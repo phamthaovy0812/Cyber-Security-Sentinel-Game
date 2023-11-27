@@ -30,6 +30,7 @@ public class Move : MonoBehaviour
         animator.SetFloat("Vertical", moveInput.y);
         animator.SetFloat("Speed", moveInput.sqrMagnitude);
         flip();
+        animator.SetFloat("move", Mathf.Abs( Input.GetAxis("Horizontal")));
 
     }
     void FixedUpdate()
