@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Firebase;
 using Firebase.Auth;
+using Firebase.Firestore;
+using Firebase.Extensions;
 using TMPro;
 
 public class FirebaseAuthManager : MonoBehaviour
@@ -11,6 +13,10 @@ public class FirebaseAuthManager : MonoBehaviour
     public DependencyStatus dependencyStatus;
     public FirebaseAuth auth;
     public FirebaseUser user;
+    public GameObject loginObject;
+    public GameObject registerObject;
+    [SerializeField] private FirebaseFirestore database;
+    ListenerRegistration listenerRegistration;
 
     // Login Variables
     [Space]
@@ -25,8 +31,8 @@ public class FirebaseAuthManager : MonoBehaviour
     [SerializeField] TMP_InputField emailRegisterField;
     [SerializeField] TMP_InputField passwordRegisterField;
     [SerializeField] TMP_InputField confirmPasswordRegisterField;
-
-     private void Awake()
+    
+    private void Awake()
     {
         // Check that all of the necessary dependencies for firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
@@ -43,6 +49,7 @@ public class FirebaseAuthManager : MonoBehaviour
             }
         });
     }
+
     void InitializeFirebase()
     {
         //Set the default instance object
@@ -79,6 +86,8 @@ public class FirebaseAuthManager : MonoBehaviour
 
     private IEnumerator LoginAsync(string email, string password)
     {
+        loginObject.SetActive(true);
+        registerObject.SetActive(false);
         var loginTask = auth.SignInWithEmailAndPasswordAsync(email, password);
 
         yield return new WaitUntil(() => loginTask.IsCompleted);
@@ -132,6 +141,8 @@ public class FirebaseAuthManager : MonoBehaviour
 
     private IEnumerator RegisterAsync(string name, string email, string password, string confirmPassword)
     {
+        loginObject.SetActive(false);
+        registerObject.SetActive(true);
         if (name == "")
         {
             Debug.LogError("User Name is empty");
@@ -226,8 +237,20 @@ public class FirebaseAuthManager : MonoBehaviour
                 }
                 else
                 {
+                    database = FirebaseFirestore.DefaultInstance;
+                    
+                    User newUser = new User{
+                        id = "1",
+                        email = email,
+                        username = name,
+                        password = password
+                    };
+                    DocumentReference new_user = database.Collection("Users").Document(newUser.id);
+                    new_user.SetAsync(newUser).ContinueWithOnMainThread(task =>{
+                        Debug.Log("Setting new user successfully");
+                    });
                     Debug.Log("Registration Sucessful Welcome " + user.DisplayName);
-                   // UIManager.Instance.OpenLoginPanel();
+                    // UIManager.Instance.OpenLoginPanel();
                 }
             }
         }
