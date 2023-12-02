@@ -6,6 +6,9 @@ using Firebase.Auth;
 using Firebase.Firestore;
 using Firebase.Extensions;
 using TMPro;
+using Firebase.Database;
+using System.Data.Common;
+using System;
 
 public class FirebaseAuthManager : MonoBehaviour
 {
@@ -15,7 +18,7 @@ public class FirebaseAuthManager : MonoBehaviour
     public FirebaseUser user;
     public GameObject loginObject;
     public GameObject registerObject;
-    [SerializeField] private FirebaseFirestore database;
+    [SerializeField] private DatabaseReference database;
     ListenerRegistration listenerRegistration;
 
     // Login Variables
@@ -31,7 +34,6 @@ public class FirebaseAuthManager : MonoBehaviour
     [SerializeField] TMP_InputField emailRegisterField;
     [SerializeField] TMP_InputField passwordRegisterField;
     [SerializeField] TMP_InputField confirmPasswordRegisterField;
-    
     private void Awake()
     {
         // Check that all of the necessary dependencies for firebase are present on the system
@@ -237,18 +239,18 @@ public class FirebaseAuthManager : MonoBehaviour
                 }
                 else
                 {
-                    database = FirebaseFirestore.DefaultInstance;
-                    
-                    User newUser = new User{
-                        id = "1",
-                        email = email,
-                        username = name,
-                        password = password
-                    };
-                    DocumentReference new_user = database.Collection("Users").Document(newUser.id);
-                    new_user.SetAsync(newUser).ContinueWithOnMainThread(task =>{
-                        Debug.Log("Setting new user successfully");
-                    });
+                    // database = FirebaseFirestore.DefaultInstance;
+
+                    // User newUser = new User{
+                    //     id = "1",
+                    //     email = email,
+                    //     username = name,
+                    //     password = password
+                    // };
+                    // DocumentReference new_user = database.Collection("Users").Document(newUser.id);
+                    // new_user.SetAsync(newUser).ContinueWithOnMainThread(task =>{
+                    //     Debug.Log("Setting new user successfully");
+                    // });
                     Debug.Log("Registration Sucessful Welcome " + user.DisplayName);
                     // UIManager.Instance.OpenLoginPanel();
                 }

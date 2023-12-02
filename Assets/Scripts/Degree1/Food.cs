@@ -38,9 +38,13 @@ public class Food : MonoBehaviour
     public BoxCollider2D foodSpawn;
     public float score;
     public int index = 0;
+    public int countFood = 0;
     public float waitTimeCheckAns = 3f;
     public TextMeshProUGUI scoreTextMesh;
     public GameObject questions;
+    public GameObject enemy1;
+    public GameObject enemy2;
+    public GameObject enemy3;
 
 
 
@@ -185,7 +189,16 @@ public class Food : MonoBehaviour
             {
                 score += 20;
             }
-
+            if(countFood == 2){
+                enemy1.SetActive(true);
+            }
+            if(countFood == 4){
+                enemy2.SetActive(true);
+            }
+            if(countFood == 6){
+                enemy3.SetActive(true);
+            }
+            countFood++;
             RandomPose();
 
             index = UnityEngine.Random.Range(0, 20);
