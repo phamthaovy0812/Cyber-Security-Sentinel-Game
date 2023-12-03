@@ -3556,7 +3556,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1813757198}
         m_TargetAssemblyTypeName: FirebaseAuthManager, Assembly-CSharp
-        m_MethodName: Login
+        m_MethodName: Register
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4821,7 +4821,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1813757198}
         m_TargetAssemblyTypeName: FirebaseAuthManager, Assembly-CSharp
-        m_MethodName: Register
+        m_MethodName: Login
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4899,6 +4899,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dependencyStatus: 0
+  loginObject: {fileID: 771101487}
+  registerObject: {fileID: 1252813803}
   emailLoginField: {fileID: 876534380}
   passwordLoginField: {fileID: 309412481}
   nameRegisterField: {fileID: 2022325692}
