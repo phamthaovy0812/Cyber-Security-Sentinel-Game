@@ -37,7 +37,7 @@ public class QuestionData
 public class Food : MonoBehaviour
 {
     [SerializeField] private static Food instance;                             //instance variable
-    public static Food Instance { get => instance; } 
+    public static Food Instance { get => instance; }
     public BoxCollider2D foodSpawn;
     public float score;
     public int index = 0;
@@ -186,7 +186,7 @@ public class Food : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            if (index % 2 == 1 && countQuestion < 4)
+            if (index % 2 == 1 && countQuestion < 3)
             {
                 Time.timeScale = 0;
                 questions.SetActive(true);
@@ -209,24 +209,28 @@ public class Food : MonoBehaviour
             {
                 enemy3.SetActive(true);
             }
-            if(count > 10){
+
+            if (count > 10)
+            {
                 GameOver(score);
             }
             count++;
-            
+
             countFood++;
             RandomPose();
             index = UnityEngine.Random.Range(0, 20);
         }
     }
-    public void BtnMenuLevel(){
-        
+    public void BtnMenuLevel()
+    {
+
 
     }
-    public void NextLevel(){
-        
-         //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene(2);  
+    public void NextLevel()
+    {
+
+        //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene(2);
     }
     public void GameOver(float score)
     {
@@ -251,9 +255,9 @@ public class Food : MonoBehaviour
         {
             countStar = 0;
         }
-        
+
         LevelSystemManager.Instance.LevelComplete(countStar, score);
-        
+
         txtScore.text = score.ToString();
         SetStar(countStar);
 

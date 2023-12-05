@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Degree1/LevelGame1/Level_6.unity
     guid: fc66999202db78a4192e626f0e19795c
+  - enabled: 1
+    path: Assets/Scenes/WelcomePage.unity
+    guid: 2dde8ea1b8c961148aa0720fc42471b5
+  - enabled: 1
+    path: Assets/Scenes/SignPage.unity
+    guid: 49e251192955bb74985fe117c55172d6
+  - enabled: 1
+    path: Assets/Scenes/HomeText.unity
+    guid: e70c81c01ab155a4aa61bd4d83c570d8
   m_configObjects: {}

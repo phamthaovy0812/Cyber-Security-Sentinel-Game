@@ -42,7 +42,6 @@ public class SaveLoadData : MonoBehaviour
         //ClearData();
         if (PlayerPrefs.GetInt("GameStartFirstTime") == 1)  //if PlayerPrefs of "GameStartFirstTime" value is 1, means we are playing the game again
         {
-            ClearData();
             LoadData();                                     //so we load the data
         }
         else                                                //if its not 1, means we are playing the game 1st time
