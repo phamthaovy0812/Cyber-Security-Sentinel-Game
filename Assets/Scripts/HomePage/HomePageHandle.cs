@@ -89,6 +89,4 @@ public class HomePageHandle : MonoBehaviour
         scriptInfo1.SetActive(false);
         scriptInfo2.SetActive(true);
     }
-
-
 }
