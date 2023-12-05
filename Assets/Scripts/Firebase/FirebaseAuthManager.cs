@@ -130,6 +130,7 @@ public class FirebaseAuthManager : MonoBehaviour
             user = loginTask.Result.User;
 
             Debug.LogFormat("{0} You Are Successfully Logged In", user.DisplayName);
+            //HomePageHandle.Instance.LoadUserInfo();
 
             References.userName = user.DisplayName;
             UnityEngine.SceneManagement.SceneManager.LoadScene("HomeText");
@@ -194,8 +195,6 @@ public class FirebaseAuthManager : MonoBehaviour
             }
             else
             {
-                // Get The User After Registration Success
-                // user = registerTask.Result;
                 user = registerTask.Result.User;
 
                 UserProfile userProfile = new UserProfile { DisplayName = name };
@@ -241,6 +240,8 @@ public class FirebaseAuthManager : MonoBehaviour
                 {
                     CreateNewUser(username: name, password: password, email:email);
                     Debug.Log("Registration Sucessful Welcome " + user.DisplayName);
+                    loginObject.SetActive(true);
+                    registerObject.SetActive(false);
                     // UIManager.Instance.OpenLoginPanel();
                 }
             }
