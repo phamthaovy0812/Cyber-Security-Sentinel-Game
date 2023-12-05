@@ -13,6 +13,8 @@ public class HomePageHandle : MonoBehaviour
     public GameObject scriptInfo1;
     public GameObject scriptInfo2;
     public FirebaseUser user;
+    [SerializeField] private static HomePageHandle instance;                             //instance variable
+    public static HomePageHandle Instance { get => instance; }
 
     [SerializeField] TMP_Text username;
     [SerializeField] TMP_Text level;
@@ -20,45 +22,51 @@ public class HomePageHandle : MonoBehaviour
     private FirebaseAuth auth;
     DatabaseReference databaseReference;
 
-    private void Start()
+    public void Start()
     {
         FirebaseAuthManager authManager = FindObjectOfType<FirebaseAuthManager>();
         if (authManager != null)
         {
             auth = authManager.auth;
-            databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
-            LoadUserInfo();
         }
+         LoadUserInfo();
     }
 
-    private void LoadUserInfo()
+    public void LoadUserInfo()
     {
-        if (auth != null && auth.CurrentUser != null)
-        {
-            FirebaseUser user = auth.CurrentUser;
-            databaseReference.Child("Users").Child(user.UserId).GetValueAsync().ContinueWithOnMainThread(task =>
+        databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
+        // if (auth != null && auth.CurrentUser != null)
+        // {
+        //    FirebaseUser user = auth.CurrentUser;
+        //    Debug.Log("userId:"+user.UserId);
+            databaseReference.Child("Users").Child("1").GetValueAsync().ContinueWithOnMainThread(task =>
                {
-                   if (task.IsCompleted)
+                   if (task.IsFaulted)
+                   {
+                       Debug.Log("fail ne");
+                   }
+                   else if (task.IsCompleted)
                    {
                        DataSnapshot snapshot = task.Result;
 
-                       if (snapshot.Exists)
-                       {
+                       Debug.Log("success ne");
+
+                        Debug.Log("co data hong ne");
+                        var check = 
                            // Retrieve data from the snapshot
-                           experience.text = snapshot.Child("experiences").GetValue(true).ToString();
-                           level.text = snapshot.Child("id_degree").GetValue(true).ToString();
+                           experience.text = snapshot.Child("experience").GetValue(true).ToString();
+                           level.text = snapshot.Child("id_level").GetValue(true).ToString();
                            username.text = snapshot.Child("username").GetValue(true).ToString();
 
                            // Now you have the user data, you can use it as needed
-                           Debug.Log("User: " + username + ", id_degree: " + level.text + ", experiences: " + experience.text);
-                       }
+                           Debug.Log("User: " + username.text + ", id_degree: " + level.text + ", experiences: " + experience.text);
                    }
                });
-        }
-        else
-        {
-            Debug.LogWarning("User not authenticated or user information is not available.");
-        }
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("User not authenticated or user information is not available.");
+        // }
     }
 
     private void Awake()

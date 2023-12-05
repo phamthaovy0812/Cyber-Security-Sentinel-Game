@@ -74,7 +74,7 @@
                 {
                     "name": "",
                     "id": "5d0aa861-8edf-444e-9072-830a26236c8b",
-                    "path": "<Gamepad>/leftStick",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
