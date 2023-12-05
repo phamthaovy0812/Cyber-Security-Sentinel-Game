@@ -55,40 +55,67 @@ public class degree
     }
 }
 
+public class Level{
+    public int score {get;set;}
+    public Level(){
+        score = 0;
+    }
+    public Level(int score){
+        this.score = score;
+    }
+}
+public class ScoreLevel{
+    string id_user {get; set;}
+    string id_degree {get; set;}
+    string id_game {get; set;}
+    List<Level> score_level {get; set;}
+    public ScoreLevel(string id_user, string id_degree, string id_game, List<Level> score_level){
+        this.id_user = id_user;
+        this.id_degree = id_degree;
+        this.id_game = id_game;
+        this.score_level = score_level;
+    }
+
+}
 public class FirebaseDatabaseManager : MonoBehaviour
 {
     string degreeId;
+    string userId;
     string topicId;
     string questionId;
-    public TextMeshProUGUI test;
 
     DatabaseReference reference;
 
     void Start()
     {
-        // degreeId = "4";
-        // topicId = SystemInfo.deviceUniqueIdentifier;
-        // questionId = SystemInfo.deviceUniqueIdentifier;
-        // List<question> list_questions = new List<question>();
-        // for (int i = 0; i < 4; i++)
-        // {
-        //     question qs = new question(questionId, "cau hoi " + i + 1, "dap an A", "dap an B", "dap an C", "dap an D", "a");
-
-        //     list_questions.Add(qs);
-        // }
-        // List<topic> list_topic = new List<topic>();
-        // for (int i = 0; i < 4; i++)
-        // {
-        //     topic tp = new topic(topicId, "topic " + i + 1, list_questions);
-
-        //     list_topic.Add(tp);
-        // }
-
-        // degree degree = new degree(degreeId, "Cap tap su", list_topic);
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
-        ReadDatabase();
-        // CreateNewUser(degree);
         
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        // ReadDatabase();
+
+        Level level = new Level();
+        List<Level> list_level = new List<Level>();
+        list_level.Add(level);
+        list_level.Add(level);
+        list_level.Add(level);
+        list_level.Add(level);
+        list_level.Add(level);
+        list_level.Add(level);
+
+        CreateScoreDegree(SystemInfo.deviceUniqueIdentifier, "1","1",list_level);
+        // CreateNewUser();
+
+        
+    }
+    public void CreateScoreDegree(string id_user, string id_degree, string id_game, List<Level> levels){
+        for(int i = 0; i < levels.Count; i++){
+        reference.Child("ScoreDegree")
+                .Child(id_user)
+                .Child(id_degree)
+                .Child(id_game)
+                .Child("score_level_"+i+1)
+                .SetValueAsync(levels[i].score);
+        } 
+
     }
 
     public void ReadDatabase()
@@ -110,108 +137,129 @@ public class FirebaseDatabaseManager : MonoBehaviour
                         }
                    });
     }
-    public void CreateNewUser(degree degree)
+    public void CreateNewUser()
     {
+        userId = SystemInfo.deviceUniqueIdentifier;
+        User user = new User(userId,"","","","",0);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("id_user")
+            .SetValueAsync(user.id_user);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("username")
+            .SetValueAsync(user.username);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("password")
+            .SetValueAsync(user.password);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("email")
+            .SetValueAsync(user.email);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("id_level")
+            .SetValueAsync(user.id_level);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("experience")
+            .SetValueAsync(user.experience);
 
-        reference.Child("Degree")
-            .Child(degreeId)
-            .Child("id_degree")
-            .SetValueAsync(degree.id);
+        // reference.Child("Degree")
+        //     .Child(degreeId)
+        //     .Child("name_degree")
+        //     .SetValueAsync(degree.name_degree);
+        // for (int i = 0; i < degree.list_topic.Count; i++)
+        // {
+        //     reference.Child("Degree")
+        //     .Child(degreeId)
+        //     .Child("Topics")
+        //     .Child(degree.list_topic[i].id_topic)
+        //     .Child("id_topic")
+        //     .SetValueAsync(degree.list_topic[i].id_topic);
 
-        reference.Child("Degree")
-            .Child(degreeId)
-            .Child("name_degree")
-            .SetValueAsync(degree.name_degree);
-        for (int i = 0; i < degree.list_topic.Count; i++)
-        {
-            reference.Child("Degree")
-            .Child(degreeId)
-            .Child("Topics")
-            .Child(degree.list_topic[i].id_topic)
-            .Child("id_topic")
-            .SetValueAsync(degree.list_topic[i].id_topic);
+        //     reference.Child("Degree")
+        //     .Child(degreeId)
+        //     .Child("Topics")
+        //     .Child(degree.list_topic[i].id_topic)
+        //     .Child("name_topic")
+        //     .SetValueAsync(degree.list_topic[i].nameTopic);
+        //     for (int j = 0; j < degree.list_topic[i].list_question.Count; j++)
+        //     {
+        //         reference.Child("Degree")
+        //                 .Child(degreeId)
+        //                 .Child("Topics")
+        //                 .Child(degree.list_topic[i].id_topic)
+        //                 .Child("Questions")
+        //                 .Child(degree.list_topic[i].list_question[j].id_question)
+        //                 .Child("id_question")
+        //                 .SetValueAsync(degree.list_topic[i].list_question[j].id_question);
+        //         reference.Child("Degree")
+        //                 .Child(degreeId)
+        //                 .Child("Topics")
+        //                 .Child(degree.list_topic[i].id_topic)
+        //                 .Child("Questions")
+        //                 .Child(degree.list_topic[i].list_question[j].id_question)
 
-            reference.Child("Degree")
-            .Child(degreeId)
-            .Child("Topics")
-            .Child(degree.list_topic[i].id_topic)
-            .Child("name_topic")
-            .SetValueAsync(degree.list_topic[i].nameTopic);
-            for (int j = 0; j < degree.list_topic[i].list_question.Count; j++)
-            {
-                reference.Child("Degree")
-                        .Child(degreeId)
-                        .Child("Topics")
-                        .Child(degree.list_topic[i].id_topic)
-                        .Child("Questions")
-                        .Child(degree.list_topic[i].list_question[j].id_question)
-                        .Child("id_question")
-                        .SetValueAsync(degree.list_topic[i].list_question[j].id_question);
-                reference.Child("Degree")
-                        .Child(degreeId)
-                        .Child("Topics")
-                        .Child(degree.list_topic[i].id_topic)
-                        .Child("Questions")
-                        .Child(degree.list_topic[i].list_question[j].id_question)
+        //                 .Child("Question")
+        //                 .SetValueAsync(degree.list_topic[i].list_question[j].name);
+        //         reference.Child("Degree")
+        //                 .Child(degreeId)
+        //                 .Child("Topics")
+        //                 .Child(degree.list_topic[i].id_topic)
+        //                 .Child("Questions")
+        //                 .Child(degree.list_topic[i].list_question[j].id_question)
 
-                        .Child("Question")
-                        .SetValueAsync(degree.list_topic[i].list_question[j].name);
-                reference.Child("Degree")
-                        .Child(degreeId)
-                        .Child("Topics")
-                        .Child(degree.list_topic[i].id_topic)
-                        .Child("Questions")
-                        .Child(degree.list_topic[i].list_question[j].id_question)
+        //                 .Child("answerA")
+        //                 .SetValueAsync(degree.list_topic[i].list_question[j].answerA);
+        //         reference.Child("Degree")
+        //                 .Child(degreeId)
+        //                 .Child("Topics")
+        //                 .Child(degree.list_topic[i].id_topic)
+        //                 .Child("Questions")
+        //                 .Child(degree.list_topic[i].list_question[j].id_question)
 
-                        .Child("answerA")
-                        .SetValueAsync(degree.list_topic[i].list_question[j].answerA);
-                reference.Child("Degree")
-                        .Child(degreeId)
-                        .Child("Topics")
-                        .Child(degree.list_topic[i].id_topic)
-                        .Child("Questions")
-                        .Child(degree.list_topic[i].list_question[j].id_question)
+        //                 .Child("answerA")
+        //                 .SetValueAsync(degree.list_topic[i].list_question[j].answerA);
+        //         reference.Child("Degree")
+        //                 .Child(degreeId)
+        //                 .Child("Topics")
+        //                 .Child(degree.list_topic[i].id_topic)
+        //                 .Child("Questions")
+        //                 .Child(degree.list_topic[i].list_question[j].id_question)
 
-                        .Child("answerA")
-                        .SetValueAsync(degree.list_topic[i].list_question[j].answerA);
-                reference.Child("Degree")
-                        .Child(degreeId)
-                        .Child("Topics")
-                        .Child(degree.list_topic[i].id_topic)
-                        .Child("Questions")
-                        .Child(degree.list_topic[i].list_question[j].id_question)
+        //                 .Child("answerB")
+        //                 .SetValueAsync(degree.list_topic[i].list_question[j].answerB);
+        //         reference.Child("Degree")
+        //                 .Child(degreeId)
+        //                 .Child("Topics")
+        //                 .Child(degree.list_topic[i].id_topic)
+        //                 .Child("Questions")
+        //                 .Child(degree.list_topic[i].list_question[j].id_question)
 
-                        .Child("answerB")
-                        .SetValueAsync(degree.list_topic[i].list_question[j].answerB);
-                reference.Child("Degree")
-                        .Child(degreeId)
-                        .Child("Topics")
-                        .Child(degree.list_topic[i].id_topic)
-                        .Child("Questions")
-                        .Child(degree.list_topic[i].list_question[j].id_question)
+        //                 .Child("answerC")
+        //                 .SetValueAsync(degree.list_topic[i].list_question[j].answerC);
+        //         reference.Child("Degree")
+        //                 .Child(degreeId)
+        //                 .Child("Topics")
+        //                 .Child(degree.list_topic[i].id_topic)
+        //                 .Child("Questions")
+        //                 .Child(degree.list_topic[i].list_question[j].id_question)
 
-                        .Child("answerC")
-                        .SetValueAsync(degree.list_topic[i].list_question[j].answerC);
-                reference.Child("Degree")
-                        .Child(degreeId)
-                        .Child("Topics")
-                        .Child(degree.list_topic[i].id_topic)
-                        .Child("Questions")
-                        .Child(degree.list_topic[i].list_question[j].id_question)
+        //                 .Child("answerD")
+        //                 .SetValueAsync(degree.list_topic[i].list_question[j].answerD);
+        //         reference.Child("Degree")
+        //                 .Child(degreeId)
+        //                 .Child("Topics")
+        //                 .Child(degree.list_topic[i].id_topic)
+        //                 .Child("Questions")
+        //                 .Child(degree.list_topic[i].list_question[j].id_question)
 
-                        .Child("answerD")
-                        .SetValueAsync(degree.list_topic[i].list_question[j].answerD);
-                reference.Child("Degree")
-                        .Child(degreeId)
-                        .Child("Topics")
-                        .Child(degree.list_topic[i].id_topic)
-                        .Child("Questions")
-                        .Child(degree.list_topic[i].list_question[j].id_question)
-
-                        .Child("correctAnswer")
-                        .SetValueAsync(degree.list_topic[i].list_question[j].correctAnswer);
-            }
-        }
+        //                 .Child("correctAnswer")
+        //                 .SetValueAsync(degree.list_topic[i].list_question[j].correctAnswer);
+        //     }
+        // }
         // reference.Child("Degree")
         //     .Child(degreeId)
         //     .Child(topicId)
@@ -224,4 +272,5 @@ public class FirebaseDatabaseManager : MonoBehaviour
 
         Debug.Log("New User Created");
     }
+
 }

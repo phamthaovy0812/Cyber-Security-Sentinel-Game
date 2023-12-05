@@ -1,4 +1,4 @@
-
+  [System.Serializable]
 public class User
 {
     public string email { get; set; }
@@ -23,4 +23,5 @@ public class User
         this.id_level = id_level;
         this.experience = experience;
     }
+    
 }

@@ -7,6 +7,7 @@ using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 using System;
 using System.Security.Permissions;
+using UnityEngine.SceneManagement;
 
 
 
@@ -35,10 +36,13 @@ public class QuestionData
 }
 public class Food : MonoBehaviour
 {
+    [SerializeField] private static Food instance;                             //instance variable
+    public static Food Instance { get => instance; } 
     public BoxCollider2D foodSpawn;
     public float score;
     public int index = 0;
     public int countFood = 0;
+    int countStar;
     public float waitTimeCheckAns = 3f;
     public TextMeshProUGUI scoreTextMesh;
     public GameObject questions;
@@ -58,6 +62,9 @@ public class Food : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerB;
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerC;
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerD;
+    [SerializeField] private GameObject overPanelGameOver;
+    [SerializeField] private UnityEngine.UI.Image[] starsArray;
+    [SerializeField] private TextMeshProUGUI txtScore;
 
     [SerializeField]
     private QuestionData[] m_QuestionData = {
@@ -73,8 +80,10 @@ public class Food : MonoBehaviour
     public float delay = 3;
     float timer;
     public bool clickAnswer = false;
+
     private void Start()
     {
+        Time.timeScale = 1;
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
         RandomPose();
 
@@ -83,7 +92,7 @@ public class Food : MonoBehaviour
     private void Update()
     {
         scoreTextMesh.text = " " + score;
-        
+
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
 
     }
@@ -99,7 +108,7 @@ public class Food : MonoBehaviour
     public void BtnAnswer_Pressd(string pSlectedAnswer)
     {
         bool iscorrectAnswer = false;
-        
+
         if (m_QuestionData[m_QuestionIndex].correctAnswer == pSlectedAnswer)
         {
             iscorrectAnswer = true;
@@ -115,8 +124,8 @@ public class Food : MonoBehaviour
         }
 
         clickAnswer = true;
-        
-        StartCoroutine(ExampleCoroutine(pSlectedAnswer,iscorrectAnswer));
+
+        StartCoroutine(ExampleCoroutine(pSlectedAnswer, iscorrectAnswer));
         // StartCoroutine(ExampleCoroutine());
     }
     private void NextQuestion()
@@ -126,7 +135,6 @@ public class Food : MonoBehaviour
     }
     IEnumerator ExampleCoroutine(string pSlectedAnswer, bool iscorrectAnswer)
     {
-        Debug.Log("Begin:  ");
         switch (pSlectedAnswer)
         {
             case "a":
@@ -148,13 +156,10 @@ public class Food : MonoBehaviour
 
 
         }
-        Debug.Log("Begin time ");
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSecondsRealtime(3);
-        Debug.Log("Mid: ");
         Time.timeScale = 1;
         questions.SetActive(false);
-        Debug.Log("End ");
 
     }
     private void InitQuestion(int index)
@@ -189,19 +194,81 @@ public class Food : MonoBehaviour
             {
                 score += 20;
             }
-            if(countFood == 2){
+            if (countFood == 2)
+            {
                 enemy1.SetActive(true);
             }
-            if(countFood == 4){
+            if (countFood == 4)
+            {
                 enemy2.SetActive(true);
             }
-            if(countFood == 6){
+            if (countFood == 6)
+            {
                 enemy3.SetActive(true);
+            }
+            if(score >= 100){
+                GameOver(score);
             }
             countFood++;
             RandomPose();
-
             index = UnityEngine.Random.Range(0, 20);
+        }
+    }
+    public void BtnMenuLevel(){
+        
+
+    }
+    public void NextLevel(){
+        
+         //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene(2);  
+    }
+    public void GameOver(float score)
+    {
+        Time.timeScale = 0;
+        overPanelGameOver.SetActive(true);
+        Debug.Log("Game Over");
+
+        if (score >= 300)
+        {
+            countStar = 3;
+
+        }
+        else if (score >= 200)
+        {
+            countStar = 2;
+        }
+        else if (score >= 50)
+        {
+            countStar = 1;
+        }
+        else
+        {
+            countStar = 0;
+        }
+        
+        LevelSystemManager.Instance.LevelComplete(countStar, score);
+        
+        txtScore.text = score.ToString();
+        SetStar(countStar);
+
+    }
+    private void SetStar(int starAchieved)
+    {
+        for (int i = 0; i < starsArray.Length; i++)             //loop through entire star array
+        {
+            /// <summary>
+            /// if i is less than starAchieved
+            /// Eg: if 2 stars are achieved we set the start at index 0 and 1 color to unlockColor, as array start from 0 element
+            /// </summary>
+            if (i < starAchieved)
+            {
+                starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.white;              //set its color to unlockColor
+            }
+            else
+            {
+                starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.black;                //else set its color to lockColor
+            }
         }
     }
 }

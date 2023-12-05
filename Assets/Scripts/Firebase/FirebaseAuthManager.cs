@@ -238,6 +238,7 @@ public class FirebaseAuthManager : MonoBehaviour
                 }
                 else
                 {
+                    CreateNewUser(username: name, password: password, email:email);
                     Debug.Log("Registration Sucessful Welcome " + user.DisplayName);
                     loginObject.SetActive(true);
                     registerObject.SetActive(false);
@@ -246,5 +247,38 @@ public class FirebaseAuthManager : MonoBehaviour
             }
         }
     }
+    public void CreateNewUser( string username, string password, string email)
+    {
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+        string userId;
+        userId = SystemInfo.deviceUniqueIdentifier;
+        
+        User user = new User(userId,email,username,password,"1",0);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("id_user")
+            .SetValueAsync(user.id_user);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("username")
+            .SetValueAsync(user.username);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("password")
+            .SetValueAsync(user.password);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("email")
+            .SetValueAsync(user.email);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("id_level")
+            .SetValueAsync(user.id_level);
+        reference.Child("Users")
+            .Child(userId)
+            .Child("experience")
+            .SetValueAsync(user.experience);
 
+        Debug.Log("New User Created");
+    }
 }
