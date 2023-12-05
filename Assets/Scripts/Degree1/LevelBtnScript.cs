@@ -35,7 +35,7 @@ public class LevelBtnScript : MonoBehaviour
                                                                 //make button interactable
             lockObj.SetActive(false);                           //deactivate lockObj
             unlockObj.SetActive(true);                          //activate unlockObj
-            SetStar(value.starAchieverd);                        //set the stars
+            SetStar(value.starAchieved);                        //set the stars
             levelIndexText.text = "" + levelIndex;              //set levelIndexText text
 
         }
@@ -62,15 +62,15 @@ public class LevelBtnScript : MonoBehaviour
             /// </summary>
             if (i < starAchieved)
             {
-                starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.black;              //set its color to unlockColor
+                starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.white;              //set its color to unlockColor
             }
             else
             {
-                starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.white;                //else set its color to lockColor
+                starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.black;                //else set its color to lockColor
             }
         }
     }
-
+    
     void OnClick()                                              //method called by button
     {
         LevelSystemManager.Instance.CurrentLevel = levelIndex - 1;  //set the CurrentLevel, we subtract 1 as level data array start from 0
