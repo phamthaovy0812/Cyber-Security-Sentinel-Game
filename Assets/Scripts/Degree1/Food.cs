@@ -79,6 +79,8 @@ public class Food : MonoBehaviour
     private int m_QuestionIndex;
     public float delay = 3;
     float timer;
+    int count = 0;
+    int countQuestion = 0;
     public bool clickAnswer = false;
 
     private void Start()
@@ -184,11 +186,12 @@ public class Food : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            if (index % 2 == 1)
+            if (index % 2 == 1 && countQuestion < 4)
             {
                 Time.timeScale = 0;
                 questions.SetActive(true);
                 InitQuestion(m_QuestionIndex);
+                countQuestion++;
             }
             else
             {
@@ -206,9 +209,11 @@ public class Food : MonoBehaviour
             {
                 enemy3.SetActive(true);
             }
-            if(score >= 100){
+            if(count > 10){
                 GameOver(score);
             }
+            count++;
+            
             countFood++;
             RandomPose();
             index = UnityEngine.Random.Range(0, 20);
