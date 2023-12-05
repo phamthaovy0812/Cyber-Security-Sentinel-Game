@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Degree1/LevelGame1/Level_1.unity
     guid: 17fd57b89d3251e44b4a92d83df1e8a9
+  - enabled: 1
+    path: Assets/Scenes/HomeText.unity
+    guid: e70c81c01ab155a4aa61bd4d83c570d8
+  - enabled: 1
+    path: Assets/Scenes/WelcomePage.unity
+    guid: 07222822fc996f549a257ae80589c080
+  - enabled: 1
+    path: Assets/Scenes/SignPage.unity
+    guid: db2b1cfad481d054ead52633bf030c30
   m_configObjects: {}

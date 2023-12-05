@@ -132,7 +132,7 @@ public class FirebaseAuthManager : MonoBehaviour
             Debug.LogFormat("{0} You Are Successfully Logged In", user.DisplayName);
 
             References.userName = user.DisplayName;
-            //UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("HomeText");
         }
     }
 
@@ -194,8 +194,6 @@ public class FirebaseAuthManager : MonoBehaviour
             }
             else
             {
-                // Get The User After Registration Success
-                // user = registerTask.Result;
                 user = registerTask.Result.User;
 
                 UserProfile userProfile = new UserProfile { DisplayName = name };
@@ -239,19 +237,9 @@ public class FirebaseAuthManager : MonoBehaviour
                 }
                 else
                 {
-                    // database = FirebaseFirestore.DefaultInstance;
-
-                    // User newUser = new User{
-                    //     id = "1",
-                    //     email = email,
-                    //     username = name,
-                    //     password = password
-                    // };
-                    // DocumentReference new_user = database.Collection("Users").Document(newUser.id);
-                    // new_user.SetAsync(newUser).ContinueWithOnMainThread(task =>{
-                    //     Debug.Log("Setting new user successfully");
-                    // });
                     Debug.Log("Registration Sucessful Welcome " + user.DisplayName);
+                    loginObject.SetActive(true);
+                    registerObject.SetActive(false);
                     // UIManager.Instance.OpenLoginPanel();
                 }
             }
