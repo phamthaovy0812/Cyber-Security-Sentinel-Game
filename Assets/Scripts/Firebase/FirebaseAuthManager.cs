@@ -34,7 +34,7 @@ public class FirebaseAuthManager : MonoBehaviour
     [SerializeField] TMP_InputField emailRegisterField;
     [SerializeField] TMP_InputField passwordRegisterField;
     [SerializeField] TMP_InputField confirmPasswordRegisterField;
-    private void Awake()
+    private void Update()
     {
         // Check that all of the necessary dependencies for firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
@@ -85,11 +85,13 @@ public class FirebaseAuthManager : MonoBehaviour
     {
         StartCoroutine(LoginAsync(emailLoginField.text, passwordLoginField.text));
     }
-
-    private IEnumerator LoginAsync(string email, string password)
-    {
+public void BtnLogin(){
         loginObject.SetActive(true);
         registerObject.SetActive(false);
+    }
+    private IEnumerator LoginAsync(string email, string password)
+    {
+        
         var loginTask = auth.SignInWithEmailAndPasswordAsync(email, password);
 
         yield return new WaitUntil(() => loginTask.IsCompleted);
@@ -142,10 +144,13 @@ public class FirebaseAuthManager : MonoBehaviour
         StartCoroutine(RegisterAsync(nameRegisterField.text, emailRegisterField.text, passwordRegisterField.text, confirmPasswordRegisterField.text));
     }
 
-    private IEnumerator RegisterAsync(string name, string email, string password, string confirmPassword)
-    {
+    public void BtnRegister(){
         loginObject.SetActive(false);
         registerObject.SetActive(true);
+    }
+    private IEnumerator RegisterAsync(string name, string email, string password, string confirmPassword)
+    {
+        
         if (name == "")
         {
             Debug.LogError("User Name is empty");

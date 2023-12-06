@@ -49,6 +49,8 @@ public class Food : MonoBehaviour
     public GameObject enemy1;
     public GameObject enemy2;
     public GameObject enemy3;
+    public GameObject enemy4;
+    public GameObject enemy5;
 
 
 
@@ -68,11 +70,42 @@ public class Food : MonoBehaviour
 
     [SerializeField]
     private QuestionData[] m_QuestionData = {
-        new QuestionData(questions: "Cau hoi 1", answerA: "Dap an A",answerB: "Dap an B",answerC: "Dap an C", answerD: "Dap an D", correctAnswer: "a"),
-        new QuestionData(questions: "Cau hoi 2", answerA: "Dap an A",answerB: "Dap an B",answerC: "Dap an C", answerD: "Dap an D", correctAnswer: "a"),
-        new QuestionData(questions: "Cau hoi 3", answerA: "Dap an A",answerB: "Dap an B",answerC: "Dap an C", answerD: "Dap an D", correctAnswer: "a"),
-        new QuestionData(questions: "Cau hoi 4", answerA: "Dap an A",answerB: "Dap an B",answerC: "Dap an C", answerD: "Dap an D", correctAnswer: "a"),
-        new QuestionData(questions: "Cau hoi 5", answerA: "Dap an A",answerB: "Dap an B",answerC: "Dap an C", answerD: "Dap an D", correctAnswer: "a"),
+        new QuestionData(
+            questions: "Làm thế nào bạn có thể xác định một trang web có dấu hiệu của trang web lừa đảo?", 
+            answerA: " Trang web chứa nhiều thông tin chi tiết và có mục giới thiệu rõ ràng.",
+            answerB: "Trang web không có địa chỉ liên hệ hoặc thông tin về công ty.",
+            answerC: "Trang web có địa chỉ bảo mật 'https' và biểu tượng ổ khóa.", 
+            answerD: "Trang web yêu cầu người dùng nhập thông tin cá nhân.", 
+            correctAnswer: "b"),
+        new QuestionData(
+            questions: "Một trang web an toàn thường sử dụng gì để bảo vệ thông tin của người dùng?", 
+            answerA: " Địa chỉ web không có mục giới thiệu.",
+            answerB: "Không có biểu tượng ổ khóa hoặc giao thức 'https'.",
+            answerC: "Địa chỉ web chứa nhiều thông tin cá nhân của người dùng.", 
+            answerD: "Sử dụng chứng chỉ SSL và giao thức 'https'.", 
+            correctAnswer: "d"),
+        new QuestionData(
+            questions: "Thông báo nào có thể xuất phát từ các trang web lừa đảo?", 
+            answerA: "Thông báo về sự cố giao dịch và yêu cầu nhập thông tin cá nhân.",
+            answerB: "Các thông báo giúp người dùng cảm thấy an toàn và hạnh phúc.",
+            answerC: "Thông báo trúng thưởng và quà tặng mà không yêu cầu gì.", 
+            answerD: "Cả A và C.", 
+            correctAnswer: "d"),
+        new QuestionData(
+            questions: "Khi một trang web yêu cầu người dùng cung cấp nhiều thông tin cá nhân như địa chỉ nhà, số điện thoại, số CMND/CCCD, hoặc số tài khoản ngân hàng, điều này có thể đề xuất gì?", 
+            answerA: "Trang web là một nguồn tin cậy và an toàn.",
+            answerB: " Trang web không liên quan đến việc nhận diện trang web lừa đảo.",
+            answerC: "Trang web có dấu hiệu của trang web lừa đảo và có thể muốn đánh cắp thông tin cá nhân.", 
+            answerD: "Trang web đang cung cấp dịch vụ tài chính trực tuyến.", 
+            correctAnswer: "c"),
+        new QuestionData(
+            questions: " Dấu hiệu nào sau đây có thể xuất hiện trên trang web lừa đảo liên quan đến tên miền?", 
+            answerA: "Tên miền dài và khó nhớ, chứa các ký tự lạ hoặc sai chính tả.",
+            answerB: "  Sử dụng dịch vụ rút gọn tên miền",
+            answerC: "Tên miền sử dụng chứng chỉ SSL.", 
+            answerD: "Tên miền phổ biến như .com, .vn, .edu", 
+            correctAnswer: "a"),
+        
 
      };
 
@@ -197,6 +230,7 @@ public class Food : MonoBehaviour
             {
                 score += 20;
             }
+            
             if (countFood == 2)
             {
                 enemy1.SetActive(true);
@@ -205,9 +239,19 @@ public class Food : MonoBehaviour
             {
                 enemy2.SetActive(true);
             }
-            if (countFood == 6)
+
+            if (countFood == 6 && LevelSystemManager.Instance.getCurrentLevel() > 2)
             {
+                
                 enemy3.SetActive(true);
+            }
+            if (countFood == 6 && LevelSystemManager.Instance.getCurrentLevel() > 4)
+            {
+                enemy4.SetActive(true);
+            }
+            if (countFood == 8 && LevelSystemManager.Instance.getCurrentLevel() > 5)
+            {
+                enemy5.SetActive(true);
             }
 
             if (count > 10)
@@ -221,16 +265,19 @@ public class Food : MonoBehaviour
             index = UnityEngine.Random.Range(0, 20);
         }
     }
-    public void BtnMenuLevel()
+    public void BtnAgain()
     {
-
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void NextLevel()
     {
-
         //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level_" + LevelSystemManager.Instance.getCurrentLevel() + 2);
+    }
+    public void MenuLevel()
+    {
+        //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene("MenuLevel");
     }
     public void GameOver(float score)
     {

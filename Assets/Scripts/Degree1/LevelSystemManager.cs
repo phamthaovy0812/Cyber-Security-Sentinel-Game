@@ -70,9 +70,6 @@ public class LevelSystemManager : MonoBehaviour
        }
         );
 
-        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
-        var json = JsonUtility.ToJson(new User());
-        reference.Child("test2").Child("test2").SetRawJsonValueAsync(json);
         // User user = new User("",",","","","",100);
         // string json = JsonUtility.ToJson(user);
         // DatabaseReference dbRef = FirebaseDatabase.DefaultInstance.RootReference;
@@ -134,6 +131,9 @@ public class LevelSystemManager : MonoBehaviour
     private void OnEnable()
     {
         SaveLoadData.Instance.Initialize();
+    }
+    public int getCurrentLevel (){
+        return currentLevel;
     }
 
     public void LevelComplete(int starAchieved, float score)                             //method called when player win the level

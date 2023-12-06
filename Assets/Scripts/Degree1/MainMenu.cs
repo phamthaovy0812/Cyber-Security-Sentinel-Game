@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public void OnClickPlay()
     {
         // SceneManager.LoadScene("MenuLevel"); 
-        SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene("MenuLevel");  
         
     }
     public void OnClickOption()

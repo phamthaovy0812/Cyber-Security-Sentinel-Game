@@ -3556,7 +3556,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1813757198}
         m_TargetAssemblyTypeName: FirebaseAuthManager, Assembly-CSharp
-        m_MethodName: Register
+        m_MethodName: BtnRegister
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4821,7 +4821,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1813757198}
         m_TargetAssemblyTypeName: FirebaseAuthManager, Assembly-CSharp
-        m_MethodName: Login
+        m_MethodName: BtnLogin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5661,8 +5661,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1904839190}
   - {fileID: 1944655316}
+  - {fileID: 1904839190}
   m_Father: {fileID: 2022325691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
