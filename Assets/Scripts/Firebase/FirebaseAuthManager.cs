@@ -9,6 +9,9 @@ using TMPro;
 using Firebase.Database;
 using System.Data.Common;
 using System;
+using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class FirebaseAuthManager : MonoBehaviour
 {
@@ -34,22 +37,26 @@ public class FirebaseAuthManager : MonoBehaviour
     [SerializeField] TMP_InputField emailRegisterField;
     [SerializeField] TMP_InputField passwordRegisterField;
     [SerializeField] TMP_InputField confirmPasswordRegisterField;
-    private void Update()
+    private void Start()
     {
-        // Check that all of the necessary dependencies for firebase are present on the system
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
-        {
-            dependencyStatus = task.Result;
+        StartCoroutine(CheckAndFixDependenciesAsync());
+    }
+    private IEnumerator CheckAndFixDependenciesAsync()
+    {
+        var dependencyTask = FirebaseApp.CheckAndFixDependenciesAsync();
+        yield return new WaitUntil(() => dependencyTask.IsCompleted);
 
-            if (dependencyStatus == DependencyStatus.Available)
-            {
-                InitializeFirebase();
-            }
-            else
-            {
-                Debug.LogError("Could not resolve all firebase dependencies: " + dependencyStatus);
-            }
-        });
+        dependencyStatus = dependencyTask.Result;
+        if (dependencyStatus == DependencyStatus.Available)
+        {
+            InitializeFirebase();
+            yield return new WaitForEndOfFrame();
+            StartCoroutine(CheckForAutoLogin());
+        }
+        else
+        {
+            Debug.LogError("Could not resolve all firebase dependencies: " + dependencyStatus);
+        }
     }
 
     void InitializeFirebase()
@@ -60,7 +67,33 @@ public class FirebaseAuthManager : MonoBehaviour
         auth.StateChanged += AuthStateChanged;
         AuthStateChanged(this, null);
     }
+    private IEnumerator CheckForAutoLogin()
+    {
+        if (user != null)
+        {
+            var reloadUser = user.ReloadAsync();
+            yield return new WaitUntil(() => reloadUser.IsCompleted);
+            AutoLogin();
+        }
+        else
+        {
+            UIManager.Instance.OpenLoginPanel();
+        }
+    }
+    private void AutoLogin()
+    {
+        if (user != null)
+        {
+            Debug.LogFormat("{0} You Are Successfully Logged In", user.DisplayName);
+            APIUser.Instance.getConnectedUserByUId(user.Email);
 
+            UnityEngine.SceneManagement.SceneManager.LoadScene("HomeText");
+        }
+        else
+        {
+            UIManager.Instance.OpenLoginPanel();
+        }
+    }
     // Track state changes of the auth object.
     void AuthStateChanged(object sender, System.EventArgs eventArgs)
     {
@@ -85,13 +118,14 @@ public class FirebaseAuthManager : MonoBehaviour
     {
         StartCoroutine(LoginAsync(emailLoginField.text, passwordLoginField.text));
     }
-public void BtnLogin(){
-        loginObject.SetActive(true);
-        registerObject.SetActive(false);
+    public void BtnRegisterButton()
+    {
+        loginObject.SetActive(false);
+        registerObject.SetActive(true);
     }
     private IEnumerator LoginAsync(string email, string password)
     {
-        
+
         var loginTask = auth.SignInWithEmailAndPasswordAsync(email, password);
 
         yield return new WaitUntil(() => loginTask.IsCompleted);
@@ -132,25 +166,49 @@ public void BtnLogin(){
             user = loginTask.Result.User;
 
             Debug.LogFormat("{0} You Are Successfully Logged In", user.DisplayName);
-            //HomePageHandle.Instance.LoadUserInfo();
+            APIUser.Instance.getConnectedUserByUId(email);
+
+            // yield return new WaitUntil(() => APIUser.Instance.getConnectedUserByUId(email));
+            UnityEngine.SceneManagement.SceneManager.LoadScene("HomeText");
 
             References.userName = user.DisplayName;
-            UnityEngine.SceneManagement.SceneManager.LoadScene("HomeText");
+
         }
+    }
+    public async void getInfor(string email)
+    {
+        Debug.LogFormat("begin getInfor");
+        Task<int> result = GetInforUserProcess(email);
+        int val = await result;
+        if (val == 1)
+        {
+            Debug.LogFormat("if var == 1");
+
+        }
+        Debug.LogFormat("end");
+    }
+    static async Task<int> GetInforUserProcess(string email)
+    {
+        Console.WriteLine("LongProcess Started");
+
+
+        Console.WriteLine("LongProcess Completed");
+
+        return 1;
     }
 
     public void Register()
     {
         StartCoroutine(RegisterAsync(nameRegisterField.text, emailRegisterField.text, passwordRegisterField.text, confirmPasswordRegisterField.text));
     }
-
-    public void BtnRegister(){
-        loginObject.SetActive(false);
-        registerObject.SetActive(true);
+    public void BtnLoginButton()
+    {
+        loginObject.SetActive(true);
+        registerObject.SetActive(false);
     }
     private IEnumerator RegisterAsync(string name, string email, string password, string confirmPassword)
     {
-        
+
         if (name == "")
         {
             Debug.LogError("User Name is empty");
@@ -243,7 +301,7 @@ public void BtnLogin(){
                 }
                 else
                 {
-                    CreateNewUser(username: name, password: password, email:email);
+                    CreateNewUser(username: name, password: password, email: email);
                     Debug.Log("Registration Sucessful Welcome " + user.DisplayName);
                     loginObject.SetActive(true);
                     registerObject.SetActive(false);
@@ -252,13 +310,12 @@ public void BtnLogin(){
             }
         }
     }
-    public void CreateNewUser( string username, string password, string email)
+    public void CreateNewUser(string username, string password, string email)
     {
         DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
         string userId;
-        userId = SystemInfo.deviceUniqueIdentifier;
-        
-        User user = new User(userId,email,username,password,"1",0);
+        userId = System.Guid.NewGuid().ToString(); ;
+        User user = new User(userId, email, username, password, "1", 0);
         reference.Child("Users")
             .Child(userId)
             .Child("id_user")
