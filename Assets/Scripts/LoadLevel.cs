@@ -10,9 +10,10 @@ public class LoadLevel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Trigger Enetered");
+        
         if (collision.tag == "Player")
         {
+            print("Trigger Enetered");
             collision.gameObject.SetActive(false);
 
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
