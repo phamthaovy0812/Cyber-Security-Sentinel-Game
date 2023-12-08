@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class HomePageHandle : MonoBehaviour
 {
@@ -29,39 +30,47 @@ public class HomePageHandle : MonoBehaviour
         {
             auth = authManager.auth;
         }
-         LoadUserInfo();
+        LoadUserInfo();
     }
-
+    public void Update()
+    {
+        LoadUserInfo();
+    }
     public void LoadUserInfo()
     {
-        databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
-        // if (auth != null && auth.CurrentUser != null)
-        // {
-        //    FirebaseUser user = auth.CurrentUser;
-        //    Debug.Log("userId:"+user.UserId);
-            databaseReference.Child("Users").Child("1").GetValueAsync().ContinueWithOnMainThread(task =>
-               {
-                   if (task.IsFaulted)
-                   {
-                       Debug.Log("fail ne");
-                   }
-                   else if (task.IsCompleted)
-                   {
-                       DataSnapshot snapshot = task.Result;
+        User user = APIUser.Instance.GetUser();
+        level.text = user.id_level;
+        username.text = user.username;
+        experience.text = user.experience.ToString();
+        // // Debug.Log("UserInfo loaded: " + APIUser.Instance.GetUser().id_user);
+        // databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
+        // // if (auth != null && auth.CurrentUser != null)
+        // // {
+        // //    FirebaseUser user = auth.CurrentUser;
+        // //    Debug.Log("userId:"+user.UserId);
+        // databaseReference.Child("Users").Child("1").GetValueAsync().ContinueWithOnMainThread(task =>
+        //    {
+        //        if (task.IsFaulted)
+        //        {
+        //            Debug.Log("fail ne");
+        //        }
+        //        else if (task.IsCompleted)
+        //        {
+        //            DataSnapshot snapshot = task.Result;
 
-                       Debug.Log("success ne");
+        //            Debug.Log("success ne");
 
-                        Debug.Log("co data hong ne");
-                        var check = 
-                           // Retrieve data from the snapshot
-                           experience.text = snapshot.Child("experience").GetValue(true).ToString();
-                           level.text = snapshot.Child("id_level").GetValue(true).ToString();
-                           username.text = snapshot.Child("username").GetValue(true).ToString();
+        //            Debug.Log("co data hong ne");
+        //            var check =
+        //                   // Retrieve data from the snapshot
+        //                   experience.text = snapshot.Child("experience").GetValue(true).ToString();
+        //            level.text = snapshot.Child("id_level").GetValue(true).ToString();
+        //            username.text = snapshot.Child("username").GetValue(true).ToString();
 
-                           // Now you have the user data, you can use it as needed
-                           Debug.Log("User: " + username.text + ", id_degree: " + level.text + ", experiences: " + experience.text);
-                   }
-               });
+        //            // Now you have the user data, you can use it as needed
+        //            Debug.Log("User: " + username.text + ", id_degree: " + level.text + ", experiences: " + experience.text);
+        //        }
+        //    });
         // }
         // else
         // {
@@ -71,6 +80,7 @@ public class HomePageHandle : MonoBehaviour
 
     private void Awake()
     {
+        LoadUserInfo();
     }
 
     public void openDialogInfoGame()
