@@ -111,24 +111,16 @@ public class Food : MonoBehaviour
 
     private int m_QuestionIndex;
     public float delay = 3;
-    float timer;
-    int count = 0;
-    int countQuestion = 0;
+    int countQuestion = -1;
     public bool clickAnswer = false;
 
     private void Start()
     {
+        score = 0;
         Time.timeScale = 1;
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
         RandomPose();
 
-
-    }
-    private void Update()
-    {
-        scoreTextMesh.text = " " + score;
-
-        m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
 
     }
     private void RandomPose()
@@ -144,23 +136,21 @@ public class Food : MonoBehaviour
     {
         bool iscorrectAnswer = false;
 
-        if (m_QuestionData[m_QuestionIndex].correctAnswer == pSlectedAnswer)
+        if (m_QuestionData[m_QuestionIndex].correctAnswer.Equals(pSlectedAnswer))
         {
+            Debug.Log("CorrectAnswer:  " + m_QuestionData[m_QuestionIndex].correctAnswer + "; correctPress: " + pSlectedAnswer);
             iscorrectAnswer = true;
-
-            score += 40;
+            score += 25;
+            scoreTextMesh.text = " " + score;
             Debug.Log("Cau tra loiw chinh xac");
         }
         else
         {
-            iscorrectAnswer = false;
             Debug.Log("Cau tra loiw sai ");
 
         }
 
-        clickAnswer = true;
-
-        StartCoroutine(ExampleCoroutine(pSlectedAnswer, iscorrectAnswer));
+        StartCoroutine(QuestionCoroutine(pSlectedAnswer, iscorrectAnswer));
         // StartCoroutine(ExampleCoroutine());
     }
     private void NextQuestion()
@@ -168,31 +158,73 @@ public class Food : MonoBehaviour
         Time.timeScale = 1;
         questions.SetActive(false);
     }
-    IEnumerator ExampleCoroutine(string pSlectedAnswer, bool iscorrectAnswer)
+    IEnumerator QuestionCoroutine(string pSlectedAnswer, bool iscorrectAnswer)
     {
         switch (pSlectedAnswer)
         {
             case "a":
                 {
-                    m_ImageAnswerA.GetComponent<UnityEngine.UI.Image>().color = iscorrectAnswer ? Color.green : Color.red;
+                    if (iscorrectAnswer)
+                    {
+                        m_ImageAnswerA.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+                    }
+                    else
+                    {
+                        m_ImageAnswerA.GetComponent<UnityEngine.UI.Image>().color = Color.red;
+
+                    }
                     break;
                 }
 
             case "b":
-                m_ImageAnswerB.GetComponent<UnityEngine.UI.Image>().color = iscorrectAnswer ? Color.green : Color.red;
-                break;
-            case "c":
-                m_ImageAnswerC.GetComponent<UnityEngine.UI.Image>().color = iscorrectAnswer ? Color.green : Color.red;
-                break;
-            case "d":
-                m_ImageAnswerD.GetComponent<UnityEngine.UI.Image>().color = iscorrectAnswer ? Color.green : Color.red;
+                {
+                    if (iscorrectAnswer)
+                    {
+                        m_ImageAnswerB.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+                    }
+                    else
+                    {
+                        m_ImageAnswerB.GetComponent<UnityEngine.UI.Image>().color = Color.red;
 
-                break;
+                    }
+                    break;
+                }
+
+
+            case "c":
+                {
+
+                    if (iscorrectAnswer)
+                    {
+                        m_ImageAnswerC.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+                    }
+                    else
+                    {
+                        m_ImageAnswerC.GetComponent<UnityEngine.UI.Image>().color = Color.red;
+
+                    }
+                    break;
+                }
+
+            case "d":
+                {
+
+                    if (iscorrectAnswer)
+                    {
+                        m_ImageAnswerD.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+                    }
+                    else
+                    {
+                        m_ImageAnswerD.GetComponent<UnityEngine.UI.Image>().color = Color.red;
+
+                    }
+                    break;
+                }
 
 
         }
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(2);
         Time.timeScale = 1;
         questions.SetActive(false);
 
@@ -219,16 +251,18 @@ public class Food : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
+            if (countFood > 10)
+            {
+                GameOver(score);
+            }
             if (index % 2 == 1 && countQuestion < 3)
             {
-                Time.timeScale = 0;
-                questions.SetActive(true);
-                InitQuestion(m_QuestionIndex);
-                countQuestion++;
+                CallQuestion();
             }
             else
             {
-                score += 20;
+                score += 15;
+                scoreTextMesh.text = " " + score;
             }
 
             if (countFood == 2)
@@ -254,20 +288,42 @@ public class Food : MonoBehaviour
                 enemy5.SetActive(true);
             }
 
-            if (count > 10)
+            if (countFood > 8 && countQuestion > 1)
             {
-                GameOver(score);
+                CallQuestion();
             }
-            count++;
-
+            else if (countFood > 7 && countQuestion > 0)
+            {
+                CallQuestion();
+            }
+            else if (countFood > 6 && countQuestion > -1)
+            {
+                CallQuestion();
+            }
             countFood++;
             RandomPose();
             index = UnityEngine.Random.Range(0, 20);
         }
     }
+    public void CallQuestion()
+    {
+        Time.timeScale = 0;
+        m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
+
+        InitQuestion(m_QuestionIndex);
+        questions.SetActive(true);
+
+        countQuestion++;
+    }
     public void BtnAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("BtnAgain");
+        // Get the current scene index
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        // Reload the current scene
+        SceneManager.LoadScene(currentSceneIndex);
+        // SceneManager.LoadScene("Game1");
     }
     public void NextLevel()
     {
@@ -285,16 +341,16 @@ public class Food : MonoBehaviour
         overPanelGameOver.SetActive(true);
         Debug.Log("Game Over");
 
-        if (score >= 300)
+        if (score == 180)
         {
             countStar = 3;
 
         }
-        else if (score >= 200)
+        else if (score >= 155)
         {
             countStar = 2;
         }
-        else if (score >= 50)
+        else if (score >= 130)
         {
             countStar = 1;
         }
@@ -302,8 +358,11 @@ public class Food : MonoBehaviour
         {
             countStar = 0;
         }
+        if (countStar > 0)
+        {
+            LevelSystemManager.Instance.LevelComplete(countStar, score);
+        }
 
-        LevelSystemManager.Instance.LevelComplete(countStar, score);
 
         txtScore.text = score.ToString();
         SetStar(countStar);
@@ -313,10 +372,7 @@ public class Food : MonoBehaviour
     {
         for (int i = 0; i < starsArray.Length; i++)             //loop through entire star array
         {
-            /// <summary>
-            /// if i is less than starAchieved
-            /// Eg: if 2 stars are achieved we set the start at index 0 and 1 color to unlockColor, as array start from 0 element
-            /// </summary>
+
             if (i < starAchieved)
             {
                 starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.white;              //set its color to unlockColor
