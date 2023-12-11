@@ -35,17 +35,24 @@ public class LevelSystemManager : MonoBehaviour
            {
                DataSnapshot snapshot = task.Result;
                Debug.Log(snapshot.ChildrenCount);
+
+               string str = snapshot.GetRawJsonValue();
+
+               Debug.Log("str = " + str);
+
+               System.IO.File.WriteAllText(Application.persistentDataPath + "/User.json", str);
                if (snapshot.ChildrenCount > 0)
                {
+
                    foreach (DataSnapshot snapshotChild in snapshot.Children)
                    {
+
                        try
                        {
                            //    User user = JsonUtility.FromJson<User>(snapshotChild.GetRawJsonValue());
                            //    string t = JsonUtility.ToJson(user);
                            //    Debug.Log(snapshotChild.GetRawJsonValue().ToString());
-                           string str = snapshotChild.GetRawJsonValue();
-                           Debug.Log("str = " + str);
+
 
 
 
@@ -127,6 +134,10 @@ public class LevelSystemManager : MonoBehaviour
     private void OnEnable()
     {
         SaveLoadData.Instance.Initialize();
+    }
+    public int getCurrentLevel()
+    {
+        return currentLevel;
     }
 
     public void LevelComplete(int starAchieved, float score)                             //method called when player win the level
