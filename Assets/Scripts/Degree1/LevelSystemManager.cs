@@ -20,93 +20,6 @@ public class LevelSystemManager : MonoBehaviour
     public int sceneBuildIndex;                                           //keep track of current level player is playing
     public int CurrentLevel { get => currentLevel; set => currentLevel = value; }   //getter and setter for currentLevel
 
-
-    private void Start()
-    {
-
-        FirebaseDatabase.DefaultInstance.GetReference("Users").GetValueAsync().ContinueWithOnMainThread((task) =>
-       {
-
-           if (task.IsFaulted)
-           {
-               Debug.Log("error read desk data");
-           }
-           else if (task.IsCompleted)
-           {
-               DataSnapshot snapshot = task.Result;
-               Debug.Log(snapshot.ChildrenCount);
-
-               string str = snapshot.GetRawJsonValue();
-
-               Debug.Log("str = " + str);
-
-               System.IO.File.WriteAllText(Application.persistentDataPath + "/User.json", str);
-               if (snapshot.ChildrenCount > 0)
-               {
-
-                   foreach (DataSnapshot snapshotChild in snapshot.Children)
-                   {
-
-                       try
-                       {
-                           //    User user = JsonUtility.FromJson<User>(snapshotChild.GetRawJsonValue());
-                           //    string t = JsonUtility.ToJson(user);
-                           //    Debug.Log(snapshotChild.GetRawJsonValue().ToString());
-
-
-
-
-                       }
-                       catch (System.Exception ex)
-                       {
-                           Debug.Log(snapshotChild.Key);
-                           Debug.Log(snapshotChild.Value);
-                           Debug.Log(ex.Data);
-                           Debug.Log(ex.Message);
-                       }
-                   }
-               }
-           }
-       }
-        );
-
-        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
-        var json = JsonUtility.ToJson(new User());
-        reference.Child("test2").Child("test2").SetRawJsonValueAsync(json);
-        // User user = new User("",",","","","",100);
-        // string json = JsonUtility.ToJson(user);
-        // DatabaseReference dbRef = FirebaseDatabase.DefaultInstance.RootReference;
-        // dbRef.Child("Users").Child("SystemInfo.deviceUniqueIdentifier").Push().SetRawJsonValueAsync(json);
-
-        FirebaseDatabase.DefaultInstance
-  .GetReference("ScoreDegree").Child(SystemInfo.deviceUniqueIdentifier)
-  .GetValueAsync().ContinueWithOnMainThread(task =>
-  {
-      if (task.IsFaulted)
-      {
-          Debug.Log("No read data from database");
-      }
-      else if (task.IsCompleted)
-      {
-          DataSnapshot snapshot = task.Result;
-
-
-          foreach (DataSnapshot item in snapshot.Children)
-          {
-              int score = item.Value.ConvertTo<int>();
-              if (score == -1)
-              {
-
-              }
-              // Debug.Log("Data snapshot: " + item.Value);
-
-          }
-
-          // Do something with snapshot...
-      }
-  });
-
-    }
     private void Awake()
     {
         if (instance == null)                                               //if instance is null
@@ -126,11 +39,6 @@ public class LevelSystemManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
-    private void Update()
-    {
-        SaveLoadData.Instance.LoadData();
-    }
-
     private void OnEnable()
     {
         SaveLoadData.Instance.Initialize();
@@ -140,22 +48,26 @@ public class LevelSystemManager : MonoBehaviour
         return currentLevel;
     }
 
-    public void LevelComplete(int starAchieved, float score)                             //method called when player win the level
+    public void LevelComplete(int starAchieved)                             //method called when player win the level
     {
-        levelData.levelItemsArray[currentLevel].starAchieved = starAchieved;
-        if (score > levelData.levelItemsArray[currentLevel].score)
+        if (starAchieved > levelData.levelItemsArray[currentLevel].starAchieved)
         {
-            levelData.levelItemsArray[currentLevel].score = score;
+            // xuwr lys update diem cho user
+            int star = starAchieved - levelData.levelItemsArray[currentLevel].starAchieved;
+            APIUser.Instance.UpdateExperiences(star * 60);
+            levelData.levelItemsArray[currentLevel].starAchieved = starAchieved;
         }
 
         //save the stars achieved by the player in level
-        if (levelData.lastUnlockedLevel <= (currentLevel + 1))
+        if (levelData.lastUnlockedLevel <= (currentLevel + 1) && starAchieved > 0)
         {
             levelData.lastUnlockedLevel = currentLevel + 1;           //change the lastUnlockedLevel to next level                                                    //and make next level unlock true
             levelData.levelItemsArray[levelData.lastUnlockedLevel].unlocked = true;
 
         }
         SaveLoadData.Instance.SaveData();
+
+
     }
 
 }

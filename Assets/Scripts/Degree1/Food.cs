@@ -64,61 +64,24 @@ public class Food : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerB;
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerC;
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerD;
-    [SerializeField] private GameObject overPanelGameOver;
-    [SerializeField] private UnityEngine.UI.Image[] starsArray;
-    [SerializeField] private TextMeshProUGUI txtScore;
-
-    [SerializeField]
-    private QuestionData[] m_QuestionData = {
-        new QuestionData(
-            questions: "Làm thế nào bạn có thể xác định một trang web có dấu hiệu của trang web lừa đảo?",
-            answerA: " Trang web chứa nhiều thông tin chi tiết và có mục giới thiệu rõ ràng.",
-            answerB: "Trang web không có địa chỉ liên hệ hoặc thông tin về công ty.",
-            answerC: "Trang web có địa chỉ bảo mật 'https' và biểu tượng ổ khóa.",
-            answerD: "Trang web yêu cầu người dùng nhập thông tin cá nhân.",
-            correctAnswer: "b"),
-        new QuestionData(
-            questions: "Một trang web an toàn thường sử dụng gì để bảo vệ thông tin của người dùng?",
-            answerA: " Địa chỉ web không có mục giới thiệu.",
-            answerB: "Không có biểu tượng ổ khóa hoặc giao thức 'https'.",
-            answerC: "Địa chỉ web chứa nhiều thông tin cá nhân của người dùng.",
-            answerD: "Sử dụng chứng chỉ SSL và giao thức 'https'.",
-            correctAnswer: "d"),
-        new QuestionData(
-            questions: "Thông báo nào có thể xuất phát từ các trang web lừa đảo?",
-            answerA: "Thông báo về sự cố giao dịch và yêu cầu nhập thông tin cá nhân.",
-            answerB: "Các thông báo giúp người dùng cảm thấy an toàn và hạnh phúc.",
-            answerC: "Thông báo trúng thưởng và quà tặng mà không yêu cầu gì.",
-            answerD: "Cả A và C.",
-            correctAnswer: "d"),
-        new QuestionData(
-            questions: "Khi một trang web yêu cầu người dùng cung cấp nhiều thông tin cá nhân như địa chỉ nhà, số điện thoại, số CMND/CCCD, hoặc số tài khoản ngân hàng, điều này có thể đề xuất gì?",
-            answerA: "Trang web là một nguồn tin cậy và an toàn.",
-            answerB: " Trang web không liên quan đến việc nhận diện trang web lừa đảo.",
-            answerC: "Trang web có dấu hiệu của trang web lừa đảo và có thể muốn đánh cắp thông tin cá nhân.",
-            answerD: "Trang web đang cung cấp dịch vụ tài chính trực tuyến.",
-            correctAnswer: "c"),
-        new QuestionData(
-            questions: " Dấu hiệu nào sau đây có thể xuất hiện trên trang web lừa đảo liên quan đến tên miền?",
-            answerA: "Tên miền dài và khó nhớ, chứa các ký tự lạ hoặc sai chính tả.",
-            answerB: "  Sử dụng dịch vụ rút gọn tên miền",
-            answerC: "Tên miền sử dụng chứng chỉ SSL.",
-            answerD: "Tên miền phổ biến như .com, .vn, .edu",
-            correctAnswer: "a"),
 
 
-     };
-
+    private Question[] m_QuestionData;
     private int m_QuestionIndex;
     public float delay = 3;
-    int countQuestion = -1;
+    int countQuestion = 0;
     public bool clickAnswer = false;
-
+    bool checkAppearQuestion = true;
+    public int indexLevel;
+    private int[] arrayCheckAppearQuestion;
     private void Start()
     {
-        score = 0;
         Time.timeScale = 1;
+        score = 0;
+        arrayCheckAppearQuestion = new int[GetQuestion.Instance.getTopic().listQuestions.Length];
+        m_QuestionData = GetQuestion.Instance.getTopic().listQuestions;
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
+
         RandomPose();
 
 
@@ -241,7 +204,7 @@ public class Food : MonoBehaviour
         m_ImageAnswerC.GetComponent<UnityEngine.UI.Image>().color = Color.white;
         m_ImageAnswerD.GetComponent<UnityEngine.UI.Image>().color = Color.white;
 
-        m_TxtQuestion.text = m_QuestionData[index].questions;
+        m_TxtQuestion.text = m_QuestionData[index].question;
         m_TxtAnswerA.text = "A: " + m_QuestionData[index].answerA;
         m_TxtAnswerB.text = "B: " + m_QuestionData[index].answerB;
         m_TxtAnswerC.text = "C: " + m_QuestionData[index].answerC;
@@ -251,11 +214,33 @@ public class Food : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            if (countFood > 10)
+            if (countFood > 9)
             {
-                GameOver(score);
+                GameOver.Instance.gameOver(score);
             }
-            if (index % 2 == 1 && countQuestion < 3)
+
+            if (countFood > 6 && countQuestion < 0)
+            {
+                checkAppearQuestion = false;
+                Debug.Log("check 6: countQuestion: " + countQuestion);
+
+                CallQuestion();
+            }
+
+            else if (countFood > 7 && countQuestion < 1)
+            {
+                checkAppearQuestion = false;
+                Debug.Log("check 7 countQuestion: " + countQuestion);
+
+                CallQuestion();
+            }
+            else if (countFood > 8 && countQuestion < 2)
+            {
+                checkAppearQuestion = false;
+                Debug.Log("check 8  countQuestion: " + countQuestion);
+                CallQuestion();
+            }
+            else if (index % 2 == 1 && countQuestion < 3 && checkAppearQuestion == true)
             {
                 CallQuestion();
             }
@@ -288,18 +273,8 @@ public class Food : MonoBehaviour
                 enemy5.SetActive(true);
             }
 
-            if (countFood > 8 && countQuestion > 1)
-            {
-                CallQuestion();
-            }
-            else if (countFood > 7 && countQuestion > 0)
-            {
-                CallQuestion();
-            }
-            else if (countFood > 6 && countQuestion > -1)
-            {
-                CallQuestion();
-            }
+
+            Debug.Log("Total food: " + countFood + " countQuestion: " + countQuestion);
             countFood++;
             RandomPose();
             index = UnityEngine.Random.Range(0, 20);
@@ -308,21 +283,27 @@ public class Food : MonoBehaviour
     public void CallQuestion()
     {
         Time.timeScale = 0;
-        m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
-
+        countQuestion++;
+        while (arrayCheckAppearQuestion[m_QuestionIndex] == 1)
+        {
+            m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
+        }
+        arrayCheckAppearQuestion[m_QuestionIndex] = 1;
         InitQuestion(m_QuestionIndex);
         questions.SetActive(true);
 
-        countQuestion++;
+
     }
     public void BtnAgain()
     {
-        Debug.Log("BtnAgain");
-        // Get the current scene index
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+        Debug.Log("BtnAgain");
+        LevelSystemManager.Instance.CurrentLevel = LevelSystemManager.Instance.getCurrentLevel() + 1;
+        int level = LevelSystemManager.Instance.getCurrentLevel();
+        //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene("Level_" + level);
+        //load the level
         // Reload the current scene
-        SceneManager.LoadScene(currentSceneIndex);
         // SceneManager.LoadScene("Game1");
     }
     public void NextLevel()
@@ -332,55 +313,22 @@ public class Food : MonoBehaviour
     }
     public void MenuLevel()
     {
+        Time.timeScale = 0;
+        SaveLoadData.Instance.LoadData();
         //set the CurrentLevel, we subtract 1 as level data array start from 0
         SceneManager.LoadScene("MenuLevel");
     }
-    public void GameOver(float score)
+    private void Awake()
     {
-        Time.timeScale = 0;
-        overPanelGameOver.SetActive(true);
-        Debug.Log("Game Over");
-
-        if (score == 180)
+        if (instance == null)                                               //if instance is null
         {
-            countStar = 3;
-
-        }
-        else if (score >= 155)
-        {
-            countStar = 2;
-        }
-        else if (score >= 130)
-        {
-            countStar = 1;
+            instance = this;                                                //set this as instance
+            // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
         }
         else
         {
-            countStar = 0;
-        }
-        if (countStar > 0)
-        {
-            LevelSystemManager.Instance.LevelComplete(countStar, score);
-        }
-
-
-        txtScore.text = score.ToString();
-        SetStar(countStar);
-
-    }
-    private void SetStar(int starAchieved)
-    {
-        for (int i = 0; i < starsArray.Length; i++)             //loop through entire star array
-        {
-
-            if (i < starAchieved)
-            {
-                starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.white;              //set its color to unlockColor
-            }
-            else
-            {
-                starsArray[i].GetComponent<UnityEngine.UI.Image>().color = Color.black;                //else set its color to lockColor
-            }
+            Destroy(gameObject);                                            //else destroy it
         }
     }
+
 }

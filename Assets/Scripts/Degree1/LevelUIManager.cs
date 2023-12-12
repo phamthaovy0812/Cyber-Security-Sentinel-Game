@@ -14,6 +14,7 @@ public class LevelUIManager : MonoBehaviour
 
     private void Start()
     {
+
         InitializeUI();
     }
 
@@ -38,6 +39,7 @@ public class LevelUIManager : MonoBehaviour
             LevelBtnScript levelButton = Instantiate(levelBtnPrefab, levelBtnGridHolder);    //create button for each element in array
                                                                                              //and set the button
             levelButton.SetLevelButton(levelItemsArray[i], i);
+
         }
     }
 }

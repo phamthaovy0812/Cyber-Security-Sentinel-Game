@@ -15,6 +15,7 @@ public class APIUser : MonoBehaviour
 
 	private User _user;
 	public DataSnapshot snapshot;
+	private LevelData levelData;
 
 	private void Awake()
 	{
@@ -29,6 +30,12 @@ public class APIUser : MonoBehaviour
 		}
 	}
 	public User GetUser() { return _user; }
+
+	public LevelData GetLevelData()
+	{
+		GetDataDegreeOfUser();
+		return levelData;
+	}
 	public void getConnectedUserByUId(string email)
 	{
 
@@ -80,24 +87,43 @@ public class APIUser : MonoBehaviour
 			}
 		});
 
-
-		// databaseReference.Child("Users").GetValueAsync().ContinueWithOnMainThread((task) =>
-		// {
-		// 	if (task.IsFaulted)
-		// 	{
-		// 		Debug.Log("error read desk data");
-
-		// 	}
-		// 	else if (task.IsCompleted)
-		// 	{
-		// 		snapshot = task.Result;
-		// 		Debug.Log("Count user: " + snapshot.ChildrenCount);
-		// 	}
-
-		// });
-
-
 	}
 	//instance getter
+	public void UpdateExperiences(int experience)
+	{
+		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
+		DatabaseReference reference = database.GetReference("Users");
+		reference.Child(_user.id_user).Child("experiences").SetValueAsync(_user.experience + experience);
+
+		Debug.Log("Updated successfully");
+	}
+	public async void GetDataDegreeOfUser()
+	{
+		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+		await FirebaseDatabase.DefaultInstance
+ 		 .GetReference("ScoreDegree").Child(APIUser.Instance.GetUser().id_user)
+		  .GetValueAsync().ContinueWithOnMainThread(task =>
+  		{
+			  if (task.IsFaulted)
+			  {
+				  Debug.Log("No read data from database");
+			  }
+			  else if (task.IsCompleted)
+			  {
+				  DataSnapshot snapshot = task.Result;
+				  if (snapshot.ChildrenCount > 0)
+				  {
+					  foreach (DataSnapshot dataSnapshot in snapshot.Children)
+					  {
+						  levelData = JsonUtility.FromJson<LevelData>(dataSnapshot.GetRawJsonValue());
+
+
+					  }
+				  }
+
+				  // Do something with snapshot...
+			  }
+		  });
+	}
 
 }

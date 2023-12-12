@@ -5,18 +5,19 @@ using UnityEngine;
 
 public class EnemyAi : MonoBehaviour
 {
-//     public Transform target;
-//     public float moveSpeed = 2f;
-//     public float nextWayPointDistance = 2f;
-//     public float repeatTimeUpdatePath = 0.5f;
-//     public SpriteRenderer characterSR;
-//     public Animator animator;
-//     public int minDamage;
-//     public int maxDamage;
+    //     public Transform target;
+    //     public float moveSpeed = 2f;
+    //     public float nextWayPointDistance = 2f;
+    //     public float repeatTimeUpdatePath = 0.5f;
+    //     public SpriteRenderer characterSR;
+    //     public Animator animator;
+    //     public int minDamage;
+    //     public int maxDamage;
 
     Path path;
     Seeker seeker;
     Rigidbody2D rb;
+
     // Health PlayerHealth;
 
     Coroutine moveCoroutine;
@@ -24,15 +25,15 @@ public class EnemyAi : MonoBehaviour
     // // Part 10
     // public float freezeDurationTime;
     // float freezeDuration;
-    // private void Start()
-    // {
-    //     seeker = GetComponent<Seeker>();
-    //     rb = GetComponent<Rigidbody2D>();
-    //     freezeDuration = 0;
-    //     target = FindObjectOfType<Player>().transform;
+    private void Start()
+    {
+        // seeker = GetComponent<Seeker>();
+        rb = GetComponent<Rigidbody2D>();
+        // freezeDuration = 0;
+        // target = FindObjectOfType<Player>().transform;
 
-    //     InvokeRepeating("CalculatePath", 0f, repeatTimeUpdatePath);
-    // }
+        // InvokeRepeating("CalculatePath", 0f, repeatTimeUpdatePath);
+    }
 
     // void CalculatePath()
     // {
@@ -92,13 +93,12 @@ public class EnemyAi : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("collision" );
-            Debug.Log("collision" + Food.Instance.score.ToString());
+            Debug.Log("collision");
 
-            Food.Instance.GameOver(Food.Instance.score);
-            
+            GameOver.Instance.gameOver(Food.Instance.score);
+
 
         }
     }
