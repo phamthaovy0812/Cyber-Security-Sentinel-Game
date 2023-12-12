@@ -15,6 +15,7 @@ public class LevelBtnScript : MonoBehaviour
 
     private void Start()
     {
+        SaveLoadData.Instance.LoadData();
         btn.onClick.AddListener(() => OnClick());               //add listener to the button
 
     }
@@ -29,7 +30,7 @@ public class LevelBtnScript : MonoBehaviour
     {
         if (value.unlocked)                                     //if unlocked is true
         {
-            
+
             levelIndex = index + 1;                             //set levelIndex, Note: We add 1 because array start from 0 and level index start from 1 
             btn.interactable = true;                            //make button interactable
                                                                 //make button interactable
@@ -70,11 +71,12 @@ public class LevelBtnScript : MonoBehaviour
             }
         }
     }
-    
+
     void OnClick()                                              //method called by button
     {
-        LevelSystemManager.Instance.CurrentLevel = levelIndex - 1;  //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene("Level_" + levelIndex);           //load the level
+        LevelSystemManager.Instance.CurrentLevel = levelIndex - 1;
+        int level = LevelSystemManager.Instance.CurrentLevel + 1;  //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene("Level_" + level);           //load the level
     }
 
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Firebase.Database;
 using UnityEngine;
 
 
@@ -15,7 +16,6 @@ public class LevelItem                  //level item
 {
     public bool unlocked;
     public int starAchieved;
-    public float score;
 }
 public class SaveLoadData : MonoBehaviour
 {
@@ -28,6 +28,7 @@ public class SaveLoadData : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -39,6 +40,7 @@ public class SaveLoadData : MonoBehaviour
     //Method to initialize the SaveLoad Script
     public void Initialize()
     {
+
         //ClearData();
         if (PlayerPrefs.GetInt("GameStartFirstTime") == 1)  //if PlayerPrefs of "GameStartFirstTime" value is 1, means we are playing the game again
         {
@@ -60,14 +62,17 @@ public class SaveLoadData : MonoBehaviour
     /// <summary>
     /// Method used to save the data
     /// </summary>
-    public void SaveData()
+    public async void SaveData()
     {
         //convert the data to string
         string levelDataString = JsonUtility.ToJson(LevelSystemManager.Instance.LevelData);
+
         try
         {
             //save the string as json 
-            System.IO.File.WriteAllText(Application.persistentDataPath + "/LevelData.json", levelDataString);
+            DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+            // string json = JsonUtility.ToJson(degree);
+            await reference.Child("ScoreDegree").Child(APIUser.Instance.GetUser().id_user).Child("1").SetRawJsonValueAsync(levelDataString);
             Debug.Log("Data Saved");
 
         }
@@ -84,11 +89,12 @@ public class SaveLoadData : MonoBehaviour
     {
         try
         {
-            //get the text data from json and stro it in string
-            string levelDataString = System.IO.File.ReadAllText(Application.persistentDataPath + "/LevelData.json");
-            LevelData levelData = JsonUtility.FromJson<LevelData>(levelDataString); //create LevelData from json
+
+            LevelData levelData = APIUser.Instance.GetLevelData();
+            //create LevelData from json
             if (levelData != null)
             {
+                Debug.Log("LevelData : " + levelData.lastUnlockedLevel);
                 //set the LevelData of LevelSystemManager
                 LevelSystemManager.Instance.LevelData.levelItemsArray = levelData.levelItemsArray;
                 LevelSystemManager.Instance.LevelData.lastUnlockedLevel = levelData.lastUnlockedLevel;
@@ -114,7 +120,6 @@ public class SaveLoadData : MonoBehaviour
         SaveData();
         PlayerPrefs.SetInt("GameStartFirstTime", 1);
     }
-
 
 }
 

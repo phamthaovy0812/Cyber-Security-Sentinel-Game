@@ -332,6 +332,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32061237}
   m_CullTransparentMesh: 1
+--- !u!1 &69553307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69553309}
+  - component: {fileID: 69553310}
+  m_Layer: 0
+  m_Name: loadData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69553309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69553307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 813.0686, y: 433.9249, z: -5.923228}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &69553310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69553307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ac436538d1c8b40a8ecfb0010bb833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &75861107
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,8 +543,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: -2.6684, y: -85.3873}
+  m_SizeDelta: {x: 853.6204, y: 420.2026}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345081754
 MonoBehaviour:
@@ -522,10 +566,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "H\u01B0\u1EDBng d\u1EABn tr\xF2 ch\u01A1i"
+  m_text: "Ng\u01B0\u1EDDi ch\u01A1i s\u1EBD s\u1EED d\u1EE5ng b\xE0n ph\xEDm \u0111\u1EC3
+    di chuy\u1EC3n nh\xE2n v\u1EADt \u0111\u1EBFn thu th\u1EADp c\xE1c t\u1EADp t\xE0i
+    li\u1EC7u \u0111\u01B0\u1EE3c xu\u1EA5t hi\u1EC7n ng\u1EABu nhi\xEAn. T\u1ED5ng
+    s\u1ED1 l\u1EA7n t\xE0i li\u1EC7u xu\u1EA5t hi\u1EC7n l\xE0 10. M\u1ED7i t\xE0i
+    li\u1EC7u thu th\u1EADp \u0111\u01B0\u1EE3c t\u01B0\u01A1ng \u1EE9ng v\u1EDBi
+    15 \u0111i\u1EC3m. Trong s\u1ED1 t\u1EC7p t\xE0i li\u1EC7u xu\u1EA5t hi\u1EC7n
+    s\u1EBD c\xF3 3 t\xE0i li\u1EC7u c\xF3  k\xE8m c\xE2u h\u1ECFi tr\u1EAFc nghi\u1EC7m
+    v\xE0 s\u1EBD \u0111\u01B0\u1EE3c random xu\u1EA5t hi\u1EC7n ng\u1EABu nhi\xEAn
+    v\xE0 x\u1EED l\xFD \u0111\u1EA3m b\u1EA3o r\u1EB1ng lu\xF4n lu\xF4n c\xF3 3
+    c\xE2u h\u1ECFi \u0111\u01B0\u1EE3c xu\u1EA5t hi\u1EC7n., n\u1EBFu ng\u01B0\u1EDDi
+    ch\u01A1i tr\u1EA3 l\u1EDDi \u0111\xFAng th\xEC \u0111\u01B0\u1EE3c 25 \u0111i\u1EC3m,
+    tr\u1EA3 l\u1EDDi sai kh\xF4ng c\xF3 \u0111i\u1EC3m. \r\nTrong qu\xE1 tr\xECnh
+    ch\u01A1i s\u1EBD c\xF3 nh\u1EEFng con virus xu\u1EA5t hi\u1EC7n b\u1EA5t ng\u1EDD
+    v\xE0 truy \u0111u\u1ED5i theo ng\u01B0\u1EDDi ch\u01A1i. Ng\u01B0\u1EDDi ch\u01A1i
+    s\u1EBD ph\u1EA3i di chuy\u1EC3n nh\xE2n v\u1EADt \u0111\u1EC3 thu th\u1EADp
+    t\xE0i li\u1EC7u v\xE0 ph\u1EA3i tr\xE1nh \u0111\u1EE5ng tr\xFAng virut \u0111\xF3.
+    N\u1EBFu nh\xE2n v\u1EADt ch\u1EA1m v\xE0o virut th\xEC gameOver.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -561,7 +621,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1571,10 +1631,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "THU TH\u1EACP HOA QU\u1EA2"
+  m_text: "THU TH\u1EACP T\xC0I LI\u1EC6U"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2147,3 +2207,4 @@ SceneRoots:
   - {fileID: 1749358471}
   - {fileID: 1424131180}
   - {fileID: 824229455}
+  - {fileID: 69553309}
