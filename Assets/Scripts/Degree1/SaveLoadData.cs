@@ -29,7 +29,7 @@ public class SaveLoadData : MonoBehaviour
         {
             instance = this;
 
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -41,7 +41,7 @@ public class SaveLoadData : MonoBehaviour
     public void Initialize()
     {
 
-        //ClearData();
+        // ClearData();
         if (PlayerPrefs.GetInt("GameStartFirstTime") == 1)  //if PlayerPrefs of "GameStartFirstTime" value is 1, means we are playing the game again
         {
             LoadData();                                     //so we load the data

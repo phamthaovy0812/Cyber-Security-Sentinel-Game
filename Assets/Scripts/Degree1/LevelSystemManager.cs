@@ -66,7 +66,7 @@ public class LevelSystemManager : MonoBehaviour
 
         }
         SaveLoadData.Instance.SaveData();
-
+        SaveLoadData.Instance.LoadData();
 
     }
 

@@ -74,12 +74,16 @@ public class Food : MonoBehaviour
     bool checkAppearQuestion = true;
     public int indexLevel;
     private int[] arrayCheckAppearQuestion;
+    // Question[] m_QuestionData;
+    int indexCurrentLevel;
     private void Start()
     {
         Time.timeScale = 1;
         score = 0;
-        arrayCheckAppearQuestion = new int[GetQuestion.Instance.getTopic().listQuestions.Length];
-        m_QuestionData = GetQuestion.Instance.getTopic().listQuestions;
+        indexCurrentLevel = LevelSystemManager.Instance.getCurrentLevel();
+        arrayCheckAppearQuestion = new int[GetQuestion.Instance.getListQuestionTopicOfDegree1().Count];
+        Debug.Log("Count of questions: " + GetQuestion.Instance.getListQuestionTopicOfDegree1().Count);
+        m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
 
         RandomPose();
@@ -214,10 +218,7 @@ public class Food : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            if (countFood > 9)
-            {
-                GameOver.Instance.gameOver(score);
-            }
+
 
             if (countFood > 6 && countQuestion < 0)
             {
@@ -273,11 +274,17 @@ public class Food : MonoBehaviour
                 enemy5.SetActive(true);
             }
 
+            if (countFood > 9)
+            {
+                GameOver.Instance.gameOver(score);
+            }
+            else
+            {
+                countFood++;
+                RandomPose();
+                index = UnityEngine.Random.Range(0, 20);
+            }
 
-            Debug.Log("Total food: " + countFood + " countQuestion: " + countQuestion);
-            countFood++;
-            RandomPose();
-            index = UnityEngine.Random.Range(0, 20);
         }
     }
     public void CallQuestion()
@@ -301,7 +308,7 @@ public class Food : MonoBehaviour
         LevelSystemManager.Instance.CurrentLevel = LevelSystemManager.Instance.getCurrentLevel() + 1;
         int level = LevelSystemManager.Instance.getCurrentLevel();
         //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene("Level_" + level);
+        SceneManager.LoadScene("Degree1Game1Level_" + level);
         //load the level
         // Reload the current scene
         // SceneManager.LoadScene("Game1");
@@ -309,14 +316,14 @@ public class Food : MonoBehaviour
     public void NextLevel()
     {
         //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene("Level_" + LevelSystemManager.Instance.getCurrentLevel() + 2);
+        SceneManager.LoadScene("Degree1Game1Level_" + LevelSystemManager.Instance.getCurrentLevel() + 2);
     }
     public void MenuLevel()
     {
         Time.timeScale = 0;
         SaveLoadData.Instance.LoadData();
         //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene("MenuLevel");
+        SceneManager.LoadScene("Degree1Game1MenuLevel");
     }
     private void Awake()
     {

@@ -9,29 +9,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Degree1/Gane1.unity
+    path: Assets/Scenes/Degree1/Degree1Gane1.unity
     guid: 19a85af7622447046a3a2bc88c25bcdf
   - enabled: 1
-    path: Assets/Scenes/Degree1/LevelGame1/MenuLevel.unity
+    path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1MenuLevel.unity
     guid: 772404883f84a2345a1823d6dc8a35f7
   - enabled: 1
-    path: Assets/Scenes/Degree1/LevelGame1/Level_1.unity
+    path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_1.unity
     guid: 17fd57b89d3251e44b4a92d83df1e8a9
   - enabled: 1
-    path: Assets/Scenes/Degree1/LevelGame1/Level_2.unity
-    guid: b731d5ddcea64a043ab70a57cb346195
+    path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_2.unity
+    guid: 357f9e77f3e184f47bb6e24b6838d90e
   - enabled: 1
-    path: Assets/Scenes/Degree1/LevelGame1/Level_3.unity
-    guid: 477a3b0f6b1b2994e89169ea54b0cd90
+    path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_3.unity
+    guid: 139336f71af55054fa619e9f2d371563
   - enabled: 1
-    path: Assets/Scenes/Degree1/LevelGame1/Level_4.unity
-    guid: c0d3fed8588c00a4cbe3d3b195174edc
+    path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_4.unity
+    guid: eb35fbd6c9e1de34381307bc9d15579d
   - enabled: 1
-    path: Assets/Scenes/Degree1/LevelGame1/Level_5.unity
-    guid: 89fd191ce05453a40a1d57eab0a79b7a
+    path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_5.unity
+    guid: bf74f33a8dd36c5448f02ece32dd5d33
   - enabled: 1
-    path: Assets/Scenes/Degree1/LevelGame1/Level_6.unity
-    guid: 9dc2d0fe43434dc4da5072258025abbe
+    path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_6.unity
+    guid: 57abdb9f7de48af4fa311dd9750da13a
   - enabled: 1
     path: Assets/Scenes/HomeText.unity
     guid: e70c81c01ab155a4aa61bd4d83c570d8

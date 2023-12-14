@@ -22,7 +22,7 @@ public class APIUser : MonoBehaviour
 		if (instance == null)                                               //if instance is null
 		{
 			instance = this;                                                //set this as instance
-			DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
+																			// DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
 		}
 		else
 		{
@@ -93,7 +93,8 @@ public class APIUser : MonoBehaviour
 	{
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
 		DatabaseReference reference = database.GetReference("Users");
-		reference.Child(_user.id_user).Child("experiences").SetValueAsync(_user.experience + experience);
+		_user.experience += experience;
+		reference.Child(_user.id_user).Child("experiences").SetValueAsync(_user.experience);
 
 		Debug.Log("Updated successfully");
 	}
