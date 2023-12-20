@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Firebase.Database;
 using Firebase.Extensions;
 using UnityEngine;
@@ -8,13 +9,18 @@ public class GetQuestion : MonoBehaviour
 {
 	[SerializeField] private static GetQuestion instance;
 	public static GetQuestion Instance { get => instance; }
-	List<Topic> listTopics = new List<Topic>();
+	private List<Topic> listTopics = new List<Topic>();
+	private List<Question> listQuestion = new List<Question>();
 	private Topic topic1;
 
 
 	public Topic getTopic()
 	{
 		return this.topic1;
+	}
+	public List<Question> getListQuestionTopicOfDegree1()
+	{
+		return this.listQuestion;
 	}
 	public async void GetQuestionTopic1()
 	{
@@ -32,20 +38,22 @@ public class GetQuestion : MonoBehaviour
 			  {
 				  DataSnapshot snapshot = task.Result;
 				  string data = JsonUtility.ToJson(snapshot);
-				  Debug.Log("count data snapshot: " + snapshot.ChildrenCount);
-				  Debug.Log("data snapshot: " + data);
 				  if (snapshot.ChildrenCount > 0)
 				  {
 					  foreach (DataSnapshot dataSnapshot in snapshot.Children)
 					  {
 						  Topic topic = JsonUtility.FromJson<Topic>(dataSnapshot.GetRawJsonValue());
-						  listTopics.Add(topic);
+						  for (int i = 0; i < topic.listQuestions.Length; i++)
+						  {
+							  listQuestion.Add(topic.listQuestions[i]);
+
+						  }
 
 					  }
-					  Debug.Log("count listTopics: " + listTopics.Count);
-					  topic1.id_topic = listTopics[0].id_topic;
-					  topic1.name_topic = listTopics[0].name_topic;
-					  topic1.listQuestions = listTopics[0].listQuestions;
+					  Debug.Log("count listTopics: " + listQuestion.Count);
+					  //   topic1.id_topic = listTopics[0].id_topic;
+					  //   topic1.name_topic = listTopics[0].name_topic;
+					  //   topic1.listQuestions = listTopics[0].listQuestions;
 
 
 					  //   Debug.Log("listTopics: " + JsonUtility.ToJson(listTopics..listQuestions));

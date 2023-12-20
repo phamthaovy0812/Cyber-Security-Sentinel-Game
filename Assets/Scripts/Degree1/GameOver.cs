@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
         overPanelGameOver.SetActive(true);
         Debug.Log("Game Over");
 
-        if (score == 180)
+        if (score >= 180)
         {
             countStar = 3;
 

@@ -24,6 +24,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OnClickExit()
     {
+
         SceneManager.LoadScene("HomeText");
     }
     public void OnClickBackOption()

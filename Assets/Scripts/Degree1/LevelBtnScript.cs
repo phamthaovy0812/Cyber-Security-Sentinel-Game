@@ -76,7 +76,7 @@ public class LevelBtnScript : MonoBehaviour
     {
         LevelSystemManager.Instance.CurrentLevel = levelIndex - 1;
         int level = LevelSystemManager.Instance.CurrentLevel + 1;  //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene("Level_" + level);           //load the level
+        SceneManager.LoadScene("Degree1Game1Level_" + level);           //load the level
     }
 
 }

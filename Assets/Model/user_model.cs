@@ -43,7 +43,7 @@ public class Question
     public string answerB;
     public string answerC;
     public string answerD;
-    public string correctAnswer;
+    public string correctAnswer; // a, b, c, d
 
     public Question()
     {
