@@ -87,8 +87,6 @@ public class Food : MonoBehaviour
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
 
         RandomPose();
-
-
     }
     private void RandomPose()
     {
@@ -196,6 +194,7 @@ public class Food : MonoBehaviour
         questions.SetActive(false);
 
     }
+
     private void InitQuestion(int index)
     {
         if (index < 0 || index >= m_QuestionData.Length)

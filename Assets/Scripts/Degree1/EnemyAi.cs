@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class EnemyAi : MonoBehaviour
 {
-    //     public Transform target;
-    //     public float moveSpeed = 2f;
-    //     public float nextWayPointDistance = 2f;
-    //     public float repeatTimeUpdatePath = 0.5f;
-    //     public SpriteRenderer characterSR;
-    //     public Animator animator;
-    //     public int minDamage;
-    //     public int maxDamage;
+    public Transform target;
+    public float moveSpeed = 2f;
+    public float nextWayPointDistance = 2f;
+    public float repeatTimeUpdatePath = 0.5f;
+    // public SpriteRenderer characterSR;
+    // public Animator animator;
+    public int minDamage;
+    public int maxDamage;
 
     Path path;
     Seeker seeker;
@@ -21,10 +21,11 @@ public class EnemyAi : MonoBehaviour
     // Health PlayerHealth;
 
     Coroutine moveCoroutine;
+    public GameObject gameOver;
 
-    // // Part 10
-    // public float freezeDurationTime;
-    // float freezeDuration;
+    // Part 10
+    public float freezeDurationTime;
+    float freezeDuration;
     private void Start()
     {
         // seeker = GetComponent<Seeker>();
@@ -81,11 +82,11 @@ public class EnemyAi : MonoBehaviour
     //         if (distance < nextWayPointDistance)
     //             currentWP++;
 
-    //         if (force.x != 0)
-    //             if (force.x < 0)
-    //                 characterSR.transform.localScale = new Vector3(-1, 1, 0);
-    //             else
-    //                 characterSR.transform.localScale = new Vector3(1, 1, 0);
+    //         // if (force.x != 0)
+    //         //     if (force.x < 0)
+    //         //         characterSR.transform.localScale = new Vector3(-1, 1, 0);
+    //         //     else
+    //         //         characterSR.transform.localScale = new Vector3(1, 1, 0);
 
     //         yield return null;
     //     }
@@ -96,9 +97,8 @@ public class EnemyAi : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("collision");
-
-            GameOver.Instance.gameOver(Food.Instance.score);
-
+            Time.timeScale = 0;
+            gameOver.SetActive(true);
 
         }
     }
