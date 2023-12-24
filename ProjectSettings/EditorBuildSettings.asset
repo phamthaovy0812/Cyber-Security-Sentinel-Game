@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SignPage.unity
     guid: db2b1cfad481d054ead52633bf030c30
+  - enabled: 1
+    path: Assets/Scenes/Degree1/LevelGame2/Degree1Gam2Level1.unity
+    guid: fba6a7615b51ebb4c86c73de00b61e04
   m_configObjects: {}

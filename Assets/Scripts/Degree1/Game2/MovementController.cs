@@ -86,6 +86,10 @@ public class MovementController : MonoBehaviour
             Time.timeScale = 0;
             gameOver.SetActive(true);
         }
+        if (other.gameObject.tag == "Star")
+        {
+            Debug.Log("Have star");
+        }
 
     }
 
