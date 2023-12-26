@@ -22,6 +22,7 @@ public class BombController : MonoBehaviour
     [Header("Destructible")]
     public Tilemap destructibleTiles;
     public Destructible destructiblePrefab;
+    // public TilemapCollider2D tilemapCollider;
 
 
 
@@ -81,6 +82,7 @@ public class BombController : MonoBehaviour
         if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask))
         {
             ClearDestructible(position);
+
             return;
         }
 
@@ -101,7 +103,11 @@ public class BombController : MonoBehaviour
         {
             Instantiate(destructiblePrefab, position, Quaternion.identity);
             destructibleTiles.SetTile(cell, null);
+            destructibleTiles.gameObject.GetComponent<TilemapCollider2D>().enabled = false;
+            destructibleTiles.gameObject.GetComponent<TilemapCollider2D>().enabled = true;
+
         }
+        // tilemapCollider.OverrideTilemapColliderGeometry(destructibleTiles);
     }
 
     public void Start()

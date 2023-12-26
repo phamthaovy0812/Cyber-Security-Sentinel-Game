@@ -20,7 +20,7 @@ public class HaveStar : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerC;
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerD;
 
-    private Question[] m_QuestionData;
+    private Question[] m_QuestionData = { new Question("", "", "", "", "", "", "") };
     private int m_QuestionIndex = 0;
     bool checkAnswer = false;
 
@@ -28,7 +28,7 @@ public class HaveStar : MonoBehaviour
     public TextMeshProUGUI txtcountStar;
     public void Start()
     {
-        m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
+        // m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
     }
 
@@ -56,6 +56,11 @@ public class HaveStar : MonoBehaviour
 
         StartCoroutine(QuestionCoroutine(pSlectedAnswer, iscorrectAnswer));
         // StartCoroutine(ExampleCoroutine());
+    }
+    public void BtnAnswer_Pressd_Test(string pSlectedAnswer)
+    {
+        Debug.Log("Press Answer");
+
     }
 
     IEnumerator QuestionCoroutine(string pSlectedAnswer, bool iscorrectAnswer)
