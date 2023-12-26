@@ -11,9 +11,7 @@ public class WordManager : MonoBehaviour
 
     private void Start()
     {
-        AddWord();
-        AddWord();
-        AddWord();
+   
     }
     public void AddWord()
     {

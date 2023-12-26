@@ -6,6 +6,7 @@ using TMPro;
 public class WordDisplay : MonoBehaviour
 {
     public TMP_Text text;
+    public float fallSpeed = 1f;
     public void SetWord (string word){
         text.text=word;
     }
@@ -16,6 +17,11 @@ public class WordDisplay : MonoBehaviour
     }
     public void RemoveWord (){
         Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        transform.Translate(0f,-fallSpeed *Time.deltaTime,0f);
     }
     
 }
