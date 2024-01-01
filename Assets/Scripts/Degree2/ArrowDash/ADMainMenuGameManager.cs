@@ -30,6 +30,8 @@ public class ADMainMenuManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
         Application.Quit();
+        
+        // SceneManager.LoadScene(ADConstants.DATA.HOME_SCENE);
     }
 
     public void ToggleSound()

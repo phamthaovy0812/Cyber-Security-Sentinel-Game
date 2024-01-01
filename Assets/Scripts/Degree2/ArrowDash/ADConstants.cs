@@ -5,7 +5,8 @@ namespace ADConstants
         public const string HIGH_SCORE = "HIGH_SCORE";
         public const string SETTINGS_SOUND = "SETTINGS_SOUND";
         public const string MAIN_MENU_SCENE = "ADMainMenu";
-        public const string GAMEPLAY_SCENE = "ADGameplay";
+        public const string GAMEPLAY_SCENE = "Gameplay";
+        public const string HOME_SCENE = "HomeText";
     }
 
     public class Tags
