@@ -448,13 +448,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - prefab: {fileID: 4007934302288977394, guid: 0d2a20aedb8b17e4ab67c5f8294ccb91, type: 3}
-    spawnChance: 0.13
+    spawnChance: 0.481
   - prefab: {fileID: 8942792887726606219, guid: 5da8f1980e601f145be4205622d16199, type: 3}
-    spawnChance: 0.12
+    spawnChance: 0.274
   - prefab: {fileID: 6410611878390890564, guid: 5ef81e442d05d264bb47bddb5d399206, type: 3}
-    spawnChance: 0.11
+    spawnChance: 0.149
   - prefab: {fileID: 293425566431047539, guid: f8c0f4a3bc9c0a34ea1cfc8e6e9dc2bc, type: 3}
-    spawnChance: 0.1
+    spawnChance: 0.111
   minSpawnRate: 1
   maxSpawnRate: 2
 --- !u!4 &957945725
