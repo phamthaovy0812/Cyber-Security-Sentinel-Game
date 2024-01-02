@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Food
   - Wall
+  - Obstacle
+  - Score
+  - Obstacle1
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -40,6 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bg
+    uniqueID: 135068831
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 3317529377
     locked: 0

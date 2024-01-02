@@ -303,8 +303,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 134153998}
+        m_TargetAssemblyTypeName: ADGameManager, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
@@ -5495,8 +5495,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 12
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9fb41c48df6e6644ba053c703fc9e68f, type: 2}
+  m_sharedMaterial: {fileID: -3359616415118325047, guid: 9fb41c48df6e6644ba053c703fc9e68f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5629,8 +5629,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 12
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9fb41c48df6e6644ba053c703fc9e68f, type: 2}
+  m_sharedMaterial: {fileID: -3359616415118325047, guid: 9fb41c48df6e6644ba053c703fc9e68f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5908,8 +5908,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 134153998}
+        m_TargetAssemblyTypeName: ADGameManager, Assembly-CSharp
         m_MethodName: ToggleSound
         m_Mode: 1
         m_Arguments:
@@ -6040,8 +6040,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 134153998}
+        m_TargetAssemblyTypeName: ADGameManager, Assembly-CSharp
         m_MethodName: ReloadGame
         m_Mode: 1
         m_Arguments:
@@ -6111,8 +6111,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BEST 78
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9fb41c48df6e6644ba053c703fc9e68f, type: 2}
+  m_sharedMaterial: {fileID: -3359616415118325047, guid: 9fb41c48df6e6644ba053c703fc9e68f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
