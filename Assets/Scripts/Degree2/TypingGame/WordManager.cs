@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WordManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class WordManager : MonoBehaviour
     private bool hasActiveWord;
     private Word activateWord;
     public WordSpwaner wordSpwaner;
+    public GameObject _gameOver;
+    public static WordManager instance;
 
     private void Start()
     {
@@ -43,5 +46,13 @@ public class WordManager : MonoBehaviour
             hasActiveWord = false;
             words.Remove(activateWord);
         }
+    }
+    public void GameOver(){
+        _gameOver.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    public void RestartGame(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // SceneManager.LoadScene(WordConstants.DATA.HOME_TYPING);
     }
 }

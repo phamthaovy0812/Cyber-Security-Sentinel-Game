@@ -7,7 +7,7 @@ public class WordSpwaner : MonoBehaviour
     public GameObject wordPrefab;
     public Transform wordCanvas;
 
-    private float range1 =8f;
+    private float range1 =6f;
     private float range2 = 7f;
     // [SerializeField] private float _maxTime = 1f;
     // [SerializeField] private float _widthRange = 2f;
@@ -34,7 +34,7 @@ public class WordSpwaner : MonoBehaviour
 
     public WordDisplay SpawnWord()
     {
-        Vector3 randomPosition = new Vector3 ( Random.Range(-range1, range1), range2);
+        Vector3 randomPosition = new Vector3 ( Random.Range(-4, range1), range2);
 
         GameObject wordObj = Instantiate(wordPrefab, randomPosition, Quaternion.identity, wordCanvas);
         // GameObject wordObj = Instantiate(wordPrefab, wordCanvas);

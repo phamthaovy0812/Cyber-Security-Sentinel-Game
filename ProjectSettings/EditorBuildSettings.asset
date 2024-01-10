@@ -54,6 +54,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Degree2/Gameplay.unity
     guid: d3dab0bc6fb598b41a174a1fa3aa583a
   - enabled: 1
-    path: Assets/Scenes/Degree2/TypingGameMenu.unity
+    path: Assets/Scenes/Degree2/Typing/TypingGameMenu.unity
     guid: fa262e00a47737b40bd1fe22cfaf3642
   m_configObjects: {}
