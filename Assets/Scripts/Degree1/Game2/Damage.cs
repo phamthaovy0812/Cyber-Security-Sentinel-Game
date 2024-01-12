@@ -11,14 +11,16 @@ public class Damage : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		if (other.gameObject.layer == LayerMask.GetMask("Explosion"))
+		{
+			Debug.Log("collision enemy detected");
+
+			other.GetComponent<EnemyBomber>().Damage(source);
+		}
 		if (other.gameObject.tag == "Player")
 		{
-			GameOver.Instance.gameOver(300);
+			Debug.Log("collision Player detected");
 
-		}
-		if (other.gameObject.tag == "Enemy")
-		{
-			other.GetComponent<EnemyBomber>().Damage(source);
 		}
 	}
 }

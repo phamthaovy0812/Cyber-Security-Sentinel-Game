@@ -1,29 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PathFinderBomberman : MonoBehaviour
 {
-
     public List<Vector2> PathToTarget;
     public List<Node> CheckedNodes = new List<Node>();
     public List<Node> FreeNodes = new List<Node>();
     List<Node> WaitingNodes = new List<Node>();
-    public GameObject Target;
+    // public GameObject Target;
     public LayerMask SolidLayer;
+    private Transform player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("TestPath started");
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
     public List<Vector2> GetPath(Vector2 target)
     {
         PathToTarget = new List<Vector2>();
@@ -118,6 +108,10 @@ public class PathFinderBomberman : MonoBehaviour
                 Gizmos.color = Color.red;
                 Gizmos.DrawSphere(new Vector2(item.x, item.y), 0.2f);
             }
+    }
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
 }

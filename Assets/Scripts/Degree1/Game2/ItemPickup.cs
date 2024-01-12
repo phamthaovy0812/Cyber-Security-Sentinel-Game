@@ -7,6 +7,7 @@ public class ItemPickup : MonoBehaviour
         ExtraBomb,
         BlastRadius,
         SpeedIncrease,
+        IncreaseTime,
     }
 
     public ItemType type;
@@ -21,11 +22,15 @@ public class ItemPickup : MonoBehaviour
                 break;
 
             case ItemType.BlastRadius:
-                player.GetComponent<BombController>().explosionRadius++;
+                player.GetComponent<BombController>().AddRadius();
                 break;
 
             case ItemType.SpeedIncrease:
-                player.GetComponent<MovementController>().speed++;
+                player.GetComponent<MovementController>().AddSpeed();
+                break;
+            case ItemType.IncreaseTime:
+                Debug.Log("Speed increase");
+                FindObjectOfType<BBCountDownGamePlay>().AddTimer(10);
                 break;
         }
 

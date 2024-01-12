@@ -846,7 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625947e43fef6c24db5476c20e90ddd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 2
+  nameScene: Degree1Game1MenuLevel
   OptionsMenu: {fileID: 32061237}
 --- !u!1 &811827313
 GameObject:

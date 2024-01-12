@@ -541,6 +541,7 @@ MonoBehaviour:
   lockColor: {r: 0.4113207, g: 0.35621923, b: 0.35621923, a: 0}
   unlockColor: {r: 1, g: 1, b: 1, a: 0}
   btn: {fileID: 1853459554715906676}
+  nameScene: Degree1Game1Level_
 --- !u!1 &8065459623966076460
 GameObject:
   m_ObjectHideFlags: 0

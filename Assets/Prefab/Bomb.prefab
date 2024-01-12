@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.918954, y: 0.918954, z: 0.918954}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   - {fileID: -5337159410277229379, guid: 975894a97cf0594469745d6e9e8bd8e0, type: 3}
   animationTime: 0.25
   loop: 1
-  idle: 1
+  idle: 0
 --- !u!58 &3724944610335009608
 CircleCollider2D:
   m_ObjectHideFlags: 0

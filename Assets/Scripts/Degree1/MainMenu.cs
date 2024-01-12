@@ -3,8 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public int sceneBuildIndex;
+
+    public string nameScene;
     public GameObject OptionsMenu;
+
 
     public void Start()
     {
@@ -13,9 +15,10 @@ public class MainMenu : MonoBehaviour
     public void OnClickPlay()
     {
         // SceneManager.LoadScene("MenuLevel"); 
-        SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene(nameScene);
 
     }
+
     public void OnClickOption()
     {
 
@@ -25,7 +28,7 @@ public class MainMenu : MonoBehaviour
     public void OnClickExit()
     {
 
-        SceneManager.LoadScene("HomeText");
+        SceneManager.LoadScene(GetIndexScene.Instance.indexPreviousScene, LoadSceneMode.Single);
     }
     public void OnClickBackOption()
     {

@@ -20,11 +20,11 @@ public class HaveStar : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerC;
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerD;
 
-    private Question[] m_QuestionData = { new Question("", "", "", "", "", "", "") };
+    private Question[] m_QuestionData = { new Question("", "", "", "", "", "", "a") };
     private int m_QuestionIndex = 0;
     bool checkAnswer = false;
 
-    int countStar = 0;
+    public int countStar = 0;
     public TextMeshProUGUI txtcountStar;
     public void Start()
     {
@@ -42,6 +42,7 @@ public class HaveStar : MonoBehaviour
             Debug.Log("CorrectAnswer:  " + m_QuestionData[m_QuestionIndex].correctAnswer + "; correctPress: " + pSlectedAnswer);
             iscorrectAnswer = true;
             countStar++;
+            GameManagerDegree3game1.Instance.SetStar(countStar);
             txtcountStar.text = countStar.ToString();
 
             Debug.Log("Building add bomb");
@@ -69,8 +70,10 @@ public class HaveStar : MonoBehaviour
         {
             case "a":
                 {
+                    m_TxtAnswerA.GetComponent<TextMeshProUGUI>().color = Color.white;
                     if (iscorrectAnswer)
                     {
+
                         m_ImageAnswerA.GetComponent<UnityEngine.UI.Image>().color = Color.green;
                     }
                     else
@@ -83,6 +86,7 @@ public class HaveStar : MonoBehaviour
 
             case "b":
                 {
+                    m_TxtAnswerB.GetComponent<TextMeshProUGUI>().color = Color.white;
                     if (iscorrectAnswer)
                     {
                         m_ImageAnswerB.GetComponent<UnityEngine.UI.Image>().color = Color.green;
@@ -98,6 +102,7 @@ public class HaveStar : MonoBehaviour
 
             case "c":
                 {
+                    m_TxtAnswerC.GetComponent<TextMeshProUGUI>().color = Color.white;
 
                     if (iscorrectAnswer)
                     {
@@ -113,6 +118,7 @@ public class HaveStar : MonoBehaviour
 
             case "d":
                 {
+                    m_TxtAnswerD.GetComponent<TextMeshProUGUI>().color = Color.white;
 
                     if (iscorrectAnswer)
                     {
@@ -152,6 +158,10 @@ public class HaveStar : MonoBehaviour
         m_TxtAnswerB.text = "B: " + m_QuestionData[index].answerB;
         m_TxtAnswerC.text = "C: " + m_QuestionData[index].answerC;
         m_TxtAnswerD.text = "D: " + m_QuestionData[index].answerD;
+        m_TxtAnswerA.GetComponent<TextMeshProUGUI>().color = Color.black;
+        m_TxtAnswerB.GetComponent<TextMeshProUGUI>().color = Color.black;
+        m_TxtAnswerC.GetComponent<TextMeshProUGUI>().color = Color.black;
+        m_TxtAnswerD.GetComponent<TextMeshProUGUI>().color = Color.black;
     }
     public void CallQuestion()
     {

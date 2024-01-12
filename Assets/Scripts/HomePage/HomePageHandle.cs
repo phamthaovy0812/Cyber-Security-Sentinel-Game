@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class HomePageHandle : MonoBehaviour
 {
@@ -31,11 +32,12 @@ public class HomePageHandle : MonoBehaviour
             auth = authManager.auth;
         }
         LoadUserInfo();
+        GetIndexScene.Instance.indexPreviousScene = SceneManager.GetActiveScene().buildIndex;
     }
-    public void Update()
-    {
-        LoadUserInfo();
-    }
+    // public void Update()
+    // {
+    //     LoadUserInfo();
+    // }
     public void LoadUserInfo()
     {
         User user = APIUser.Instance.GetUser();

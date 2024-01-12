@@ -10,7 +10,7 @@ public class LevelBtnScript : MonoBehaviour
     [SerializeField] private Color lockColor, unlockColor;      //color references
     [SerializeField] private Button btn;                        //ref to hold button component                  //ref to hold button component
 
-
+    public string nameScene;
     private int levelIndex;                                     //int which hold the level Index this perticular button specify
 
     private void Start()
@@ -76,7 +76,7 @@ public class LevelBtnScript : MonoBehaviour
     {
         LevelSystemManager.Instance.CurrentLevel = levelIndex - 1;
         int level = LevelSystemManager.Instance.CurrentLevel + 1;  //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene("Degree1Game1Level_" + level);           //load the level
+        SceneManager.LoadScene(nameScene + level);           //load the level
     }
 
 }

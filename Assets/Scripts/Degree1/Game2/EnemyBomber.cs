@@ -11,20 +11,17 @@ public class EnemyBomber : MonoBehaviour
     private bool isMoving;
     private bool SeeBomber;
 
-    public GameObject BomberMan;
+    private GameObject BomberMan;
     public GameObject DeathEffect;
     public float MoveSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (BomberMan != null)
-        {
-            PathFinder = GetComponent<PathFinderBomberman>();
-            ReCalculatePath();
-            isMoving = true;
-
-        }
+        BomberMan = GameObject.FindGameObjectWithTag("Player");
+        PathFinder = GetComponent<PathFinderBomberman>();
+        ReCalculatePath();
+        isMoving = true;
     }
 
     public void ReCalculatePath()
@@ -34,12 +31,11 @@ public class EnemyBomber : MonoBehaviour
         if (PathToBomberMan.Count == 0)
         {
             SeeBomber = false;
-            if (!SeeBomber)
+            if (!SeeBomber && CurrentPath.Count == 0)
             {
                 var r = Random.Range(0, PathFinder.FreeNodes.Count);
                 RandomPath = PathFinder.GetPath(PathFinder.FreeNodes[r].Position);
                 CurrentPath = RandomPath;
-                print(CurrentPath.Count);
             }
 
         }
@@ -58,10 +54,19 @@ public class EnemyBomber : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+        {
+            Instantiate(DeathEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+    }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
+        Debug.Log("Loop");
         if (BomberMan == null) return;
 
         if (CurrentPath.Count == 0 && Vector2.Distance(transform.position, BomberMan.transform.position) > 0.5f)

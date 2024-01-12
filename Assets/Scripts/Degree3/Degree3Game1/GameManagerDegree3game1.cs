@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,13 +12,18 @@ public class GameManagerDegree3game1 : MonoBehaviour
     [SerializeField] private Text gameOverText;
     [SerializeField] private Text scoreText;
     [SerializeField] private Text livesText;
+    // [SerializeField] private Text starText;
+    [SerializeField] private GameObject gameOver;
 
     private int ghostMultiplier = 1;
     private int lives = 3;
     private int score = 0;
+    private int star = 0;
+    public TextMeshProUGUI txtStar;
 
     public int Lives => lives;
     public int Score => score;
+    public int Star => star;
 
     private void Awake()
     {
@@ -49,6 +55,7 @@ public class GameManagerDegree3game1 : MonoBehaviour
     {
         SetScore(0);
         SetLives(3);
+        SetStar(HaveStar.Instance.countStar);
         NewRound();
     }
 
@@ -77,7 +84,8 @@ public class GameManagerDegree3game1 : MonoBehaviour
 
     private void GameOver()
     {
-        gameOverText.enabled = true;
+        gameOver.SetActive(true);
+        // gameOverText.enabled = true;
 
         for (int i = 0; i < ghosts.Length; i++)
         {
@@ -85,6 +93,16 @@ public class GameManagerDegree3game1 : MonoBehaviour
         }
 
         pacman.gameObject.SetActive(false);
+    }
+    public void Btn_AgainPlay()
+    {
+        gameOver.SetActive(false);
+        NewGame();
+
+    }
+    public void Btn_Home()
+    {
+        Debug.Log("Home btn");
     }
 
     private void SetLives(int lives)
@@ -98,6 +116,12 @@ public class GameManagerDegree3game1 : MonoBehaviour
         this.score = score;
         scoreText.text = score.ToString().PadLeft(2, '0');
     }
+    public void SetStar(int star)
+    {
+        this.star = star;
+        txtStar.text = star.ToString();
+    }
+
 
     public void PacmanEaten()
     {
@@ -142,8 +166,8 @@ public class GameManagerDegree3game1 : MonoBehaviour
         {
             ghosts[i].frightened.Enable(pellet.duration);
         }
-
         PelletEaten(pellet);
+
         CancelInvoke(nameof(ResetGhostMultiplier));
         Invoke(nameof(ResetGhostMultiplier), pellet.duration);
     }

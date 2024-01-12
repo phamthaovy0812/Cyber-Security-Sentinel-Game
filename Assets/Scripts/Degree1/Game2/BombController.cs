@@ -22,10 +22,21 @@ public class BombController : MonoBehaviour
     [Header("Destructible")]
     public Tilemap destructibleTiles;
     public Destructible destructiblePrefab;
+    // public Answer answer;
     // public TilemapCollider2D tilemapCollider;
+    [Header("Text")]
+    public TextMeshProUGUI txtBomb;
+
+    public TextMeshProUGUI txtLengthFire;
 
 
-
+    public void Start()
+    {
+        explosionRadius = 1;
+        bombAmount = 1;
+        txtBomb.text = bombsRemaining.ToString();
+        txtLengthFire.text = explosionRadius.ToString();
+    }
     private void OnEnable()
     {
         bombsRemaining = bombAmount;
@@ -45,7 +56,8 @@ public class BombController : MonoBehaviour
         Vector2 position = transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
-
+        // position.x += 0.2f;
+        // position.y -= 0.1f;
         GameObject bomb = Instantiate(bombPrefab, position, Quaternion.identity);
         bombsRemaining--;
 
@@ -110,15 +122,18 @@ public class BombController : MonoBehaviour
         // tilemapCollider.OverrideTilemapColliderGeometry(destructibleTiles);
     }
 
-    public void Start()
-    {
-        bombAmount = 1;
-        txtCountBomb.text = bombAmount.ToString();
-    }
+
     public void AddBomb()
     {
         bombAmount++;
-        txtCountBomb.text = bombAmount.ToString();
+        bombsRemaining++;
+        txtBomb.text = bombsRemaining.ToString();
+    }
+
+    public void AddRadius()
+    {
+        explosionRadius++;
+        txtLengthFire.text = explosionRadius.ToString();
     }
 
     private void OnTriggerExit2D(Collider2D other)

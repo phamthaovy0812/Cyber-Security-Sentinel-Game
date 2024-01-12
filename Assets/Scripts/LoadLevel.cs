@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LoadLevel : MonoBehaviour
 {
-    public int sceneBuildIndex;
-    public string nameScene = "Level_1";
+    public string nameScene;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,7 +15,7 @@ public class LoadLevel : MonoBehaviour
             print("Trigger Enetered");
             // collision.gameObject.SetActive(false);
 
-            SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            SceneManager.LoadScene(nameScene);
         }
 
     }
