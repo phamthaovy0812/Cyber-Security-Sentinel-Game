@@ -124,6 +124,10 @@ MonoBehaviour:
   destructionTime: 1
   itemSpawnChance: 0.2
   spawnableItems:
-  - {fileID: 7221775407620026774, guid: c50d946d2f66ce14ab4eb04d03d22b38, type: 3}
-  - {fileID: 5054165791708347386, guid: c95fa0a4a23fe85488ad87f9b9f6f9ca, type: 3}
-  - {fileID: 2265667938111882919, guid: b54f2602d0ade3e47bc57da7a39c65b4, type: 3}
+  - {fileID: 5663624465102467014, guid: 31b905b559648804f905f19a731ba3d2, type: 3}
+  - {fileID: 1823142962012329013, guid: 95982decd360f8041990778ad6d707be, type: 3}
+  - {fileID: 5308182512690858118, guid: 927a7b4654ac6d44abddcf664566b825, type: 3}
+  - {fileID: 3279059032372775522, guid: 9ff4b2cc672b7a24a9e33e12f0f08df4, type: 3}
+  explosionLayerMask:
+    serializedVersion: 2
+    m_Bits: 524288

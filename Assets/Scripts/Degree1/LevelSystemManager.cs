@@ -25,7 +25,7 @@ public class LevelSystemManager : MonoBehaviour
         if (instance == null)                                               //if instance is null
         {
             instance = this;                                                //set this as instance
-            DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
+            // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
         }
         else
         {
@@ -34,9 +34,9 @@ public class LevelSystemManager : MonoBehaviour
     }
     public void OnClickExit()
     {
-        Debug.Log("exit successfully");
+        Time.timeScale = 1;
         // load the previous scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Degree1Game2");
     }
 
     private void OnEnable()
