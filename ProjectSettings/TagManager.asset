@@ -6,8 +6,10 @@ TagManager:
   tags:
   - Food
   - Wall
+  - Obstacle
+  - Score
+  - Obstacle1
   - Enemy
-  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -23,13 +25,13 @@ TagManager:
   - enemy
   - key
   - door
-  - Star
-  - Pellet
-  - Node
-  - Pacman
-  - Ghost
-  - Answer
-  - Minimap
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -42,15 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Dialog
-    uniqueID: 826070925
-    locked: 0
-  - name: BG
-    uniqueID: 1445452341
+  - name: bg
+    uniqueID: 135068831
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Collectable
-    uniqueID: 2506512983
+  - name: New Layer 2
+    uniqueID: 3317529377
     locked: 0
