@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WordSpwaner : MonoBehaviour
+public class WordSpwaner3 : MonoBehaviour
 {
     public GameObject wordPrefab;
     public Transform wordCanvas;
@@ -32,14 +32,14 @@ public class WordSpwaner : MonoBehaviour
     //     // Destroy(pipe, 10f);
     // }
 
-    public WordDisplay SpawnWord()
+    public WordDisplay3 SpawnWord()
     {
         Vector3 randomPosition = new Vector3 ( Random.Range(-4, range1), range2);
 
         GameObject wordObj = Instantiate(wordPrefab, randomPosition, Quaternion.identity, wordCanvas);
         // GameObject wordObj = Instantiate(wordPrefab, wordCanvas);
 
-        WordDisplay wordDisplay = wordObj.GetComponent<WordDisplay>();
+        WordDisplay3 wordDisplay = wordObj.GetComponent<WordDisplay3>();
         return wordDisplay;
 
     }

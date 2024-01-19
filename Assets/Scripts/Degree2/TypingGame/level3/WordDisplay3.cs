@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
-public class WordDisplay : MonoBehaviour
+public class WordDisplay3 : MonoBehaviour
 {
     public TMP_Text text;
+    private string check ;
     public GameObject word1;
     public GameObject word2;
     public GameObject word3;
@@ -16,6 +18,7 @@ public class WordDisplay : MonoBehaviour
 
     public void SetWord (string word){
         text.text=word;
+        check= word;
     }
 
     public void RemoveLetter (){
@@ -33,41 +36,42 @@ public class WordDisplay : MonoBehaviour
     {
         transform.Translate(0f,-fallSpeed *Time.deltaTime,0f);
     }
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     WordManager.instance.GameOver();
-        
-    // }
-     private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Obstacle")) {
-            WordManager.instance.GameOver();
-        }
-    }
 
       private void CheckAndActivateWord()
     {
+        int count = FindAnyObjectByType<WordManager3>().count;
+        if ( count == 5){
+           FindAnyObjectByType<WordManager3>().openSecurity.SetActive(true);
+
+        }
+
          //firewall, network, policy, risk, phishing
-        if (text.text.ToLower() == "firewall")
+        if (check == "authorization")
         {
+            Debug.Log("check word?");
             word1.SetActive(true);
         }
-         if (text.text.ToLower() == "network")
+         if (check == "availability")
         {
+            Debug.Log("check word?");
             word2.SetActive(true);
         }
-         if (text.text.ToLower() == "policy")
+         if (check == "reconnaissance")
         {
+            Debug.Log("check word?");
             word3.SetActive(true);
         }
-         if (text.text.ToLower() == "risk")
+         if (check == "polymorphism")
         {
+            Debug.Log("check word?");
             word4.SetActive(true);
         }
-         if (text.text.ToLower() == "phishing")
+         if (check == "protocol")
         {
+            Debug.Log("check word?");
             word5.SetActive(true);
         }
+        FindAnyObjectByType<WordManager3>().count=count;
     }
     
 }

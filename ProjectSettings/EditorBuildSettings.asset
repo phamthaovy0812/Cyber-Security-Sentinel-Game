@@ -47,13 +47,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Degree2/ADMainMenu.unity
     guid: 0b8f883363048394d9b023853f97db4d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Degree2/ADGameplay.unity
     guid: e3d21aa3a896c404bb32b8c93f051bf4
   - enabled: 1
     path: Assets/Scenes/Degree2/Gameplay.unity
     guid: d3dab0bc6fb598b41a174a1fa3aa583a
   - enabled: 1
-    path: Assets/Scenes/Degree2/Typing/TypingGameMenu.unity
+    path: Assets/Scenes/Degree2/Typing/TypingHome.unity
     guid: fa262e00a47737b40bd1fe22cfaf3642
+  - enabled: 1
+    path: Assets/Scenes/Degree2/Typing/TypingGame1.unity
+    guid: dd961a5a60d19814a991774c29f0e4fa
+  - enabled: 1
+    path: Assets/Scenes/Degree2/Typing/TypingGame3.unity
+    guid: d3b0cbec62d0f8c40abd195fc93c5bfc
+  - enabled: 1
+    path: Assets/Scenes/Degree2/Typing/TypingGame2.unity
+    guid: d2ef6cf9e97168543847af8de91842ec
+  - enabled: 1
+    path: Assets/Scenes/Degree2/Typing/TypingGame4.unity
+    guid: 2fadf03e8d639bd45a4a810b8537cdeb
   m_configObjects: {}

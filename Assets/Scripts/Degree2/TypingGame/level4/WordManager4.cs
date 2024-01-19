@@ -3,25 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WordManager : MonoBehaviour
+public class WordManager4 : MonoBehaviour
 {
-    public List<Word> words;
+    public List<Word4> words;
     private bool hasActiveWord;
-    private Word activateWord;
-    public WordSpwaner wordSpwaner;
+    private Word4 activateWord;
+    public WordSpwaner4 wordSpwaner;
     public GameObject _gameOver;
-    public static WordManager instance;
+    public static WordManager4 instance;
+     public GameObject openSecurity;
+    public GameObject word;
+    public int count = 0;
+        public int countDraw=0;
+    public GameObject nextLevel;
+
 
     private void Start()
     {
    
     }
+     private void Update()
+    {
+        if (countDraw ==5){
+            nextLevel.SetActive(true);
+        }
+    }
     public void AddWord()
     {
         // WordDisplay wordDisplay = wordSpwaner.SpawnWord();
-        Word word = new Word(WordGenerator.GetRandomWord(),wordSpwaner.SpawnWord());
-        Debug.Log(word.word);
-        words.Add(word);
+        if (count < 5)
+        {
+            Word4 word = new Word4(WordGenerator4.GetRandomWord(), wordSpwaner.SpawnWord());
+            Debug.Log(word.word);
+            words.Add(word);
+        }
+        else {
+            word.SetActive(false);
+            openSecurity.SetActive(true);
+        }
     }
     public void TypeLetter (char letter){
         if ( hasActiveWord){
@@ -32,7 +51,7 @@ public class WordManager : MonoBehaviour
             }
         }
         else {
-            foreach(Word word in words){
+            foreach(Word4 word in words){
                 if (word.GetNextLetter()== letter){
                     activateWord=word;
                     hasActiveWord=true;

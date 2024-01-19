@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Word 
+public class Word3
 {
     public string word;
     private int typeIndex;
-    WordDisplay display;
-    public Word (string _word, WordDisplay _display){
+    WordDisplay3 display;
+    public Word3 (string _word, WordDisplay3 _display){
         word= _word;
         typeIndex=0;
 
