@@ -34,7 +34,8 @@ public class GameOver : MonoBehaviour
         Debug.Log("Game Over");
 
         SetStar(star);
-        LevelSystemManager.Instance.LevelComplete(3);
+
+        LevelSystemManager.Instance.LevelComplete(star);
 
     }
     private void SetStar(int starAchieved)

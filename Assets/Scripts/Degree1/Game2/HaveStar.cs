@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class HaveStar : MonoBehaviour
 {
-    [SerializeField] private static HaveStar instance;
-    public static HaveStar Instance { get => instance; }
+
 
     // ================= questions
     public GameObject QuestionObj;
@@ -22,7 +21,7 @@ public class HaveStar : MonoBehaviour
 
     private Question[] m_QuestionData = { new Question("", "", "", "", "", "", "a") };
     private int m_QuestionIndex = 0;
-    bool checkAnswer = false;
+    public bool checkAnswer;
 
     public int countStar = 0;
     public TextMeshProUGUI txtcountStar;
@@ -30,24 +29,22 @@ public class HaveStar : MonoBehaviour
     {
         // m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
+        checkAnswer = false;
     }
-
     public void BtnAnswer_Pressd(string pSlectedAnswer)
     {
-        Debug.Log("Press Answer");
         bool iscorrectAnswer = false;
 
         if (m_QuestionData[m_QuestionIndex].correctAnswer.Equals(pSlectedAnswer))
         {
-            Debug.Log("CorrectAnswer:  " + m_QuestionData[m_QuestionIndex].correctAnswer + "; correctPress: " + pSlectedAnswer);
+
             iscorrectAnswer = true;
             countStar++;
-            GameManagerDegree3game1.Instance.SetStar(countStar);
-            txtcountStar.text = countStar.ToString();
 
-            Debug.Log("Building add bomb");
+            txtcountStar.text = countStar.ToString();
             checkAnswer = true;
-            Debug.Log("Cau tra loiw chinh xac");
+            // FindFirstObjectByType<PMStoneQuestion>().DestroyObject();
+
         }
         else
         {
@@ -135,6 +132,7 @@ public class HaveStar : MonoBehaviour
 
         }
         //yield on a new YieldInstruction that waits for 5 seconds.
+
         yield return new WaitForSecondsRealtime(2);
         Time.timeScale = 1;
         QuestionObj.SetActive(false);
@@ -175,20 +173,8 @@ public class HaveStar : MonoBehaviour
         // arrayCheckAppearQuestion[m_QuestionIndex] = 1;
         InitQuestion(m_QuestionIndex);
         QuestionObj.SetActive(true);
-
-
     }
-    public void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    public bool GetCheckAnswer() { return checkAnswer; }
 
 
 }

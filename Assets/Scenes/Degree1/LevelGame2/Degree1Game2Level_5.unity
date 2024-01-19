@@ -754,6 +754,7 @@ MonoBehaviour:
   location: {x: 0, y: 0, z: 0}
   gameObjectChooseAnswer: {fileID: 2016300836}
   txtAnswer: {fileID: 871503504}
+  countCorrectAnswer: 0
   countCorrectAnswerText: {fileID: 1190574828}
   isCorrectAnswerText: {fileID: 171214157}
 --- !u!50 &35853533
@@ -3139,7 +3140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaa
+  m_text: "M\xE0n 5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -5322,6 +5323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownText: {fileID: 849965217}
+  gameObjDestroy: {fileID: 0}
   countdownTime: 10
 --- !u!114 &849965217
 MonoBehaviour:
@@ -6270,7 +6272,7 @@ MonoBehaviour:
   bombPrefab: {fileID: 6988571731878702877, guid: ece98f9e1ef6dec4eb310c1199d51ca6, type: 3}
   bombFuseTime: 3
   bombAmount: 1
-  txtCountBomb: {fileID: 0}
+  txtCountBomb: {fileID: 1409687987}
   explosionPrefab: {fileID: 55176207292399857, guid: e0f42ee2666d0924a97b3bc72a45225c, type: 3}
   explosionLayerMask:
     serializedVersion: 2
@@ -6306,7 +6308,6 @@ MonoBehaviour:
   spriteRendererDeath: {fileID: 1951855123}
   gameOver: {fileID: 698312736}
   txtSpeed: {fileID: 33224016}
-  txtLevel: {fileID: 443467029}
   countCorrectAnswer: 0
 --- !u!50 &1121832891
 Rigidbody2D:
@@ -8614,7 +8615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2. C\xE1ch ki\u1EC3m tra trang web l\u1EEBa \u0111\u1EA3o\r"
+  m_text: "2. C\xE1ch ki\u1EC3m tra l\u1EEBa \u0111\u1EA3o qua \u1EE9ng d\u1EE5ng"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -9418,7 +9419,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. D\u1EA5u hi\u1EC7u nh\u1EADn di\u1EC7n c\xE1c trang web l\u1EEBa \u0111\u1EA3o\r"
+  m_text: "1. D\u1EA5u hi\u1EC7u nh\u1EADn di\u1EC7n l\u1EEBa \u0111\u1EA3o qua \u1EE9ng
+    d\u1EE5ng"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}

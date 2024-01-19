@@ -8,7 +8,7 @@ public class STEnemySpawner : MonoBehaviour
     private GameObject _enemyPrefab;
 
     [SerializeField]
-    private float _minimumSpawnTime;
+    private float _minimumSpawnTime = 10f;
 
 
 
@@ -27,12 +27,17 @@ public class STEnemySpawner : MonoBehaviour
         {
             Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
             SetTimeUntilSpawn();
+            Debug.Log("minSpawnTime: " + _minimumSpawnTime);
         }
     }
 
     private void SetTimeUntilSpawn()
     {
         _timeUntilSpawn = _minimumSpawnTime;
+    }
+    public void setTime()
+    {
+        _minimumSpawnTime -= 1f;
     }
 
 

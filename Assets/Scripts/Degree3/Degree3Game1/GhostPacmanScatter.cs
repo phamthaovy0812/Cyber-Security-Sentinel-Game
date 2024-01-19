@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class GhostPacmanScatter : GhostPacmanBehavior
 {
-    private void OnDisable()
-    {
-        ghostPacman.chase.Enable();
-    }
+    // private void OnDisable()
+    // {
+    //     ghostPacman.chase.Enable();
+    // }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         NodePacman node = other.GetComponent<NodePacman>();
 
         // Do nothing while the ghostPacman is frightened
-        if (node != null && enabled && !ghostPacman.frightened.enabled)
+        if (node != null && enabled)
         {
             // Pick a random available direction
             int index = Random.Range(0, node.availableDirections.Count);

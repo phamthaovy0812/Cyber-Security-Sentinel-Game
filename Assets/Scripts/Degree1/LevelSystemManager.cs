@@ -34,7 +34,7 @@ public class LevelSystemManager : MonoBehaviour
     }
     public void OnClickExit()
     {
-        Debug.Log("exit successfully");
+        Time.timeScale = 1;
         // load the previous scene
         SceneManager.LoadScene("Degree1Game2");
     }

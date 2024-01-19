@@ -5,13 +5,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public GameObject[] players;
+    public GameObject player;
 
     private void Awake()
     {
-        if (Instance != null) {
+        if (Instance != null)
+        {
             DestroyImmediate(gameObject);
-        } else {
+        }
+        else
+        {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -21,14 +24,13 @@ public class GameManager : MonoBehaviour
     {
         int aliveCount = 0;
 
-        foreach (GameObject player in players)
+        if (player.activeSelf)
         {
-            if (player.activeSelf) {
-                aliveCount++;
-            }
+            aliveCount++;
         }
 
-        if (aliveCount <= 1) {
+        if (aliveCount <= 1)
+        {
             Invoke(nameof(NewRound), 3f);
         }
     }

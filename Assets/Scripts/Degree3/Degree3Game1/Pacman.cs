@@ -8,6 +8,7 @@ public class Pacman : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private MovementPacman movement;
     private new Collider2D collider;
+    public GameObject gameOver;
 
     private void Awake()
     {
@@ -59,6 +60,19 @@ public class Pacman : MonoBehaviour
         movement.enabled = false;
         deathSequence.enabled = true;
         deathSequence.Restart();
+    }
+    public void GameOVer()
+    {
+        Time.timeScale = 0;
+        gameOver.SetActive(true);
+    }
+    private void OnCollisionEnter2D(Collision2D collider)
+    {
+        if (collider.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Game over");
+            GameOVer();
+        }
     }
 
 }

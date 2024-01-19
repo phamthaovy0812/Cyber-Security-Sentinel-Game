@@ -9,21 +9,11 @@ public class GameManagerDegree3game1 : MonoBehaviour
     [SerializeField] private GhostPacman[] ghosts;
     [SerializeField] private Pacman pacman;
     [SerializeField] private Transform pellets;
-    [SerializeField] private Text gameOverText;
-    [SerializeField] private Text scoreText;
-    [SerializeField] private Text livesText;
-    // [SerializeField] private Text starText;
+
     [SerializeField] private GameObject gameOver;
 
     private int ghostMultiplier = 1;
-    private int lives = 3;
-    private int score = 0;
-    private int star = 0;
-    public TextMeshProUGUI txtStar;
 
-    public int Lives => lives;
-    public int Score => score;
-    public int Star => star;
 
     private void Awake()
     {
@@ -38,38 +28,7 @@ public class GameManagerDegree3game1 : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        NewGame();
-    }
 
-    private void Update()
-    {
-        if (lives <= 0 && Input.anyKeyDown)
-        {
-            NewGame();
-        }
-    }
-
-    private void NewGame()
-    {
-        SetScore(0);
-        SetLives(3);
-        SetStar(HaveStar.Instance.countStar);
-        NewRound();
-    }
-
-    private void NewRound()
-    {
-        gameOverText.enabled = false;
-
-        foreach (Transform pellet in pellets)
-        {
-            pellet.gameObject.SetActive(true);
-        }
-
-        ResetState();
-    }
 
     private void ResetState()
     {
@@ -97,7 +56,6 @@ public class GameManagerDegree3game1 : MonoBehaviour
     public void Btn_AgainPlay()
     {
         gameOver.SetActive(false);
-        NewGame();
 
     }
     public void Btn_Home()
@@ -105,89 +63,89 @@ public class GameManagerDegree3game1 : MonoBehaviour
         Debug.Log("Home btn");
     }
 
-    private void SetLives(int lives)
-    {
-        this.lives = lives;
-        livesText.text = "x" + lives.ToString();
-    }
+    // private void SetLives(int lives)
+    // {
+    //     this.lives = lives;
+    //     livesText.text = "x" + lives.ToString();
+    // }
 
-    private void SetScore(int score)
-    {
-        this.score = score;
-        scoreText.text = score.ToString().PadLeft(2, '0');
-    }
-    public void SetStar(int star)
-    {
-        this.star = star;
-        txtStar.text = star.ToString();
-    }
+    // private void SetScore(int score)
+    // {
+    //     this.score = score;
+    //     scoreText.text = score.ToString().PadLeft(2, '0');
+    // }
+    // public void SetStar(int star)
+    // {
+    //     this.star = star;
+    //     txtStar.text = star.ToString();
+    // }
 
 
-    public void PacmanEaten()
-    {
-        pacman.DeathSequence();
+    // public void PacmanEaten()
+    // {
+    //     pacman.DeathSequence();
 
-        SetLives(lives - 1);
+    //     SetLives(lives - 1);
 
-        if (lives > 0)
-        {
-            Invoke(nameof(ResetState), 3f);
-        }
-        else
-        {
-            GameOver();
-        }
-    }
+    //     if (lives > 0)
+    //     {
+    //         Invoke(nameof(ResetState), 3f);
+    //     }
+    //     else
+    //     {
+    //         GameOver();
+    //     }
+    // }
 
-    public void GhostEaten(GhostPacman ghost)
-    {
-        int points = ghost.points * ghostMultiplier;
-        SetScore(score + points);
+    // public void GhostEaten(GhostPacman ghost)
+    // {
+    //     int points = ghost.points * ghostMultiplier;
+    //     SetScore(score + points);
 
-        ghostMultiplier++;
-    }
+    //     ghostMultiplier++;
+    // }
 
-    public void PelletEaten(Pellet pellet)
-    {
-        pellet.gameObject.SetActive(false);
+    // public void PelletEaten(Pellet pellet)
+    // {
+    //     pellet.gameObject.SetActive(false);
 
-        SetScore(score + pellet.points);
+    //     SetScore(score + pellet.points);
 
-        if (!HasRemainingPellets())
-        {
-            pacman.gameObject.SetActive(false);
-            Invoke(nameof(NewRound), 3f);
-        }
-    }
+    //     if (!HasRemainingPellets())
+    //     {
+    //         pacman.gameObject.SetActive(false);
+    //         Invoke(nameof(NewRound), 3f);
+    //     }
+    // }
 
-    public void PowerPelletEaten(PowerPellet pellet)
-    {
-        for (int i = 0; i < ghosts.Length; i++)
-        {
-            ghosts[i].frightened.Enable(pellet.duration);
-        }
-        PelletEaten(pellet);
+    // public void PowerPelletEaten(PowerPellet pellet)
+    // {
+    //     // for (int i = 0; i < ghosts.Length; i++)
+    //     // {
+    //     //     ghosts[i].frightened.Enable(pellet.duration);
+    //     // }
+    //     PelletEaten(pellet);
 
-        CancelInvoke(nameof(ResetGhostMultiplier));
-        Invoke(nameof(ResetGhostMultiplier), pellet.duration);
-    }
+    //     CancelInvoke(nameof(ResetGhostMultiplier));
+    //     Invoke(nameof(ResetGhostMultiplier), pellet.duration);
+    // }
 
-    private bool HasRemainingPellets()
-    {
-        foreach (Transform pellet in pellets)
-        {
-            if (pellet.gameObject.activeSelf)
-            {
-                return true;
-            }
-        }
+    // private bool HasRemainingPellets()
+    // {
+    //     foreach (Transform pellet in pellets)
+    //     {
+    //         if (pellet.gameObject.activeSelf)
+    //         {
+    //             return true;
+    //         }
+    //     }
 
-        return false;
-    }
+    //     return false;
+    // }
 
-    private void ResetGhostMultiplier()
-    {
-        ghostMultiplier = 1;
-    }
+    // private void ResetGhostMultiplier()
+    // {
+    //     ghostMultiplier = 1;
+    // }
 
 }

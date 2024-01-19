@@ -7,7 +7,7 @@ public class Collider2DStar : MonoBehaviour
 		if (collider.CompareTag("Player"))
 		{
 			Debug.Log("Player is already");
-			HaveStar.Instance.CallQuestion();
+			// HaveStar.Instance.CallQuestion();
 			Destroy(gameObject);
 		}
 	}

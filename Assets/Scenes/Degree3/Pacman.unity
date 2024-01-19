@@ -1771,11 +1771,7 @@ MonoBehaviour:
   - {fileID: 661111205}
   pacman: {fileID: 5}
   pellets: {fileID: 1910537628}
-  gameOverText: {fileID: 1133529214}
-  scoreText: {fileID: 1945791160}
-  livesText: {fileID: 278868602}
   gameOver: {fileID: 373945808}
-  txtStar: {fileID: 8238047}
 --- !u!1 &512613666
 GameObject:
   m_ObjectHideFlags: 0
@@ -20285,6 +20281,7 @@ MonoBehaviour:
   m_ImageAnswerB: {fileID: 1821239586}
   m_ImageAnswerC: {fileID: 2564126}
   m_ImageAnswerD: {fileID: 328235614}
+  checkAnswer: 0
   countStar: 0
   txtcountStar: {fileID: 1835381620}
 --- !u!1 &1945791158

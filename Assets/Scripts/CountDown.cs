@@ -7,6 +7,7 @@ public class CountDown : MonoBehaviour
 {
 
     public TextMeshProUGUI countDownText;
+    public GameObject gameObjDestroy;
 
     public float countdownTime = 10f; // Set the initial countdown time
 
@@ -34,6 +35,7 @@ public class CountDown : MonoBehaviour
             // Decrease the countdown time
             currentTime--;
         }
+        gameObjDestroy.SetActive(false);
 
     }
 }

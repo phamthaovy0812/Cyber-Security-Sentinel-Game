@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class GhostPacmanChase : GhostPacmanBehavior
 {
-    private void OnDisable()
-    {
-        ghostPacman.scatter.Enable();
-    }
+    // private void OnDisable()
+    // {
+    //     ghostPacman.scatter.Enable();
+    // }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         NodePacman node = other.GetComponent<NodePacman>();
 
         // Do nothing while the ghostPacman is frightened
-        if (node != null && enabled && !ghostPacman.frightened.enabled)
+        if (node != null && enabled)
         {
             Vector2 direction = Vector2.zero;
             float minDistance = float.MaxValue;

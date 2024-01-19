@@ -33,15 +33,15 @@ public class MovementController : MonoBehaviour
 
     [Header("Text")]
     public TextMeshProUGUI txtSpeed;
-    public TextMeshProUGUI txtLevel;
     public int countCorrectAnswer = 0;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
+        SetDirection(Vector2.down, spriteRendererDown);
+        spriteRendererDeath.enabled = true;
         txtSpeed.text = speed.ToString();
-        txtLevel.text = "Level " + (LevelSystemManager.Instance.CurrentLevel + 1);
         countCorrectAnswer = 0;
     }
     public void AddSpeed()
@@ -74,13 +74,17 @@ public class MovementController : MonoBehaviour
         {
             SetDirection(Vector2.zero, activeSpriteRenderer);
         }
-
+        if (FindAnyObjectByType<Ufo>()._currentHealth <= 0)
+        {
+            DeathSequence();
+        }
 
     }
 
     private void FixedUpdate()
     {
         Vector2 position = rb.position;
+
 
         Vector2 translation = speed * Time.fixedDeltaTime * direction;
 
@@ -91,10 +95,10 @@ public class MovementController : MonoBehaviour
     {
         direction = newDirection;
 
-        spriteRendererUp.enabled = spriteRenderer == spriteRendererUp;
-        spriteRendererDown.enabled = spriteRenderer == spriteRendererDown;
-        spriteRendererLeft.enabled = spriteRenderer == spriteRendererLeft;
-        spriteRendererRight.enabled = spriteRenderer == spriteRendererRight;
+        spriteRendererUp.enabled = spriteRenderer == spriteRendererUp ? true : false;
+        spriteRendererDown.enabled = spriteRenderer == spriteRendererDown ? true : false;
+        spriteRendererLeft.enabled = spriteRenderer == spriteRendererLeft ? true : false;
+        spriteRendererRight.enabled = spriteRenderer == spriteRendererRight ? true : false;
 
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = direction == Vector2.zero;
@@ -120,17 +124,17 @@ public class MovementController : MonoBehaviour
         spriteRendererRight.enabled = false;
         spriteRendererDeath.enabled = true;
 
-        Invoke(nameof(OnDeathSequenceEnded), 1.25f);
+        // Invoke(nameof(OnDeathSequenceEnded), 1.25f);
         StartCoroutine(DelayPlayerDeathCoroutine());
 
     }
     IEnumerator DelayPlayerDeathCoroutine()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         Time.timeScale = 0;
         gameOver.SetActive(true);
-        GameOver.Instance.gameOver(countCorrectAnswer);
+        FindAnyObjectByType<GameOver>().gameOver(countCorrectAnswer);
 
     }
     public void Btn_AgainPlay()
@@ -156,6 +160,7 @@ public class MovementController : MonoBehaviour
     }
     public void Btn_Menu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Degree1Game2MenuLevel");
     }
 

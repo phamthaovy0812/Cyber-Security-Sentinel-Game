@@ -20,7 +20,7 @@ public class InsertAnswerDestructibles : MonoBehaviour
 
     private int[] arrayCheckAppeared;
     private int countWrongAnswer;
-    private int countCorrectAnswer = 0;
+    public int countCorrectAnswer = 0;
     public TextMeshProUGUI countCorrectAnswerText;
     public TextMeshProUGUI isCorrectAnswerText;
     private int indexTopic;
@@ -100,7 +100,7 @@ public class InsertAnswerDestructibles : MonoBehaviour
 
         Debug.Log("Btn_No");
         // Destroy(gameObjectChooseAnswer);
-        FindAnyObjectByType<EnemyBomber>().MoveSpeed += 0.5f;
+        FindAnyObjectByType<STEnemySpawner>().setTime();
         gameObjectChooseAnswer.SetActive(false);
 
         EnableGameObject();
@@ -117,10 +117,10 @@ public class InsertAnswerDestructibles : MonoBehaviour
             // Time.timeScale = 0;
 
             FindObjectOfType<MovementController>().enabled = false;
-            FindObjectOfType<BoEnemyShooter>().enabled = false;
+            // FindObjectOfType<BoEnemyShooter>().enabled = false;
             FindObjectOfType<STEnemySpawner>().enabled = false;
-            FindObjectOfType<PathFinderBomberman>().enabled = false;
-            FindObjectOfType<EnemyBomber>().enabled = false;
+            // FindObjectOfType<PathFinderBomberman>().enabled = false;
+            // FindObjectOfType<EnemyBomber>().enabled = false;
             gameObjectChooseAnswer.SetActive(true);
             // FindObjectOfType<CountDown>().enabled = true;
             FindObjectOfType<CountDown>().StartCountdown();
@@ -128,14 +128,13 @@ public class InsertAnswerDestructibles : MonoBehaviour
 
             AppearAnswer();
 
-            Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
-            Vector3 hitPosCell = transform.position;
-            hitPosPlayer.x = Mathf.Round(hitPosPlayer.x);
-            hitPosPlayer.y = Mathf.Round(hitPosPlayer.y);
-            RemoveItemAnswer(hitPosPlayer, Vector2.up);
-            RemoveItemAnswer(hitPosPlayer, Vector2.down);
-            RemoveItemAnswer(hitPosPlayer, Vector2.left);
-            RemoveItemAnswer(hitPosPlayer, Vector2.right);
+            // Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
+            // hitPosPlayer.x = Mathf.Round(hitPosPlayer.x);
+            // hitPosPlayer.y = Mathf.Round(hitPosPlayer.y);
+            // RemoveItemAnswer(hitPosPlayer, Vector2.up);
+            // RemoveItemAnswer(hitPosPlayer, Vector2.down);
+            // RemoveItemAnswer(hitPosPlayer, Vector2.left);
+            // RemoveItemAnswer(hitPosPlayer, Vector2.right);
 
 
         }
@@ -143,10 +142,10 @@ public class InsertAnswerDestructibles : MonoBehaviour
     private void EnableGameObject()
     {
         FindObjectOfType<MovementController>().enabled = true;
-        FindObjectOfType<BoEnemyShooter>().enabled = true;
+        // FindObjectOfType<BoEnemyShooter>().enabled = true;
         FindObjectOfType<STEnemySpawner>().enabled = true;
-        FindObjectOfType<PathFinderBomberman>().enabled = true;
-        FindObjectOfType<EnemyBomber>().enabled = true;
+        // FindObjectOfType<PathFinderBomberman>().enabled = true;
+        // FindObjectOfType<EnemyBomber>().enabled = true;
 
 
 

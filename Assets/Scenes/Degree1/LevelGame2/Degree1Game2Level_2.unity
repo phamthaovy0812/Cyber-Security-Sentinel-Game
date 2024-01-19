@@ -754,6 +754,7 @@ MonoBehaviour:
   location: {x: 0, y: 0, z: 0}
   gameObjectChooseAnswer: {fileID: 2016300836}
   txtAnswer: {fileID: 871503504}
+  countCorrectAnswer: 0
   countCorrectAnswerText: {fileID: 1190574828}
   isCorrectAnswerText: {fileID: 171214157}
 --- !u!50 &35853533
@@ -2050,8 +2051,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4885088872228988184, guid: 04a276df6d9dbf347959e0023688781a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 308621920}
   m_SourcePrefab: {fileID: 100100000, guid: 04a276df6d9dbf347959e0023688781a, type: 3}
+--- !u!1 &308621919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4885088872228988184, guid: 04a276df6d9dbf347959e0023688781a, type: 3}
+  m_PrefabInstance: {fileID: 308621918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &308621920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308621919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332862737d16730429ac04f2497bb432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stoppingDistance: 10
+  startTimeBtwShots: 3
+  projectile: {fileID: 6089054482580266424, guid: a217eb42269536d40918a03c8873b298, type: 3}
 --- !u!1 &346180480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,7 +3243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaa
+  m_text: "M\xE0n 2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -5402,6 +5426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownText: {fileID: 849965217}
+  gameObjDestroy: {fileID: 0}
   countdownTime: 10
 --- !u!114 &849965217
 MonoBehaviour:
@@ -6350,7 +6375,7 @@ MonoBehaviour:
   bombPrefab: {fileID: 6988571731878702877, guid: ece98f9e1ef6dec4eb310c1199d51ca6, type: 3}
   bombFuseTime: 3
   bombAmount: 1
-  txtCountBomb: {fileID: 0}
+  txtCountBomb: {fileID: 1409687987}
   explosionPrefab: {fileID: 55176207292399857, guid: e0f42ee2666d0924a97b3bc72a45225c, type: 3}
   explosionLayerMask:
     serializedVersion: 2
@@ -6386,7 +6411,6 @@ MonoBehaviour:
   spriteRendererDeath: {fileID: 1951855123}
   gameOver: {fileID: 698312736}
   txtSpeed: {fileID: 33224016}
-  txtLevel: {fileID: 443467029}
   countCorrectAnswer: 0
 --- !u!50 &1121832891
 Rigidbody2D:
@@ -8724,7 +8748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2. C\xE1ch ki\u1EC3m tra trang web l\u1EEBa \u0111\u1EA3o\r"
+  m_text: "2. C\xE1ch ki\u1EC3m tra l\u1EEBa \u0111\u1EA3o qua m\u1EA1ng x\xE3 h\u1ED9i"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -9528,7 +9552,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. D\u1EA5u hi\u1EC7u nh\u1EADn di\u1EC7n c\xE1c trang web l\u1EEBa \u0111\u1EA3o\r"
+  m_text: "1. D\u1EA5u hi\u1EC7u nh\u1EADn di\u1EC7n l\u1EEBa \u0111\u1EA3o qua m\u1EA1ng
+    x\xE3 h\u1ED9i"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
