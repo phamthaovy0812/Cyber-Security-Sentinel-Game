@@ -13,7 +13,9 @@ public class EnemyBomber : MonoBehaviour
 
     private GameObject BomberMan;
     public GameObject DeathEffect;
+
     public float MoveSpeed;
+    Vector3 positionChest;
 
     // Start is called before the first frame update
     void Start()
@@ -51,22 +53,32 @@ public class EnemyBomber : MonoBehaviour
         if (source == 1)
         {
             Instantiate(DeathEffect, transform.position, transform.rotation);
-            Destroy(gameObject);
+            // Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.layer == LayerMask.NameToLayer("Explosion"))
         {
-            Instantiate(DeathEffect, transform.position, transform.rotation);
+            Debug.Log("Enemy death");
+            GameObject game = Instantiate(DeathEffect, positionChest, Quaternion.identity);
             Destroy(gameObject);
+
+
         }
+    }
+    IEnumerator DestroyGameObject(GameObject game)
+    {
+
+        yield return new WaitForSeconds(3f);
+
+        Destroy(game);
     }
 
     // Update is called once per frame
     public void Update()
     {
-        Debug.Log("Loop");
+        positionChest = transform.position;
         if (BomberMan == null) return;
 
         if (CurrentPath.Count == 0 && Vector2.Distance(transform.position, BomberMan.transform.position) > 0.5f)

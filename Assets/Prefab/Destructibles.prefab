@@ -130,4 +130,4 @@ MonoBehaviour:
   - {fileID: 3279059032372775522, guid: 9ff4b2cc672b7a24a9e33e12f0f08df4, type: 3}
   explosionLayerMask:
     serializedVersion: 2
-    m_Bits: 524288
+    m_Bits: 0

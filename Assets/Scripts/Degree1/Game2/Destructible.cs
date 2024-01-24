@@ -15,7 +15,6 @@ public class Destructible : MonoBehaviour
     private void Start()
     {
         Destroy(gameObject, destructionTime);
-
     }
 
     private void OnDestroy()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,34 +10,54 @@ public class InsertAnswerDestructibles : MonoBehaviour
     [SerializeField] private static InsertAnswerDestructibles instance;                             //instance variable
     public static InsertAnswerDestructibles Instance { get => instance; }          //instance getter
 
-    public Tilemap insertAnswerDestructibles;
+    // public Tilemap insertAnswerDestructibles;
     private Rigidbody2D rb;
     public Vector3Int location;
-    public GameObject gameObjectChooseAnswer;
-    public TextMeshProUGUI txtAnswer;
+    [Header("GameObject")]
+    // public GameObject gameObjectChooseAnswer;
+    public GameObject itemChoice;
+
     private int randomIndex;
     private ListArrayAnswer listArrayAnswer;
     private ArrayAnswer[] arrayAnswers;
 
     private int[] arrayCheckAppeared;
     private int countWrongAnswer;
+    private int indexLevel;
     public int countCorrectAnswer = 0;
-    public TextMeshProUGUI countCorrectAnswerText;
+    [Header("Text")]
+    public TextMeshProUGUI AnswerText;
+    // public TextMeshProUGUI choiceItemText;
     public TextMeshProUGUI isCorrectAnswerText;
-    private int indexTopic;
+    public TextMeshProUGUI questionText;
+    private bool checkCorrect = false;
+    public bool checkAppear = false;
+    ListQuestion[] listQuestions = {
+        new ListQuestion("Một trong các dấu hiệu nhận biết Lừa đảo qua website là: ","Một trong các cách phòng tránh Lừa đảo qua website là: "),
+        new ListQuestion("Một trong các dấu hiệu nhận biết lừa đảo qua mạng xã hội: ","Một trong các cách phòng tránh lừa đảo qua mạng xã hội: "),
+        new ListQuestion("Một trong các dấu hiệu nhận biết Lừa đảo qua tin nhắn SMS : ","Một trong các cách phòng tránh Lừa đảo qua tin nhắn SMS : "),
+        new ListQuestion("Một trong các dấu hiệu nhận biết Lừa Đảo qua Email: ","Một trong các cách phòng tránh Lừa Đảo qua Email: "),
+        new ListQuestion("Một trong các dấu hiệu nhận biết lừa đảo qua ứng dụng: ","Một trong các cách phòng tránh lừa đảo qua ứng dụng: "),
+        new ListQuestion("Một trong các dấu hiệu nhận biết Lừa Đảo qua Cuộc Gọi: ","Một trong các cách phòng tránh Lừa Đảo qua Cuộc Gọi: ")
+    };
+
+    // public randomItemPickup itemPickupRandom;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        insertAnswerDestructibles = GetComponent<Tilemap>();
-        indexTopic = 0; //LevelSystemManager.Instance.CurrentLevel;
-        arrayAnswers = GetListArrayAnswer()[indexTopic].arrayAnswers;
-        randomIndex = UnityEngine.Random.Range(0, arrayAnswers.Length);
-        arrayCheckAppeared = new int[arrayAnswers.Length];
-        countWrongAnswer = 0;
-        countCorrectAnswerText.text = "0";
+        // AppearAnswer();
+
+    }
+    void Update()
+    {
+        if (checkAppear)
+        {
+            AppearAnswer();
+            checkAppear = false;
+        }
 
     }
     private void Awake()
@@ -50,21 +71,81 @@ public class InsertAnswerDestructibles : MonoBehaviour
             Destroy(gameObject);                                            //else destroy it
         }
     }
-    private void AppearAnswer()
+    bool checkEndQuestion()
     {
-        while (arrayCheckAppeared[randomIndex] != 0)
+        int result = Array.Find(arrayCheckAppeared, x => x == 0);
+        if (result == 0) return true;
+        else return false;
+
+    }
+    public void AppearAnswer()
+    {
+        indexLevel = LevelSystemManager.Instance.CurrentLevel;
+        Debug.Log("Current Level: " + indexLevel);
+        arrayAnswers = GetListArrayAnswer()[0].arrayAnswers;
+        randomIndex = UnityEngine.Random.Range(0, arrayAnswers.Length);
+
+        arrayCheckAppeared = new int[arrayAnswers.Length];
+        randomIndex = UnityEngine.Random.Range(0, arrayAnswers.Length);
+        AnswerText.text = arrayAnswers[randomIndex].answer;
+        // AnswerText.text = "";
+        if (arrayAnswers[randomIndex].question == 1)
         {
-            randomIndex = UnityEngine.Random.Range(0, arrayAnswers.Length);
+            questionText.text = listQuestions[0].question1;
 
         }
-        txtAnswer.text = arrayAnswers[randomIndex].answer;
+        else
+        {
+            questionText.text = listQuestions[0].question2;
+
+        }
         arrayCheckAppeared[randomIndex] = 1;
     }
     public void Btn_Yes()
     {
 
-        txtAnswer.text = "";
+        isCorrectAnswerText.text = "";
+        AnswerText.text = "";
+        questionText.text = "";
         if (arrayAnswers[randomIndex].isCorrect)
+        {
+            countCorrectAnswer++;
+            FindObjectOfType<MovementController>().countCorrectAnswer++;
+
+            isCorrectAnswerText.text = "Chính xác";
+            isCorrectAnswerText.color = Color.blue;
+            checkCorrect = true;
+
+
+
+        }
+        else
+        {
+            countWrongAnswer++;
+            isCorrectAnswerText.text = "Sai";
+            isCorrectAnswerText.color = Color.red;
+            checkCorrect = false;
+
+        }
+        // Destroy(gameObjectChooseAnswer);
+        StartCoroutine(CountdownOneCoroutine());
+
+        // EnableGameObject();
+
+
+
+    }
+
+    public void Btn_No()
+    {
+
+        Debug.Log("Btn_No");
+        // Destroy(gameObjectChooseAnswer);
+        FindAnyObjectByType<STEnemySpawner>().setTime();
+        isCorrectAnswerText.text = "";
+        AnswerText.text = "";
+        questionText.text = "";
+        if (!arrayAnswers[randomIndex].isCorrect)
         {
             Debug.Log("Answer: " + arrayAnswers[randomIndex].isCorrect);
             countCorrectAnswer++;
@@ -72,72 +153,82 @@ public class InsertAnswerDestructibles : MonoBehaviour
 
             isCorrectAnswerText.text = "Chính xác";
             isCorrectAnswerText.color = Color.blue;
-            countCorrectAnswerText.text = countCorrectAnswer.ToString();
+            checkCorrect = true;
+            // itemChoice.SetActive(true);
+
+            // FindAnyObjectByType<ItemButtonScript>().InitializeUI();
+
+            // FindAnyObjectByType<ItemPickup>().OnItemPickup();
+
         }
         else
         {
             countWrongAnswer++;
             isCorrectAnswerText.text = "Sai";
             isCorrectAnswerText.color = Color.red;
+            checkCorrect = false;
         }
         // Destroy(gameObjectChooseAnswer);
         StartCoroutine(CountdownOneCoroutine());
 
-        EnableGameObject();
+        // EnableGameObject();
 
 
     }
     IEnumerator CountdownOneCoroutine()
     {
         yield return new WaitForSeconds(1f);
+
+
         isCorrectAnswerText.text = "";
-        gameObjectChooseAnswer.SetActive(false);
+        AnswerText.text = "";
+        questionText.text = "";
+        gameObject.SetActive(false);
 
-
-    }
-    public void Btn_No()
-    {
-
-        Debug.Log("Btn_No");
-        // Destroy(gameObjectChooseAnswer);
-        FindAnyObjectByType<STEnemySpawner>().setTime();
-        gameObjectChooseAnswer.SetActive(false);
-
-        EnableGameObject();
-
-
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.tag == "Player")
+        if (checkCorrect)
         {
-            // Time.timeScale = 0;
-
-            FindObjectOfType<MovementController>().enabled = false;
-            // FindObjectOfType<BoEnemyShooter>().enabled = false;
-            FindObjectOfType<STEnemySpawner>().enabled = false;
-            // FindObjectOfType<PathFinderBomberman>().enabled = false;
-            // FindObjectOfType<EnemyBomber>().enabled = false;
-            gameObjectChooseAnswer.SetActive(true);
-            // FindObjectOfType<CountDown>().enabled = true;
-            FindObjectOfType<CountDown>().StartCountdown();
-
-
-            AppearAnswer();
-
-            // Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
-            // hitPosPlayer.x = Mathf.Round(hitPosPlayer.x);
-            // hitPosPlayer.y = Mathf.Round(hitPosPlayer.y);
-            // RemoveItemAnswer(hitPosPlayer, Vector2.up);
-            // RemoveItemAnswer(hitPosPlayer, Vector2.down);
-            // RemoveItemAnswer(hitPosPlayer, Vector2.left);
-            // RemoveItemAnswer(hitPosPlayer, Vector2.right);
-
-
+            itemChoice.SetActive(true);
+            FindAnyObjectByType<ItemButtonScript>().InitializeUI();
         }
+        // else
+        // {
+        //     gameObject.isTriggered = false;
+        // }
+    }
+
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+
+    //     if (collision.gameObject.tag == "Player")
+    //     {
+    //         // Time.timeScale = 0;
+
+    //         FindObjectOfType<MovementController>().enabled = false;
+    //         // FindObjectOfType<BoEnemyShooter>().enabled = false;
+    //         FindObjectOfType<STEnemySpawner>().enabled = false;
+    //         // FindObjectOfType<PathFinderBomberman>().enabled = false;
+    //         // FindObjectOfType<EnemyBomber>().enabled = false;
+    //         gameObjectChooseAnswer.SetActive(true);
+    //         // FindObjectOfType<CountDown>().enabled = true;
+    //         // FindObjectOfType<CountDown>().StartCountdown();
+
+
+    //         AppearAnswer();
+
+    //         // Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
+    //         // hitPosPlayer.x = Mathf.Round(hitPosPlayer.x);
+    //         // hitPosPlayer.y = Mathf.Round(hitPosPlayer.y);
+    //         // RemoveItemAnswer(hitPosPlayer, Vector2.up);
+    //         // RemoveItemAnswer(hitPosPlayer, Vector2.down);
+    //         // RemoveItemAnswer(hitPosPlayer, Vector2.left);
+    //         // RemoveItemAnswer(hitPosPlayer, Vector2.right);
+
+
+    //     }
+    // }
+    public void Btn_Choose_Chest()
+    {
+        Instantiate(itemChoice, transform.position, Quaternion.identity);
     }
     private void EnableGameObject()
     {
@@ -153,7 +244,7 @@ public class InsertAnswerDestructibles : MonoBehaviour
     public void DestroyObject()
     {
         EnableGameObject();
-        gameObjectChooseAnswer.SetActive(false);
+        // gameObjectChooseAnswer.SetActive(false);
     }
     private void RemoveItemAnswer(Vector3 position, Vector3 direction)
     {
@@ -163,36 +254,37 @@ public class InsertAnswerDestructibles : MonoBehaviour
     }
     private void ClearAnswerDestructible(Vector2 position)
     {
-        Vector3Int cell = insertAnswerDestructibles.WorldToCell(position);
-        TileBase tile = insertAnswerDestructibles.GetTile(cell);
+        // Vector3Int cell = insertAnswerDestructibles.WorldToCell(position);
+        // TileBase tile = insertAnswerDestructibles.GetTile(cell);
 
-        if (tile != null)
-        {
+        // if (tile != null)
+        // {
 
-            insertAnswerDestructibles.SetTile(cell, null);
+        //     insertAnswerDestructibles.SetTile(cell, null);
 
-        }
+        // }
         // tilemapCollider.OverrideTilemapColliderGeometry(destructibleTiles);
     }
+
     public ListArrayAnswer[] GetListArrayAnswer()
     {
         ListArrayAnswer[] listArrayAnswers = new ListArrayAnswer[6];
         // lừa đảo qua trang website
         ArrayAnswer[] arrayAnswer1 = {
-        new ArrayAnswer("Trang web không có nhiều thông tin ",true),
-        new ArrayAnswer("Địa chỉ web không có khóa bảo mật",true),
-        new ArrayAnswer("Trang web yêu cầu thông tin cá nhân quá mức",true),
-        new ArrayAnswer("Thông báo giật gân và cảnh báo đột ngột",true),
-        new ArrayAnswer("Kiểm tra tên miền",true),
-        new ArrayAnswer("Kiểm tra URL trang web",true),
-        new ArrayAnswer("Kiểm tra thông tin doanh nghiệp",true),
-        new ArrayAnswer("Nhận biết trang web lừa đảo qua các thông báo trên web",true),
+        new ArrayAnswer("Trang web không có nhiều thông tin ",true,1),
+        new ArrayAnswer("Địa chỉ web không có khóa bảo mật",true,1),
+        new ArrayAnswer("Trang web yêu cầu thông tin cá nhân quá mức",true,1),
+        new ArrayAnswer("Thông báo giật gân và cảnh báo đột ngột",true,1),
+        new ArrayAnswer("Kiểm tra tên miền",true,2),
+        new ArrayAnswer("Kiểm tra URL trang web",true,2),
+        new ArrayAnswer("Kiểm tra thông tin doanh nghiệp",true,2),
+        new ArrayAnswer("Nhận biết trang web lừa đảo qua các thông báo trên web",true,2),
         new ArrayAnswer("Trang web không có địa chỉ liên hệ hoặc thông tin về công ty.",true),
-        new ArrayAnswer("Giao diện và thiết kế đáng ngờ",true),
-        new ArrayAnswer("Thời gian tải trang chậm",false),
-        new ArrayAnswer("Sử dụng ngôn ngữ khó hiểu",false),
-        new ArrayAnswer("Dựa vào thiết kế trang web",false),
-        new ArrayAnswer("Phụ thuộc vào mức độ quảng cáo",false),
+        new ArrayAnswer("Giao diện và thiết kế đáng ngờ",true,2),
+        new ArrayAnswer("Thời gian tải trang chậm",false, 1),
+        new ArrayAnswer("Sử dụng ngôn ngữ khó hiểu",false, 1),
+        new ArrayAnswer("Dựa vào thiết kế trang web",false,2),
+        new ArrayAnswer("Phụ thuộc vào mức độ quảng cáo",false,2),
         };
         listArrayAnswers[0] = new ListArrayAnswer(0, arrayAnswer1);
         // lừa đảo qua mạng xã hội 
@@ -295,4 +387,14 @@ public class InsertAnswerDestructibles : MonoBehaviour
     }
 
 
+}
+class ListQuestion
+{
+    public string question1;
+    public string question2;
+    public ListQuestion(string question1, string question2)
+    {
+        this.question1 = question1;
+        this.question2 = question2;
+    }
 }

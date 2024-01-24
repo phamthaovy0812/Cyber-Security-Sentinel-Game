@@ -45,6 +45,30 @@ EditorBuildSettings:
     path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_1.unity
     guid: 74a0b6b338e631543bea3504a19f878c
   - enabled: 1
+    path: Assets/Scenes/Degree1/Degree1Game2.unity
+    guid: cac035d28991746479dd89a3a9de501e
+  - enabled: 1
+    path: Assets/Scenes/Degree1/LevelGame2/Degree1Game2Level_1.unity
+    guid: 29de075266c77084ea5d7ba9bc230a03
+  - enabled: 1
+    path: Assets/Scenes/Degree1/LevelGame2/Degree1Game2Level_2.unity
+    guid: 7fd0e6678cca6c84e98ecd8eb9fa5404
+  - enabled: 1
+    path: Assets/Scenes/Degree1/LevelGame2/Degree1Game2Level_3.unity
+    guid: f71a9426fbd7bfc48b176f5c0085123e
+  - enabled: 1
+    path: Assets/Scenes/Degree1/LevelGame2/Degree1Game2Level_4.unity
+    guid: 41bec811313b609449d74e2bae360e74
+  - enabled: 1
+    path: Assets/Scenes/Degree1/LevelGame2/Degree1Game2Level_5.unity
+    guid: c43b2f1473e92294e9877638b22036f6
+  - enabled: 1
+    path: Assets/Scenes/Degree1/LevelGame2/Degree1Game2Level_6.unity
+    guid: 3c3baaf995ac3ec4dac479f45bde03ce
+  - enabled: 1
+    path: Assets/Scenes/Degree1/LevelGame2/Degree1Game2MenuLevel.unity
+    guid: 796adf91bec13504f928e6a11ae54082
+  - enabled: 1
     path: Assets/Scenes/Degree2/ADMainMenu.unity
     guid: 0b8f883363048394d9b023853f97db4d
   - enabled: 0

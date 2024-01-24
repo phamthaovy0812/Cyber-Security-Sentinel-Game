@@ -8,13 +8,12 @@ public class MainMenu : MonoBehaviour
     public GameObject OptionsMenu;
 
 
-    public void Start()
-    {
-        SaveLoadData.Instance.LoadData();
-    }
+
     public void OnClickPlay()
     {
         // SceneManager.LoadScene("MenuLevel"); 
+        SaveLoadData.Instance.LoadData();
+
         SceneManager.LoadScene(nameScene);
 
     }
@@ -28,7 +27,7 @@ public class MainMenu : MonoBehaviour
     public void OnClickExit()
     {
 
-        SceneManager.LoadScene(GetIndexScene.Instance.indexPreviousScene, LoadSceneMode.Single);
+        SceneManager.LoadScene("HomeText");
     }
     public void OnClickBackOption()
     {

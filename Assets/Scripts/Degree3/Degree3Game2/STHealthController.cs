@@ -19,6 +19,7 @@ public class STHealthController : MonoBehaviour
         healthBar.SetMaxHealth(_maximumHealth);
     }
 
+
     public void TakeDamage(int damageAmount)
     {
         if (_currentHealth == _maximumHealth)

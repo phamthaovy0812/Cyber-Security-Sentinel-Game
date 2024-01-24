@@ -288,26 +288,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelData:
-    lastUnlockedLevel: 0
+    lastUnlockedLevel: 1
     levelItemsArray:
     - unlocked: 1
       starAchieved: 0
-      score: 0
     - unlocked: 0
       starAchieved: 0
-      score: 0
     - unlocked: 0
       starAchieved: 0
-      score: 0
     - unlocked: 0
       starAchieved: 0
-      score: 0
     - unlocked: 0
       starAchieved: 0
-      score: 0
     - unlocked: 0
       starAchieved: 0
-      score: 0
   sceneBuildIndex: 1
 --- !u!1 &414630800
 GameObject:

@@ -35,13 +35,14 @@ public class LevelSystemManager : MonoBehaviour
     public void OnClickExit()
     {
         Time.timeScale = 1;
+        SaveLoadData.Instance.LoadData();
         // load the previous scene
         SceneManager.LoadScene("Degree1Game2");
     }
 
     private void OnEnable()
     {
-        SaveLoadData.Instance.Initialize();
+        // SaveLoadData.Instance.Initialize();
     }
     public int getCurrentLevel()
     {
@@ -54,10 +55,10 @@ public class LevelSystemManager : MonoBehaviour
         {
             // xuwr lys update diem cho user
             int star = starAchieved - levelData.levelItemsArray[currentLevel].starAchieved;
-            APIUser.Instance.UpdateExperiences(star * 60);
-            levelData.levelItemsArray[currentLevel].starAchieved = starAchieved;
-        }
+            // APIUser.Instance.UpdateExperiences(star * 60);
 
+        }
+        levelData.levelItemsArray[currentLevel].starAchieved = starAchieved;
         //save the stars achieved by the player in level
         if (levelData.lastUnlockedLevel <= (currentLevel + 1) && starAchieved > 0)
         {
@@ -67,7 +68,6 @@ public class LevelSystemManager : MonoBehaviour
         }
         SaveLoadData.Instance.SaveData();
         SaveLoadData.Instance.LoadData();
-
     }
 
 }

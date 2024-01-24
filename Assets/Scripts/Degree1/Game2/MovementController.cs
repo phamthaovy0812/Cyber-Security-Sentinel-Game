@@ -29,11 +29,14 @@ public class MovementController : MonoBehaviour
     public AnimatedSpriteRenderer spriteRendererDeath;
     private AnimatedSpriteRenderer activeSpriteRenderer;
     public GameObject gameOver;
+    public GameObject itemQuestion;
     private bool checkPassGame = false;
 
     [Header("Text")]
     public TextMeshProUGUI txtSpeed;
     public int countCorrectAnswer = 0;
+    bool isOpenQuestion = false;
+    bool isWin = false;
 
     private void Awake()
     {
@@ -76,7 +79,9 @@ public class MovementController : MonoBehaviour
         }
         if (FindAnyObjectByType<Ufo>()._currentHealth <= 0)
         {
-            DeathSequence();
+            isWin = true;
+            DeathSequence(true);
+
         }
 
     }
@@ -106,14 +111,24 @@ public class MovementController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("enemy"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("enemy"))
         {
-            DeathSequence();
+            DeathSequence(false);
+            isWin = false;
         }
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Chest"))
+        {
+            itemQuestion.SetActive(true);
+            FindAnyObjectByType<InsertAnswerDestructibles>().checkAppear = true;
 
-    public void DeathSequence()
+        }
+    }
+
+    public void DeathSequence(bool isWin)
     {
         enabled = false;
         GetComponent<BombController>().enabled = false;
@@ -125,16 +140,16 @@ public class MovementController : MonoBehaviour
         spriteRendererDeath.enabled = true;
 
         // Invoke(nameof(OnDeathSequenceEnded), 1.25f);
-        StartCoroutine(DelayPlayerDeathCoroutine());
+        StartCoroutine(DelayPlayerDeathCoroutine(isWin));
 
     }
-    IEnumerator DelayPlayerDeathCoroutine()
+    IEnumerator DelayPlayerDeathCoroutine(bool isWin)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         Time.timeScale = 0;
         gameOver.SetActive(true);
-        FindAnyObjectByType<GameOver>().gameOver(countCorrectAnswer);
+        FindAnyObjectByType<GameOver>().gameOver(isWin);
 
     }
     public void Btn_AgainPlay()
@@ -152,11 +167,15 @@ public class MovementController : MonoBehaviour
     public void Btn_NextLevel()
     {
         Debug.Log("btn next level");
-        Time.timeScale = 1;
-        LevelSystemManager.Instance.CurrentLevel += 1;
-        int level = LevelSystemManager.Instance.CurrentLevel + 1;
-        //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene("Degree1Game2Level_" + level);
+        if (isWin)
+        {
+            Time.timeScale = 1;
+            LevelSystemManager.Instance.CurrentLevel += 1;
+            int level = LevelSystemManager.Instance.CurrentLevel + 1;
+            //set the CurrentLevel, we subtract 1 as level data array start from 0
+            SceneManager.LoadScene("Degree1Game2Level_" + level);
+        }
+
     }
     public void Btn_Menu()
     {
