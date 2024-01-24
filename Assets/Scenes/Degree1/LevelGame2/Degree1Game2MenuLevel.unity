@@ -288,11 +288,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelData:
-    lastUnlockedLevel: 0
+    lastUnlockedLevel: 2
     levelItemsArray:
     - unlocked: 1
       starAchieved: 0
-    - unlocked: 0
+    - unlocked: 1
       starAchieved: 0
     - unlocked: 0
       starAchieved: 0

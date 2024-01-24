@@ -9,33 +9,28 @@ public class GameOver : MonoBehaviour
     public static GameOver Instance { get => instance; }
     [SerializeField] private UnityEngine.UI.Image[] starsArray;
     [SerializeField] private TextMeshProUGUI titleGameOver;
+
     // Start is called before the first frame update
 
-    public void gameOver(int countCorrectAnswer)
+    public void gameOver(bool isWin)
     {
         Time.timeScale = 0;
-        int star = 0;
-        if (countCorrectAnswer <= 5)
-        {
-            star = 0;
-        }
-        else if (countCorrectAnswer <= 6)
-        {
-            star = 1;
-        }
-        else if (countCorrectAnswer <= 7)
-        {
-            star = 2;
-        }
-        else if (countCorrectAnswer <= 8)
-        {
-            star = 3;
-        }
+
         Debug.Log("Game Over");
+        if (isWin)
+        {
+            titleGameOver.text = "Chiến thắng";
+            LevelSystemManager.Instance.LevelComplete(3);
 
-        SetStar(star);
+        }
+        else
+        {
+            titleGameOver.text = "Thất bại";
+            LevelSystemManager.Instance.LevelComplete(1);
 
-        LevelSystemManager.Instance.LevelComplete(star);
+        }
+        // SetStar(star);
+
 
     }
     private void SetStar(int starAchieved)

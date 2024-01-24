@@ -33,7 +33,7 @@ public class APIUser : MonoBehaviour
 
 	public LevelData GetLevelData()
 	{
-		GetDataDegreeOfUser();
+
 		return levelData;
 	}
 	public void getConnectedUserByUId(string email)
@@ -71,7 +71,11 @@ public class APIUser : MonoBehaviour
 							_user.password = dataSnapshot.Child("password").GetValue(true).ToString();
 							_user.email = dataSnapshot.Child("email").GetValue(true).ToString();
 							_user.experience = Int32.Parse(dataSnapshot.Child("experience").GetValue(true).ToString());
-
+							_user.isOpenStartGame = bool.Parse(dataSnapshot.Child("isOpenStartGame").GetValue(true).ToString());
+							_user.isOpenDegree1 = bool.Parse(dataSnapshot.Child("isOpenDegree1").GetValue(true).ToString());
+							_user.isOpenDegree2 = bool.Parse(dataSnapshot.Child("isOpenDegree2").GetValue(true).ToString());
+							_user.isOpenDegree3 = bool.Parse(dataSnapshot.Child("isOpenDegree3").GetValue(true).ToString());
+							_user.isOpenDegree4 = bool.Parse(dataSnapshot.Child("isOpenDegree4").GetValue(true).ToString());
 							Debug.Log("findUser: " + _user.username);
 
 							break;
@@ -83,9 +87,10 @@ public class APIUser : MonoBehaviour
 
 				}
 
-
+				GetDataDegreeOfUser();
 			}
 		});
+
 
 	}
 	//instance getter
@@ -94,15 +99,69 @@ public class APIUser : MonoBehaviour
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
 		DatabaseReference reference = database.GetReference("Users");
 		_user.experience += experience;
-		reference.Child(_user.id_user).Child("experiences").SetValueAsync(_user.experience);
+		reference.Child(_user.id_user).Child("experience").SetValueAsync(_user.experience);
 
 		Debug.Log("Updated successfully");
+	}
+	public void UpdateIdLevel(int id_level)
+	{
+		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
+		DatabaseReference reference = database.GetReference("Users");
+		_user.id_level = id_level.ToString();
+		reference.Child(_user.id_user).Child("id_level").SetValueAsync(_user.id_level);
+
+		Debug.Log("Updated id_level successfully");
+	}
+	public void UpdateIsOpenDegree1(bool isOpenDegree1)
+	{
+		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
+		DatabaseReference reference = database.GetReference("Users");
+		_user.isOpenDegree1 = isOpenDegree1;
+		reference.Child(_user.id_user).Child("isOpenDegree1").SetValueAsync(_user.isOpenDegree1);
+
+		Debug.Log("Updated isOpenDegree1 successfully");
+	}
+	public void UpdateIsOpenDegree2(bool isOpenDegree2)
+	{
+		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
+		DatabaseReference reference = database.GetReference("Users");
+		_user.isOpenDegree2 = isOpenDegree2;
+		reference.Child(_user.id_user).Child("isOpenDegree2").SetValueAsync(_user.isOpenDegree2);
+
+		Debug.Log("Updated isOpenDegree2 successfully");
+	}
+	public void UpdateIsOpenDegree3(bool isOpenDegree3)
+	{
+		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
+		DatabaseReference reference = database.GetReference("Users");
+		_user.isOpenDegree3 = isOpenDegree3;
+		reference.Child(_user.id_user).Child("isOpenDegree3").SetValueAsync(_user.isOpenDegree3);
+
+		Debug.Log("Updated isOpenDegree3 successfully");
+	}
+	public void UpdateIsOpenDegree4(bool isOpenDegree4)
+	{
+		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
+		DatabaseReference reference = database.GetReference("Users");
+		_user.isOpenDegree4 = isOpenDegree4;
+		reference.Child(_user.id_user).Child("isOpenDegree4").SetValueAsync(_user.isOpenDegree4);
+
+		Debug.Log("Updated isOpenDegree4 successfully");
+	}
+	public void UpdateIsOpenStartGame(bool isOpenStartGame)
+	{
+		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
+		DatabaseReference reference = database.GetReference("Users");
+		_user.isOpenStartGame = isOpenStartGame;
+		reference.Child(_user.id_user).Child("isOpenStartGame").SetValueAsync(_user.isOpenStartGame);
+
+		Debug.Log("Updated isOpenStartGame successfully");
 	}
 	public async void GetDataDegreeOfUser()
 	{
 		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 		await FirebaseDatabase.DefaultInstance
- 		 .GetReference("ScoreDegree").Child(APIUser.Instance.GetUser().id_user)
+ 		 .GetReference("ScoreDegree").Child("76bb0d9fdbb1554371bddf36b08711aba548bb16")
 		  .GetValueAsync().ContinueWithOnMainThread(task =>
   		{
 			  if (task.IsFaulted)
@@ -117,8 +176,8 @@ public class APIUser : MonoBehaviour
 					  foreach (DataSnapshot dataSnapshot in snapshot.Children)
 					  {
 						  levelData = JsonUtility.FromJson<LevelData>(dataSnapshot.GetRawJsonValue());
-
-
+						  Debug.Log("Finale");
+						  SaveLoadData.Instance.levelData = levelData;
 					  }
 				  }
 

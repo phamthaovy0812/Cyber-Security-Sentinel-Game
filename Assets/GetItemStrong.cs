@@ -47,9 +47,9 @@ public class GetItemStrong : MonoBehaviour
             Destroy(gameObject);                                            //else destroy it
         }
     }
-    private void AppearAnswer()
+    public void AppearAnswer()
     {
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
         while (arrayCheckAppeared[randomIndex] != 0)
         {
             randomIndex = UnityEngine.Random.Range(0, arrayAnswers.Length);
@@ -110,36 +110,36 @@ public class GetItemStrong : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
 
-        if (collision.gameObject.tag == "Player")
-        {
-            // Time.timeScale = 0;
+    //     if (collision.gameObject.tag == "Player")
+    //     {
+    //         // Time.timeScale = 0;
 
-            // FindObjectOfType<MovementController>().enabled = false;
-            // FindObjectOfType<BoEnemyShooter>().enabled = false;
-            // FindObjectOfType<STEnemySpawner>().enabled = false;
-            // FindObjectOfType<PathFinderBomberman>().enabled = false;
-            // FindObjectOfType<EnemyBomber>().enabled = false;
-            gameObjectChooseAnswer.SetActive(true);
-            // FindObjectOfType<CountDown>().enabled = true;
-            // FindObjectOfType<CountDown>().StartCountdown();
-
-
-            AppearAnswer();
-
-            // Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
-            // hitPosPlayer.x = Mathf.Round(hitPosPlayer.x);
-            // hitPosPlayer.y = Mathf.Round(hitPosPlayer.y);
-            // RemoveItemAnswer(hitPosPlayer, Vector2.up);
-            // RemoveItemAnswer(hitPosPlayer, Vector2.down);
-            // RemoveItemAnswer(hitPosPlayer, Vector2.left);
-            // RemoveItemAnswer(hitPosPlayer, Vector2.right);
+    //         // FindObjectOfType<MovementController>().enabled = false;
+    //         // FindObjectOfType<BoEnemyShooter>().enabled = false;
+    //         // FindObjectOfType<STEnemySpawner>().enabled = false;
+    //         // FindObjectOfType<PathFinderBomberman>().enabled = false;
+    //         // FindObjectOfType<EnemyBomber>().enabled = false;
+    //         gameObjectChooseAnswer.SetActive(true);
+    //         // FindObjectOfType<CountDown>().enabled = true;
+    //         // FindObjectOfType<CountDown>().StartCountdown();
 
 
-        }
-    }
+    //         AppearAnswer();
+
+    //         // Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
+    //         // hitPosPlayer.x = Mathf.Round(hitPosPlayer.x);
+    //         // hitPosPlayer.y = Mathf.Round(hitPosPlayer.y);
+    //         // RemoveItemAnswer(hitPosPlayer, Vector2.up);
+    //         // RemoveItemAnswer(hitPosPlayer, Vector2.down);
+    //         // RemoveItemAnswer(hitPosPlayer, Vector2.left);
+    //         // RemoveItemAnswer(hitPosPlayer, Vector2.right);
+
+
+    //     }
+    // }
     private void EnableGameObject()
     {
         FindObjectOfType<MovementController>().enabled = true;

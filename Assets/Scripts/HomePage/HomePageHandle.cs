@@ -32,7 +32,7 @@ public class HomePageHandle : MonoBehaviour
             auth = authManager.auth;
         }
         LoadUserInfo();
-        GetIndexScene.Instance.indexPreviousScene = SceneManager.GetActiveScene().buildIndex;
+        // GetIndexScene.Instance.indexPreviousScene = SceneManager.GetActiveScene().buildIndex;
     }
     // public void Update()
     // {
@@ -80,10 +80,10 @@ public class HomePageHandle : MonoBehaviour
         // }
     }
 
-    private void Awake()
-    {
-        LoadUserInfo();
-    }
+    // private void Awake()
+    // {
+    //     LoadUserInfo();
+    // }
 
     public void openDialogInfoGame()
     {

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1232195173588965335}
   - component: {fileID: 9110340006070367938}
-  - component: {fileID: 5174043175073930718}
   - component: {fileID: 5150565255968180541}
+  - component: {fileID: 6442623381662659665}
   m_Layer: 0
   m_Name: item@4x_6
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: -1127745841, guid: 84c384186ca16314d9df4a9b6cc2f91b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5174043175073930718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3279059032372775522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61dbd01fa60a71a42bdfcba52bea3a53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
 --- !u!61 &5150565255968180541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.02, y: 1.01}
   m_EdgeRadius: 0
+--- !u!114 &6442623381662659665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279059032372775522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e603af9dfa1989846b87e826e32921e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2

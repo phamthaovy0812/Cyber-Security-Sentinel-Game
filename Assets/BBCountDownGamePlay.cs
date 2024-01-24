@@ -29,7 +29,7 @@ public class BBCountDownGamePlay : MonoBehaviour
         if (currentTime <= 0)
         {
 
-            FindAnyObjectByType<MovementController>().DeathSequence();
+            FindAnyObjectByType<MovementController>().DeathSequence(false);
             Destroy(gameObject);
         }
 

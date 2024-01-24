@@ -37,6 +37,8 @@ public class FirebaseAuthManager : MonoBehaviour
     [SerializeField] TMP_InputField emailRegisterField;
     [SerializeField] TMP_InputField passwordRegisterField;
     [SerializeField] TMP_InputField confirmPasswordRegisterField;
+
+    bool checkAutoLogin = false;
     private void Start()
     {
         StartCoroutine(CheckAndFixDependenciesAsync());
@@ -57,6 +59,15 @@ public class FirebaseAuthManager : MonoBehaviour
         {
             Debug.LogError("Could not resolve all firebase dependencies: " + dependencyStatus);
         }
+    }
+    void Update()
+    {
+        if (checkAutoLogin)
+        {
+            emailLoginField.text = APIUser.Instance.GetUser().email;
+            passwordLoginField.text = APIUser.Instance.GetUser().password;
+        }
+
     }
 
     void InitializeFirebase()
@@ -84,10 +95,12 @@ public class FirebaseAuthManager : MonoBehaviour
     {
         if (user != null)
         {
-            Debug.LogFormat("{0} You Are Successfully Logged In", user.DisplayName);
             APIUser.Instance.getConnectedUserByUId(user.Email);
+            Debug.Log("AutoLogin: " + user.Email);
+            checkAutoLogin = true;
+            Debug.Log("email: " + user.Email);
+            Debug.Log("password: " + passwordLoginField.text);
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene("HomeText");
         }
         else
         {
@@ -167,8 +180,7 @@ public class FirebaseAuthManager : MonoBehaviour
 
             Debug.LogFormat("{0} You Are Successfully Logged In", user.DisplayName);
             APIUser.Instance.getConnectedUserByUId(email);
-
-            // yield return new WaitUntil(() => APIUser.Instance.getConnectedUserByUId(email));
+            yield return new WaitForSeconds(3f);
             UnityEngine.SceneManagement.SceneManager.LoadScene("HomeText");
 
             References.userName = user.DisplayName;
@@ -342,5 +354,7 @@ public class FirebaseAuthManager : MonoBehaviour
             .SetValueAsync(user.experience);
 
         Debug.Log("New User Created");
+
     }
+
 }

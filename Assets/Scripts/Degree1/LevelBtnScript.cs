@@ -15,7 +15,7 @@ public class LevelBtnScript : MonoBehaviour
 
     private void Start()
     {
-        SaveLoadData.Instance.LoadData();
+        // SaveLoadData.Instance.LoadData();
         btn.onClick.AddListener(() => OnClick());               //add listener to the button
 
     }

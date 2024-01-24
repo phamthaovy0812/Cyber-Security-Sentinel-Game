@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
@@ -12,21 +13,21 @@ public class ItemPickup : MonoBehaviour
 
     public ItemType type;
 
-    private void OnItemPickup(GameObject player)
+    public void OnItemPickup()
     {
         switch (type)
         {
             case ItemType.ExtraBomb:
-                player.GetComponent<BombController>().AddBomb();
+                FindAnyObjectByType<BombController>().AddBomb();
 
                 break;
 
             case ItemType.BlastRadius:
-                player.GetComponent<BombController>().AddRadius();
+                FindAnyObjectByType<BombController>().AddRadius();
                 break;
 
             case ItemType.SpeedIncrease:
-                player.GetComponent<MovementController>().AddSpeed();
+                FindAnyObjectByType<MovementController>().AddSpeed();
                 break;
             case ItemType.IncreaseTime:
                 Debug.Log("Speed increase");
@@ -34,15 +35,24 @@ public class ItemPickup : MonoBehaviour
                 break;
         }
 
+        // Destroy(gameObject);
+        StartCoroutine(detroy());
+    }
+    void Start()
+    {
+        OnItemPickup();
+    }
+    IEnumerator detroy()
+    {
+        yield return new WaitForSeconds(2.5f);
         Destroy(gameObject);
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            OnItemPickup(other.gameObject);
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         OnItemPickup(other.gameObject);
+    //     }
+    // }
 
 }

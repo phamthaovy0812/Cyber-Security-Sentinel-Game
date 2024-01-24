@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 public class LoadLevel : MonoBehaviour
 {
     public string nameScene;
+    Rigidbody2D rb;
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             print("Trigger Enetered");
             // collision.gameObject.SetActive(false);

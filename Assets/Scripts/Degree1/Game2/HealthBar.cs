@@ -10,6 +10,7 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+
     // Start is called before the first frame update
     public void SetHealth(int health)
     {

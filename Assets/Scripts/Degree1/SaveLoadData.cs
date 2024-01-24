@@ -1,27 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using Firebase.Database;
+using Firebase.Extensions;
 using UnityEngine;
 
 
-[System.Serializable]
-public class LevelData
-{
-    public int lastUnlockedLevel = 0;   //has referece to lastUnlockedLevel
-    public LevelItem[] levelItemsArray;       //reference to level data
-}
 
-[System.Serializable]
-public class LevelItem                  //level item
-{
-    public bool unlocked;
-    public int starAchieved;
-}
 public class SaveLoadData : MonoBehaviour
 {
     private static SaveLoadData instance;
 
     public static SaveLoadData Instance { get => instance; }
+    public LevelData levelData;
 
     private void Awake()
     {
@@ -40,17 +30,18 @@ public class SaveLoadData : MonoBehaviour
     //Method to initialize the SaveLoad Script
     public void Initialize()
     {
-
+        // SaveData();
         // ClearData();
-        if (PlayerPrefs.GetInt("GameStartFirstTime") == 1)  //if PlayerPrefs of "GameStartFirstTime" value is 1, means we are playing the game again
-        {
-            LoadData();                                     //so we load the data
-        }
-        else                                                //if its not 1, means we are playing the game 1st time
-        {
-            SaveData();                                     //save the data 1st
-            PlayerPrefs.SetInt("GameStartFirstTime", 1);    //save the PlayerPrefs
-        }
+        LoadData();
+        // if (PlayerPrefs.GetInt("GameStartFirstTime") == 1)  //if PlayerPrefs of "GameStartFirstTime" value is 1, means we are playing the game again
+        // {
+        //     LoadData();                                     //so we load the data
+        // }
+        // else                                                //if its not 1, means we are playing the game 1st time
+        // {
+        //     SaveData();                                     //save the data 1st
+        //     PlayerPrefs.SetInt("GameStartFirstTime", 1);    //save the PlayerPrefs
+        // }
     }
 
     //this is Unity method which is called when game is crashed or in background or quit
@@ -72,7 +63,7 @@ public class SaveLoadData : MonoBehaviour
             //save the string as json 
             DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
             // string json = JsonUtility.ToJson(degree);
-            await reference.Child("ScoreDegree").Child(APIUser.Instance.GetUser().id_user).Child("1").SetRawJsonValueAsync(levelDataString);
+            await reference.Child("ScoreDegree").Child("76bb0d9fdbb1554371bddf36b08711aba548bb16").Child("1").SetRawJsonValueAsync(levelDataString);
             Debug.Log("Data Saved");
 
         }
@@ -90,7 +81,8 @@ public class SaveLoadData : MonoBehaviour
         try
         {
 
-            LevelData levelData = APIUser.Instance.GetLevelData();
+            // levelData = APIUser.Instance.GetLevelData();
+
             //create LevelData from json
             if (levelData != null)
             {
@@ -121,7 +113,20 @@ public class SaveLoadData : MonoBehaviour
         PlayerPrefs.SetInt("GameStartFirstTime", 1);
     }
 
+
+}
+[System.Serializable]
+public class LevelData
+{
+    public int lastUnlockedLevel = 0;   //has referece to lastUnlockedLevel
+    public LevelItem[] levelItemsArray;       //reference to level data
 }
 
+[System.Serializable]
+public class LevelItem                  //level item
+{
+    public bool unlocked;
+    public int starAchieved;
+}
 
 

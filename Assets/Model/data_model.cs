@@ -3,10 +3,12 @@ public class ArrayAnswer
 {
 	public string answer;
 	public bool isCorrect;
-	public ArrayAnswer(string answer, bool isCorrect)
+	public int question; // 1 laf dau hieu nhan biet ; 2 cach phong trannh
+	public ArrayAnswer(string answer, bool isCorrect, int question = 1)
 	{
 		this.answer = answer;
 		this.isCorrect = isCorrect;
+		this.question = question;
 
 	}
 
