@@ -2803,8 +2803,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1160021853}
-        m_TargetAssemblyTypeName: Room412Q5, Assembly-CSharp
+      - m_Target: {fileID: 1160021855}
+        m_TargetAssemblyTypeName: Room323Q5, Assembly-CSharp
         m_MethodName: CheckQ2
         m_Mode: 1
         m_Arguments:
@@ -3213,6 +3213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317234768}
   - component: {fileID: 317234769}
+  - component: {fileID: 317234770}
   m_Layer: 5
   m_Name: Q2Manage
   m_TagString: Untagged
@@ -3257,6 +3258,22 @@ MonoBehaviour:
   ques2: {fileID: 1001431877}
   npc1: {fileID: 2013676207}
   npc2: {fileID: 760039808}
+--- !u!114 &317234770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317234766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a93b57e06b18ab4da96881c3952bcdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q2: {fileID: 1780909524}
+  right: {fileID: 1959548152}
+  wrong: {fileID: 1872007971}
+  ques2: {fileID: 1001431877}
 --- !u!1 &317733922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,8 +3744,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -220.58, y: 100.71002}
-  m_SizeDelta: {x: 441.1573, y: 183.3387}
+  m_AnchoredPosition: {x: -436.9, y: -23.62}
+  m_SizeDelta: {x: 441.1573, y: 147.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348394109
 MonoBehaviour:
@@ -3780,8 +3797,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3913,8 +3930,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 317234769}
-        m_TargetAssemblyTypeName: Room412Q2, Assembly-CSharp
+      - m_Target: {fileID: 317234770}
+        m_TargetAssemblyTypeName: Room323Q2, Assembly-CSharp
         m_MethodName: CheckQ2
         m_Mode: 1
         m_Arguments:
@@ -4150,6 +4167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 396835837}
   - component: {fileID: 396835836}
+  - component: {fileID: 396835838}
   m_Layer: 5
   m_Name: Q4Manage
   m_TagString: Untagged
@@ -4194,6 +4212,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &396835838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396835835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226f6188baaebd74daf01e9bb6573c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q4: {fileID: 884343021}
+  right: {fileID: 1981307459}
+  wrong: {fileID: 1222950953}
+  ques4: {fileID: 1096400905}
 --- !u!1 &409550881
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,8 +4593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281, y: -129.78}
-  m_SizeDelta: {x: 505.7624, y: 359.56}
+  m_AnchoredPosition: {x: 233.96, y: -51.1701}
+  m_SizeDelta: {x: 839.49, y: 461.2876}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446721195
 MonoBehaviour:
@@ -4582,7 +4616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 7436d07ff0d1ebd4ca0b19e909fadd6e, type: 3}
+  m_Texture: {fileID: 2800000, guid: bbc2a69273366314c9815223535c27ef, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4631,8 +4665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 282.57632, y: -90.516}
-  m_SizeDelta: {x: 465.1626, y: 438.0819}
+  m_AnchoredPosition: {x: 238.67, y: -62.594604}
+  m_SizeDelta: {x: 848.91, y: 453.4951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &464359712
 MonoBehaviour:
@@ -4654,7 +4688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 636b8c752a244e44396c3f391f096933, type: 3}
+  m_Texture: {fileID: 2800000, guid: 37130889b28d59843b22b156645ea71a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -6446,8 +6480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -313.14, y: -151.71}
-  m_SizeDelta: {x: 645.07, y: 315.7}
+  m_AnchoredPosition: {x: -410.73, y: -179.78001}
+  m_SizeDelta: {x: 449.89, y: 259.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618600578
 MonoBehaviour:
@@ -6501,8 +6535,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6788,8 +6822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -426, y: -350}
-  m_SizeDelta: {x: 419.3553, y: 80.8851}
+  m_AnchoredPosition: {x: -436.9, y: -350}
+  m_SizeDelta: {x: 441.16, y: 80.8851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623404112
 MonoBehaviour:
@@ -7422,8 +7456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -322.53, y: -207.85}
-  m_SizeDelta: {x: 645.07, y: 315.7}
+  m_AnchoredPosition: {x: -416.94, y: -233}
+  m_SizeDelta: {x: 459.28, y: 209.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648775872
 MonoBehaviour:
@@ -7474,8 +7508,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7558,8 +7592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273.7174, y: -112.6037}
-  m_SizeDelta: {x: 505.7448, y: 555.6827}
+  m_AnchoredPosition: {x: 238.22, y: -55.575}
+  m_SizeDelta: {x: 848.01, y: 469.3684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &655985124
 MonoBehaviour:
@@ -7581,7 +7615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f1dd109bde408ac4d86257e51bce4d33, type: 3}
+  m_Texture: {fileID: 2800000, guid: ac4aed73c12b5f740b29e8ed809a5897, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9120,8 +9154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -301.69, y: -184.13998}
-  m_SizeDelta: {x: 645.07, y: 315.7}
+  m_AnchoredPosition: {x: -436.9, y: -178.39}
+  m_SizeDelta: {x: 441.16, y: 162.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764381468
 MonoBehaviour:
@@ -9172,8 +9206,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11352,8 +11386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294.42, y: -165.22958}
-  m_SizeDelta: {x: 645.07, y: 138.1592}
+  m_AnchoredPosition: {x: -410.73, y: -188.98}
+  m_SizeDelta: {x: 449.89, y: 185.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943076247
 MonoBehaviour:
@@ -11404,8 +11438,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13402,7 +13436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -220.58, y: 72.484}
+  m_AnchoredPosition: {x: -426, y: -64.136}
   m_SizeDelta: {x: 441.1573, y: 183.3387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1109982229
@@ -13455,8 +13489,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14032,8 +14066,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1701868430}
-        m_TargetAssemblyTypeName: Room412Q3, Assembly-CSharp
+      - m_Target: {fileID: 1701868431}
+        m_TargetAssemblyTypeName: Room323Q3, Assembly-CSharp
         m_MethodName: CheckQ2
         m_Mode: 1
         m_Arguments:
@@ -14092,6 +14126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1160021854}
   - component: {fileID: 1160021853}
+  - component: {fileID: 1160021855}
   m_Layer: 5
   m_Name: Q5Manage
   m_TagString: Untagged
@@ -14136,6 +14171,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1160021855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160021852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d36cb9a5114fc449a7c6ed65e6b497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q4: {fileID: 1057093331}
+  right: {fileID: 845363150}
+  wrong: {fileID: 974433463}
+  ques4: {fileID: 1685848154}
 --- !u!1 &1160243343
 GameObject:
   m_ObjectHideFlags: 0
@@ -15243,6 +15294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232235005}
   - component: {fileID: 1232235004}
+  - component: {fileID: 1232235006}
   m_Layer: 5
   m_Name: Q1Manage
   m_TagString: Untagged
@@ -15287,6 +15339,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1232235006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232235003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699de2f4a2ddcf542b934cc2568dc111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q1: {fileID: 623404110}
+  right: {fileID: 542072741}
+  wrong: {fileID: 1855754259}
+  ques1: {fileID: 1755514730}
 --- !u!1 &1272481653
 GameObject:
   m_ObjectHideFlags: 0
@@ -15370,8 +15438,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1232235004}
-        m_TargetAssemblyTypeName: Room412Q1, Assembly-CSharp
+      - m_Target: {fileID: 1232235006}
+        m_TargetAssemblyTypeName: Room323Q1, Assembly-CSharp
         m_MethodName: CheckQ1
         m_Mode: 1
         m_Arguments:
@@ -19452,8 +19520,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 396835836}
-        m_TargetAssemblyTypeName: Room412Q4, Assembly-CSharp
+      - m_Target: {fileID: 396835838}
+        m_TargetAssemblyTypeName: Room323Q4, Assembly-CSharp
         m_MethodName: CheckQ2
         m_Mode: 1
         m_Arguments:
@@ -20127,8 +20195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371.38, y: -29}
-  m_SizeDelta: {x: 491.15, y: 183.3387}
+  m_AnchoredPosition: {x: -410.73, y: -29}
+  m_SizeDelta: {x: 449.89, y: 183.3387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693633690
 MonoBehaviour:
@@ -20178,8 +20246,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20474,8 +20542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -195.58, y: 72.484}
-  m_SizeDelta: {x: 491.15, y: 183.3387}
+  m_AnchoredPosition: {x: -410.73, y: -20}
+  m_SizeDelta: {x: 449.88, y: 183.3387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701619187
 MonoBehaviour:
@@ -20525,8 +20593,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20585,6 +20653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701868429}
   - component: {fileID: 1701868430}
+  - component: {fileID: 1701868431}
   m_Layer: 5
   m_Name: Q3Manage
   m_TagString: Untagged
@@ -20629,6 +20698,22 @@ MonoBehaviour:
   ques3: {fileID: 1694131899}
   npc1: {fileID: 760039808}
   npc2: {fileID: 11918424}
+--- !u!114 &1701868431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701868427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa79826a77245a40b005ee7444ea505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q3: {fileID: 1517795712}
+  right: {fileID: 391900028}
+  wrong: {fileID: 1124445387}
+  ques3: {fileID: 1694131899}
 --- !u!1 &1708808116
 GameObject:
   m_ObjectHideFlags: 0
@@ -21508,8 +21593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 265.73, y: -54.887695}
-  m_SizeDelta: {x: 531.47, y: 438.0819}
+  m_AnchoredPosition: {x: 239.12, y: -64.13568}
+  m_SizeDelta: {x: 849.81, y: 456.5778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835860925
 MonoBehaviour:
@@ -21531,7 +21616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5b3b506e5cdc2344783628089baf7849, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9fc8058bbb1c47e49bed45c381affb57, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -23536,8 +23621,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -313.14, y: -207.85}
-  m_SizeDelta: {x: 645.07, y: 315.7}
+  m_AnchoredPosition: {x: -410.73, y: -179.78}
+  m_SizeDelta: {x: 449.89, y: 259.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973421398
 MonoBehaviour:
@@ -23588,8 +23673,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24240,8 +24325,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -195.58, y: 72.484}
-  m_SizeDelta: {x: 491.15, y: 183.3387}
+  m_AnchoredPosition: {x: -410.73, y: -0.0000076294}
+  m_SizeDelta: {x: 449.89, y: 183.3387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2064390437
 MonoBehaviour:
@@ -24291,8 +24376,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24415,8 +24500,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 282.57632, y: -90.516}
-  m_SizeDelta: {x: 465.1626, y: 438.0819}
+  m_AnchoredPosition: {x: 241.75, y: -64.13599}
+  m_SizeDelta: {x: 855.08, y: 456.5778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078233055
 MonoBehaviour:
@@ -24438,7 +24523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9d48d97498273c84ea5b71332fd3d43b, type: 3}
+  m_Texture: {fileID: 2800000, guid: b07edcf2bdb61184c924856dcbb2387a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

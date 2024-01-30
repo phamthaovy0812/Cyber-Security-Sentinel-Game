@@ -40,7 +40,7 @@ public class WordManager2 : MonoBehaviour
         else
         {
             word.SetActive(false);
-         StartCoroutine(DelayedActivation(3f));
+         StartCoroutine(DelayedActivation(4f));
         }
 
     }

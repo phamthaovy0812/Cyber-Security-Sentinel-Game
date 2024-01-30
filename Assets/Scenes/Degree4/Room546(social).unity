@@ -2803,8 +2803,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1160021853}
-        m_TargetAssemblyTypeName: Room412Q5, Assembly-CSharp
+      - m_Target: {fileID: 1160021855}
+        m_TargetAssemblyTypeName: Room456Q5, Assembly-CSharp
         m_MethodName: CheckQ2
         m_Mode: 1
         m_Arguments:
@@ -3213,6 +3213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317234768}
   - component: {fileID: 317234769}
+  - component: {fileID: 317234770}
   m_Layer: 5
   m_Name: Q2Manage
   m_TagString: Untagged
@@ -3257,6 +3258,22 @@ MonoBehaviour:
   ques2: {fileID: 1001431877}
   npc1: {fileID: 2013676207}
   npc2: {fileID: 760039808}
+--- !u!114 &317234770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317234766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f10107e29943f4786c65aaf23e640e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q2: {fileID: 1780909524}
+  right: {fileID: 1959548152}
+  wrong: {fileID: 1872007971}
+  ques2: {fileID: 1001431877}
 --- !u!1 &317733922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3913,8 +3930,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 317234769}
-        m_TargetAssemblyTypeName: Room412Q2, Assembly-CSharp
+      - m_Target: {fileID: 317234770}
+        m_TargetAssemblyTypeName: Room456Q2, Assembly-CSharp
         m_MethodName: CheckQ2
         m_Mode: 1
         m_Arguments:
@@ -4150,6 +4167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 396835837}
   - component: {fileID: 396835836}
+  - component: {fileID: 396835838}
   m_Layer: 5
   m_Name: Q4Manage
   m_TagString: Untagged
@@ -4194,6 +4212,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &396835838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396835835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c296f48276310a46bab343aaa4426f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q4: {fileID: 884343021}
+  right: {fileID: 1981307459}
+  wrong: {fileID: 1222950953}
+  ques4: {fileID: 1096400905}
 --- !u!1 &409550881
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,8 +4593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281, y: -129.78}
-  m_SizeDelta: {x: 505.7624, y: 359.56}
+  m_AnchoredPosition: {x: 276.55103, y: -127.55545}
+  m_SizeDelta: {x: 496.8643, y: 604.2483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446721195
 MonoBehaviour:
@@ -4582,7 +4616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 7436d07ff0d1ebd4ca0b19e909fadd6e, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0078cafbc53f04d4b88820910b5bdbde, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4631,8 +4665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 282.57632, y: -90.516}
-  m_SizeDelta: {x: 465.1626, y: 438.0819}
+  m_AnchoredPosition: {x: 240.32, y: -54.149017}
+  m_SizeDelta: {x: 852.21, y: 457.4355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &464359712
 MonoBehaviour:
@@ -4654,7 +4688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 636b8c752a244e44396c3f391f096933, type: 3}
+  m_Texture: {fileID: 2800000, guid: e1ba102bd294f094a855f4eac81f652f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -7581,7 +7615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f1dd109bde408ac4d86257e51bce4d33, type: 3}
+  m_Texture: {fileID: 2800000, guid: c5d02355aac0e3e4681cef2487373fa6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -14032,8 +14066,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1701868430}
-        m_TargetAssemblyTypeName: Room412Q3, Assembly-CSharp
+      - m_Target: {fileID: 1701868431}
+        m_TargetAssemblyTypeName: Room456Q3, Assembly-CSharp
         m_MethodName: CheckQ2
         m_Mode: 1
         m_Arguments:
@@ -14092,6 +14126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1160021854}
   - component: {fileID: 1160021853}
+  - component: {fileID: 1160021855}
   m_Layer: 5
   m_Name: Q5Manage
   m_TagString: Untagged
@@ -14136,6 +14171,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1160021855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160021852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cc95125ce8ed242a4659100b661c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q4: {fileID: 1057093331}
+  right: {fileID: 845363150}
+  wrong: {fileID: 974433463}
+  ques4: {fileID: 1685848154}
 --- !u!1 &1160243343
 GameObject:
   m_ObjectHideFlags: 0
@@ -15243,6 +15294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232235005}
   - component: {fileID: 1232235004}
+  - component: {fileID: 1232235006}
   m_Layer: 5
   m_Name: Q1Manage
   m_TagString: Untagged
@@ -15287,6 +15339,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1232235006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232235003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07d05f181221934094dfde736a5e29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q1: {fileID: 623404110}
+  right: {fileID: 542072741}
+  wrong: {fileID: 1855754259}
+  ques1: {fileID: 1755514730}
 --- !u!1 &1272481653
 GameObject:
   m_ObjectHideFlags: 0
@@ -15370,8 +15438,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1232235004}
-        m_TargetAssemblyTypeName: Room412Q1, Assembly-CSharp
+      - m_Target: {fileID: 1232235006}
+        m_TargetAssemblyTypeName: Room456Q1, Assembly-CSharp
         m_MethodName: CheckQ1
         m_Mode: 1
         m_Arguments:
@@ -19452,8 +19520,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 396835836}
-        m_TargetAssemblyTypeName: Room412Q4, Assembly-CSharp
+      - m_Target: {fileID: 396835838}
+        m_TargetAssemblyTypeName: Room456Q4, Assembly-CSharp
         m_MethodName: CheckQ2
         m_Mode: 1
         m_Arguments:
@@ -20585,6 +20653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701868429}
   - component: {fileID: 1701868430}
+  - component: {fileID: 1701868431}
   m_Layer: 5
   m_Name: Q3Manage
   m_TagString: Untagged
@@ -20629,6 +20698,22 @@ MonoBehaviour:
   ques3: {fileID: 1694131899}
   npc1: {fileID: 760039808}
   npc2: {fileID: 11918424}
+--- !u!114 &1701868431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701868427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6989dc3d7c7ab0e488da69d534080071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q3: {fileID: 1517795712}
+  right: {fileID: 391900028}
+  wrong: {fileID: 1124445387}
+  ques3: {fileID: 1694131899}
 --- !u!1 &1708808116
 GameObject:
   m_ObjectHideFlags: 0
@@ -21508,8 +21593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 265.73, y: -54.887695}
-  m_SizeDelta: {x: 531.47, y: 438.0819}
+  m_AnchoredPosition: {x: 261, y: -113.1461}
+  m_SizeDelta: {x: 344.6169, y: 616.8722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835860925
 MonoBehaviour:
@@ -21531,7 +21616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5b3b506e5cdc2344783628089baf7849, type: 3}
+  m_Texture: {fileID: 2800000, guid: bd880d76f6e12d445b77c37089c559ff, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -24240,7 +24325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -195.58, y: 72.484}
+  m_AnchoredPosition: {x: -426, y: -0.0000076293945}
   m_SizeDelta: {x: 491.15, y: 183.3387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2064390437
@@ -24438,7 +24523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9d48d97498273c84ea5b71332fd3d43b, type: 3}
+  m_Texture: {fileID: 2800000, guid: fe89c0947a929e34cb2ef51b0cfe6707, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
