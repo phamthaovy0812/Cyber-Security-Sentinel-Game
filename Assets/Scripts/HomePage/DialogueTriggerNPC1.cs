@@ -17,7 +17,7 @@ public class DialogueTriggerNPC1 : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        dialogueScript.dialogues = new List<List<string>>();
+
 
 
     }
@@ -31,13 +31,15 @@ public class DialogueTriggerNPC1 : MonoBehaviour
             HomeManager.Instance.NPC = 1;
             if (HomeManager.Instance.id_level < 1)
             {
+                dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docNoCompleteDegree1;
 
             }
 
-            else if (!APIUser.Instance.GetUser().isOpenDegree1 && HomeManager.Instance.id_level == 1)
+            else if (!APIUser.Instance.GetUser().isOpenDegree1)//&& HomeManager.Instance.id_level == 1
             {
-
+                Debug.Log("1");
+                dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docBeginStartingSeeNPCDegree1;
                 ActiveHomePage.Instance.isOpenFlagPolice = false;
 
@@ -45,11 +47,15 @@ public class DialogueTriggerNPC1 : MonoBehaviour
             }
             else if (APIUser.Instance.GetUser().isOpenDegree1 && HomeManager.Instance.id_level > 1)
             {
+                Debug.Log("2");
+                dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docAfterCompleteDegree1;
             }
             else if (APIUser.Instance.GetUser().isOpenDegree1)
             {
+                Debug.Log("3");
+                dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docAfterSeeNPCDegree1;
             }
@@ -69,10 +75,14 @@ public class DialogueTriggerNPC1 : MonoBehaviour
         //If we lost trigger  with the player disable playerdeteced and hide indicator
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player disabled");
+
             playerDetected = false;
             // dialogueScript.ToggleIndicator(playerDetected);
-            dialogueScript.EndDialogue();
+            if (dialogueScript != null)
+            {
+                dialogueScript.EndDialogue();
+
+            }
         }
     }
     //While detected if we interact start the dialogue

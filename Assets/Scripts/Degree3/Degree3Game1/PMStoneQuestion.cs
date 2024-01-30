@@ -22,10 +22,11 @@ public class PMStoneQuestion : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerC;
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerD;
 
-    private Question[] m_QuestionData = { new Question("", "", "", "", "", "", "a") };
+    private Question[] m_QuestionData;
     private int m_QuestionIndex = 0;
     private bool checkCorrectAnswer = false;
     private bool checkCorrect = false;
+    private int countCorrect = 0;
     int layer1;
     int layer2;
     [SerializeField] private TextMeshProUGUI speedPoliceText;
@@ -34,6 +35,7 @@ public class PMStoneQuestion : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         insertAnswerDestructibles = GetComponent<Tilemap>();
+        m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
         // m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
         layer1 = LayerMask.NameToLayer("enemy");
@@ -46,6 +48,12 @@ public class PMStoneQuestion : MonoBehaviour
     {
         if (checkCorrectAnswer)
         {
+            countCorrect++;
+            if (countCorrect == 1 || countCorrect == 3 || countCorrect == 5 || countCorrect >= 8)
+            {
+                FindAnyObjectByType<MovementPacman>().speed += 1;
+            }
+            FindAnyObjectByType<MoveEnemy>().enabled = true;
             Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
             RemoveItemAnswer(hitPosPlayer, Vector2.up);
             RemoveItemAnswer(hitPosPlayer, Vector2.down);
@@ -53,7 +61,7 @@ public class PMStoneQuestion : MonoBehaviour
             RemoveItemAnswer(hitPosPlayer, Vector2.right);
             // Time.timeScale = 1;
             QuestionObj.SetActive(false);
-            FindAnyObjectByType<MovementPacman>().speed += 1;
+
             Debug.Log("Movement pacman: " + FindAnyObjectByType<MovementPacman>().speed);
             speedPoliceText.text = FindAnyObjectByType<MovementPacman>().speed.ToString();
             speedThiefText.text = FindAnyObjectByType<MoveEnemy>().speed.ToString();
@@ -67,13 +75,27 @@ public class PMStoneQuestion : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            FindAnyObjectByType<MoveEnemy>().enabled = false;
             Debug.Log("Player1");
             CallQuestion();
             FindAnyObjectByType<CountDown>().StartCountdown();
+
         }
         if (collision.gameObject.tag == "Enemy")
         {
             Physics2D.IgnoreLayerCollision(layer1, layer2, true);
+        }
+
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "Player")
+        {
+            FindAnyObjectByType<MoveEnemy>().enabled = true;
+            QuestionObj.SetActive(false);
+
+            StopAllCoroutines();
         }
 
     }

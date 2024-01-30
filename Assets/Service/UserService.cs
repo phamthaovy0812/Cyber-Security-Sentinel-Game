@@ -22,7 +22,7 @@ public class APIUser : MonoBehaviour
 		if (instance == null)                                               //if instance is null
 		{
 			instance = this;                                                //set this as instance
-																			// DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
+																			// DontDestroyOnLoad(gameObject);                                                          // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
 		}
 		else
 		{
@@ -33,12 +33,19 @@ public class APIUser : MonoBehaviour
 
 	public LevelData GetLevelData()
 	{
-
 		return levelData;
+	}
+	public void UpdatedLevelData(LevelData levelData)
+	{
+
+	}
+	public void SetLevelData(LevelData levelData)
+	{
+		this.levelData = levelData;
 	}
 	public void getConnectedUserByUId(string email)
 	{
-
+		Debug.Log("getConnectedUserByUId");
 		_user = new User();
 		// DatabaseReference databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
@@ -47,6 +54,8 @@ public class APIUser : MonoBehaviour
 		Task<DataSnapshot> task = reference.GetValueAsync();
 		task.ContinueWith((Task<DataSnapshot> t) =>
 		{
+
+
 			if (t.IsFaulted)
 			{
 				// Xử lý lỗi
@@ -56,17 +65,21 @@ public class APIUser : MonoBehaviour
 			{
 				DataSnapshot snapshot = t.Result;
 				// Xử lý dữ liệu snapshot
-
+				Debug.Log("Email input: " + email);
 				if (snapshot.ChildrenCount > 0)
 				{
 
 					foreach (DataSnapshot dataSnapshot in snapshot.Children)
 					{
+						Debug.Log("Email dataSnapshot: " + dataSnapshot.GetRawJsonValue());
 
 						if (dataSnapshot.Child("email").GetValue(true).ToString().Equals(email))
 						{
+							Debug.Log("Email: " + dataSnapshot.Child("email").GetValue(true).ToString());
+							// _user = JsonUtility.FromJson<User>(dataSnapshot.GetRawJsonValue());
+							// Debug.Log("dataSnapshot: " + dataSnapshot.GetRawJsonValue());
 							_user.id_user = dataSnapshot.Child("id_user").GetValue(true).ToString();
-							_user.id_level = dataSnapshot.Child("id_level").GetValue(true).ToString();
+							_user.id_level = Int32.Parse(dataSnapshot.Child("id_level").GetValue(true).ToString());
 							_user.username = dataSnapshot.Child("username").GetValue(true).ToString();
 							_user.password = dataSnapshot.Child("password").GetValue(true).ToString();
 							_user.email = dataSnapshot.Child("email").GetValue(true).ToString();
@@ -76,7 +89,7 @@ public class APIUser : MonoBehaviour
 							_user.isOpenDegree2 = bool.Parse(dataSnapshot.Child("isOpenDegree2").GetValue(true).ToString());
 							_user.isOpenDegree3 = bool.Parse(dataSnapshot.Child("isOpenDegree3").GetValue(true).ToString());
 							_user.isOpenDegree4 = bool.Parse(dataSnapshot.Child("isOpenDegree4").GetValue(true).ToString());
-							Debug.Log("findUser: " + _user.username);
+							Debug.Log("findUser: " + _user.id_level);
 
 							break;
 							// return true;
@@ -84,10 +97,11 @@ public class APIUser : MonoBehaviour
 						}
 
 					}
+					GetDataDegreeOfUser();
 
 				}
 
-				GetDataDegreeOfUser();
+
 			}
 		});
 
@@ -96,6 +110,7 @@ public class APIUser : MonoBehaviour
 	//instance getter
 	public void UpdateExperiences(int experience)
 	{
+		Debug.Log("experiences user: " + _user.experience);
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
 		DatabaseReference reference = database.GetReference("Users");
 		_user.experience += experience;
@@ -107,7 +122,7 @@ public class APIUser : MonoBehaviour
 	{
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
 		DatabaseReference reference = database.GetReference("Users");
-		_user.id_level = id_level.ToString();
+		_user.id_level = id_level;
 		reference.Child(_user.id_user).Child("id_level").SetValueAsync(_user.id_level);
 
 		Debug.Log("Updated id_level successfully");
@@ -153,7 +168,7 @@ public class APIUser : MonoBehaviour
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
 		DatabaseReference reference = database.GetReference("Users");
 		_user.isOpenStartGame = isOpenStartGame;
-		reference.Child(_user.id_user).Child("isOpenStartGame").SetValueAsync(_user.isOpenStartGame);
+		reference.Child(_user.id_user).Child("isOpenStartGame").SetValueAsync(isOpenStartGame);
 
 		Debug.Log("Updated isOpenStartGame successfully");
 	}
@@ -161,7 +176,7 @@ public class APIUser : MonoBehaviour
 	{
 		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 		await FirebaseDatabase.DefaultInstance
- 		 .GetReference("ScoreDegree").Child("76bb0d9fdbb1554371bddf36b08711aba548bb16")
+ 		 .GetReference("ScoreDegree").Child(_user.id_user)
 		  .GetValueAsync().ContinueWithOnMainThread(task =>
   		{
 			  if (task.IsFaulted)
@@ -177,7 +192,6 @@ public class APIUser : MonoBehaviour
 					  {
 						  levelData = JsonUtility.FromJson<LevelData>(dataSnapshot.GetRawJsonValue());
 						  Debug.Log("Finale");
-						  SaveLoadData.Instance.levelData = levelData;
 					  }
 				  }
 

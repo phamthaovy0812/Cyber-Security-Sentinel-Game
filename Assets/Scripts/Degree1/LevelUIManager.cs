@@ -14,7 +14,8 @@ public class LevelUIManager : MonoBehaviour
 
     private void Start()
     {
-
+        LevelSystemManager.Instance.LevelData = APIUser.Instance.GetLevelData();
+        Debug.Log("load level successfully");
         InitializeUI();
     }
 
@@ -32,6 +33,8 @@ public class LevelUIManager : MonoBehaviour
 
     public void InitializeUI()                                             //method to create the level buttons
     {
+        Debug.Log("Get level item array");
+
         LevelItem[] levelItemsArray = LevelSystemManager.Instance.LevelData.levelItemsArray;  //get the level data array
 
         for (int i = 0; i < levelItemsArray.Length; i++)                         //loop through entire array

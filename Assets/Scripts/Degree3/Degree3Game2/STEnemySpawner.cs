@@ -16,8 +16,6 @@ public class STEnemySpawner : MonoBehaviour
 
     void Awake()
     {
-        Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
-
         SetTimeUntilSpawn();
     }
 

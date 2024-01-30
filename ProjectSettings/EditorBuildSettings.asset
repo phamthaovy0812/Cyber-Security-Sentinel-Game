@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_6.unity
     guid: 57abdb9f7de48af4fa311dd9750da13a
   - enabled: 1
-    path: Assets/Scenes/HomeText.unity
+    path: Assets/Scenes/HomePage.unity
     guid: e70c81c01ab155a4aa61bd4d83c570d8
   - enabled: 1
     path: Assets/Scenes/WelcomePage.unity
@@ -75,6 +75,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Degree2/ADGameplay.unity
     guid: e3d21aa3a896c404bb32b8c93f051bf4
   - enabled: 1
+    path: Assets/Scenes/Degree3/Chase.unity
+    guid: 29a6f68686de7c543a27b41693386904
+  - enabled: 1
     path: Assets/Scenes/Degree2/Gameplay.unity
     guid: d3dab0bc6fb598b41a174a1fa3aa583a
   - enabled: 1
@@ -92,4 +95,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Degree2/Typing/TypingGame4.unity
     guid: 2fadf03e8d639bd45a4a810b8537cdeb
+  - enabled: 1
+    path: Assets/Scenes/Degree3/Degree3Game1.unity
+    guid: 7eac364654834544e9202c9af8a2d42e
   m_configObjects: {}

@@ -65,6 +65,49 @@ public class GetQuestion : MonoBehaviour
 
 		// return listTopics;
 	}
+	public async void GetQuestionTopic3()
+	{
+		topic1 = new Topic();
+		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+		await FirebaseDatabase.DefaultInstance
+ 		 .GetReference("Degree").Child("1").Child("topics")
+		  .GetValueAsync().ContinueWithOnMainThread(task =>
+  		{
+			  if (task.IsFaulted)
+			  {
+				  Debug.Log("No read data from database");
+			  }
+			  else if (task.IsCompleted)
+			  {
+				  DataSnapshot snapshot = task.Result;
+				  string data = JsonUtility.ToJson(snapshot);
+				  if (snapshot.ChildrenCount > 0)
+				  {
+					  foreach (DataSnapshot dataSnapshot in snapshot.Children)
+					  {
+						  Topic topic = JsonUtility.FromJson<Topic>(dataSnapshot.GetRawJsonValue());
+						  for (int i = 0; i < topic.listQuestions.Length; i++)
+						  {
+							  listQuestion.Add(topic.listQuestions[i]);
+
+						  }
+
+					  }
+					  Debug.Log("count listTopics: " + listQuestion.Count);
+					  //   topic1.id_topic = listTopics[0].id_topic;
+					  //   topic1.name_topic = listTopics[0].name_topic;
+					  //   topic1.listQuestions = listTopics[0].listQuestions;
+
+
+					  //   Debug.Log("listTopics: " + JsonUtility.ToJson(listTopics..listQuestions));
+				  }
+
+				  // Do something with snapshot...
+			  }
+		  });
+
+		// return listTopics;
+	}
 	private void Awake()
 	{
 		if (instance == null)                                               //if instance is null

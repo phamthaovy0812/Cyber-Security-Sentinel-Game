@@ -12,6 +12,7 @@ using System;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using System.Threading;
+using System.Collections.Generic;
 
 public class FirebaseAuthManager : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class FirebaseAuthManager : MonoBehaviour
     bool checkAutoLogin = false;
     private void Start()
     {
+
         StartCoroutine(CheckAndFixDependenciesAsync());
     }
     private IEnumerator CheckAndFixDependenciesAsync()
@@ -64,8 +66,10 @@ public class FirebaseAuthManager : MonoBehaviour
     {
         if (checkAutoLogin)
         {
+            // emailLoginField.OnPointerClick
             emailLoginField.text = APIUser.Instance.GetUser().email;
             passwordLoginField.text = APIUser.Instance.GetUser().password;
+            checkAutoLogin = false;
         }
 
     }
@@ -98,8 +102,7 @@ public class FirebaseAuthManager : MonoBehaviour
             APIUser.Instance.getConnectedUserByUId(user.Email);
             Debug.Log("AutoLogin: " + user.Email);
             checkAutoLogin = true;
-            Debug.Log("email: " + user.Email);
-            Debug.Log("password: " + passwordLoginField.text);
+
 
         }
         else
@@ -173,6 +176,7 @@ public class FirebaseAuthManager : MonoBehaviour
             }
 
             Debug.Log(failedMessage);
+
         }
         else
         {
@@ -181,7 +185,7 @@ public class FirebaseAuthManager : MonoBehaviour
             Debug.LogFormat("{0} You Are Successfully Logged In", user.DisplayName);
             APIUser.Instance.getConnectedUserByUId(email);
             yield return new WaitForSeconds(3f);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("HomeText");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("HomePage");
 
             References.userName = user.DisplayName;
 
@@ -322,39 +326,74 @@ public class FirebaseAuthManager : MonoBehaviour
             }
         }
     }
-    public void CreateNewUser(string username, string password, string email)
+    public async void CreateNewUser(string username, string password, string email)
     {
         DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
         string userId;
         userId = System.Guid.NewGuid().ToString(); ;
-        User user = new User(userId, email, username, password, "1", 0);
-        reference.Child("Users")
+        User user = new User(userId, email, username, password, 0, 0);
+        await reference.Child("Users")
             .Child(userId)
             .Child("id_user")
             .SetValueAsync(user.id_user);
-        reference.Child("Users")
+        await reference.Child("Users")
             .Child(userId)
             .Child("username")
             .SetValueAsync(user.username);
-        reference.Child("Users")
+        await reference.Child("Users")
             .Child(userId)
             .Child("password")
             .SetValueAsync(user.password);
-        reference.Child("Users")
+        await reference.Child("Users")
             .Child(userId)
             .Child("email")
             .SetValueAsync(user.email);
-        reference.Child("Users")
+        await reference.Child("Users")
             .Child(userId)
             .Child("id_level")
             .SetValueAsync(user.id_level);
-        reference.Child("Users")
+        await reference.Child("Users")
             .Child(userId)
             .Child("experience")
             .SetValueAsync(user.experience);
+        await reference.Child("Users")
+        .Child(userId)
+        .Child("isOpenDegree1")
+        .SetValueAsync(user.isOpenDegree1);
+        await reference.Child("Users")
+            .Child(userId)
+            .Child("isOpenDegree2")
+            .SetValueAsync(user.isOpenDegree2);
+        await reference.Child("Users")
+            .Child(userId)
+            .Child("isOpenDegree3")
+            .SetValueAsync(user.isOpenDegree3);
+        await reference.Child("Users")
+            .Child(userId)
+            .Child("isOpenDegree4")
+            .SetValueAsync(user.isOpenDegree4);
+        await reference.Child("Users")
+            .Child(userId)
+            .Child("isOpenStartGame")
+            .SetValueAsync(user.isOpenStartGame);
+
 
         Debug.Log("New User Created");
+        LevelItem[] levelItems = {
+            new LevelItem(unlock: true, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+        };
 
+        LevelData levelData = new LevelData();
+        levelData.lastUnlockedLevel = 0;
+        levelData.levelItemsArray = levelItems;
+        string levelDataString = JsonUtility.ToJson(levelData);
+        await reference.Child("ScoreDegree").Child(userId).Child("1").SetRawJsonValueAsync(levelDataString);
+        await reference.Child("ScoreDegree").Child(userId).Child("3").SetRawJsonValueAsync(levelDataString);
     }
 
 }
