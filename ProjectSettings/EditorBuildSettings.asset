@@ -92,4 +92,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Degree2/Typing/TypingGame4.unity
     guid: 2fadf03e8d639bd45a4a810b8537cdeb
+  - enabled: 1
+    path: Assets/Scenes/Degree4/Room412(sms).unity
+    guid: 81bb2bc186f06884f8d44364afcbc6a7
+  - enabled: 1
+    path: Assets/Scenes/Degree4/Room546(social).unity
+    guid: 97ccaa4afc801954ba70200f8433c39c
+  - enabled: 1
+    path: Assets/Scenes/Degree4/Room323(web).unity
+    guid: c59296f74140a774c97d62c81365c19b
+  - enabled: 1
+    path: Assets/Scenes/Degree4/Room112(Email).unity
+    guid: 2519c70b41972ef47a96eaef36d4074c
   m_configObjects: {}

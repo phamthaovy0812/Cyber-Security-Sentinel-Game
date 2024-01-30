@@ -40,8 +40,16 @@ public class WordManager3 : MonoBehaviour
         else
         {
             word.SetActive(false);
-            openSecurity.SetActive(true);
+         StartCoroutine(DelayedActivation(5f));
         }
+
+    }
+    private IEnumerator DelayedActivation(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Assuming "openSecurity" is a GameObject reference
+        openSecurity.SetActive(true);
     }
     public void TypeLetter(char letter)
     {
