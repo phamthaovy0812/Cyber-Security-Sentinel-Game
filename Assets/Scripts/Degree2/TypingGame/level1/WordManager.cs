@@ -14,7 +14,7 @@ public class WordManager : MonoBehaviour
     public GameObject openSecurity;
     public GameObject word;
     public int count = 0;
-    public int countDraw=0;
+    public int countDraw = 0;
     public GameObject nextLevel;
 
     private void Start()
@@ -23,7 +23,8 @@ public class WordManager : MonoBehaviour
     }
     private void Update()
     {
-        if (countDraw ==5){
+        if (countDraw == 5)
+        {
             nextLevel.SetActive(true);
         }
     }
@@ -36,11 +37,20 @@ public class WordManager : MonoBehaviour
             Debug.Log(word.word);
             words.Add(word);
         }
-        else {
+        else
+        {
             word.SetActive(false);
-            openSecurity.SetActive(true);
+
+            StartCoroutine(DelayedActivation(3f));
         }
 
+    }
+    private IEnumerator DelayedActivation(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Assuming "openSecurity" is a GameObject reference
+        openSecurity.SetActive(true);
     }
     public void TypeLetter(char letter)
     {
@@ -83,5 +93,5 @@ public class WordManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // SceneManager.LoadScene(WordConstants.DATA.HOME_TYPING);
     }
-   
+
 }
