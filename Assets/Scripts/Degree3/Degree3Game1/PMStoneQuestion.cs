@@ -35,7 +35,7 @@ public class PMStoneQuestion : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         insertAnswerDestructibles = GetComponent<Tilemap>();
-        m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
+
         // m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
         layer1 = LayerMask.NameToLayer("enemy");

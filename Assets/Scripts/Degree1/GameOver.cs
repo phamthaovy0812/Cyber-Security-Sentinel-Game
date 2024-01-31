@@ -26,11 +26,16 @@ public class GameOver : MonoBehaviour
                 LevelSystemManager.Instance.LevelComplete(3);
                 scoreText.text = "+180exp";
             }
+            else
+            {
+                scoreText.text = "";
+            }
         }
         else
         {
             titleGameOver.text = "Thất bại";
             LevelSystemManager.Instance.LevelComplete(0);
+            scoreText.text = "";
 
         }
         // SetStar(star);
