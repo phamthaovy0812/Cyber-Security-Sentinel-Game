@@ -55,21 +55,26 @@ public class degree
     }
 }
 
-public class Level{
-    public int score {get;set;}
-    public Level(){
+public class Level
+{
+    public int score { get; set; }
+    public Level()
+    {
         score = 0;
     }
-    public Level(int score){
+    public Level(int score)
+    {
         this.score = score;
     }
 }
-public class ScoreLevel{
-    string id_user {get; set;}
-    string id_degree {get; set;}
-    string id_game {get; set;}
-    List<Level> score_level {get; set;}
-    public ScoreLevel(string id_user, string id_degree, string id_game, List<Level> score_level){
+public class ScoreLevel
+{
+    string id_user { get; set; }
+    string id_degree { get; set; }
+    string id_game { get; set; }
+    List<Level> score_level { get; set; }
+    public ScoreLevel(string id_user, string id_degree, string id_game, List<Level> score_level)
+    {
         this.id_user = id_user;
         this.id_degree = id_degree;
         this.id_game = id_game;
@@ -88,7 +93,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
 
     void Start()
     {
-        
+
         reference = FirebaseDatabase.DefaultInstance.RootReference;
         // ReadDatabase();
 
@@ -101,46 +106,49 @@ public class FirebaseDatabaseManager : MonoBehaviour
         list_level.Add(level);
         list_level.Add(level);
 
-        CreateScoreDegree(SystemInfo.deviceUniqueIdentifier, "1","1",list_level);
+        CreateScoreDegree(SystemInfo.deviceUniqueIdentifier, "1", "1", list_level);
         // CreateNewUser();
 
-        
+
     }
-    public void CreateScoreDegree(string id_user, string id_degree, string id_game, List<Level> levels){
-        for(int i = 0; i < levels.Count; i++){
-        reference.Child("ScoreDegree")
-                .Child(id_user)
-                .Child(id_degree)
-                .Child(id_game)
-                .Child("score_level_"+i+1)
-                .SetValueAsync(levels[i].score);
-        } 
+    public void CreateScoreDegree(string id_user, string id_degree, string id_game, List<Level> levels)
+    {
+        for (int i = 0; i < levels.Count; i++)
+        {
+            reference.Child("ScoreDegree")
+                    .Child(id_user)
+                    .Child(id_degree)
+                    .Child(id_game)
+                    .Child("score_level_" + i + 1)
+                    .SetValueAsync(levels[i].score);
+        }
 
     }
 
     public void ReadDatabase()
     {
-        
+
         reference.Child("Degree")
                  .Child("1")
                  .Child("Topics")
-                 .GetValueAsync().ContinueWithOnMainThread(task => {
-                    if (task.IsFaulted)
-                        {
-                             Debug.Log(task.Exception.Message);
-                        }
-                        else if (task.IsCompleted)
-                        {
-                            DataSnapshot snapshot = task.Result;
-                            
-                            Debug.Log("object" + snapshot.Value);
-                        }
-                   });
+                 .GetValueAsync().ContinueWithOnMainThread(task =>
+                 {
+                     if (task.IsFaulted)
+                     {
+                         Debug.Log(task.Exception.Message);
+                     }
+                     else if (task.IsCompleted)
+                     {
+                         DataSnapshot snapshot = task.Result;
+
+                         Debug.Log("object" + snapshot.Value);
+                     }
+                 });
     }
     public void CreateNewUser()
     {
         userId = SystemInfo.deviceUniqueIdentifier;
-        User user = new User(userId,"","","","",0);
+        User user = new User(userId, "", "", "", 0, 0);
         reference.Child("Users")
             .Child(userId)
             .Child("id_user")

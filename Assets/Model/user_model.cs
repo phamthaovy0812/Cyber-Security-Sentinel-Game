@@ -6,7 +6,7 @@ public class User
     public string password { get; set; }
     public string username { get; set; }
     public int experience { get; set; }
-    public string id_level { get; set; }
+    public int id_level { get; set; }
     public bool isOpenDegree1 { get; set; }
     public bool isOpenDegree2 { get; set; }
     public bool isOpenDegree3 { get; set; }
@@ -17,10 +17,11 @@ public class User
     public User()
     {
         id_user = "0";
-        email = username = password = id_level = "";
+        email = username = password = "";
+        id_level = 0;
         experience = 0;
     }
-    public User(string id, string email, string username, string password, string id_level, int experience, bool isOpenDegree1 = false, bool isOpenDegree2 = false, bool isOpenDegree3 = false, bool isOpenDegree4 = false, bool isOpenStartGame = false)
+    public User(string id, string email, string username, string password, int id_level, int experience, bool isOpenDegree1 = false, bool isOpenDegree2 = false, bool isOpenDegree3 = false, bool isOpenDegree4 = false, bool isOpenStartGame = false)
     {
         this.id_user = id;
         this.email = email;

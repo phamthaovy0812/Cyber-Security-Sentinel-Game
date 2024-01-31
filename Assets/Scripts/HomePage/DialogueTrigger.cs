@@ -28,38 +28,54 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             HomeManager.Instance.NPC = 0;
-
             if (!APIUser.Instance.GetUser().isOpenStartGame)
             {
-                Debug.Log("Start game");
+                Debug.Log("false");
                 dialogueScript.dialogues = new List<List<string>>();
 
-                dialogueScript.dialogues = dialogString.docBeginStartingSeePolice;
-                ActiveHomePage.Instance.isOpenFlagPolice = false;
+                dialogueScript.dialogues = dialogString.docBeginStartingSeePoliceDegree1;
+
                 playerDetected = true;
 
             }
             else
             {
-                if (HomeManager.Instance.id_level == 1)
+                Debug.Log("true");
+                if (HomeManager.Instance.id_level == 2 && !APIUser.Instance.GetUser().isOpenDegree2)
+                {
+                    dialogueScript.dialogues = new List<List<string>>();
+                    dialogueScript.dialogues = dialogString.docBeginStartingSeePoliceDegree2;
+                }
+                if (HomeManager.Instance.id_level == 2 && !APIUser.Instance.GetUser().isOpenDegree3)
+                {
+                    dialogueScript.dialogues = new List<List<string>>();
+                    dialogueScript.dialogues = dialogString.docBeginStartingSeePoliceDegree2;
+                }
+                if (HomeManager.Instance.id_level == 4 && !APIUser.Instance.GetUser().isOpenDegree4)
+                {
+                    dialogueScript.dialogues = new List<List<string>>();
+                    dialogueScript.dialogues = dialogString.docBeginStartingSeePoliceDegree2;
+                }
+
+                if (HomeManager.Instance.id_level == 1 && APIUser.Instance.GetUser().isOpenDegree1)
                 {
                     dialogueScript.dialogues = new List<List<string>>();
                     dialogueScript.dialogues = dialogString.docNoCompleteDegree1;
 
                 }
-                if (HomeManager.Instance.id_level == 2)
+                if (HomeManager.Instance.id_level == 2 && APIUser.Instance.GetUser().isOpenDegree2)
                 {
                     dialogueScript.dialogues = new List<List<string>>();
                     dialogueScript.dialogues = dialogString.docNoCompleteDegree2;
 
                 }
-                if (HomeManager.Instance.id_level == 3)
+                if (HomeManager.Instance.id_level == 3 && APIUser.Instance.GetUser().isOpenDegree3)
                 {
                     dialogueScript.dialogues = new List<List<string>>();
                     dialogueScript.dialogues = dialogString.docNoCompleteDegree3;
 
                 }
-                if (HomeManager.Instance.id_level == 4)
+                if (HomeManager.Instance.id_level == 4 && APIUser.Instance.GetUser().isOpenDegree4)
                 {
                     dialogueScript.dialogues = new List<List<string>>();
                     dialogueScript.dialogues = dialogString.docNoCompleteDegree4;

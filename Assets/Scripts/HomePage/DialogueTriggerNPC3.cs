@@ -29,14 +29,7 @@ public class DialogueTriggerNPC3 : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             HomeManager.Instance.NPC = 3;
-            if (HomeManager.Instance.id_level < 3)
-            {
-                dialogueScript.dialogues = dialogString.docNoPlayDegree3;
-
-
-            }
-
-            else if (!APIUser.Instance.GetUser().isOpenDegree3 && HomeManager.Instance.id_level == 3)
+            if (!APIUser.Instance.GetUser().isOpenDegree3 && HomeManager.Instance.id_level == 3)
             {
 
                 dialogueScript.dialogues = dialogString.docBeginStartingSeeNPCDegree3;

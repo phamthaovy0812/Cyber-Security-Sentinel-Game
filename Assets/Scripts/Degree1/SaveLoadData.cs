@@ -11,15 +11,16 @@ public class SaveLoadData : MonoBehaviour
     private static SaveLoadData instance;
 
     public static SaveLoadData Instance { get => instance; }
-    public LevelData levelData;
+    LevelData levelData;
 
     private void Awake()
     {
+
         if (instance == null)
         {
             instance = this;
 
-            // DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -32,22 +33,22 @@ public class SaveLoadData : MonoBehaviour
     {
         // SaveData();
         // ClearData();
-        LoadData();
-        // if (PlayerPrefs.GetInt("GameStartFirstTime") == 1)  //if PlayerPrefs of "GameStartFirstTime" value is 1, means we are playing the game again
-        // {
-        //     LoadData();                                     //so we load the data
-        // }
-        // else                                                //if its not 1, means we are playing the game 1st time
-        // {
-        //     SaveData();                                     //save the data 1st
-        //     PlayerPrefs.SetInt("GameStartFirstTime", 1);    //save the PlayerPrefs
-        // }
+        // LoadData();
+        if (PlayerPrefs.GetInt("GameStartFirstTime") == 1)  //if PlayerPrefs of "GameStartFirstTime" value is 1, means we are playing the game again
+        {
+            LoadData();                                     //so we load the data
+        }
+        else                                                //if its not 1, means we are playing the game 1st time
+        {
+            SaveData();                                     //save the data 1st
+            PlayerPrefs.SetInt("GameStartFirstTime", 1);    //save the PlayerPrefs
+        }
     }
 
     //this is Unity method which is called when game is crashed or in background or quit
     private void OnApplicationPause(bool pause)
     {
-        SaveData();                                 //great for saving the data. Note: In editor doesnt work correctly, but works great in Build
+        // SaveData();                                 //great for saving the data. Note: In editor doesnt work correctly, but works great in Build
     }
 
     /// <summary>
@@ -56,15 +57,16 @@ public class SaveLoadData : MonoBehaviour
     public async void SaveData()
     {
         //convert the data to string
+
         string levelDataString = JsonUtility.ToJson(LevelSystemManager.Instance.LevelData);
+        APIUser.Instance.SetLevelData(LevelSystemManager.Instance.LevelData);
 
         try
         {
             //save the string as json 
             DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
             // string json = JsonUtility.ToJson(degree);
-            await reference.Child("ScoreDegree").Child("76bb0d9fdbb1554371bddf36b08711aba548bb16").Child("1").SetRawJsonValueAsync(levelDataString);
-            Debug.Log("Data Saved");
+            await reference.Child("ScoreDegree").Child(APIUser.Instance.GetUser().id_user).Child(APIUser.Instance.GetUser().id_level.ToString()).SetRawJsonValueAsync(levelDataString);
 
         }
         catch (System.Exception e)
@@ -81,7 +83,6 @@ public class SaveLoadData : MonoBehaviour
         try
         {
 
-            // levelData = APIUser.Instance.GetLevelData();
 
             //create LevelData from json
             if (levelData != null)
@@ -127,6 +128,16 @@ public class LevelItem                  //level item
 {
     public bool unlocked;
     public int starAchieved;
+    public LevelItem()
+    {
+        unlocked = false;
+        starAchieved = 0;
+    }
+    public LevelItem(bool unlock, int star)
+    {
+        this.unlocked = unlock;
+        this.starAchieved = star;
+    }
 }
 
 

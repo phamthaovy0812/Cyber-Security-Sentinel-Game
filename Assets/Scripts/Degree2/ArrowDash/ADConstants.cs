@@ -6,7 +6,7 @@ namespace ADConstants
         public const string SETTINGS_SOUND = "SETTINGS_SOUND";
         public const string MAIN_MENU_SCENE = "ADMainMenu";
         public const string GAMEPLAY_SCENE = "Gameplay";
-        public const string HOME_SCENE = "HomeText";
+        public const string HOME_SCENE = "HomePage";
     }
 
     public class Tags

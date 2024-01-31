@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public void OnClickPlay()
     {
         // SceneManager.LoadScene("MenuLevel"); 
-        SaveLoadData.Instance.LoadData();
+
 
         SceneManager.LoadScene(nameScene);
 
@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
     public void OnClickExit()
     {
 
-        SceneManager.LoadScene("HomeText");
+        SceneManager.LoadScene("HomePage");
     }
     public void OnClickBackOption()
     {
