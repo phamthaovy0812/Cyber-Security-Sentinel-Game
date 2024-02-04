@@ -26,10 +26,6 @@ public class Dialogue : MonoBehaviour
     //Wait for next boolean
     private bool waitForNext;
 
-    private void Awake()
-    {
-        ToggleWindow(false);
-    }
     private void ToggleWindow(bool show)
     {
         window.SetActive(show);
@@ -72,9 +68,10 @@ public class Dialogue : MonoBehaviour
         indexDialog = 0;
         //Stop all Ienumerators
         //Hide the window
-        ToggleWindow(false);
         // set flag position police 
         StopAllCoroutines();
+        ToggleWindow(false);
+
         Debug.Log("EndDialogue");
 
 

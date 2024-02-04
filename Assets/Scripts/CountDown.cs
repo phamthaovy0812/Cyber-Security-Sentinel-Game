@@ -9,7 +9,7 @@ public class CountDown : MonoBehaviour
     public TextMeshProUGUI countDownText;
     public GameObject gameObjDestroy;
 
-    public float countdownTime = 10f; // Set the initial countdown time
+    public float countdownTime = 15f; // Set the initial countdown time
 
     // Start is called before the first frame update
 
