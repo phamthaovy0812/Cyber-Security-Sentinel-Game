@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PMCountdownPlayGame : MonoBehaviour
 {
-    private float currentTime = 0f;
+    public float currentTime = 0f;
     [SerializeField] private float startingTime;
     [SerializeField] private float dangerTime;
     public TMPro.TextMeshProUGUI countDownText;
@@ -27,9 +27,14 @@ public class PMCountdownPlayGame : MonoBehaviour
         }
         if (currentTime <= 0)
         {
-            FindAnyObjectByType<Pacman>().GameOVer();
+            FindAnyObjectByType<Pacman>().GameOVer(false);
             Destroy(gameObject);
         }
 
     }
+    public void AddTime()
+    {
+        currentTime += 10;
+    }
+
 }

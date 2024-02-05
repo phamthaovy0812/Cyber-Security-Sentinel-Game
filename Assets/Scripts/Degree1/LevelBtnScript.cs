@@ -6,6 +6,7 @@ public class LevelBtnScript : MonoBehaviour
 {
     [SerializeField] private GameObject lockObj, unlockObj;     //ref to lock and unlock gameobject
     [SerializeField] private Image[] starsArray;                //ref to all the stars of button
+    [SerializeField] private Image objectBtn;                //ref to all the stars of button
     [SerializeField] private TextMeshProUGUI levelIndexText;               //ref to text which indicate the level number
     [SerializeField] private Color lockColor, unlockColor;      //color references
     [SerializeField] private Button btn;                        //ref to hold button component                  //ref to hold button component
@@ -34,16 +35,19 @@ public class LevelBtnScript : MonoBehaviour
             levelIndex = index + 1;                             //set levelIndex, Note: We add 1 because array start from 0 and level index start from 1 
             btn.interactable = true;                            //make button interactable
                                                                 //make button interactable
+            objectBtn.GetComponent<UnityEngine.UI.Image>().color = Color.white;                                                       //remove button interactable
             lockObj.SetActive(false);                           //deactivate lockObj
             unlockObj.SetActive(true);                          //activate unlockObj
             SetStar(value.starAchieved);                        //set the stars
-            levelIndexText.text = "" + levelIndex;              //set levelIndexText text
+            levelIndexText.text = "" + levelIndex;
+            //set levelIndexText text
 
         }
         else
         {
             btn.interactable = false;                           //remove button interactable
-                                                                //remove button interactable
+            objectBtn.GetComponent<UnityEngine.UI.Image>().color = Color.gray;                                                       //remove button interactable
+                                                                                                                                     //remove button interactable
             lockObj.SetActive(true);                            //activate lockObj
             unlockObj.SetActive(false);                         //deactivate unlockObj
         }

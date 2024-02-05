@@ -48,7 +48,27 @@ public class InsertAnswerDestructibles : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // AppearAnswer();
+
+        checkCorrect = false;
+        indexLevel = LevelSystemManager.Instance.CurrentLevel;
+
+        arrayAnswers = GetListArrayAnswer()[indexLevel].arrayAnswers;
+        randomIndex = UnityEngine.Random.Range(0, arrayAnswers.Length);
+
+        arrayCheckAppeared = new int[arrayAnswers.Length];
+        AnswerText.text = arrayAnswers[randomIndex].answer;
+        // AnswerText.text = "";
+        if (arrayAnswers[randomIndex].question == 1)
+        {
+            questionText.text = listQuestions[indexLevel].question1;
+
+        }
+        else
+        {
+            questionText.text = listQuestions[indexLevel].question2;
+
+        }
+        arrayCheckAppeared[randomIndex] = 1;
 
     }
     void Update()
@@ -57,6 +77,7 @@ public class InsertAnswerDestructibles : MonoBehaviour
         {
             AppearAnswer();
             checkAppear = false;
+            checkCorrect = false;
         }
 
     }
@@ -64,7 +85,8 @@ public class InsertAnswerDestructibles : MonoBehaviour
     {
         if (instance == null)                                               //if instance is null
         {
-            instance = this;                                                //set this as instance
+            instance = this;
+            // DontDestroyOnLoad(gameObject);                                       //set this as instance
         }
         else
         {
@@ -80,23 +102,18 @@ public class InsertAnswerDestructibles : MonoBehaviour
     }
     public void AppearAnswer()
     {
-        indexLevel = LevelSystemManager.Instance.CurrentLevel;
-        Debug.Log("Current Level: " + indexLevel);
-        arrayAnswers = GetListArrayAnswer()[0].arrayAnswers;
-        randomIndex = UnityEngine.Random.Range(0, arrayAnswers.Length);
 
-        arrayCheckAppeared = new int[arrayAnswers.Length];
         randomIndex = UnityEngine.Random.Range(0, arrayAnswers.Length);
         AnswerText.text = arrayAnswers[randomIndex].answer;
         // AnswerText.text = "";
         if (arrayAnswers[randomIndex].question == 1)
         {
-            questionText.text = listQuestions[0].question1;
+            questionText.text = listQuestions[indexLevel].question1;
 
         }
         else
         {
-            questionText.text = listQuestions[0].question2;
+            questionText.text = listQuestions[indexLevel].question2;
 
         }
         arrayCheckAppeared[randomIndex] = 1;
@@ -115,9 +132,6 @@ public class InsertAnswerDestructibles : MonoBehaviour
             isCorrectAnswerText.text = "Chính xác";
             isCorrectAnswerText.color = Color.blue;
             checkCorrect = true;
-
-
-
         }
         else
         {
@@ -141,7 +155,7 @@ public class InsertAnswerDestructibles : MonoBehaviour
 
         Debug.Log("Btn_No");
         // Destroy(gameObjectChooseAnswer);
-        FindAnyObjectByType<STEnemySpawner>().setTime();
+        // FindAnyObjectByType<STEnemySpawner>().setTime();
         isCorrectAnswerText.text = "";
         AnswerText.text = "";
         questionText.text = "";

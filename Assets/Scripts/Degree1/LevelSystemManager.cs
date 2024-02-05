@@ -17,7 +17,9 @@ public class LevelSystemManager : MonoBehaviour
     public LevelData LevelData { get => levelData; set => levelData = value; }   //getter
 
     private int currentLevel;
-    public int sceneBuildIndex;                                           //keep track of current level player is playing
+    public int sceneBuildIndex;
+    public int idGame;            //ref to grid holder
+                                  //keep track of current level player is playing
     public int CurrentLevel { get => currentLevel; set => currentLevel = value; }   //getter and setter for currentLevel
 
     private void Awake()
@@ -56,16 +58,25 @@ public class LevelSystemManager : MonoBehaviour
 
     public void LevelComplete(int starAchieved)                             //method called when player win the level
     {
-        if (starAchieved == 3)
+
+        if (starAchieved > APIUser.Instance.GetLevelData(idGame).levelItemsArray[currentLevel].starAchieved)
         {
             // xuwr lys update diem cho user
+            int score = starAchieved - APIUser.Instance.GetLevelData(idGame).levelItemsArray[currentLevel].starAchieved;
+            if (idGame == 1)
+            {
+                APIUser.Instance.UpdateExperiences(score * 112);
 
-            APIUser.Instance.UpdateExperiences(3 * 60);
+            }
+            else if (idGame == 2)
+            {
+                APIUser.Instance.UpdateExperiences(score * 400);
 
+            }
+            levelData.levelItemsArray[currentLevel].starAchieved = starAchieved;
         }
-        levelData.levelItemsArray[currentLevel].starAchieved = starAchieved;
         //save the stars achieved by the player in level
-        if (levelData.lastUnlockedLevel <= (currentLevel + 1) && (currentLevel + 1) < 6) //&& starAchieved > 0
+        if (levelData.lastUnlockedLevel <= (currentLevel + 1) && (currentLevel + 1) < APIUser.Instance.GetLevelData(idGame).levelItemsArray.Length && starAchieved > 0) //&& starAchieved > 0
         {
             levelData.lastUnlockedLevel = currentLevel + 1;           //change the lastUnlockedLevel to next level                                                    //and make next level unlock true
             levelData.levelItemsArray[levelData.lastUnlockedLevel].unlocked = true;

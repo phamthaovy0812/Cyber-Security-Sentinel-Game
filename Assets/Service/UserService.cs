@@ -15,7 +15,8 @@ public class APIUser : MonoBehaviour
 
 	private User _user;
 	public DataSnapshot snapshot;
-	private LevelData levelData;
+	private LevelData levelDataDegree1;
+	private LevelData levelDataDegree3;
 
 	private void Awake()
 	{
@@ -31,17 +32,24 @@ public class APIUser : MonoBehaviour
 	}
 	public User GetUser() { return _user; }
 
-	public LevelData GetLevelData()
+	public LevelData GetLevelData(int idGame)
 	{
-		return levelData;
+		Debug.Log("Length degree1: " + levelDataDegree1.levelItemsArray.Length + " levelDataDegree2: " + levelDataDegree3.levelItemsArray.Length);
+		if (idGame == 1) return levelDataDegree1;
+		else if (idGame == 3) return levelDataDegree3;
+		else return null;
 	}
 	public void UpdatedLevelData(LevelData levelData)
 	{
 
 	}
-	public void SetLevelData(LevelData levelData)
+	public void SetLevelDataDegree1(LevelData levelData)
 	{
-		this.levelData = levelData;
+		this.levelDataDegree1 = levelData;
+	}
+	public void SetLevelDataDegree3(LevelData levelData)
+	{
+		this.levelDataDegree3 = levelData;
 	}
 	public void getConnectedUserByUId(string email)
 	{
@@ -188,11 +196,9 @@ public class APIUser : MonoBehaviour
 				  DataSnapshot snapshot = task.Result;
 				  if (snapshot.ChildrenCount > 0)
 				  {
-					  foreach (DataSnapshot dataSnapshot in snapshot.Children)
-					  {
-						  levelData = JsonUtility.FromJson<LevelData>(dataSnapshot.GetRawJsonValue());
-						  Debug.Log("Finale");
-					  }
+					  levelDataDegree1 = JsonUtility.FromJson<LevelData>(snapshot.Child("1").GetRawJsonValue());
+					  levelDataDegree3 = JsonUtility.FromJson<LevelData>(snapshot.Child("3").GetRawJsonValue());
+
 				  }
 
 				  // Do something with snapshot...

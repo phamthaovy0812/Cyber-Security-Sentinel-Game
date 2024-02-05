@@ -9,6 +9,7 @@ public class PMStoneQuestion : MonoBehaviour
     public static PMStoneQuestion Instance { get; private set; }
     [Header("Titlemap")]
     public Tilemap insertAnswerDestructibles;
+    public GameObject AddTimeObject;
     Rigidbody2D rb;
     [Header("Questions")]
     public GameObject QuestionObj;
@@ -22,7 +23,7 @@ public class PMStoneQuestion : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerC;
     [SerializeField] private UnityEngine.UI.Image m_ImageAnswerD;
 
-    private Question[] m_QuestionData;
+    private Question[] m_QuestionData = { new Question("", "", "", "", "", "", "a") };
     private int m_QuestionIndex = 0;
     private bool checkCorrectAnswer = false;
     private bool checkCorrect = false;
@@ -36,16 +37,17 @@ public class PMStoneQuestion : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         insertAnswerDestructibles = GetComponent<Tilemap>();
 
-        // m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
+        m_QuestionData = GetQuestion.Instance.getListQuestionTopicOfDegree1().ToArray();
         m_QuestionIndex = UnityEngine.Random.Range(0, m_QuestionData.Length);
         layer1 = LayerMask.NameToLayer("enemy");
-        layer2 = LayerMask.NameToLayer("Stage");
+        layer2 = LayerMask.NameToLayer("Stone");
         speedPoliceText.text = FindAnyObjectByType<MovementPacman>().speed.ToString();
         speedThiefText.text = FindAnyObjectByType<MoveEnemy>().speed.ToString();
 
     }
     private void Update()
     {
+        Physics2D.IgnoreLayerCollision(layer1, layer2, true);
         if (checkCorrectAnswer)
         {
             countCorrect++;
@@ -55,6 +57,7 @@ public class PMStoneQuestion : MonoBehaviour
             }
             FindAnyObjectByType<MoveEnemy>().enabled = true;
             Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
+            Instantiate(AddTimeObject, hitPosPlayer, Quaternion.identity);
             RemoveItemAnswer(hitPosPlayer, Vector2.up);
             RemoveItemAnswer(hitPosPlayer, Vector2.down);
             RemoveItemAnswer(hitPosPlayer, Vector2.left);
@@ -66,9 +69,15 @@ public class PMStoneQuestion : MonoBehaviour
             speedPoliceText.text = FindAnyObjectByType<MovementPacman>().speed.ToString();
             speedThiefText.text = FindAnyObjectByType<MoveEnemy>().speed.ToString();
             checkCorrectAnswer = false;
+            FindAnyObjectByType<PMCountdownPlayGame>().AddTime();
 
 
         }
+    }
+
+    void FixedUpdate()
+    {
+        Physics.IgnoreLayerCollision(layer1, layer2, true);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -76,15 +85,11 @@ public class PMStoneQuestion : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             FindAnyObjectByType<MoveEnemy>().enabled = false;
-            Debug.Log("Player1");
             CallQuestion();
             FindAnyObjectByType<CountDown>().StartCountdown();
 
         }
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Physics2D.IgnoreLayerCollision(layer1, layer2, true);
-        }
+
 
     }
     private void OnCollisionExit2D(Collision2D collision)

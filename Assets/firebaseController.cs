@@ -283,7 +283,19 @@ public class firebaseController : MonoBehaviour
         levelData.levelItemsArray = levelItems;
         string levelDataString = JsonUtility.ToJson(levelData);
         await reference.Child("ScoreDegree").Child(userId).Child("1").SetRawJsonValueAsync(levelDataString);
-        // await reference.Child("ScoreDegree").Child(userId).Child("3").SetRawJsonValueAsync(levelDataString);
+
+        LevelItem[] levelItems3 = {
+            new LevelItem(unlock: true, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+        };
+
+        LevelData levelData3 = new LevelData();
+        levelData3.lastUnlockedLevel = 0;
+        levelData3.levelItemsArray = levelItems3;
+        string levelDataString3 = JsonUtility.ToJson(levelData);
+        await reference.Child("ScoreDegree").Child(userId).Child("3").SetRawJsonValueAsync(levelDataString3);
     }
 
 

@@ -10,21 +10,24 @@ public class GameOver : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image[] starsArray;
     [SerializeField] private TextMeshProUGUI titleGameOver;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private int idGame;
 
     // Start is called before the first frame update
 
-    public void gameOver(bool isWin)
+    public void gameOver(int star)
     {
         Time.timeScale = 0;
 
         Debug.Log("Game Over");
-        if (isWin)
+        if (star > 0)
         {
             titleGameOver.text = "Chiến thắng";
-            if (APIUser.Instance.GetUser().id_level == 1)
+
+            LevelSystemManager.Instance.LevelComplete(star);
+            int indexItem = LevelSystemManager.Instance.CurrentLevel;
+            if (star > APIUser.Instance.GetLevelData(idGame).levelItemsArray[indexItem].starAchieved)
             {
-                LevelSystemManager.Instance.LevelComplete(3);
-                scoreText.text = "+180exp";
+                scoreText.text = "+" + (star - APIUser.Instance.GetLevelData(idGame).levelItemsArray[indexItem].starAchieved) + "exp";
             }
             else
             {
@@ -38,7 +41,7 @@ public class GameOver : MonoBehaviour
             scoreText.text = "";
 
         }
-        // SetStar(star);
+        SetStar(star);
 
 
     }

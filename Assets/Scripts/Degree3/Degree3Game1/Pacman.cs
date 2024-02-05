@@ -61,17 +61,38 @@ public class Pacman : MonoBehaviour
         deathSequence.enabled = true;
         deathSequence.Restart();
     }
-    public void GameOVer()
+    public void GameOVer(bool isWin)
     {
         Time.timeScale = 0;
         gameOver.SetActive(true);
+        float currentTime = FindAnyObjectByType<PMCountdownPlayGame>().currentTime;
+        int star = 0;
+        if (isWin)
+        {
+            if (currentTime > 120)
+            {
+                star = 3;
+            }
+            else if (currentTime > 60)
+            {
+                star = 2;
+            }
+            else
+            {
+                star = 1;
+            }
+
+        }
+        FindAnyObjectByType<GameOver>().gameOver(star);
+
+
     }
     private void OnCollisionEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Enemy")
         {
             Debug.Log("Game over");
-            GameOVer();
+            GameOVer(true);
         }
     }
 

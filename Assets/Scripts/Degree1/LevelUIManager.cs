@@ -10,11 +10,12 @@ public class LevelUIManager : MonoBehaviour
     public static LevelUIManager Instance { get => instance; }          //instance getter
 
     [SerializeField] private LevelBtnScript levelBtnPrefab;              //ref to LevelButton prefab
-    [SerializeField] private Transform levelBtnGridHolder;                  //ref to grid holder
+    [SerializeField] private Transform levelBtnGridHolder;
+    [SerializeField] private int idGame;            //ref to grid holder
 
     private void Start()
     {
-        LevelSystemManager.Instance.LevelData = APIUser.Instance.GetLevelData();
+        LevelSystemManager.Instance.LevelData = APIUser.Instance.GetLevelData(idGame);
         Debug.Log("load level successfully");
         InitializeUI();
     }

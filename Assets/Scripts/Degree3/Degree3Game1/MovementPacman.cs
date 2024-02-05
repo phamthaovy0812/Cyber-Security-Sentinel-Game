@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementPacman : MonoBehaviour
@@ -74,5 +75,31 @@ public class MovementPacman : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, direction, 1.5f, obstacleLayer);
         return hit.collider != null;
     }
+    public void Btn_AgainPlay()
+    {
+        Time.timeScale = 1;
+        Debug.Log("BtnAgain");
+        // LevelSystemManager.Instance.CurrentLevel = LevelSystemManager.Instance.getCurrentLevel();
+        int level = LevelSystemManager.Instance.CurrentLevel + 1;
+        //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene("Chase_" + level);
+        //load the level
+        // Reload the current scene
+        // SceneManager.LoadScene("Game1");
+    }
+    public void Btn_NextLevel()
+    {
+        Debug.Log("btn next level");
+        Time.timeScale = 1;
+        LevelSystemManager.Instance.CurrentLevel += 1;
+        int level = LevelSystemManager.Instance.CurrentLevel + 1;
+        //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene("Chase_" + level);
 
+    }
+    public void Btn_Menu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Degree3Game1MenuLevel");
+    }
 }
