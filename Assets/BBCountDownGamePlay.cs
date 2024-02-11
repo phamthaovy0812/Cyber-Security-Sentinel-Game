@@ -38,4 +38,5 @@ public class BBCountDownGamePlay : MonoBehaviour
     {
         currentTime += time;
     }
+    public float GetTime() { return currentTime; }
 }

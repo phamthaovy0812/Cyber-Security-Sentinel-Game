@@ -34,13 +34,13 @@ public class WordManager3 : MonoBehaviour
         if (count < 5)
         {
             Word3 word = new Word3(WordGenerator3.GetRandomWord(), wordSpwaner.SpawnWord());
-            Debug.Log(word.word);
+            Debug.Log("COunt" + count);
             words.Add(word);
         }
         else
         {
             word.SetActive(false);
-         StartCoroutine(DelayedActivation(5f));
+            StartCoroutine(DelayedActivation(5f));
         }
 
     }
@@ -53,8 +53,11 @@ public class WordManager3 : MonoBehaviour
     }
     public void TypeLetter(char letter)
     {
+        Debug.Log("1");
         if (hasActiveWord)
         {
+            Debug.Log("2");
+
             // check if letter was net 
             // remove it from the word
             if (activateWord.GetNextLetter() == letter)
@@ -64,10 +67,16 @@ public class WordManager3 : MonoBehaviour
         }
         else
         {
+            Debug.Log("3");
+
             foreach (Word3 word in words)
             {
+                Debug.Log("5");
+
                 if (word.GetNextLetter() == letter)
                 {
+                    Debug.Log("6");
+
                     activateWord = word;
                     hasActiveWord = true;
                     word.TypeLetter();
@@ -78,6 +87,8 @@ public class WordManager3 : MonoBehaviour
 
         if (hasActiveWord && activateWord.WordTyped())
         {
+            Debug.Log("4");
+
             hasActiveWord = false;
             words.Remove(activateWord);
         }

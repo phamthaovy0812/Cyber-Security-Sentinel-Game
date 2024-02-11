@@ -1040,7 +1040,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1362607918}
         m_TargetAssemblyTypeName: WordNextLevel, Assembly-CSharp
-        m_MethodName: GoToLevel1
+        m_MethodName: GoToMenuLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

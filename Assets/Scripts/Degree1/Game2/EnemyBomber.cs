@@ -13,6 +13,7 @@ public class EnemyBomber : MonoBehaviour
 
     private GameObject BomberMan;
     public GameObject DeathEffect;
+    public GameObject AddScoreEffect;
 
     public float MoveSpeed;
     Vector3 positionChest;
@@ -52,7 +53,9 @@ public class EnemyBomber : MonoBehaviour
     {
         if (source == 1)
         {
+
             Instantiate(DeathEffect, transform.position, transform.rotation);
+
             // Destroy(gameObject);
         }
     }
@@ -61,7 +64,9 @@ public class EnemyBomber : MonoBehaviour
         if (collider.gameObject.layer == LayerMask.NameToLayer("Explosion"))
         {
             Debug.Log("Enemy death");
+            GameObject add = Instantiate(AddScoreEffect, positionChest, Quaternion.identity);
             GameObject game = Instantiate(DeathEffect, positionChest, Quaternion.identity);
+            FindObjectOfType<BBCountDownGamePlay>().AddTimer(1);
             Destroy(gameObject);
 
 

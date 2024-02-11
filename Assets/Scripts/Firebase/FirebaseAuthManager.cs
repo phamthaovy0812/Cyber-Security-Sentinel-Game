@@ -99,7 +99,7 @@ public class FirebaseAuthManager : MonoBehaviour
     {
         if (user != null)
         {
-            APIUser.Instance.getConnectedUserByUId(user.Email);
+            APIUser.Instance.getConnectedUserByUId(user.Email, "");
             Debug.Log("AutoLogin: " + user.Email);
             checkAutoLogin = true;
 
@@ -183,7 +183,7 @@ public class FirebaseAuthManager : MonoBehaviour
             user = loginTask.Result.User;
 
             Debug.LogFormat("{0} You Are Successfully Logged In", user.DisplayName);
-            APIUser.Instance.getConnectedUserByUId(email);
+            APIUser.Instance.getConnectedUserByUId(email, "");
             yield return new WaitForSeconds(3f);
             UnityEngine.SceneManagement.SceneManager.LoadScene("HomePage");
 

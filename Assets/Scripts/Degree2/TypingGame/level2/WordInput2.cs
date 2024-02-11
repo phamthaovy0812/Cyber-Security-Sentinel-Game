@@ -9,7 +9,7 @@ public class WordInput2 : MonoBehaviour
     void Update()
     {
         foreach (char letter in Input.inputString){
-            // Debug.Log(letter);
+            Debug.Log(letter);
             wordManager.TypeLetter(letter);
         }
         

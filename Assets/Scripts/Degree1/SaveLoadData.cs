@@ -59,7 +59,16 @@ public class SaveLoadData : MonoBehaviour
         //convert the data to string
 
         string levelDataString = JsonUtility.ToJson(LevelSystemManager.Instance.LevelData);
-        APIUser.Instance.SetLevelData(LevelSystemManager.Instance.LevelData);
+        if (LevelSystemManager.Instance.idGame == 1)
+        {
+            APIUser.Instance.SetLevelDataDegree1(LevelSystemManager.Instance.LevelData);
+
+        }
+        else
+        {
+            APIUser.Instance.SetLevelDataDegree3(LevelSystemManager.Instance.LevelData);
+
+        }
 
         try
         {

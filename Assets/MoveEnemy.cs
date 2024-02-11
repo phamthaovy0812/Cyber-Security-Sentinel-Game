@@ -75,4 +75,12 @@ public class MoveEnemy : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, direction, 1.5f, obstacleLayer);
         return hit.collider != null;
     }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            Debug.Log("Player");
+            FindAnyObjectByType<Pacman>().GameOVer(true);
+        }
+    }
 }

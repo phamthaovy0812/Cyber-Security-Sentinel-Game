@@ -19,12 +19,12 @@ public class GameManagerDegree3game1 : MonoBehaviour
     {
         if (Instance != null)
         {
-            DestroyImmediate(gameObject);
+            Destroy(gameObject);
         }
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
     }
 

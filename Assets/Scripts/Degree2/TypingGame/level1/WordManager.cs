@@ -33,15 +33,16 @@ public class WordManager : MonoBehaviour
         // WordDisplay wordDisplay = wordSpwaner.SpawnWord();
         if (count < 5)
         {
-            Word word = new Word(WordGenerator.GetRandomWord(), wordSpwaner.SpawnWord());
-            Debug.Log(word.word);
+            string wordStr = FindAnyObjectByType<WordGenerator>().GetRandomWord();
+            Word word = new Word(wordStr, wordSpwaner.SpawnWord());
             words.Add(word);
+
         }
         else
         {
             word.SetActive(false);
 
-            StartCoroutine(DelayedActivation(3f));
+            StartCoroutine(DelayedActivation(1f));
         }
 
     }
@@ -83,10 +84,33 @@ public class WordManager : MonoBehaviour
             words.Remove(activateWord);
         }
     }
-    public void GameOver()
+    public void GameOver(bool isWin)
     {
+        float currentTime = FindAnyObjectByType<TPCountTime>().currentTime;
+        Debug.Log("currentTime: " + currentTime);
+        FindAnyObjectByType<TPCountTime>().isGameOver = true;
         _gameOver.SetActive(true);
-        Time.timeScale = 0f;
+        int star = 0;
+        if (isWin)
+        {
+            if (currentTime < 180)
+            {
+                star = 3;
+            }
+            else if (currentTime < 240) star = 2;
+            else if (star < 300)
+            {
+                star = 1;
+            }
+            FindAnyObjectByType<GameOver>().gameOver(star);
+        }
+        else
+        {
+            FindAnyObjectByType<GameOver>().gameOver(0);
+
+        }
+
+        // Time.timeScale = 0f;
     }
     public void RestartGame()
     {

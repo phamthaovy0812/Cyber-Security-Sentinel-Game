@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathEffect: {fileID: 3237802181030349472, guid: 2a042909bafb5d1459287f2ee8fef848, type: 3}
-  spriteRendererDeath: {fileID: 0}
+  AddScoreEffect: {fileID: 9028427285480192420, guid: c3b618abb6bc97b48a3fbd88abe23067, type: 3}
   MoveSpeed: 1
 --- !u!50 &984416714333247834
 Rigidbody2D:

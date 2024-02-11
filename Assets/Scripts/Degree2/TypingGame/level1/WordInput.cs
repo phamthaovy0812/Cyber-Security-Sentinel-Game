@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class WordInput : MonoBehaviour
 {
-    public WordManager wordManager;
+    // public WordManager wordManager;
     // Update is called once per frame
     void Update()
     {
-        foreach (char letter in Input.inputString){
-            // Debug.Log(letter);
-            wordManager.TypeLetter(letter);
+        Debug.Log("Update called");
+        foreach (char letter in Input.inputString)
+        {
+            Debug.Log(letter);
+            FindAnyObjectByType<WordManager>().TypeLetter(letter);
         }
-        
+
     }
 }

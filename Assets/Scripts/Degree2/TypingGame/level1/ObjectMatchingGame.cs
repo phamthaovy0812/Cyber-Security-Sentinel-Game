@@ -9,8 +9,8 @@ public class ObjectMatchingGame : MonoBehaviour
     private bool isDragging;
     private Vector3 endPoint;
     private ObjectMatchForm objectMatchForm;
-   
-    
+
+
 
     private void Start()
     {
@@ -28,14 +28,14 @@ public class ObjectMatchingGame : MonoBehaviour
                 isDragging = true;
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0f;
-                lineRenderer.SetPosition(0,mousePosition);
+                lineRenderer.SetPosition(0, mousePosition);
             }
         }
         if (isDragging)
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0f;
-            lineRenderer.SetPosition(1,mousePosition);
+            lineRenderer.SetPosition(1, mousePosition);
             endPoint = mousePosition;
         }
 
@@ -56,8 +56,10 @@ public class ObjectMatchingGame : MonoBehaviour
 
             lineRenderer.positionCount = 2;
         }
-        if (FindAnyObjectByType<WordManager>().countDraw == 5){
+        if (FindAnyObjectByType<WordManager>().countDraw == 5)
+        {
 
+            FindAnyObjectByType<WordManager>().GameOver(true);
         }
     }
 }

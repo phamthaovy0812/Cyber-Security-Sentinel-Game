@@ -19,7 +19,7 @@ public class MovementController : MonoBehaviour
     public KeyCode inputDown = KeyCode.S;
     public KeyCode inputLeft = KeyCode.A;
     public KeyCode inputRight = KeyCode.D;
-    public KeyCode inputSpace = KeyCode.Space;
+    public KeyCode inputSpace = KeyCode.Z;
 
     [Header("Sprites")]
     public AnimatedSpriteRenderer spriteRendererUp;
@@ -56,20 +56,20 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(inputUp))
+        if (Input.GetKey(inputUp) || Input.GetKey(KeyCode.W))
         {
             SetDirection(Vector2.up, spriteRendererUp);
 
         }
-        else if (Input.GetKey(inputDown))
+        else if (Input.GetKey(inputDown) || Input.GetKey(KeyCode.S))
         {
             SetDirection(Vector2.down, spriteRendererDown);
         }
-        else if (Input.GetKey(inputLeft))
+        else if (Input.GetKey(inputLeft) || Input.GetKey(KeyCode.A))
         {
             SetDirection(Vector2.left, spriteRendererLeft);
         }
-        else if (Input.GetKey(inputRight))
+        else if (Input.GetKey(inputRight) || Input.GetKey(KeyCode.D))
         {
             SetDirection(Vector2.right, spriteRendererRight);
         }
@@ -122,9 +122,9 @@ public class MovementController : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Chest"))
         {
+            StopAllCoroutines();
             itemQuestion.SetActive(true);
             FindAnyObjectByType<InsertAnswerDestructibles>().checkAppear = true;
-
         }
     }
 
@@ -149,7 +149,29 @@ public class MovementController : MonoBehaviour
 
         Time.timeScale = 0;
         gameOver.SetActive(true);
-        FindAnyObjectByType<GameOver>().gameOver(isWin);
+        if (isWin)
+        {
+            float currentTime = FindObjectOfType<BBCountDownGamePlay>().GetTime();
+
+            if (currentTime > 119)
+                FindAnyObjectByType<GameOver>().gameOver(3);
+            else if (currentTime > 59)
+            {
+                FindAnyObjectByType<GameOver>().gameOver(2);
+
+            }
+            else
+            {
+                FindAnyObjectByType<GameOver>().gameOver(1);
+
+            }
+
+        }
+        else
+        {
+            FindAnyObjectByType<GameOver>().gameOver(0);
+
+        }
 
     }
     public void Btn_AgainPlay()
