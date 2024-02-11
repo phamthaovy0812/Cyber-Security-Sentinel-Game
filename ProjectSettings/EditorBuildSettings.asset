@@ -113,6 +113,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Degree3/Degree3Game1MenuLevel.unity
     guid: 99b3721db3073c740a1e22b491bc688c
+  - enabled: 1
+    path: Assets/Scenes/Degree2/Typing/TypingGameMenuLevel.unity
+    guid: 2e62bdee7dc815b4db1d3b7274bbaa3a
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a49bddf3a77899644bbc8b8558259e7b, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 84b0a9e25c007954a87b97f69cb3aef3, type: 2}

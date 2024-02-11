@@ -34,6 +34,7 @@ public class firebaseController : MonoBehaviour
     public GameObject notificationPanel;
     public TMP_Text notif_Title_Text, notif_Message_Text;
     public TMP_Text htmlText;
+    public bool isExitUser;
 
 
     Firebase.Auth.FirebaseAuth auth;
@@ -56,6 +57,7 @@ public class firebaseController : MonoBehaviour
         signupPanel.SetActive(false);
         notificationPanel.SetActive(false);
         forgetPasswordPanel.SetActive(false);
+        isExitUser = false;
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
             var dependencyStatus = task.Result;
@@ -295,6 +297,7 @@ public class firebaseController : MonoBehaviour
         levelData3.lastUnlockedLevel = 0;
         levelData3.levelItemsArray = levelItems3;
         string levelDataString3 = JsonUtility.ToJson(levelData);
+        await reference.Child("ScoreDegree").Child(userId).Child("2").SetRawJsonValueAsync(levelDataString3);
         await reference.Child("ScoreDegree").Child(userId).Child("3").SetRawJsonValueAsync(levelDataString3);
     }
 
@@ -332,22 +335,19 @@ public class firebaseController : MonoBehaviour
            }
 
            Firebase.Auth.FirebaseUser newUser = task.Result.User;
-           Debug.LogFormat("User signed in successfully: {0} ({1})",
-               newUser.DisplayName, newUser.UserId);
 
-
-
+           StartCoroutine(StartHomePage(email, password));
            // Open mainscean
        });
 
-        StartCoroutine(StartHomePage(email));
-
     }
-    IEnumerator StartHomePage(string email)
+    IEnumerator StartHomePage(string email, string password)
     {
-        APIUser.Instance.getConnectedUserByUId(email);
+        APIUser.Instance.getConnectedUserByUId(email, password);
+        // Debug.Log("email: " + email + " password: " + password);
         yield return new WaitForSeconds(3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomePage");
+
     }
 
     void InitializeFirebase()

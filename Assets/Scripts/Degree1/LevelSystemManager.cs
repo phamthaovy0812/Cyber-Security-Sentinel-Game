@@ -73,6 +73,11 @@ public class LevelSystemManager : MonoBehaviour
                 APIUser.Instance.UpdateExperiences(score * 400);
 
             }
+            else if (idGame == 3)
+            {
+                APIUser.Instance.UpdateExperiences(score * 400);
+
+            }
             levelData.levelItemsArray[currentLevel].starAchieved = starAchieved;
         }
         //save the stars achieved by the player in level

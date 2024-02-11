@@ -391,10 +391,10 @@ TextureImporter:
       name: BBButon@4x_12
       rect:
         serializedVersion: 2
-        x: 412
-        y: 0
-        width: 103.125
-        height: 95
+        x: 442
+        y: 16
+        width: 58
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

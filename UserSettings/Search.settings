@@ -11,6 +11,9 @@ scopes = {
 	"last_search.E8DA15E5" = ""
 	"OpenInspectorPreview.E8DA15E5" = "0"
 	"currentGroup.E8DA15E5" = "all"
+	"last_search.3BE40471" = "ref:Assets/Scripts/Degree2/TypingGame/level1/WordGenerator.cs"
+	"OpenInspectorPreview.3BE40471" = "0"
+	"currentGroup.3BE40471" = "all"
 }
 providers = {
 	scene = {
@@ -62,6 +65,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"ref:Assets/Scripts/Degree2/TypingGame/level1/WordGenerator.cs"
 ]
 searchItemFavorites = [
 ]

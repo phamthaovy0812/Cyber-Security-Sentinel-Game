@@ -16,6 +16,7 @@ public class APIUser : MonoBehaviour
 	private User _user;
 	public DataSnapshot snapshot;
 	private LevelData levelDataDegree1;
+	private LevelData levelDataDegree2;
 	private LevelData levelDataDegree3;
 
 	private void Awake()
@@ -23,7 +24,7 @@ public class APIUser : MonoBehaviour
 		if (instance == null)                                               //if instance is null
 		{
 			instance = this;                                                //set this as instance
-			DontDestroyOnLoad(gameObject);                                                          // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
+																			// DontDestroyOnLoad(gameObject);                                                          // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
 		}
 		else
 		{
@@ -34,8 +35,9 @@ public class APIUser : MonoBehaviour
 
 	public LevelData GetLevelData(int idGame)
 	{
-		Debug.Log("Length degree1: " + levelDataDegree1.levelItemsArray.Length + " levelDataDegree2: " + levelDataDegree3.levelItemsArray.Length);
+
 		if (idGame == 1) return levelDataDegree1;
+		else if (idGame == 2) return levelDataDegree2;
 		else if (idGame == 3) return levelDataDegree3;
 		else return null;
 	}
@@ -51,9 +53,11 @@ public class APIUser : MonoBehaviour
 	{
 		this.levelDataDegree3 = levelData;
 	}
-	public void getConnectedUserByUId(string email)
+
+	public void getConnectedUserByUId(string email, string password)
 	{
-		Debug.Log("getConnectedUserByUId");
+		
+
 		_user = new User();
 		// DatabaseReference databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
@@ -73,17 +77,17 @@ public class APIUser : MonoBehaviour
 			{
 				DataSnapshot snapshot = t.Result;
 				// Xử lý dữ liệu snapshot
-				Debug.Log("Email input: " + email);
+
 				if (snapshot.ChildrenCount > 0)
 				{
 
 					foreach (DataSnapshot dataSnapshot in snapshot.Children)
 					{
-						Debug.Log("Email dataSnapshot: " + dataSnapshot.GetRawJsonValue());
 
-						if (dataSnapshot.Child("email").GetValue(true).ToString().Equals(email))
+						if (dataSnapshot.Child("email").GetValue(true).ToString().Equals(email) && dataSnapshot.Child("password").GetValue(true).ToString().Equals(password))
 						{
-							Debug.Log("Email: " + dataSnapshot.Child("email").GetValue(true).ToString());
+							Debug.Log("getConnectedUserByUId");
+							
 							// _user = JsonUtility.FromJson<User>(dataSnapshot.GetRawJsonValue());
 							// Debug.Log("dataSnapshot: " + dataSnapshot.GetRawJsonValue());
 							_user.id_user = dataSnapshot.Child("id_user").GetValue(true).ToString();
@@ -97,7 +101,11 @@ public class APIUser : MonoBehaviour
 							_user.isOpenDegree2 = bool.Parse(dataSnapshot.Child("isOpenDegree2").GetValue(true).ToString());
 							_user.isOpenDegree3 = bool.Parse(dataSnapshot.Child("isOpenDegree3").GetValue(true).ToString());
 							_user.isOpenDegree4 = bool.Parse(dataSnapshot.Child("isOpenDegree4").GetValue(true).ToString());
-							Debug.Log("findUser: " + _user.id_level);
+							Debug.Log("findUser: " + _user.id_user);
+							GetDataDegreeOfUser();
+
+							FindAnyObjectByType<firebaseController>().isExitUser = true;
+
 
 							break;
 							// return true;
@@ -105,14 +113,12 @@ public class APIUser : MonoBehaviour
 						}
 
 					}
-					GetDataDegreeOfUser();
 
 				}
 
 
 			}
 		});
-
 
 	}
 	//instance getter
@@ -182,11 +188,14 @@ public class APIUser : MonoBehaviour
 	}
 	public async void GetDataDegreeOfUser()
 	{
+				  Debug.Log("id_user: " + _user.id_user);
+
 		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 		await FirebaseDatabase.DefaultInstance
  		 .GetReference("ScoreDegree").Child(_user.id_user)
 		  .GetValueAsync().ContinueWithOnMainThread(task =>
   		{
+			 
 			  if (task.IsFaulted)
 			  {
 				  Debug.Log("No read data from database");
@@ -197,8 +206,9 @@ public class APIUser : MonoBehaviour
 				  if (snapshot.ChildrenCount > 0)
 				  {
 					  levelDataDegree1 = JsonUtility.FromJson<LevelData>(snapshot.Child("1").GetRawJsonValue());
+					  levelDataDegree2 = JsonUtility.FromJson<LevelData>(snapshot.Child("2").GetRawJsonValue());
 					  levelDataDegree3 = JsonUtility.FromJson<LevelData>(snapshot.Child("3").GetRawJsonValue());
-
+					  Debug.Log("loadLevel successfully loaded");
 				  }
 
 				  // Do something with snapshot...

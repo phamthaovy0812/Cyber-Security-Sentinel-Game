@@ -590,9 +590,9 @@ RectTransform:
   - {fileID: 1695048104}
   m_Father: {fileID: 402159083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 201, y: -381}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -196, y: -192}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &183666647
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 3
+  startingTime: 180
   dangerTime: 10
   countDownText: {fileID: 184421469}
 --- !u!1 &234587131
@@ -1400,7 +1400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 433389096}
   - component: {fileID: 433389097}
-  m_Layer: 20
+  m_Layer: 17
   m_Name: Minimap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1653,7 +1653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 479289176}
   - component: {fileID: 479289177}
-  m_Layer: 20
+  m_Layer: 17
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1955,11 +1955,11 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.1682444
+  orthographic size: 7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1048575
+    m_Bits: 917503
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5432,7 +5432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225149188}
   - component: {fileID: 1225149189}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: enemyMini
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41629,7 +41629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countDownText: {fileID: 1760417820}
   gameObjDestroy: {fileID: 1881230982}
-  countdownTime: 10
+  countdownTime: 15
 --- !u!1 &1766334295
 GameObject:
   m_ObjectHideFlags: 0
@@ -49372,9 +49372,17 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6f01592c971bf814f85819a4193c78da, type: 3}
+    - target: {fileID: 6038318316045854525, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854526, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Name
       value: Pacman
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038318316045854526, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854526, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_IsActive
@@ -49383,6 +49391,10 @@ PrefabInstance:
     - target: {fileID: 6038318316045854526, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985264796447110198, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
+      propertyPath: loop
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9092965352768958205, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: speed
@@ -49424,7 +49436,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8985264796447110198, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6038318316045854524, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
