@@ -7,7 +7,7 @@ using UnityEngine;
 public class WordGenerator : MonoBehaviour
 {
     //firewall, network, policy, risk, phishing
-    string[] wordList = WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].wishedList;
+    string[] wordList = WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].listWords;
     public string GetRandomWord()
     {
 
