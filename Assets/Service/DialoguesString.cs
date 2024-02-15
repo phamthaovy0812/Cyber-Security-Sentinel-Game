@@ -62,39 +62,41 @@ public class DialogString : MonoBehaviour
 	};
 
 	public List<List<string>> docNoCompleteDegree1 = new List<List<string>>{
-		new List<string> {"Chào Ban, chúng tôi nhận thấy bạn chưa hoàn thành tiến độ của Caap bac 1, hãy quay lại địa điểm Cap bac 1 và tiếp tục làm nhiệm vụ. ",
+		new List<string> {"Chào Ban, chúng tôi nhận thấy bạn chưa hoàn thành tiến độ của cấp bậc 1, hãy quay lại địa điểm cấp bậc 1 và tiếp tục làm nhiệm vụ. ",
 		"Chúc bạn may mắn."},
 
 	};
 	public List<List<string>> docNoCompleteDegree2 = new List<List<string>>{
-		new List<string> {"Chào Ban, chúng tôi nhận thấy bạn chưa hoàn thành tiến độ của Caap bac 2, hãy quay lại địa điểm Cap bac 1 và tiếp tục làm nhiệm vụ. ",
+		new List<string> {"Chào Ban, chúng tôi nhận thấy bạn chưa hoàn thành tiến độ của cấp bậc 2, hãy quay lại địa điểm cấp bậc 2 và tiếp tục làm nhiệm vụ. ",
 		"Chúc bạn may mắn."},
 
 	};
 	public List<List<string>> docNoCompleteDegree3 = new List<List<string>>{
-		new List<string> {"Chào Ban, chúng tôi nhận thấy bạn chưa hoàn thành tiến độ của Caap bac 3, hãy quay lại địa điểm Cap bac 1 và tiếp tục làm nhiệm vụ. ",
+		new List<string> {"Chào Ban, chúng tôi nhận thấy bạn chưa hoàn thành tiến độ của cấp bậc 3, hãy quay lại địa điểm cấp bậc 3 và tiếp tục làm nhiệm vụ. ",
 		"Chúc bạn may mắn."},
 
 	};
 	public List<List<string>> docNoCompleteDegree4 = new List<List<string>>{
-		new List<string> {"Chào Ban, chúng tôi nhận thấy bạn chưa hoàn thành tiến độ của Caap bac 4, hãy quay lại địa điểm Cap bac 1 và tiếp tục làm nhiệm vụ. ",
+		new List<string> {"Chào Ban, chúng tôi nhận thấy bạn chưa hoàn thành tiến độ của cấp bậc 4, hãy quay lại địa điểm cấp bậc 4 và tiếp tục làm nhiệm vụ. ",
 		"Chúc bạn may mắn."},
 
 	};
 
 	// NPC degree 1
 	public List<List<string>> docBeginStartingSeeNPCDegree1 = new List<List<string>>{
-		new List<string> {"Chào <Tên người chơi>, Chao mung bạn đến trò chơi cấp 1"},
+		new List<string> {"Chao mung bạn đến trò chơi cấp 1."},
+		new List<string> {" Ở cấp chơi này bạn sẽ di chuyển nhân vật và đặt bom để tiêu diệt tàu vũ trụ, quái vật nguy hiểm. Cấp bậc sẽ bao gồm 6 level khác nhau. Ở mỗi level bạn cần phải hoàn thành trong thời gian quy định để nhận điểm kinh nghiệm thăng cấp"},
+		new List<string> {"Chúc bạn may mắn."},
 	};
 	public List<List<string>> docAfterSeeNPCDegree1 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 1"},
 	};
 	public List<List<string>> docAfterCompleteDegree1 = new List<List<string>>{
-		new List<string> {"Bạn đã hoàn thành cấp 1. bạn có muốn Tiếp tục trò chơi cấp 1 nữa không"},
+		new List<string> {"Bạn đã hoàn thành cấp 1. bạn có muốn Tiếp tục tham gia lại lần nữa không? (Điểm kinh nghiệm sẽ được cộng theo mức độ chơi tốt nhất của bạn)"},
 	};
 	// NPC degree 2
 	public List<List<string>> docBeginStartingSeeNPCDegree2 = new List<List<string>>{
-		new List<string> {"Chào <Tên người chơi>, Chao mung bạn đến trò chơi cấp 2"},
+		new List<string> {"Chao mung bạn đến trò chơi cấp 2"},
 	};
 	public List<List<string>> docAfterSeeNPCDegree2 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 2"},
@@ -105,17 +107,20 @@ public class DialogString : MonoBehaviour
 
 	// degree 3
 	public List<List<string>> docBeginStartingSeeNPCDegree3 = new List<List<string>>{
-		new List<string> {"Chào <Tên người chơi>, Chao mung bạn đến trò chơi cấp 3"},
+		new List<string> {"Chao mung bạn đến trò chơi cấp 3"},
+		new List<string> {"Trong bối cảnh trộm cướp hoành hành. Là một cảnh sát dự bị bạn được giao nhiệm vụ truy đổi băng cướp trong thị trấn. Bạn sẽ phải điều khiển xe cảnh sát để truy đuổi băng cướp. Trong quá trình truy đuổi bạn cần trả lời các câu hỏi trên đường đi để loại bỏ đá trên đường cản trở bạn di chuyển.Cấp bậc sẽ bao gồm 4 level khác nhau. Ở mỗi level bạn cần phải hoàn thành trong thời gian quy định để nhận điểm kinh nghiệm thăng cấp"},
+		new List<string> {"Chúc bạn may mắn"},
+
 	};
 	public List<List<string>> docAfterSeeNPCDegree3 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 3"},
 	};
 	public List<List<string>> docAfterCompleteDegree3 = new List<List<string>>{
-		new List<string> {"Bạn đã hoàn thành cấp 3. bạn có muốn Tiếp tục trò chơi cấp 3 nữa không"},
+		new List<string> {"Bạn đã hoàn thành cấp 3. bạn có muốn Tiếp tục lại trò chơi cấp 3 nữa không?"},
 	};
 	// degree 3
 	public List<List<string>> docBeginStartingSeeNPCDegree4 = new List<List<string>>{
-		new List<string> {"Chào <Tên người chơi>, Chao mung bạn đến trò chơi cấp 4"},
+		new List<string> {"Chao mung bạn đến trò chơi cấp 4"},
 	};
 	public List<List<string>> docAfterSeeNPCDegree4 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 4"},

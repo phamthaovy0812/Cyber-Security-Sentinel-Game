@@ -37,12 +37,19 @@ public class HomeManager : MonoBehaviour
     public GameObject PassedDegree2Panel;
     public GameObject PassedDegree3Panel;
     public GameObject PassedDegree4Panel;
+    [Header("Username text")]
+
+    public TextMeshProUGUI usernameOfCertificate1;
+    public TextMeshProUGUI usernameOfCertificate2;
+    public TextMeshProUGUI usernameOfCertificate3;
+    public TextMeshProUGUI usernameOfCertificate4;
     [Header("Profiles")]
     public GameObject ProfilesObject;
     public GameObject badgeOfDegree1Object;
     public GameObject badgeOfDegree2Object;
     public GameObject badgeOfDegree3Object;
     public GameObject badgeOfDegree4Object;
+    public GameObject degree4Room;
     public TMP_Text usernameText;
     public TMP_Text experienceText;
     public TMP_Text levelText;
@@ -52,6 +59,7 @@ public class HomeManager : MonoBehaviour
 
 
     [Header("Button")]
+    public GameObject MorePanel;
     public GameObject btnJoin;
     // public GameObject btnExitGame;
     public bool isOpenBtn = false;
@@ -116,6 +124,15 @@ public class HomeManager : MonoBehaviour
         }
 
     }
+
+    public void Btn_MorePanel()
+    {
+        MorePanel.SetActive(true);
+    }
+    public void Btn_Exit_MorePanel()
+    {
+        MorePanel.SetActive(false);
+    }
     public void Btn_display_Profile()
     {
         Debug.Log("Btn_display_Profile");
@@ -133,6 +150,10 @@ public class HomeManager : MonoBehaviour
     public void Btn_Share_Profile()
     {
         ProfilesObject.SetActive(false);
+    }
+    public void Btn_Logout()
+    {
+        SceneManager.LoadScene("SignPage");
     }
     public void Btn_Join()
     {
@@ -188,6 +209,8 @@ public class HomeManager : MonoBehaviour
                             {
                                 APIUser.Instance.UpdateIsOpenDegree4(true);
                                 ActiveHomePage.Instance.isOpenFlagDegree4 = true;
+                                FindAnyObjectByType<Dialogue>().EndDialogue();
+
 
                                 break;
                             }
@@ -217,12 +240,18 @@ public class HomeManager : MonoBehaviour
             case 3:
                 {
 
-                    APIUser.Instance.UpdateIsOpenDegree2(true);
+                    APIUser.Instance.UpdateIsOpenDegree3(true);
 
                     // scene play game degree1
                     StartCoroutine(SetActiveDialogue("Degree3Game1"));
                     // scene play game degree1
 
+                    break;
+                }
+            case 4:
+                {
+                    degree4Room.SetActive(true);
+                    APIUser.Instance.UpdateIsOpenDegree3(true);
                     break;
                 }
         }
@@ -259,12 +288,22 @@ public class HomeManager : MonoBehaviour
         PassedDegree4Panel.SetActive(false);
         LevelUpObject.SetActive(false);
     }
+    private void UpdateUsernameOfCertificate()
+    {
+        string username = APIUser.Instance.GetUser().username;
+        usernameOfCertificate1.text = username;
+        usernameOfCertificate2.text = username;
+        usernameOfCertificate3.text = username;
+        usernameOfCertificate4.text = username;
+
+    }
     // Update is called once per frame
     void Update()
     {
         // Update profile information
 
         UpdateProfile();
+        UpdateUsernameOfCertificate();
 
         if (id_level == 1)
         {
@@ -313,6 +352,8 @@ public class HomeManager : MonoBehaviour
             NPCDegree2Obect.SetActive(true);
             NPCDegree3Obect.SetActive(true);
             NPCDegree4Obect.SetActive(true);
+
+            degree4Room.SetActive(true);
         }
         if (ActiveHomePage.Instance.isOpenFlagPolice)
         {
@@ -381,19 +422,19 @@ public class HomeManager : MonoBehaviour
             // btnExitGame.SetActive(false);
         }
         // open dialog level up
-        if (APIUser.Instance.GetUser().experience >= 10000 && id_level == 4)
+        if (APIUser.Instance.GetUser().experience >= 9800 && id_level == 4)
         {
             PassedDegree4Panel.SetActive(true);
         }
-        else if (APIUser.Instance.GetUser().experience >= 8000 && id_level == 3)
+        else if (APIUser.Instance.GetUser().experience >= 5600 && id_level == 3)
         {
             PassedDegree3Panel.SetActive(true);
         }
-        else if (APIUser.Instance.GetUser().experience >= 4000 && id_level == 2)
+        else if (APIUser.Instance.GetUser().experience >= 3600 && id_level == 2)
         {
             PassedDegree2Panel.SetActive(true);
         }
-        else if (APIUser.Instance.GetUser().experience >= 2000 && id_level == 1)
+        else if (APIUser.Instance.GetUser().experience >= 1600 && id_level == 1)
         {
             PassedDegree1Panel.SetActive(true);
         }

@@ -11,23 +11,36 @@ public class GameOver : MonoBehaviour
     [SerializeField] private TextMeshProUGUI titleGameOver;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private int idGame;
+    LevelData levelData;
+    int indexItem;
 
     // Start is called before the first frame update
+    void Start()
+    {
+
+
+    }
+
 
     public void gameOver(int star)
     {
         Time.timeScale = 0;
-
+        indexItem = LevelSystemManager.Instance.CurrentLevel;
+        levelData = LevelSystemManager.Instance.LevelData;
         Debug.Log("Game Over");
         if (star > 0)
         {
             titleGameOver.text = "Chiến thắng";
+            Debug.Log("levelData: " + JsonUtility.ToJson(levelData));
 
-            LevelSystemManager.Instance.LevelComplete(star);
-            int indexItem = LevelSystemManager.Instance.CurrentLevel;
-            if (star > APIUser.Instance.GetLevelData(idGame).levelItemsArray[indexItem].starAchieved)
+            Debug.Log("Star: " + star);
+            Debug.Log("index item: " + indexItem);
+            Debug.Log("id game: " + idGame);
+
+            Debug.Log("star level: " + levelData.levelItemsArray[indexItem].starAchieved);
+            if (star > levelData.levelItemsArray[indexItem].starAchieved)
             {
-                scoreText.text = "+" + (star - APIUser.Instance.GetLevelData(idGame).levelItemsArray[indexItem].starAchieved) + "exp";
+                scoreText.text = "+" + ((star - APIUser.Instance.GetLevelData(idGame).levelItemsArray[indexItem].starAchieved) * 112) + "exp";
             }
             else
             {
@@ -42,6 +55,7 @@ public class GameOver : MonoBehaviour
 
         }
         SetStar(star);
+        LevelSystemManager.Instance.LevelComplete(star);
 
 
     }

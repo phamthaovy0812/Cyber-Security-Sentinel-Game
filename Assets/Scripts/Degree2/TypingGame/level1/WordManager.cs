@@ -25,7 +25,7 @@ public class WordManager : MonoBehaviour
     {
         if (countDraw == 5)
         {
-            nextLevel.SetActive(true);
+            GameOver(true);
         }
     }
     public void AddWord()
@@ -93,12 +93,12 @@ public class WordManager : MonoBehaviour
         int star = 0;
         if (isWin)
         {
-            if (currentTime < 180)
+            if (currentTime < 120)
             {
                 star = 3;
             }
-            else if (currentTime < 240) star = 2;
-            else if (star < 300)
+            else if (currentTime < 180) star = 2;
+            else
             {
                 star = 1;
             }

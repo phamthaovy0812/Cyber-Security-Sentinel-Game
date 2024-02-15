@@ -47,10 +47,10 @@ public class LevelSystemManager : MonoBehaviour
         SceneManager.LoadScene("Degree1Game2");
     }
 
-    private void OnEnable()
-    {
-        SaveLoadData.Instance.Initialize();
-    }
+    // private void OnEnable()
+    // {
+    //     SaveLoadData.Instance.Initialize();
+    // }
     public int getCurrentLevel()
     {
         return currentLevel;

@@ -171,7 +171,6 @@ public class firebaseController : MonoBehaviour
     {
         notif_Title_Text.text = "";
         notif_Message_Text.text = "";
-
         notificationPanel.SetActive(false);
     }
 
@@ -270,7 +269,7 @@ public class firebaseController : MonoBehaviour
             .SetValueAsync(user.isOpenStartGame);
 
 
-        Debug.Log("New User Created");
+
         LevelItem[] levelItems = {
             new LevelItem(unlock: true, star: 0),
             new LevelItem(unlock: false, star: 0),
@@ -296,9 +295,27 @@ public class firebaseController : MonoBehaviour
         LevelData levelData3 = new LevelData();
         levelData3.lastUnlockedLevel = 0;
         levelData3.levelItemsArray = levelItems3;
-        string levelDataString3 = JsonUtility.ToJson(levelData);
+        string levelDataString3 = JsonUtility.ToJson(levelData3);
         await reference.Child("ScoreDegree").Child(userId).Child("2").SetRawJsonValueAsync(levelDataString3);
         await reference.Child("ScoreDegree").Child(userId).Child("3").SetRawJsonValueAsync(levelDataString3);
+        // degree 4
+        LevelItem[] levelItems4 = {
+            new LevelItem(unlock: true, star: 0),
+            new LevelItem(unlock: true, star: 0),
+            new LevelItem(unlock: true, star: 0),
+            new LevelItem(unlock: true, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+            new LevelItem(unlock: false, star: 0),
+        };
+
+        LevelData levelData4 = new LevelData();
+        levelData4.lastUnlockedLevel = 0;
+        levelData4.levelItemsArray = levelItems4;
+        string levelDataString4 = JsonUtility.ToJson(levelData4);
+        await reference.Child("ScoreDegree").Child(userId).Child("4").SetRawJsonValueAsync(levelDataString4);
+        Debug.Log("New User Created");
     }
 
 
