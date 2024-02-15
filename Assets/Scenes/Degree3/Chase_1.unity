@@ -42354,7 +42354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f4c38d08789a4c8665e6d4987a606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   speedMultiplier: 1
   initialDirection: {x: 0, y: 0}
   obstacleLayer:
@@ -49398,7 +49398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9092965352768958205, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: speed
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9092965352768958205, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: spriteUp
