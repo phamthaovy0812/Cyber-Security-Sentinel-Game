@@ -10,14 +10,16 @@ public class Room112Q4 : MonoBehaviour
    public GameObject ques4;
    public GameObject npc1;
    public GameObject npc2;
-   public void Repply(){
+   public void Repply()
+   {
       right.SetActive(false);
       npc2.SetActive(true);
    }
-   
-   public void showQues(){
+
+   public void showQues()
+   {
       npc1.SetActive(false);
-  
+
       ques4.SetActive(true);
 
    }
@@ -27,6 +29,8 @@ public class Room112Q4 : MonoBehaviour
       {
          ques4.SetActive(false);
          right.SetActive(true);
+         FindAnyObjectByType<EndTalking>().countCorrect++;
+
       }
       else
       {

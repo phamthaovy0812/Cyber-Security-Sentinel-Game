@@ -18,6 +18,7 @@ public class APIUser : MonoBehaviour
 	private LevelData levelDataDegree1;
 	private LevelData levelDataDegree2;
 	private LevelData levelDataDegree3;
+	private LevelData levelDataDegree4;
 
 	private void Awake()
 	{
@@ -35,10 +36,16 @@ public class APIUser : MonoBehaviour
 
 	public LevelData GetLevelData(int idGame)
 	{
+		Debug.Log("idGame API: " + idGame);
+		if (idGame == 1)
+		{
 
-		if (idGame == 1) return levelDataDegree1;
+			return levelDataDegree1;
+
+		}
 		else if (idGame == 2) return levelDataDegree2;
 		else if (idGame == 3) return levelDataDegree3;
+		else if (idGame == 4) return levelDataDegree4;
 		else return null;
 	}
 	public void UpdatedLevelData(LevelData levelData)
@@ -53,10 +60,15 @@ public class APIUser : MonoBehaviour
 	{
 		this.levelDataDegree3 = levelData;
 	}
+	public void SetLevelDataDegree4(LevelData levelData)
+	{
+		this.levelDataDegree4 = levelData;
+	}
+
 
 	public void getConnectedUserByUId(string email, string password)
 	{
-		
+
 
 		_user = new User();
 		// DatabaseReference databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
@@ -87,7 +99,7 @@ public class APIUser : MonoBehaviour
 						if (dataSnapshot.Child("email").GetValue(true).ToString().Equals(email) && dataSnapshot.Child("password").GetValue(true).ToString().Equals(password))
 						{
 							Debug.Log("getConnectedUserByUId");
-							
+
 							// _user = JsonUtility.FromJson<User>(dataSnapshot.GetRawJsonValue());
 							// Debug.Log("dataSnapshot: " + dataSnapshot.GetRawJsonValue());
 							_user.id_user = dataSnapshot.Child("id_user").GetValue(true).ToString();
@@ -101,9 +113,8 @@ public class APIUser : MonoBehaviour
 							_user.isOpenDegree2 = bool.Parse(dataSnapshot.Child("isOpenDegree2").GetValue(true).ToString());
 							_user.isOpenDegree3 = bool.Parse(dataSnapshot.Child("isOpenDegree3").GetValue(true).ToString());
 							_user.isOpenDegree4 = bool.Parse(dataSnapshot.Child("isOpenDegree4").GetValue(true).ToString());
-							Debug.Log("findUser: " + _user.id_user);
 							GetDataDegreeOfUser();
-
+							Debug.Log("findUser: " + _user.id_user);
 							FindAnyObjectByType<firebaseController>().isExitUser = true;
 
 
@@ -188,14 +199,12 @@ public class APIUser : MonoBehaviour
 	}
 	public async void GetDataDegreeOfUser()
 	{
-				  Debug.Log("id_user: " + _user.id_user);
-
 		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 		await FirebaseDatabase.DefaultInstance
  		 .GetReference("ScoreDegree").Child(_user.id_user)
 		  .GetValueAsync().ContinueWithOnMainThread(task =>
   		{
-			 
+
 			  if (task.IsFaulted)
 			  {
 				  Debug.Log("No read data from database");
@@ -208,6 +217,7 @@ public class APIUser : MonoBehaviour
 					  levelDataDegree1 = JsonUtility.FromJson<LevelData>(snapshot.Child("1").GetRawJsonValue());
 					  levelDataDegree2 = JsonUtility.FromJson<LevelData>(snapshot.Child("2").GetRawJsonValue());
 					  levelDataDegree3 = JsonUtility.FromJson<LevelData>(snapshot.Child("3").GetRawJsonValue());
+					  levelDataDegree4 = JsonUtility.FromJson<LevelData>(snapshot.Child("4").GetRawJsonValue());
 					  Debug.Log("loadLevel successfully loaded");
 				  }
 

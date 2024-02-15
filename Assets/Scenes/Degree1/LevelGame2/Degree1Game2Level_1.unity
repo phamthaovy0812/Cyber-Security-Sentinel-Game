@@ -1069,7 +1069,7 @@ Transform:
   m_GameObject: {fileID: 133057700}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.49, y: 0.35, z: -0.020072151}
+  m_LocalPosition: {x: -3.37, y: 0.95, z: -0.020072151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3804,6 +3804,7 @@ MonoBehaviour:
   - {fileID: 1900220104}
   titleGameOver: {fileID: 744078223}
   scoreText: {fileID: 705297918}
+  idGame: 1
 --- !u!4 &698312738
 Transform:
   m_ObjectHideFlags: 0
