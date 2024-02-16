@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    private static SoundManager instance;                             //instance variable
+    public static SoundManager Instance { get => instance; }
     [SerializeField] GameObject soundOnIcon;
     [SerializeField] GameObject soundOffIcon;
     private bool muted = false;
@@ -20,8 +22,28 @@ public class SoundManager : MonoBehaviour
             Load();
         }
         UpdateButtonIcon();
-        AudioListener.pause=muted;
+        AudioListener.pause = muted;
 
+    }
+    public void LoadBeginSound()
+    {
+        muted = false;
+        UpdateButtonIcon();
+        AudioListener.pause = muted;
+
+    }
+    void Awake()
+    {
+        if (instance == null)                                               //if instance is null
+        {
+            instance = this;                                                //set this as instance
+            // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
+        }
+        else
+        {
+            Destroy(gameObject);
+
+        }
     }
 
     public void OnButtonPress()

@@ -16,6 +16,8 @@ using System.Web;
 
 public class firebaseController : MonoBehaviour
 {
+
+
     // public GameObject signin, register, login, notificationPanel, forgetPasswordPanel;
 
     // public TMP_InputField forgotPasswordEmail;
@@ -53,6 +55,7 @@ public class firebaseController : MonoBehaviour
     }
     void Start()
     {
+        Logout();
         // htmlText.text = StripHTML();
         loginPanel.SetActive(true);
         signupPanel.SetActive(false);
@@ -80,7 +83,13 @@ public class firebaseController : MonoBehaviour
         });
     }
 
-
+    public void Logout()
+    {
+        if (auth != null && user != null)
+        {
+            auth.SignOut();
+        }
+    }
     public void OpenLoginPanel()
     {
         loginPanel.SetActive(true);

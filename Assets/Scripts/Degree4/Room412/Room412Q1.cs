@@ -10,13 +10,15 @@ public class Room412Q1 : MonoBehaviour
    public GameObject ques1;
    public GameObject npc;
    public GameObject npcNext;
-   public void goto2 (){
+   public void goto2()
+   {
       right.SetActive(false);
       wrong.SetActive(false);
       npcNext.SetActive(true);
    }
-   
-   public void showQues(){
+
+   public void showQues()
+   {
       npc.SetActive(false);
       ques1.SetActive(true);
 
@@ -27,6 +29,8 @@ public class Room412Q1 : MonoBehaviour
       {
          ques1.SetActive(false);
          right.SetActive(true);
+         FindAnyObjectByType<EndTalking>().countCorrect++;
+
       }
       else
       {
