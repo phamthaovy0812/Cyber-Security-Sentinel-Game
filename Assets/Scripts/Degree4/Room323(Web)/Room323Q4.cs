@@ -8,19 +8,21 @@ public class Room323Q4 : MonoBehaviour
    public GameObject right;
    public GameObject wrong;
    public GameObject ques4;
- 
+
    public void CheckQ2()
    {
       if (q4.text == "0")
       {
          ques4.SetActive(false);
          right.SetActive(true);
+         FindAnyObjectByType<EndTalking>().countCorrect++;
+
       }
       else
       {
          wrong.SetActive(true);
       }
    }
-  
+
 
 }

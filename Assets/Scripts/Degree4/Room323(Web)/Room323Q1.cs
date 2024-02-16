@@ -16,12 +16,13 @@ public class Room323Q1 : MonoBehaviour
       {
          ques1.SetActive(false);
          right.SetActive(true);
+         FindAnyObjectByType<EndTalking>().countCorrect++;
       }
       else
       {
          wrong.SetActive(true);
       }
    }
-  
+
 
 }
