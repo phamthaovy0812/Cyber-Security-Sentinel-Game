@@ -25,7 +25,7 @@ public class Room112Q1 : MonoBehaviour
    }
    public void CheckQ1()
    {
-      if (q1.text == "5")
+      if (q1.text == "4")
       {
          ques1.SetActive(false);
          right.SetActive(true);

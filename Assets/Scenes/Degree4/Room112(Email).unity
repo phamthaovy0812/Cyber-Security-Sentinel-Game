@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785.3562, y: -281.64392}
-  m_SizeDelta: {x: 276.0166, y: 483.1701}
+  m_AnchoredPosition: {x: 783.83716, y: -350.32587}
+  m_SizeDelta: {x: 259.6909, y: 450.5184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &21959072
 MonoBehaviour:
@@ -1241,8 +1241,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82103321
 MonoBehaviour:
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1316,8 +1316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82464042
 MonoBehaviour:
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1431,8 +1431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785.3562, y: -281.64392}
-  m_SizeDelta: {x: 276.0166, y: 483.1701}
+  m_AnchoredPosition: {x: 783.83716, y: -350.32587}
+  m_SizeDelta: {x: 259.6909, y: 450.5184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86240868
 MonoBehaviour:
@@ -2216,8 +2216,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168712788
 MonoBehaviour:
@@ -2239,7 +2239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2586,6 +2586,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212706515}
   m_CullTransparentMesh: 1
+--- !u!1 &230508721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230508722}
+  - component: {fileID: 230508724}
+  - component: {fileID: 230508723}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &230508722
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230508721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1694131902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 279.6053, y: -12.0409}
+  m_SizeDelta: {x: 1633.1495, y: 857.9839}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &230508723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230508721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 82e7ef9eccf81a940b285612fc3c5d49, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &230508724
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230508721}
+  m_CullTransparentMesh: 1
 --- !u!1 &263698770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,7 +2831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -92.894, y: -349.99997}
+  m_AnchoredPosition: {x: -323.89398, y: -170.99997}
   m_SizeDelta: {x: 185.7852, y: 80.882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &276315498
@@ -3105,8 +3180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 212706517}
   content:
-  - "V\xE2ng, h\xE3y \u0111\u01B0a t\xF4i xem c\xE1c tin nh\u1EAFn b\u1EA1n g\u1EB7p
-    v\xE0 t\xF4i s\u1EBD gi\u1EA3i th\xEDch gi\xFAp b\u1EA1n."
+  - "H\xE3y cho t\xF4i xem qua ch\xFAng v\xE0 t\xF4i s\u1EBD gi\u1EA3i th\xEDch gi\xFAp
+    ch\u1ECB. "
   speed: 0.02
 --- !u!1 &291732338
 GameObject:
@@ -3330,10 +3405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 63242569}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy, t\xF4i th\u1EA5y tin nh\u1EAFn \u1EA5y m\xE0
-    c\u1EE9 nghi ng\u1EDD ho\xE0i. Th\u1EADt may, v\xEC n\xF3 kh\xF4ng ph\u1EA3i
-    tin nh\u1EAFn l\u1EEBa \u0111\u1EA3o. V\u1EADy c\xF2n tin nh\u1EAFn n\xE0y th\xEC
-    sao \u1EA1 ?"
+  - " C\xF2n email n\xE0y th\xEC sao?"
   speed: 0.02
 --- !u!114 &317733925
 MonoBehaviour:
@@ -3739,15 +3811,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1213725843}
   content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t tin nh\u1EAFn uy t\xEDn do B\u1ED9 C\xF4ng An g\u1EEDi.
-    \u0110\u1EC3 nh\u1EADn bi\u1EBFt, tin nh\u1EAFn \u0111\u01B0\u1EE3c ghi r\u1EA5t
-    chu\u1EA9n m\u1EF1c, \u0111\xFAng ch\xEDnh t\u1EA3, \u0111\xFAng ng\u1EEF ph\xE1p.
-    Th\u1EE9 hai, \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt uy t\xEDn, \u0111\u1EC3 ch\u1EAFc
-    ch\u1EAFn, khi nh\u1EA5n v\xE0o s\u1EBD d\u1EABn \u0111\u1EBFn website c\u1EE7a
-    B\u1ED9 C\xF4ng An. Cu\u1ED1i c\xF9ng uqyeets \u0111\u1ECBnh ch\xEDnh l\xE0 n\u1ED9i
-    dung c\u1EE7a tin nh\u1EAFn, kh\xF4ng ch\xE8o k\xE9o, kh\xF4ng y\xEAu c\u1EA7u,
-    ch\u1EC9 khuy\u1EBFn kh\xEDch ng\u01B0\u1EDDi d\xE2n t\xECm hi\u1EC3u v\u1EC1
-    ph\xF2ng ch\u1ED1ng ma t\xFAy. "
+  - "\u0110\xE2y l\xE0 m\u1ED9t email l\u1EEBa \u0111\u1EA3o, kh\xF4ng tin c\u1EADy.
+    M\u1EB7c d\xF9 b\xE2y gi\u1EDD ki\u1EC3u l\u1EEBa \u0111\u1EA3o n\xE0y \xEDt
+    g\u1EB7p, nh\u01B0ng v\u1EABn c\xF3 th\u1EC3 x\u1EA3y ra. Kh\xF4ng c\xF3 c\xE1c
+    ch\u01B0\u01A1ng tr\xECnh khuy\u1EBFn m\xE3i, t\u1EB7ng qu\xE0 ki\u1EC3u n\xE0y.
+    H\xECnh th\u1EE9c email c\u1EA9u th\u1EA3, b\u1ED1 c\u1EE5c kh\xF4ng h\u1EE3p
+    l\xFD, d\u1EABn \u0111\u1EBFn email kh\xF4ng trang tr\u1ECDng. Ngo\xE0i ra, h\xE3y
+    b\u1ECF qua t\u1EA5t c\u1EA3 c\xE1c email l\u1EA1 y\xEAu c\u1EA7u cung c\u1EA5p
+    th\xF4ng tin c\xE1 nh\xE2n nh\u1EA1y c\u1EA3m nh\u01B0: s\u1ED1 \u0111i\u1EC7n
+    tho\u1EA1i, \u0111\u1ECBa ch\u1EC9, ch\u1EE9ng minh nh\xE2n d\xE2n. H\xE3y c\u1EA9n
+    th\u1EADn v\xE0 c\xE2n nh\u1EAFc tr\u01B0\u1EDBc b\u1EA5t k\xEC tr\u01B0\u1EDDng
+    h\u1EE3p n\xE0o y\xEAu c\u1EA7u b\u1EA3n th\xE2n cung c\u1EA5p th\xF4ng tin c\xE1
+    nh\xE2n nh\u1EA1y c\u1EA3m \u0111\u1EC3 tr\xE1nh c\xE1c r\u1EE7i ro kh\xF4ng
+    \u0111\xE1ng c\xF3."
   speed: 0.02
 --- !u!114 &341792259
 MonoBehaviour:
@@ -3821,8 +3897,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -506.87903, y: -41.161}
-  m_SizeDelta: {x: 343.3992, y: 82.3221}
+  m_AnchoredPosition: {x: -547.4964, y: 182.88776}
+  m_SizeDelta: {x: 640.4065, y: 148.5466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348394109
 MonoBehaviour:
@@ -3844,10 +3920,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tin nh\u1EAFn b\xEAn c\u1EA1nh c\xF3 ph\u1EA3i tin nh\u1EAFn l\u1EEBa
-    \u0111\u1EA3o hay kh\xF4ng?\nN\u1EBFu c\xF3 h\xE3y nh\u1EADp t\u1ED5ng c\u1ED9ng
-    c\xE1c y\u1EBFu t\u1ED1 \u0111\xE1ng ng\u1EDD.\nN\u1EBFu kh\xF4ng h\xE3y nh\u1EADp
-    0."
+  m_text: "Email b\xEAn c\u1EA1nh c\xF3 ph\u1EA3i email \u0111\xE1ng tin c\u1EADy
+    kh\xF4ng?\r\nN\u1EBFu email \u1EA5y l\xE0 uy t\xEDn, h\xE3y nh\u1EADp 0.\r\nNg\u01B0\u1EE3c
+    l\u1EA1i,  h\xE3y li\u1EC7t k\xEA t\u1ED5ng t\u1EA5t c\u1EA3 c\xE1c \u0111i\u1EC3m
+    \u0111\xE1ng ng\u1EDD \u0111\u01B0\u1EE3c li\u1EC7t k\xEA b\xEAn d\u01B0\u1EDBi
+    \u0111\u1EC3 ch\u1EE9ng minh email b\xEAn c\u1EA1nh l\xE0 kh\xF4ng \u0111\xE1ng
+    tin c\u1EADy.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -3856,8 +3934,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280953386
-  m_fontColor: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3886,7 +3964,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -3960,7 +4038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -92.894, y: -349.99997}
+  m_AnchoredPosition: {x: -328, y: -252}
   m_SizeDelta: {x: 185.7852, y: 80.882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390753356
@@ -4193,8 +4271,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &394428268
 MonoBehaviour:
@@ -4216,7 +4294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4636,9 +4714,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 985941132}
   content:
-  - "\u0110\xE2y th\u01B0a c\u1EA3nh s\xE1t."
+  - "\u0110\xE2y th\u01B0a c\u1EA3nh s\xE1t. \u0110\xE2y l\xE0 email \u0111\u1EA7u
+    ti\xEAn."
   speed: 0.02
---- !u!1 &446721193
+--- !u!1 &482249751
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4646,45 +4725,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 446721194}
-  - component: {fileID: 446721196}
-  - component: {fileID: 446721195}
+  - component: {fileID: 482249752}
+  - component: {fileID: 482249754}
+  - component: {fileID: 482249753}
   m_Layer: 5
-  m_Name: sms
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &446721194
+--- !u!224 &482249752
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446721193}
+  m_GameObject: {fileID: 482249751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1685848157}
+  m_Father: {fileID: 1096400908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 258, y: -68.10327}
-  m_SizeDelta: {x: 799.81, y: 437.7665}
+  m_AnchoredPosition: {x: 316.57, y: 0.000022888}
+  m_SizeDelta: {x: 1533.5, y: 870.8085}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &446721195
+--- !u!114 &482249753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446721193}
+  m_GameObject: {fileID: 482249751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -4695,92 +4774,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 362acb9bbd42edc41aa3dbb121277963, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &446721196
+  m_Sprite: {fileID: 21300000, guid: 15f9c77e528688243ad28740b85cfbf5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &482249754
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446721193}
-  m_CullTransparentMesh: 1
---- !u!1 &464359710
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 464359711}
-  - component: {fileID: 464359713}
-  - component: {fileID: 464359712}
-  m_Layer: 5
-  m_Name: sms
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &464359711
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464359710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1694131902}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271, y: -54.888}
-  m_SizeDelta: {x: 768.2127, y: 438.0819}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &464359712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464359710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d27bb02f51aeb424a9a4fe833a17b622, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &464359713
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464359710}
+  m_GameObject: {fileID: 482249751}
   m_CullTransparentMesh: 1
 --- !u!1 &495386729
 GameObject:
@@ -5007,14 +5017,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1277956469}
   content:
-  - "T\xF4i ch\u1EC9 nh\u1EADn \u0111\u01B0\u1EE3c c\xE1c tin nh\u1EAFn \u0111\xE1ng
-    ng\u1EDD nh\u01B0 th\u1EBF th\xF4i. C\u1EA3m \u01A1n anh \u0111\xE3 gi\xFAp \u0111\u1EE1
-    t\xF4i gi\u1EA3i th\xEDch c\xE1c tin nh\u1EAFn \u1EA5y. T\xF4i s\u1EBD \u0111\u1EC1
-    ph\xF2ng h\u01A1n tr\u01B0\u1EDBc nh\u1EEFng tin nh\u1EAFn nh\u1EADn \u0111\u01B0\u1EE3c
-    sau n\xE0y. X\xE3 h\u1ED9i th\u1EADt \u0111\xE1ng s\u1EE3, l\xF2ng ng\u01B0\u1EDDi
-    c\u0169ng th\u1EADt \u0111\xE1ng s\u1EE3. Nh\u1EEFng chi\u1EBFn s\u0129 c\u1EA3nh
-    s\xE1t nh\u01B0 anh th\u1EADt \u0111\xE1ng \u0111\u01B0\u1EE3c tr\xE2n tr\u1ECDng
-    v\xE0 tuy\xEAn d\u01B0\u01A1ng. C\u1EA3m \u01A1n anh r\u1EA5t nhi\u1EC1u."
+  - "C\u1EA3m \u01A1n c\u1EA3nh s\xE1t \u0111\xE3 gi\xFAp t\xF4i ph\xE2n t\xEDch
+    ch\xFAng. \u0110\xE3 l\xE0m phi\u1EC1n c\u1EA3nh s\xE1t r\u1ED3i. Ch\xFAc anh
+    c\xF3 m\u1ED9t ng\xE0y l\xE0m vi\u1EC7c hi\u1EC7u qu\u1EA3. "
   speed: 0.02
 --- !u!1 &521153457
 GameObject:
@@ -5184,8 +5189,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &524150901
 MonoBehaviour:
@@ -5207,7 +5212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6350,8 +6355,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785.3562, y: -281.64392}
-  m_SizeDelta: {x: 276.0166, y: 483.1701}
+  m_AnchoredPosition: {x: 783.83716, y: -350.32587}
+  m_SizeDelta: {x: 259.6909, y: 450.5184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609781057
 MonoBehaviour:
@@ -6559,8 +6564,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -342.84, y: -151.71}
-  m_SizeDelta: {x: 585.67, y: 315.7}
+  m_AnchoredPosition: {x: -534.77026, y: -15.52}
+  m_SizeDelta: {x: 673.9693, y: 315.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618600578
 MonoBehaviour:
@@ -6582,12 +6587,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A. Li\xEAn h\u1EC7 t\u1ED5ng \u0111\xE0i Vietcombank ho\u1EB7c \u0111\u1EBFn
-    tr\u1EE5 s\u1EDF Vietcombank g\u1EA7n nh\u1EA5t \u0111\u1EC3 th\xF4ng b\xE1o
-    v\u1EC1 tin nh\u1EAFn.\nB. M\u1EB7c k\u1EC7 kh\xF4ng l\xE0m g\xEC c\u1EA3.\nC.
-    Nh\u1EA5n v\xE0o \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\u1EC3 ti\u1EBFn
-    h\xE0nh thay \u0111\u1ED5i m\u1EADt kh\u1EA9u \u1EE9ng d\u1EE5ng ng\xE2n h\xE0ng.\nD.
-    B\xE1o c\u1EA3nh s\xE1t"
+  m_text: "A. V\xE0o \u1EE9ng d\u1EE5ng LinkedIn \u0111\u1EC3 xem tin nh\u1EAFn v\xE0
+    c\xE2n nh\u1EAFc tr\u1EA3 l\u1EDDi\r\nB. X\xE1c \u0111\u1ECBnh \u0111\xE2y l\xE0
+    email l\u1EEBa \u0111\u1EA3o v\xE0 b\xE1o c\xE1o cho c\xF4ng ty \u0111\u01B0\u1EE3c
+    nh\u1EAFc \u0111\u1EBFn\r\nC. X\xE1c \u0111\u1ECBnh \u0111\xE2y l\xE0 email kh\xF4ng
+    quan tr\u1ECDng v\xE0 b\u1ECF qua n\xF3\r\nD. H\u1EE7y li\xEAn k\u1EBFt c\u1EE7a
+    LinkedIn v\u1EDBi Gmail v\xE0 ng\u0103n ch\u1EB7n nh\u1EADn \u0111\u01B0\u1EE3c
+    c\xE1c email t\u01B0\u01A1ng t\u1EF1 t\u1EEB \u1EE9ng d\u1EE5ng LinkedIn\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -6901,8 +6907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -447.45, y: -350}
-  m_SizeDelta: {x: 462.25, y: 80.8851}
+  m_AnchoredPosition: {x: -655.63086, y: -155.00003}
+  m_SizeDelta: {x: 418.1003, y: 80.8851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623404112
 MonoBehaviour:
@@ -7669,8 +7675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -322.53, y: -207.85}
-  m_SizeDelta: {x: 645.07, y: 315.7}
+  m_AnchoredPosition: {x: -556.49, y: -69.66997}
+  m_SizeDelta: {x: 645.07, y: 211.3461}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648775872
 MonoBehaviour:
@@ -7692,9 +7698,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. \u0110\u01B0\u1EDDng li\xEAn k\u1EBFt kh\xF4ng uy t\xEDn\n2. Kh\xF4ng
-    vi\u1EBFt ti\u1EBFng Vi\u1EC7t c\xF3 d\u1EA5u\n3. T\xEAn ng\u01B0\u1EDDi g\u1EEDi
-    kh\xF4ng h\u1EE3p l\xFD\n4. N\u1ED9i dung tin nh\u1EAFn kh\xF4ng h\u1EE3p l\xFD"
+  m_text: "- N\u1ED9i dung email kh\xF4ng trang tr\u1ECDng\r\n- Y\xEAu c\u1EA7u ph\u1EA3i
+    \u1EA5n v\xE0o m\u1ED9t \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt\r\n- Ti\xEAu \u0111\u1EC1
+    email kh\xF4ng h\u1EE3p l\xFD \r\n- Email \u0111\u01B0\u1EE3c g\u1EEDi t\u1EEB
+    m\u1ED9t \u0111\u1ED1i t\u01B0\u1EE3ng kh\xF4ng r\xF5 r\xE0ng\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7770,78 +7777,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648775870}
-  m_CullTransparentMesh: 1
---- !u!1 &655985122
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 655985123}
-  - component: {fileID: 655985125}
-  - component: {fileID: 655985124}
-  m_Layer: 5
-  m_Name: sms
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &655985123
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655985122}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1755514733}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 171.1362, y: -42.3618}
-  m_SizeDelta: {x: 978.0914, y: 448.8836}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &655985124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655985122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0f075e0437f29a74d9d98daf4dd38bde, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &655985125
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655985122}
   m_CullTransparentMesh: 1
 --- !u!1 &662721348
 GameObject:
@@ -8570,8 +8505,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785.3562, y: -281.64392}
-  m_SizeDelta: {x: 276.0166, y: 483.1701}
+  m_AnchoredPosition: {x: 783.83716, y: -350.32587}
+  m_SizeDelta: {x: 259.6909, y: 450.5184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707021477
 MonoBehaviour:
@@ -9367,8 +9302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -498.24, y: -198.79}
-  m_SizeDelta: {x: 360.67, y: 136.03}
+  m_AnchoredPosition: {x: -560.9313, y: -15.097305}
+  m_SizeDelta: {x: 613.5273, y: 202.2546}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764381468
 MonoBehaviour:
@@ -9390,9 +9325,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. \u0110\u01B0\u1EDDng li\xEAn k\u1EBFt kh\xF4ng uy t\xEDn\n2. L\u1ED7i
-    d\u1EA5u c\xE2u\n3. Kh\xF4ng vi\u1EBFt ti\u1EBFng Vi\u1EC7t c\xF3 d\u1EA5u\n4.
-    L\u1ED7i c\xFA ph\xE1p\n"
+  m_text: "- Ti\xEAu \u0111\u1EC1 email kh\xF4ng ch\u1EC9n chu \r\n- N\u1ED9i dung
+    email tr\xECnh b\xE0y c\u1EA9u th\u1EA3, sai ch\xEDnh t\u1EA3\r\n- N\u1ED9i dung
+    mang t\xEDnh d\u1EE5 d\u1ED7, ch\xE8o k\xE9o\r\n- Y\xEAu c\u1EA7u ph\u1EA3i nh\u1EA5n
+    v\xE0o m\u1ED9t \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt kh\xF4ng r\xF5 r\xE0ng\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -9419,8 +9355,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9523,8 +9459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 776286873}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "\u1ED2, \u0111\xE2y l\xE0 email cu\u1ED1i c\xF9ng r\u1ED3i. "
   speed: 0.02
 --- !u!114 &772163974
 MonoBehaviour:
@@ -9732,8 +9667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776886659
 MonoBehaviour:
@@ -9755,7 +9690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9827,21 +9762,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 531478182}
   content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t tin nh\u1EAFn l\u1EEBa \u0111\u1EA3o. M\u1EB7c d\xF9
-    \u0111\u01B0\u1EE3c g\u1EEDi t\u1EEB t\u1ED5ng \u0111\xE0i, tuy nhi\xEAn \u0111\xE2y
-    l\xE0 m\u1ED9t th\u1EE7 thu\u1EADt tinh vi c\u1EE7a Hacker. D\u1EA5u hi\u1EC7u
-    nh\u1EADn bi\u1EBFt ch\xEDnh l\xE0 \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\xEDnh
-    k\xE8m, \u0111u\xF4i \"top\" kh\xF4ng ph\u1EA3i m\u1ED9t \u0111u\xF4i li\xEAn
-    k\u1EBFt uy t\xEDn v\xE0 \"-ms.top\" \u0111\u1EC3 \u0111\xE1nh l\u1EEBa nh\u1EEFng
-    ai kh\xF4ng \u0111\u1ECDc k\u1EF9 tin nh\u1EAFn. H\u01A1n h\u1EBFt, c\xE1c \u1EE9ng
-    d\u1EE5ng ng\xE2n h\xE0ng s\u1EBD kh\xF4ng \u0111\xEDnh k\xE8m \u0111\u01B0\u1EDDng
-    d\u1EABn v\xE0o tin nh\u1EAFn khi th\xF4ng b\xE1o cho b\u1EA1n. H\xE3y c\u1EA3nh
-    gi\xE1c tr\u01B0\u1EDBc c\xE1c chi\xEAu tr\xF2 l\u1EEBa \u0111\u1EA3o \u0111\xE1nh
-    v\xE0o t\xE2m l\xFD thi\u1EBFu c\u1EA3nh gi\xE1c c\u1EE7a ng\u01B0\u1EDDi d\xF9ng
-    c\u1EE7a hacker. N\u1EBFu g\u1EB7p tr\u01B0\u1EDDng h\u1EE3p n\xE0y, b\u1EA1n
-    n\xEAn \u0111\u1EBFn chi nh\xE1nh ng\xE2n h\xE0ng g\u1EA7n nh\u1EA5t ho\u1EB7c
-    g\u1ECDi cho ng\xE2n h\xE0ng \u0111\u1EC3 x\xE1c nh\u1EADn v\u1EA5n \u0111\u1EC1
-    truy c\u1EADp c\u1EE7a t\xE0i kho\u1EA3n."
+  - "\u0110\xE2y l\xE0 m\u1ED9t email uy t\xEDn. Th\u1EE9 nh\u1EA5t, email n\xE0y
+    \u0111\u01B0\u1EE3c g\u1EEDi t\u1EEB m\u1ED9t t\xE0i kho\u1EA3n uy t\xEDn tr\xEAn
+    LinkedIn, m\u1ED9t m\u1EA1ng x\xE3 h\u1ED9i chuy\xEAn v\u1EC1 m\u1EA1ng l\u01B0\u1EDBi
+    k\u1EBFt n\u1ED1i chuy\xEAn nghi\u1EC7p. \u0110i\u1EC1u n\xE0y th\u1EC3 hi\u1EC7n
+    qua ngu\u1ED3n g\u1ED1c c\u1EE7a email v\xE0 c\xE1ch n\xF3 \u0111\u01B0\u1EE3c
+    g\u1EEDi th\xF4ng qua LinkedIn. Th\u1EE9 hai, ti\xEAu \u0111\u1EC1 c\u1EE7a email
+    r\xF5 r\xE0ng, chuy\xEAn nghi\u1EC7p, \u0111\xFAng ch\xEDnh t\u1EA3, v\xE0 tu\xE2n
+    theo ng\u1EEF ph\xE1p. Ti\xEAu \u0111\u1EC1 n\xE0y kh\xF4ng g\xE2y hi\u1EC3u
+    l\u1EA7m v\xE0 th\u1EC3 hi\u1EC7n m\u1EE5c \u0111\xEDch ch\xEDnh c\u1EE7a email,
+    \u0111\xF3 l\xE0 th\xF4ng b\xE1o v\u1EC1 tuy\u1EC3n d\u1EE5ng t\u1EEB Amazon.
+    Th\u1EE9 ba, n\u1ED9i dung email r\xF5 r\xE0ng, \u0111\u1EA7y \u0111\u1EE7, kh\xF4ng
+    c\xF3 d\u1EA5u hi\u1EC7u ch\xE8o k\xE9o ho\u1EB7c l\u1EEBa \u0111\u1EA3o. Email
+    t\u1EADp trung v\xE0o th\xF4ng b\xE1o tuy\u1EC3n d\u1EE5ng t\u1EEB Amazon v\xE0
+    kh\xF4ng y\xEAu c\u1EA7u th\xF4ng tin c\xE1 nh\xE2n nh\u1EA1y c\u1EA3m ho\u1EB7c
+    giao d\u1ECBch t\xE0i ch\xEDnh. Th\u1EE9 t\u01B0, c\xE1c \u0111\u01B0\u1EDDng
+    li\xEAn k\u1EBFt trong email r\xF5 r\xE0ng v\xE0 chuy\u1EC3n h\u01B0\u1EDBng
+    ng\u01B0\u1EDDi nh\u1EADn \u0111\u1EBFn trang web tuy\u1EC3n d\u1EE5ng c\u1EE7a
+    Amazon, \u0111\u1EA3m b\u1EA3o t\xEDnh x\xE1c th\u1EF1c v\xE0 an to\xE0n. Th\u1EE9
+    n\u0103m, khi nh\u1EA5n v\xE0o \"View Message,\" s\u1EBD chuy\u1EC3n h\u01B0\u1EDBng
+    ng\u01B0\u1EDDi nh\u1EADn \u0111\u1EBFn trang tin nh\u1EAFn c\xE1 nh\xE2n trong
+    \u1EE9ng d\u1EE5ng LinkedIn c\u1EE7a ch\u1EE7 s\u1EDF h\u1EEFu email, th\u1EC3
+    hi\u1EC7n t\xEDnh ri\xEAng t\u01B0 v\xE0 x\xE1c th\u1EF1c c\u1EE7a th\xF4ng \u0111i\u1EC7p."
   speed: 0.02
 --- !u!114 &781291264
 MonoBehaviour:
@@ -10644,8 +10586,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 709808372}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m tra
+    email ti\u1EBFp theo nh\xE9! "
   speed: 0.02
 --- !u!114 &823132572
 MonoBehaviour:
@@ -11129,15 +11071,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 638576036}
   content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t tin nh\u1EAFn \u0111\xE1ng tin c\u1EADy c\u1EE7a
-    B\xE1ch ho\xE1 Xanh. M\u1EB7c d\xF9 quy t\u1EAFc d\xF9ng d\u1EA5u c\xE2u ch\u01B0a
-    h\u1EE3p l\xFD, tuy nhi\xEAn, \u0111\xE2y v\u1EABn l\xE0 m\u1ED9t tin nh\u1EAFn
-    uy t\xEDn. D\u1EA5u hi\u1EC7u nh\u1EADn bi\u1EBFt l\xE0: Th\u1EE9 nh\u1EA5t,
-    \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\xFAng ch\xEDnh t\u1EA3 \u201Cbachhoaxanh\"
-    v\xE0 c\xF3 \u0111u\xF4i \u201C.com\" l\xE0 m\u1ED9t \u0111\u01B0\u1EDDng li\xEAn
-    k\u1EBFt uy t\xEDn. Th\u1EE9 hai, \u0111\u1EC3 ch\u1EAFc ch\u1EAFn, khi nh\u1EA5n
-    v\xE0o \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt s\u1EBD hi\u1EC3n th\u1ECB \u0111\xFAng
-    trang web c\u1EE7a c\u1EEDa h\xE0ng B\xE1ch ho\xE1 Xanh."
+  - "\u0110\xE2y l\xE0 m\u1ED9t email uy t\xEDn. Ban \u0111\u1EA7u khi m\u1EDBi nh\xECn
+    qua n\u1ED9i dung email, c\xF3 th\u1EC3 t\u01B0\u1EDFng \u0111\xE2y l\xE0 m\u1ED9t
+    email kh\xF4ng uy t\xEDn do n\u1ED9i dung kh\xE1 c\xE0 ch\u1EDBn. Tuy nhi\xEAn,
+    th\xF4ng tin x\xE1c \u0111\u1ECBnh r\u1EB1ng \u0111\xE2y l\xE0 m\u1ED9t email
+    uy t\xEDn t\u1EEB Discord, th\xF4ng b\xE1o v\u1EC1 vi\u1EC7c c\u1EADp nh\u1EADt
+    th\xE0nh c\xF4ng m\u1EADt kh\u1EA9u. Email n\xE0y \u0111\u01B0\u1EE3c g\u1EEDi
+    t\u1EEB t\xE0i kho\u1EA3n t\u1EF1 \u0111\u1ED9ng c\u1EE7a Discord, l\xE0 m\u1ED9t
+    d\u1ECBch v\u1EE5 ph\u1ED5 bi\u1EBFn trong l\u0129nh v\u1EF1c tr\xF2 chuy\u1EC7n
+    v\xE0 giao ti\u1EBFp tr\u1EF1c tuy\u1EBFn. Ti\xEAu \u0111\u1EC1 c\u1EE7a email
+    r\u1EA5t r\xF5 r\xE0ng v\xE0 ch\xEDnh x\xE1c th\u1EC3 hi\u1EC7n n\u1ED9i dung
+    v\u1EC1 vi\u1EC7c c\u1EADp nh\u1EADt m\u1EADt kh\u1EA9u. Ti\xEAu \u0111\u1EC1
+    n\xE0y kh\xF4ng c\xF3 l\u1ED7i v\u1EC1 ng\u1EEF ph\xE1p v\xE0 ch\xEDnh t\u1EA3,
+    th\u1EC3 hi\u1EC7n s\u1EF1 ch\u1EC9n chu; S\u1EF1 s\xE1ng t\u1EA1o trong c\xE1ch
+    s\u1EED d\u1EE5ng ng\xF4n t\u1EEB trong email c\xF3 th\u1EC3 t\u1EA1o s\u1EF1
+    th\xFA v\u1ECB v\xE0 m\u1EDBi l\u1EA1 cho ng\u01B0\u1EDDi \u0111\u1ECDc, nh\u01B0ng
+    v\u1EABn gi\u1EEF \u0111\u01B0\u1EE3c t\xEDnh r\xF5 r\xE0ng v\xE0 th\xF4ng tin.
+    \u0110i\u1EC1u n\xE0y c\xF3 th\u1EC3 l\xE0 m\u1ED9t c\xE1ch Discord \xE1p d\u1EE5ng
+    \u0111\u1EC3 t\u1EA1o tr\u1EA3i nghi\u1EC7m ng\u01B0\u1EDDi d\xF9ng th\xFA v\u1ECB
+    h\u01A1n khi \u0111\u1ECDc email. \u0110\u1EB7c bi\u1EC7t, n\u1ED9i dung email
+    r\xF5 r\xE0ng v\xE0 kh\xF4ng c\xF3 d\u1EA5u hi\u1EC7u ch\xE8o k\xE9o ho\u1EB7c
+    l\u1EEBa \u0111\u1EA3o v\xE0 \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\xEDnh
+    k\xE8m trong email d\u1EABn \u0111\u1EBFn trang web uy t\xEDn c\u1EE7a Discord,
+    \u0111\u1EA3m b\u1EA3o t\xEDnh x\xE1c th\u1EF1c v\xE0 an to\xE0n cho ng\u01B0\u1EDDi
+    nh\u1EADn."
   speed: 0.02
 --- !u!114 &864048024
 MonoBehaviour:
@@ -11445,7 +11402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -426, y: -350}
+  m_AnchoredPosition: {x: -665.106, y: -151.00003}
   m_SizeDelta: {x: 419.3553, y: 80.8851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884343023
@@ -11732,8 +11689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294.42, y: -165.22958}
-  m_SizeDelta: {x: 645.07, y: 138.1592}
+  m_AnchoredPosition: {x: -483.57675, y: 0.000030518}
+  m_SizeDelta: {x: 755.6364, y: 241.6683}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943076247
 MonoBehaviour:
@@ -11755,9 +11712,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A. YES
-
-    B. NO'
+  m_text: "A. B\xE1o c\u1EA3nh s\xE1t\r\nB. G\u1EEDi l\u1EA1i email k\xE8m th\xF4ng
+    tin \u0111\u01B0\u1EE3c y\xEAu c\u1EA7u \u0111\u1EC3 ch\u1EDD nh\u1EADn th\u01B0\u1EDFng\r\nC.
+    B\u1ECF qua email\r\nD. Nh\u1EAFn l\u1EA1i email \u0111\u1EC3 h\u1ECFi r\xF5
+    v\u1EC1 ch\u01B0\u01A1ng tr\xECnh tr\xFAng th\u01B0\u1EDFng\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -12579,14 +12537,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2046f81409b9f6941b838947945dcaa5, type: 3}
+  m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -12613,18 +12571,18 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1682612903}
   - {fileID: 1780909525}
   - {fileID: 1109982228}
   - {fileID: 648775871}
-  - {fileID: 1835860924}
   - {fileID: 390753355}
   - {fileID: 317234768}
   m_Father: {fileID: 136791980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000014544, y: 96.829}
-  m_SizeDelta: {x: 2054.3398, y: 1273.6571}
+  m_AnchoredPosition: {x: -0.0001, y: -0.637}
+  m_SizeDelta: {x: 1833.9819, y: 993.9726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1005536161
 GameObject:
@@ -13459,11 +13417,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 811014468}
   content:
-  - "\u1ED2, kh\xF4ng c\xF3 g\xEC \u0111\xE2u. Gi\xFAp \u0111\u1EE1 m\u1ECDi ng\u01B0\u1EDDi
-    l\xE0 ngh\u0129a v\u1EE5 v\xE0 l\xFD t\u01B0\u1EDFng c\u1EE7a ch\xFAng t\xF4i.
-    N\u1EBFu b\u1EA1n kh\xF4ng c\u1EA7n s\u1EF1 gi\xFAp \u0111\u1EE1 n\u1EEFa th\xEC
-    t\xF4i ph\u1EA3i ti\u1EBFp t\u1EE5c nhi\u1EC7m v\u1EE5 c\u1EE7a b\u1EA3n th\xE2n
-    \u0111\xE2y. T\u1EA1m bi\u1EC7t."
+  - "V\xE2ng, kh\xF4ng c\xF3 g\xEC, h\xE3y c\u1EA9n th\u1EADn tr\u01B0\u1EDBc nh\u1EEFng
+    email m\xE0 m\xECnh nh\u1EADn \u0111\u01B0\u1EE3c nh\xE9. \u0110\u1ED3ng th\u1EDDi
+    c\u0169ng h\xE3y c\u1EA9n th\u1EADn khi cung c\u1EA5p th\xF4ng tin c\xE1 nh\xE2n
+    c\u1EE7a m\xECnh cho b\xEAn th\u1EE9 3. N\u1EBFu kh\xF4ng c\xF2n v\u1EA5n \u0111\u1EC1
+    g\xEC th\xEC t\xF4i \u0111i \u0111\xE2y. T\u1EA1m bi\u1EC7t! "
   speed: 0.02
 --- !u!1 &1052090926
 GameObject:
@@ -13708,7 +13666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -426, y: -350}
+  m_AnchoredPosition: {x: -657, y: -171}
   m_SizeDelta: {x: 419.3553, y: 80.8851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057093333
@@ -13780,14 +13738,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2046f81409b9f6941b838947945dcaa5, type: 3}
+  m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -13814,18 +13772,18 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 482249752}
   - {fileID: 884343022}
   - {fileID: 1701619186}
   - {fileID: 618600577}
-  - {fileID: 2078233054}
   - {fileID: 1630466246}
   - {fileID: 396835837}
   m_Father: {fileID: 800488758}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000014544, y: 96.829}
-  m_SizeDelta: {x: 2054.3398, y: 1273.6571}
+  m_AnchoredPosition: {x: -0.0001, y: -0.637}
+  m_SizeDelta: {x: 1833.9819, y: 993.9726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1103547810
 GameObject:
@@ -13905,8 +13863,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -220.58, y: 72.484}
-  m_SizeDelta: {x: 441.1573, y: 183.3387}
+  m_AnchoredPosition: {x: -526, y: 166.80437}
+  m_SizeDelta: {x: 706.0559, y: 261.6042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1109982229
 MonoBehaviour:
@@ -13928,10 +13886,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tin nh\u1EAFn b\xEAn c\u1EA1nh c\xF3 ph\u1EA3i tin nh\u1EAFn l\u1EEBa
-    \u0111\u1EA3o hay kh\xF4ng?\nN\u1EBFu c\xF3 h\xE3y nh\u1EADp t\u1ED5ng c\u1ED9ng
-    c\xE1c y\u1EBFu t\u1ED1 \u0111\xE1ng ng\u1EDD.\nN\u1EBFu kh\xF4ng h\xE3y nh\u1EADp
-    0."
+  m_text: "H\xE3y n\xEAu t\u1ED5ng c\u1ED9ng c\xF3 bao nhi\xEAu \u0111i\u1EC3m \u0111\xE1ng
+    ng\u1EDD trong email b\xEAn d\u01B0\u1EDBi \u0111\u1EC3 ch\u1EE9ng minh r\u1EB1ng
+    n\xF3 l\xE0 email kh\xF4ng \u0111\xE1ng tin c\u1EADy.\r \nN\u1EBFu email \u1EA5y
+    l\xE0 uy t\xEDn, h\xE3y nh\u1EADp 0.\r "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -13940,8 +13898,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280953386
-  m_fontColor: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13970,7 +13928,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -14411,8 +14369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144420161
 MonoBehaviour:
@@ -14434,7 +14392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14488,7 +14446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -92.894, y: -349.99997}
+  m_AnchoredPosition: {x: -397, y: -101}
   m_SizeDelta: {x: 185.7852, y: 80.882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157814237
@@ -14997,8 +14955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1173545427
 MonoBehaviour:
@@ -15020,7 +14978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15864,7 +15822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -92.894, y: -349.99997}
+  m_AnchoredPosition: {x: -342, y: -155}
   m_SizeDelta: {x: 185.7852, y: 80.882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1272481655
@@ -15995,8 +15953,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274779093
 MonoBehaviour:
@@ -16018,7 +15976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16780,8 +16738,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785.3562, y: -281.64392}
-  m_SizeDelta: {x: 276.0166, y: 483.1701}
+  m_AnchoredPosition: {x: 783.83716, y: -350.32587}
+  m_SizeDelta: {x: 259.6909, y: 450.5184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327892023
 MonoBehaviour:
@@ -17008,19 +16966,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1701288164}
   content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t tin nh\u1EAFn l\u1EEBa \u0111\u1EA3o r\xF5 r\xE0ng,
-    n\xF3 \u0111\xE1nh v\xE0o l\xF2ng tham c\u1EE7a ng\u01B0\u1EDDi nh\u1EADn. Khi
-    nh\u1EADn \u0111\u01B0\u1EE3c nh\u1EEFng tin nh\u1EAFn nh\u01B0 th\u1EBF, \u0111i\u1EC1u
-    b\u1EA1n n\xEAn l\xE0m l\xE0 ch\u1EB7n s\u1ED1 v\xE0 m\u1EB7c k\u1EC7 tin nh\u1EAFn
-    \u1EA5y \u0111i. N\u1EBFu \u0111\u01B0\u1EE3c, h\xE3y c\u1EA3nh gi\xE1c khi nh\u1EADn
-    \u0111\u01B0\u1EE3c c\xE1c cu\u1ED9c g\u1ECDi t\u1EEB s\u1ED1 l\u1EA1 v\xE0 c\u1EA3nh
-    gi\xE1c khi cho s\u1ED1 \u0111i\u1EC7n tho\u1EA1i v\u1EDBi b\xEAn th\u1EE9 ba.
-    V\xEC kh\u1EA3 n\u0103ng cao b\u1EA1n s\u1EBD b\u1ECB b\xE1n th\xF4ng tin c\xE1
-    nh\xE2n v\xE0 t\u1EEB \u0111\xF3 g\u1EB7p ph\u1EA3i c\xE1c cu\u1ED9c g\u1ECDi
-    v\xE0 tin nh\u1EAFn l\xE0m phi\u1EC1n. Quan tr\u1ECDng nh\u1EA5t, b\u1EA1n kh\xF4ng
-    \u0111\u01B0\u1EE3c \u1EA5n v\xE0o c\xE1c \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt
-    kh\xF4ng r\xF5 r\xE0ng, kh\xF4ng uy t\xEDn, c\u0169ng nh\u01B0 kh\xF4ng cung
-    c\u1EA5p th\xF4ng tin t\xE0i kho\u1EA3ng trong c\xE1c li\xEAn k\u1EBFt n\xE0y."
+  - "\u0110\xE2y l\xE0 m\u1ED9t email kh\xF4ng uy t\xEDn, l\xE0 m\u1ED9t email l\u1EEBa
+    \u0111\u1EA3o. Th\u1EE9 nh\u1EA5t, n\u1ED9i dung email y\xEAu c\u1EA7u thanh
+    to\xE1n \u0111\u1EC3 duy tr\xEC t\xE0i kho\u1EA3n, m\u1ED9t ph\u01B0\u01A1ng
+    th\u1EE9c th\u01B0\u1EDDng \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng trong c\xE1c
+    email l\u1EEBa \u0111\u1EA3o. Th\u1EE9 hai, khi nh\xECn t\u1ED5ng quan, email
+    n\xE0y kh\xF4ng c\xF3 s\u1EF1 ch\u1EC9n chu, b\u1EDFi v\xEC background c\u1EE7a
+    logo v\xE0 background c\u1EE7a email kh\xF4ng \u0111\u1ED3ng nh\u1EA5t. \u0110i\u1EC1u
+    n\xE0y c\xF3 th\u1EC3 l\xE0 m\u1ED9t d\u1EA5u hi\u1EC7u s\u01A1 \u0111\u1EB3ng
+    c\u1EE7a m\u1ED9t email l\u1EEBa \u0111\u1EA3o. Th\u1EE9 ba, s\u1EF1 sai l\u1EC7ch
+    trong \u0111\u1ECBnh d\u1EA1ng t\xEAn \"metflix\" thay v\xEC \"netflix\" trong
+    c\xE1c \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt l\xE0 m\u1ED9t d\u1EA5u hi\u1EC7u
+    r\xF5 r\xE0ng v\u1EC1 t\xEDnh kh\xF4ng uy t\xEDn c\u1EE7a email n\xE0y. D\u1EF1a
+    v\xE0o nh\u1EEFng \u0111i\u1EC3m tr\xEAn, c\u1EA7n c\u1EA9n tr\u1ECDng v\xE0
+    kh\xF4ng n\xEAn ti\u1EBFp t\u1EE5c th\u1EF1c hi\u1EC7n b\u1EA5t k\u1EF3 y\xEAu
+    c\u1EA7u thanh to\xE1n n\xE0o t\u1EEB email n\xE0y, v\xEC n\xF3 c\xF3 th\u1EC3
+    l\xE0 m\u1ED9t c\u1ED1 g\u1EAFng l\u1EEBa \u0111\u1EA3o."
   speed: 0.02
 --- !u!114 &1351763228
 MonoBehaviour:
@@ -19005,8 +18966,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 634387885}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "Th\xEC ra l\xE0 v\u1EADy. T\xF4i \u0111\xE3 r\xFAt \u0111\u01B0\u1EE3c r\u1EA5t
+    nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
+    th\xEDch c\u1EE7a c\u1EA3nh s\xE1t. "
   speed: 0.02
 --- !u!114 &1470854025
 MonoBehaviour:
@@ -19180,8 +19142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -426, y: -350}
-  m_SizeDelta: {x: 419.3553, y: 80.8851}
+  m_AnchoredPosition: {x: -679.23535, y: -101.00003}
+  m_SizeDelta: {x: 343.0966, y: 80.8851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517795714
 MonoBehaviour:
@@ -19707,8 +19669,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561089064
 MonoBehaviour:
@@ -19730,7 +19692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19747,6 +19709,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561089062}
+  m_CullTransparentMesh: 1
+--- !u!1 &1568264607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568264608}
+  - component: {fileID: 1568264610}
+  - component: {fileID: 1568264609}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1568264608
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568264607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1685848157}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 351, y: -0.0000038147}
+  m_SizeDelta: {x: 1481.4073, y: 928.76}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1568264609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568264607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1e6fd1558e7f2c94282105a7f5698743, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1568264610
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568264607}
   m_CullTransparentMesh: 1
 --- !u!1 &1585134068
 GameObject:
@@ -19936,8 +19973,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1874942333}
   content:
-  - "V\xE2ng, t\xF4i s\u1EBD ch\xFA \xFD. Tin nh\u1EAFn ti\u1EBFp theo c\u0169ng
-    l\xE0m t\xF4i ch\xFA \xFD. C\u1EA3nh s\xE1t gi\xFAp t\xF4i xem qua nh\xE9."
+  - "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m tra
+    email ti\u1EBFp theo nh\xE9! "
   speed: 0.02
 --- !u!114 &1600497515
 MonoBehaviour:
@@ -20347,7 +20384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -92.894, y: -349.99997}
+  m_AnchoredPosition: {x: -332, y: -151}
   m_SizeDelta: {x: 185.7852, y: 80.882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1630466247
@@ -20714,8 +20751,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667207128
 MonoBehaviour:
@@ -20737,7 +20774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20858,6 +20895,81 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1682612902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1682612903}
+  - component: {fileID: 1682612905}
+  - component: {fileID: 1682612904}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1682612903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682612902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1001431880}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 342.56, y: -0.000025749}
+  m_SizeDelta: {x: 1567.4, y: 876.5533}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1682612904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682612902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f8284ab01ea792940b17db60491c17ef, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1682612905
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682612902}
+  m_CullTransparentMesh: 1
 --- !u!1 &1683149504
 GameObject:
   m_ObjectHideFlags: 0
@@ -20912,12 +21024,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 806651872}
   content:
-  - "Ch\xE0o C\u1EA3nh s\xE1t, t\xF4i \u0111\xE3 nh\u1EADn m\u1ED9t s\u1ED1 tin nh\u1EAFn
-    kh\xF4ng r\xF5 g\u1EEDi \u0111\u1EBFn s\u1ED1 \u0111i\u1EC7n tho\u1EA1i c\u1EE7a
-    t\xF4i. T\xF4i r\u1EA5t b\u1ED1i r\u1ED1i. D\u1EA1o g\u1EA7n \u0111\xE2y, S\u1EDF
-    c\u1EA3nh s\xE1t \u0111\xE3 nh\u1EAFc nh\u1EDF ch\xFAng t\xF4i v\u1EC1 vi\u1EC7c
-    \u0111\u1EC1 ph\xF2ng tr\u01B0\u1EDBc c\xE1c tin nh\u1EAFn l\u1EA1. Anh h\xE3y
-    gi\xFAp t\xF4i xem qua nh\xE9!"
+  - "Ch\xE0o c\u1EA3nh s\xE1t, t\xF4i v\u1EEBa nh\u1EADn \u0111\u01B0\u1EE3c th\xF4ng
+    b\xE1o r\u1EB1ng anh s\u1EBD \u0111\u1EBFn \u0111\xE2y. T\xF4i r\u1EA5t vui v\xEC
+    anh \u0111\xE3 \u0111\u1EBFn. T\xF4i g\u1EB7p m\u1ED9t v\xE0i email m\xE0 kh\xF4ng
+    bi\u1EBFt ch\xFAng c\xF3 ph\u1EA3i l\xE0 email l\u1EEBa \u0111\u1EA3o hay kh\xF4ng.
+    T\xF4i kh\xF4ng bi\u1EBFt c\xE1ch \u0111\u1EC3 x\xE1c minh t\xEDnh \u0111\xFAng
+    ch\xE2n th\u1EF1c c\u1EE7a m\u1ED9t email. Mong anh h\xE3y gi\xFAp t\xF4i."
   speed: 0.02
 --- !u!114 &1683149507
 MonoBehaviour:
@@ -20988,14 +21100,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2046f81409b9f6941b838947945dcaa5, type: 3}
+  m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -21022,18 +21134,18 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1568264608}
   - {fileID: 1057093332}
   - {fileID: 1693633689}
   - {fileID: 943076246}
-  - {fileID: 446721194}
   - {fileID: 276315497}
   - {fileID: 1160021854}
   m_Father: {fileID: 85038248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000014544, y: 96.829}
-  m_SizeDelta: {x: 2054.3398, y: 1273.6571}
+  m_AnchoredPosition: {x: -0.0001, y: -0.637}
+  m_SizeDelta: {x: 1833.9819, y: 993.9726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1693633688
 GameObject:
@@ -21069,8 +21181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371.38, y: -29}
-  m_SizeDelta: {x: 491.15, y: 183.3387}
+  m_AnchoredPosition: {x: -510, y: 211}
+  m_SizeDelta: {x: 707.5779, y: 183.3387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693633690
 MonoBehaviour:
@@ -21092,8 +21204,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Theo b\u1EA1n \u0111\xE2y c\xF3 ph\u1EA3i m\u1ED9t tin nh\u1EAFn \u0111\xE1ng
-    tin c\u1EADy?"
+  m_text: "B\u1EA1n s\u1EBD l\xE0m g\xEC n\u1EBFu nh\u1EADn \u0111\u01B0\u1EE3c Email
+    n\xE0y?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -21102,8 +21214,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280953386
-  m_fontColor: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21201,14 +21313,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2046f81409b9f6941b838947945dcaa5, type: 3}
+  m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -21235,18 +21347,18 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 230508722}
   - {fileID: 1517795713}
   - {fileID: 2064390436}
   - {fileID: 1973421397}
-  - {fileID: 464359711}
   - {fileID: 1157814236}
   - {fileID: 1701868429}
   m_Father: {fileID: 1708808117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000014544, y: 96.829}
-  m_SizeDelta: {x: 2054.3398, y: 1273.6571}
+  m_AnchoredPosition: {x: -0.0001, y: -0.637}
+  m_SizeDelta: {x: 1833.9819, y: 993.9726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1701288162
 GameObject:
@@ -21416,8 +21528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250.09, y: 91.67}
-  m_SizeDelta: {x: 400.18, y: 183.34}
+  m_AnchoredPosition: {x: -576, y: 209}
+  m_SizeDelta: {x: 591.5, y: 133.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701619187
 MonoBehaviour:
@@ -21439,8 +21551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "B\u1EA1n n\xEAn l\xE0m g\xEC n\u1EBFu nh\u1EADn \u0111\u01B0\u1EE3c tin
-    nh\u1EAFn n\xE0y?"
+  m_text: "B\u1EA1n n\xEAn l\xE0m g\xEC khi nh\u1EADn \u0111\u01B0\u1EE3c email n\xE0y?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -21449,8 +21560,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280953386
-  m_fontColor: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21932,8 +22043,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747424215
 MonoBehaviour:
@@ -21955,7 +22066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22004,14 +22115,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2046f81409b9f6941b838947945dcaa5, type: 3}
+  m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -22038,18 +22149,18 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1999401626}
   - {fileID: 623404111}
   - {fileID: 348394108}
   - {fileID: 764381467}
-  - {fileID: 655985123}
   - {fileID: 1272481654}
   - {fileID: 1232235005}
   m_Father: {fileID: 2068753683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000014544, y: 96.829}
-  m_SizeDelta: {x: 2054.3398, y: 1273.6571}
+  m_AnchoredPosition: {x: -0.0001, y: -0.637}
+  m_SizeDelta: {x: 1833.9819, y: 993.9726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1780909523
 GameObject:
@@ -22185,7 +22296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -426, y: -350}
+  m_AnchoredPosition: {x: -661.106, y: -252.00003}
   m_SizeDelta: {x: 419.3553, y: 80.8851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1780909526
@@ -22260,8 +22371,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785.3562, y: -281.64392}
-  m_SizeDelta: {x: 276.0166, y: 483.1701}
+  m_AnchoredPosition: {x: 783.83716, y: -350.32587}
+  m_SizeDelta: {x: 259.6909, y: 450.5184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788760659
 MonoBehaviour:
@@ -22541,78 +22652,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830611423}
   m_CullTransparentMesh: 1
---- !u!1 &1835860923
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1835860924}
-  - component: {fileID: 1835860926}
-  - component: {fileID: 1835860925}
-  m_Layer: 5
-  m_Name: sms
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1835860924
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835860923}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1001431880}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 324.3848, y: -54.887695}
-  m_SizeDelta: {x: 648.7797, y: 438.0819}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1835860925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835860923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 1c87110352ae75745bdbb08a2cb4cb35, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1835860926
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835860923}
-  m_CullTransparentMesh: 1
 --- !u!1 &1838142923
 GameObject:
   m_ObjectHideFlags: 0
@@ -22757,20 +22796,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 810949423}
   content:
-  - "Tin nh\u1EAFn \u0111\u1EA5y kh\xF4ng ph\u1EA3i l\xE0 m\u1ED9t tin nh\u1EAFn
-    \u0111\xE1ng tin \u0111\u1EADy, \u0111\xE2y l\xE0 m\u1ED9t chi\xEAu tr\xF2 l\u1EEBa
-    \u0111\u1EA3o c\u1EE7a Hacker. D\u1EA5u hi\u1EC7u nh\u1EADn bi\u1EBFt l\u1EEBa
-    \u0111\u1EA3o l\xE0: Th\u1EE9 nh\u1EA5t, c\xE1c tin nh\u1EAFn c\u1EE7a ng\xE2n
-    h\xE0ng s\u1EBD kh\xF4ng k\xE8m th\xEAm \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt.
-    Th\u1EE9 hai, \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\u01B0\u1EE3c \u0111\xEDnh
-    k\xE8m trong tin nh\u1EAFn c\u0169ng kh\xF4ng ph\u1EA3i \u0111\u01B0\u1EDDng
-    li\xEAn k\u1EBFt ch\xEDnh th\u1ED1ng c\u1EE7a ng\xE2n h\xE0ng. Th\u1EE9 ba, c\xFA
-    ph\xE1p c\u1EE7a tin nh\u1EAFn kh\xF4ng ch\u1EC9n chu, d\u1EA5u c\xE2u b\u1EEBa
-    b\xE3i, c\xE1ch d\xF9ng d\u1EA5u c\xE2u kh\xF4ng \u0111\xFAng. N\u1EBFu b\u1EA1n
-    nh\u1EA5n v\xE0o \u0111\u01B0\u1EDDng link v\xE0 th\u1EF1c hi\u1EC7n theo c\xE1c
-    y\xEAu c\u1EA7u c\u1EE7a trang web th\xEC b\u1EA1n ch\u1EAFc ch\u1EAFn s\u1EBD
-    b\u1ECB \u0111\xE1nh c\u1EAFp th\xF4ng tin ng\xE2n h\xE0ng v\xE0 s\u1EBD b\u1ECB
-    m\u1EA5t to\xE0n b\u1ED9 s\u1ED1 ti\u1EC1n trong t\xE0i kho\u1EA3n. "
+  - "\u0110\xE2y l\xE0 m\u1ED9t email l\u1EEBa \u0111\u1EA3o, kh\xF4ng tin c\u1EADy.
+    M\u1EB7c d\xF9 b\xE2y gi\u1EDD ki\u1EC3u l\u1EEBa \u0111\u1EA3o n\xE0y \xEDt
+    g\u1EB7p, nh\u01B0ng v\u1EABn c\xF3 th\u1EC3 x\u1EA3y ra. Kh\xF4ng c\xF3 c\xE1c
+    ch\u01B0\u01A1ng tr\xECnh khuy\u1EBFn m\xE3i, t\u1EB7ng qu\xE0 ki\u1EC3u n\xE0y.
+    H\xECnh th\u1EE9c email c\u1EA9u th\u1EA3, b\u1ED1 c\u1EE5c kh\xF4ng h\u1EE3p
+    l\xFD, d\u1EABn \u0111\u1EBFn email kh\xF4ng trang tr\u1ECDng, v\u1EDBi c\xE1c
+    email ch\xEDnh th\u1EE9c, tin c\u1EADy t\u1EEB c\xE1c c\xF4ng ty, t\u1ED5 ch\u1EE9c,
+    email s\u1EBD \u0111\u01B0\u1EE3c vi\u1EBFt m\u1ED9t c\xE1ch trang tr\u1ECDng.
+    Ngo\xE0i ra c\xF3 th\u1EC3 nh\u1EADn th\u1EA5y qua c\xE1c d\u1EA5u hi\u1EC7u
+    nh\u01B0: email ng\u01B0\u1EDDi g\u1EEDi kh\xF4ng ph\u1EA3i l\xE0 t\xEAn c\u1EE7a
+    doanh nghi\u1EC7p m\xE0 l\xE0 m\u1ED9t email c\xE1 nh\xE2n kh\xF4ng r\xF5 r\xE0ng,
+    v\xE0 trong n\u1ED9i dung email y\xEAu c\u1EA7u ph\u1EA3i nh\u1EA5n v\xE0o m\u1ED9t
+    \u0111\u01B0\u1EDDng link li\xEAn k\u1EBFt kh\xF4ng r\xF5 r\xE0ng. "
   speed: 0.02
 --- !u!1 &1847941657
 GameObject:
@@ -23217,8 +23255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785.3562, y: -281.64392}
-  m_SizeDelta: {x: 276.0166, y: 483.1701}
+  m_AnchoredPosition: {x: 783.83716, y: -350.32587}
+  m_SizeDelta: {x: 259.6909, y: 450.5184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877008283
 MonoBehaviour:
@@ -23581,8 +23619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -810, y: -351}
+  m_SizeDelta: {x: 277.7925, y: 457.0561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909782747
 MonoBehaviour:
@@ -23604,7 +23642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: -1088834768, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24603,8 +24641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -313.14, y: -232.59}
-  m_SizeDelta: {x: 645.07, y: 315.7}
+  m_AnchoredPosition: {x: -713.21, y: 10.873}
+  m_SizeDelta: {x: 273.811, y: 125.0535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973421398
 MonoBehaviour:
@@ -24626,9 +24664,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A. G\u1ECDi v\xE0o s\u1ED1 \u0111i\u1EC7n tho\u1EA1i\nB. Kh\xF4ng l\xE0m
-    g\xEC c\u1EA3\nC. \u1EA4n v\xE0o \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt\nD. B\xE1o
-    c\u1EA3nh s\xE1t"
+  m_text: "A. C\xF3\nB. Kh\xF4ng \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -24807,6 +24843,81 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1999401625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999401626}
+  - component: {fileID: 1999401628}
+  - component: {fileID: 1999401627}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1999401626
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999401625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1755514733}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 307, y: -0.0000076294}
+  m_SizeDelta: {x: 1639.7086, y: 917.78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1999401627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999401625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ccfd31a27c0a47547a51aae80b8a1df4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1999401628
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999401625}
+  m_CullTransparentMesh: 1
 --- !u!1 &2013676207
 GameObject:
   m_ObjectHideFlags: 0
@@ -25098,8 +25209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1223002409}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "\u1ED2 th\xEC ra l\xE0 v\u1EADy. T\xF4i hi\u1EC3u r\u1ED3i th\u01B0a c\u1EA3nh
+    s\xE1t. \u0110\xE2y l\xE0 email ti\u1EBFp theo. "
   speed: 0.02
 --- !u!114 &2051900818
 MonoBehaviour:
@@ -25307,8 +25418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -396.7, y: -15.601}
-  m_SizeDelta: {x: 477.9457, y: 131.2012}
+  m_AnchoredPosition: {x: -524.8469, y: 139}
+  m_SizeDelta: {x: 650.5309, y: 131.2012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2064390437
 MonoBehaviour:
@@ -25330,8 +25441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0110i\u1EC1u kh\xF4ng n\xEAn l\xE0m nh\u1EA5t khi \u0111\u01B0\u1EE3c
-    nh\u1EADn tin nh\u1EAFn nh\u01B0 b\xEAn l\xE0 g\xEC?"
+  m_text: "Email b\xEAn c\u1EA1nh c\xF3 ph\u1EA3i email uy t\xEDn kh\xF4ng?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -25340,8 +25450,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280953386
-  m_fontColor: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -25448,78 +25558,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2078233053
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2078233054}
-  - component: {fileID: 2078233056}
-  - component: {fileID: 2078233055}
-  m_Layer: 5
-  m_Name: sms
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2078233054
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078233053}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1096400908}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 309.16, y: -74}
-  m_SizeDelta: {x: 718.31, y: 438.0819}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2078233055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078233053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: dfd7d6e23939d8f47bf7efca78e1a3b8, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &2078233056
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078233053}
-  m_CullTransparentMesh: 1
 --- !u!1 &2087222891
 GameObject:
   m_ObjectHideFlags: 0
@@ -25574,8 +25612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 2040913194}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "C\xF2n email n\xE0y th\xEC sao? "
   speed: 0.02
 --- !u!114 &2087222894
 MonoBehaviour:
