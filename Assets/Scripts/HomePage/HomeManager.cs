@@ -74,11 +74,10 @@ public class HomeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // flagPolice.SetActive(false);
-        // flagDegree1.SetActive(false);
-        // flagDegree2.SetActive(false);
-        // flagDegree3.SetActive(false);
-        // flagDegree4.SetActive(false);
+        badgeOfDegree1Object.SetActive(false);
+        badgeOfDegree2Object.SetActive(false);
+        badgeOfDegree3Object.SetActive(false);
+        badgeOfDegree4Object.SetActive(false);
 
 
 

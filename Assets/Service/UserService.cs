@@ -71,7 +71,7 @@ public class APIUser : MonoBehaviour
 
 
 		_user = new User();
-		// DatabaseReference databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
+		DatabaseReference databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
 		DatabaseReference reference = database.GetReference("Users");
 
@@ -113,8 +113,10 @@ public class APIUser : MonoBehaviour
 							_user.isOpenDegree2 = bool.Parse(dataSnapshot.Child("isOpenDegree2").GetValue(true).ToString());
 							_user.isOpenDegree3 = bool.Parse(dataSnapshot.Child("isOpenDegree3").GetValue(true).ToString());
 							_user.isOpenDegree4 = bool.Parse(dataSnapshot.Child("isOpenDegree4").GetValue(true).ToString());
-							GetDataDegreeOfUser();
+
 							Debug.Log("findUser: " + _user.id_user);
+							Debug.Log("findUser user name: " + _user.username);
+							GetDataDegreeOfUser();
 							FindAnyObjectByType<firebaseController>().isExitUser = true;
 
 

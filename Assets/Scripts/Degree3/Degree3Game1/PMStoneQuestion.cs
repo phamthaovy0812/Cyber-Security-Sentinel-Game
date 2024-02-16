@@ -9,7 +9,7 @@ public class PMStoneQuestion : MonoBehaviour
     public static PMStoneQuestion Instance { get; private set; }
     [Header("Titlemap")]
     public Tilemap insertAnswerDestructibles;
-    public GameObject AddTimeObject;
+    // public GameObject AddTimeObject;
     Rigidbody2D rb;
     [Header("Questions")]
     public GameObject QuestionObj;
@@ -57,7 +57,7 @@ public class PMStoneQuestion : MonoBehaviour
             }
             FindAnyObjectByType<MoveEnemy>().enabled = true;
             Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
-            Instantiate(AddTimeObject, hitPosPlayer, Quaternion.identity);
+            // Instantiate(AddTimeObject, hitPosPlayer, Quaternion.identity);
             RemoveItemAnswer(hitPosPlayer, Vector2.up);
             RemoveItemAnswer(hitPosPlayer, Vector2.down);
             RemoveItemAnswer(hitPosPlayer, Vector2.left);
