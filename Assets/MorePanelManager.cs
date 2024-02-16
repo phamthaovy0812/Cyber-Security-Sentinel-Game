@@ -63,7 +63,7 @@ public class MorePanelManager : MonoBehaviour
 
     }
     // Update is called once per frame
-    void Star()
+    void Start()
     {
         lineDoc.SetActive(false);
         lineTask.SetActive(true);

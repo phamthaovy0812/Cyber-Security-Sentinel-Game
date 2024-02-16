@@ -15,6 +15,8 @@ public class Room456Q2 : MonoBehaviour
       {
          ques2.SetActive(false);
          right.SetActive(true);
+         FindAnyObjectByType<EndTalking>().countCorrect++;
+
       }
       else
       {

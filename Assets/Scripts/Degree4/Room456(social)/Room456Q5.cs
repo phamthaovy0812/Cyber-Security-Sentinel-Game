@@ -8,13 +8,14 @@ public class Room456Q5 : MonoBehaviour
    public GameObject right;
    public GameObject wrong;
    public GameObject ques4;
- 
+
    public void CheckQ2()
    {
       if (q4.text == "C" || q4.text == "c")
       {
          ques4.SetActive(false);
          right.SetActive(true);
+         FindAnyObjectByType<EndTalking>().countCorrect++;
       }
       else
       {

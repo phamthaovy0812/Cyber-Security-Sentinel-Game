@@ -94,6 +94,12 @@ public class HomeManager : MonoBehaviour
             instance = this;                                                //set this as instance
             // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
         }
+        else
+        {
+
+            Destroy(gameObject);
+
+        }
 
     }
 
@@ -150,9 +156,12 @@ public class HomeManager : MonoBehaviour
     {
         ProfilesObject.SetActive(false);
     }
+
+    [Obsolete]
     public void Btn_Logout()
     {
-        SceneManager.LoadScene("SignPage");
+        Application.LoadLevel("SignPage");
+        // SceneManager.LoadScene("SignPage");
     }
     public void Btn_Join()
     {
