@@ -10,7 +10,7 @@ public class Room456Q3 : MonoBehaviour
    public GameObject ques3;
    public void CheckQ2()
    {
-      if (q3.text == "C" || q3.text == "c")
+      if (q3.text == "3" )
       {
          ques3.SetActive(false);
          right.SetActive(true);
