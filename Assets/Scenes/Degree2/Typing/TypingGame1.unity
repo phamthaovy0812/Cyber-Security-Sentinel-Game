@@ -3294,6 +3294,7 @@ MonoBehaviour:
   count: 0
   countDraw: 0
   nextLevel: {fileID: 621117002}
+  CanvasWord: {fileID: 1934744621}
 --- !u!4 &938016273
 Transform:
   m_ObjectHideFlags: 0
@@ -3973,9 +3974,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 288208369}
-        m_TargetAssemblyTypeName: WordNextLevel, Assembly-CSharp
-        m_MethodName: GoToLevel1
+      - m_Target: {fileID: 938016272}
+        m_TargetAssemblyTypeName: WordManager, Assembly-CSharp
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6729,6 +6730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58379637dc39b564e956ba1add44f9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wordList: []
 --- !u!4 &1594746454
 Transform:
   m_ObjectHideFlags: 0
@@ -7241,9 +7243,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 288208369}
-        m_TargetAssemblyTypeName: WordNextLevel, Assembly-CSharp
-        m_MethodName: GoToMenuLevel
+      - m_Target: {fileID: 938016272}
+        m_TargetAssemblyTypeName: WordManager, Assembly-CSharp
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

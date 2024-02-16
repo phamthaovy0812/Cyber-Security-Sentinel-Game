@@ -90,7 +90,7 @@ public class EndTalking : MonoBehaviour
                     }
                     else
                     {
-                        endTextMesh.text = " Bạn đã giải đáp thắc mắc cho người dân tại phòng này ít hơn so với lần thực hiện giải đáp tại phòng này gần nhất. Bạn sẽ không được cộng thêm điểm kinh nghiệm. Hãy luyện tập thêm và quay lại thực hiện nhiệm vụ tốt hơn nhé";
+                        endTextMesh.text = "Bạn đã giải đáp thắc mắc cho người dân tại phòng này ít hơn so với lần thực hiện giải đáp tại phòng này gần nhất. Bạn sẽ không được cộng thêm điểm kinh nghiệm. Hãy luyện tập thêm và quay lại thực hiện nhiệm vụ tốt hơn nhé";
                     }
                     if (countCorrect == 4)
                     {
@@ -117,7 +117,15 @@ public class EndTalking : MonoBehaviour
                 }
                 else
                 {
-                    endTextMesh.text = " Chúc mừng bạn đã hoàn thành xuất sắc giải đáp 5/5 câu hỏi thắc mắc của người dân tại phòng này. Hãy quay về trang chủ để thực hiện các nhiệm vụ khác nhé.";
+                    if (countCorrect < 5)
+                    {
+                        endTextMesh.text = " Bạn đã giải đáp thắc mắc cho người dân tại phòng này ít hơn so với lần thực hiện giải đáp tại phòng này gần nhất. Bạn sẽ không được cộng thêm điểm kinh nghiệm. Hãy luyện tập thêm và quay lại thực hiện nhiệm vụ tốt hơn nhé";
+                    }
+                    else
+                    {
+                        endTextMesh.text = " Chúc mừng bạn đã hoàn thành xuất sắc giải đáp 5/5 câu hỏi thắc mắc của người dân tại phòng này. Hãy quay về trang chủ để thực hiện các nhiệm vụ khác nhé.";
+                    }
+
                 }
             }
         }

@@ -100,7 +100,10 @@ public class Dialogue : MonoBehaviour
             //Wait x seconds 
             yield return new WaitForSeconds(1f);
             //End this sentence and wait for the next one
-            waitForNext = true;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                waitForNext = true;
+            }
         }
     }
 

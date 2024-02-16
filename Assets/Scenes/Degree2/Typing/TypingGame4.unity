@@ -3451,6 +3451,7 @@ MonoBehaviour:
   count: 0
   countDraw: 0
   nextLevel: {fileID: 621117002}
+  CanvasWord: {fileID: 1934744621}
 --- !u!4 &938016273
 Transform:
   m_ObjectHideFlags: 0
