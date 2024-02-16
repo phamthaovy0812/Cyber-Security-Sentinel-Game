@@ -180,6 +180,7 @@ public class MovementController : MonoBehaviour
         Debug.Log("BtnAgain");
         // LevelSystemManager.Instance.CurrentLevel = LevelSystemManager.Instance.getCurrentLevel();
         int level = LevelSystemManager.Instance.CurrentLevel + 1;
+
         //set the CurrentLevel, we subtract 1 as level data array start from 0
         SceneManager.LoadScene("Degree1Game2Level_" + level);
         //load the level

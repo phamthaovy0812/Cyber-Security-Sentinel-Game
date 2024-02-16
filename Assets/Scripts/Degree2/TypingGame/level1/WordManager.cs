@@ -16,6 +16,7 @@ public class WordManager : MonoBehaviour
     public int count = 0;
     public int countDraw = 0;
     public GameObject nextLevel;
+    public GameObject CanvasWord;
 
     private void Start()
     {
@@ -41,6 +42,7 @@ public class WordManager : MonoBehaviour
         else
         {
             word.SetActive(false);
+            CanvasWord.SetActive(false);
 
             StartCoroutine(DelayedActivation(1f));
         }
@@ -115,7 +117,17 @@ public class WordManager : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        Debug.Log("BtnAgain");
+        FindAnyObjectByType<TPCountTime>().isGameOver = true;
+        FindAnyObjectByType<TPCountTime>().currentTime = 0;
+        // LevelSystemManager.Instance.CurrentLevel = LevelSystemManager.Instance.getCurrentLevel();
+        int level = LevelSystemManager.Instance.CurrentLevel + 1;
+        Debug.Log("level: " + level);
+        FindAnyObjectByType<WordGenerator>().wordList = WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].wishedList;
+        //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene("TypingGame" + level);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // SceneManager.LoadScene(WordConstants.DATA.HOME_TYPING);
     }
 

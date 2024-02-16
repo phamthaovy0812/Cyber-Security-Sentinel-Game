@@ -44,6 +44,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Degree3/Chase_1.unity
     guid: 29a6f68686de7c543a27b41693386904
+  - enabled: 1
+    path: Assets/Scenes/Degree3/Chase_2.unity
+    guid: 9b7ac935bee6f0842afce45ee7cd498f
+  - enabled: 1
+    path: Assets/Scenes/Degree3/Chase_3.unity
+    guid: 174e59383b2443f4587a4d2a63a50646
+  - enabled: 1
+    path: Assets/Scenes/Degree3/Chase_4.unity
+    guid: 93692dfe9d388b74dbc1ea43a5e7ee72
   - enabled: 0
     path: Assets/Scenes/Degree1/LevelGame1/Degree1Game1Level_1.unity
     guid: 74a0b6b338e631543bea3504a19f878c

@@ -27,7 +27,7 @@ public class GetQuestion : MonoBehaviour
 		topic1 = new Topic();
 		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 		await FirebaseDatabase.DefaultInstance
- 		 .GetReference("Degree").Child("1").Child("topics")
+ 		 .GetReference("Degree").Child("3").Child("topics")
 		  .GetValueAsync().ContinueWithOnMainThread(task =>
   		{
 			  if (task.IsFaulted)

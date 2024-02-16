@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 public class WordGenerator : MonoBehaviour
 {
     //firewall, network, policy, risk, phishing
-    string[] wordList = WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].listWords;
+    public string[] wordList;
+    public void Start()
+    {
+        wordList = WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].wishedList;
+    }
     public string GetRandomWord()
     {
 

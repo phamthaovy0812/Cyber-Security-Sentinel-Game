@@ -49,6 +49,10 @@ public class HomeManager : MonoBehaviour
     public GameObject badgeOfDegree2Object;
     public GameObject badgeOfDegree3Object;
     public GameObject badgeOfDegree4Object;
+    public TextMeshProUGUI usernameProfileDegree1;
+    public TextMeshProUGUI usernameProfileDegree2;
+    public TextMeshProUGUI usernameProfileDegree3;
+    public TextMeshProUGUI usernameProfileDegree4;
     public GameObject degree4Room;
     public TMP_Text usernameText;
     public TMP_Text experienceText;
@@ -303,6 +307,10 @@ public class HomeManager : MonoBehaviour
         usernameOfCertificate2.text = username;
         usernameOfCertificate3.text = username;
         usernameOfCertificate4.text = username;
+        usernameProfileDegree1.text = username;
+        usernameProfileDegree2.text = username;
+        usernameProfileDegree3.text = username;
+        usernameProfileDegree4.text = username;
 
     }
     // Update is called once per frame
