@@ -89,6 +89,7 @@ public class WordManager : MonoBehaviour
         float currentTime = FindAnyObjectByType<TPCountTime>().currentTime;
         Debug.Log("currentTime: " + currentTime);
         FindAnyObjectByType<TPCountTime>().isGameOver = true;
+        openSecurity.SetActive(false);
         _gameOver.SetActive(true);
         int star = 0;
         if (isWin)

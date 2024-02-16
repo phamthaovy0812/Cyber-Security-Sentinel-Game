@@ -41,6 +41,7 @@ public class HomePageHandle : MonoBehaviour
     public void LoadUserInfo()
     {
         User user = APIUser.Instance.GetUser();
+        Debug.Log("username:  " + user.username + ", password: " + user.id_level);
         level.text = user.id_level.ToString();
         username.text = user.username;
         experience.text = user.experience.ToString();

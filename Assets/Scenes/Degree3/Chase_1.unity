@@ -1461,7 +1461,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1048576
+    m_Bits: 1179648
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 6832357d0c50a464b9b40ec6a027028d, type: 2}
   m_TargetDisplay: 0
@@ -5131,7 +5131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insertAnswerDestructibles: {fileID: 1211398186}
-  AddTimeObject: {fileID: 9028427285480192420, guid: c3b618abb6bc97b48a3fbd88abe23067, type: 3}
   QuestionObj: {fileID: 1881230982}
   m_TxtQuestion: {fileID: 265539501}
   m_TxtAnswerA: {fileID: 1567837624}
@@ -44366,7 +44365,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insertAnswerDestructibles: {fileID: 1910537630}
-  AddTimeObject: {fileID: 0}
   QuestionObj: {fileID: 0}
   m_TxtQuestion: {fileID: 0}
   m_TxtAnswerA: {fileID: 0}

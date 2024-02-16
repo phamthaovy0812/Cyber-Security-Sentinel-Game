@@ -26,21 +26,18 @@ public class DialogueTriggerNPC2 : MonoBehaviour
             HomeManager.Instance.NPC = 2;
             if (!APIUser.Instance.GetUser().isOpenDegree2)//&& HomeManager.Instance.id_level == 1
             {
-
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docBeginStartingSeeNPCDegree2;
                 ActiveHomePage.Instance.isOpenFlagPolice = false;
-
-
             }
-            else if (APIUser.Instance.GetUser().isOpenDegree1 && HomeManager.Instance.id_level > 1)
+            else if (APIUser.Instance.GetUser().isOpenDegree2 && HomeManager.Instance.id_level > 2)
             {
                 Debug.Log("2");
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docAfterCompleteDegree2;
             }
-            else if (APIUser.Instance.GetUser().isOpenDegree1)
+            else if (APIUser.Instance.GetUser().isOpenDegree2)
             {
                 Debug.Log("3");
                 dialogueScript.dialogues = new List<List<string>>();
