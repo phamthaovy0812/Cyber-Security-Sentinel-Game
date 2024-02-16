@@ -1634,7 +1634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &479289176
 Transform:
   m_ObjectHideFlags: 0
@@ -4948,7 +4948,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1203471242}
   m_OnClick:
     m_PersistentCalls:
@@ -5016,7 +5016,8 @@ GameObject:
   - component: {fileID: 1211398185}
   - component: {fileID: 1211398184}
   - component: {fileID: 1211398183}
-  m_Layer: 7
+  - component: {fileID: 1211398187}
+  m_Layer: 15
   m_Name: stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5051,7 +5052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insertAnswerDestructibles: {fileID: 1211398186}
-  AddTimeObject: {fileID: 0}
   QuestionObj: {fileID: 1881230982}
   m_TxtQuestion: {fileID: 265539501}
   m_TxtAnswerA: {fileID: 1567837624}
@@ -5304,6 +5304,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1211398187
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211398181}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1225149187
 GameObject:
   m_ObjectHideFlags: 0
@@ -42170,7 +42206,7 @@ Transform:
   m_GameObject: {fileID: 1882395281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.53, y: 7.45, z: -0.032611568}
+  m_LocalPosition: {x: -13.38, y: 7.54, z: -0.032611568}
   m_LocalScale: {x: 0.42017, y: 0.42017, z: 0.42017}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44389,7 +44425,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insertAnswerDestructibles: {fileID: 1910537630}
-  AddTimeObject: {fileID: 0}
   QuestionObj: {fileID: 0}
   m_TxtQuestion: {fileID: 0}
   m_TxtAnswerA: {fileID: 0}

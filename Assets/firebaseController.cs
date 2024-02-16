@@ -26,6 +26,7 @@ public class firebaseController : MonoBehaviour
     public TMP_InputField loginEmail, loginPassword;
     [Header("Signup")]
     public GameObject signupPanel;
+    public GameObject signupSuccess;
     public TMP_InputField signupEmail, signupPassword, signupCPassword, signupUserName;
     [Header("Forgot Password")]
     public GameObject forgetPasswordPanel;
@@ -57,6 +58,7 @@ public class firebaseController : MonoBehaviour
         signupPanel.SetActive(false);
         notificationPanel.SetActive(false);
         forgetPasswordPanel.SetActive(false);
+        signupSuccess.SetActive(false);
         isExitUser = false;
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
@@ -191,7 +193,7 @@ public class firebaseController : MonoBehaviour
             }
             if (task.IsFaulted)
             {
-                Debug.LogError("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+
 
                 foreach (Exception exception in task.Exception.Flatten().InnerExceptions)
                 {
@@ -222,7 +224,7 @@ public class firebaseController : MonoBehaviour
         DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
         string userId;
         userId = System.Guid.NewGuid().ToString(); ;
-        User user = new User(userId, email, username, password, 0, 0);
+        User user = new User(userId, email, username, password, -1, 0);
         await reference.Child("Users")
             .Child(userId)
             .Child("id_user")
@@ -316,6 +318,17 @@ public class firebaseController : MonoBehaviour
         string levelDataString4 = JsonUtility.ToJson(levelData4);
         await reference.Child("ScoreDegree").Child(userId).Child("4").SetRawJsonValueAsync(levelDataString4);
         Debug.Log("New User Created");
+        StartCoroutine(SignUpSuccess());
+    }
+    IEnumerator SignUpSuccess()
+    {
+        signupSuccess.SetActive(true);
+        yield return new WaitForSeconds(1);
+        signupSuccess.SetActive(false);
+        yield return new WaitForSeconds(1);
+
+        OpenLoginPanel();
+
     }
 
 
