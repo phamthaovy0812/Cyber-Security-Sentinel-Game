@@ -63,7 +63,6 @@ public class EndTalking : MonoBehaviour
             {
                 endTextMesh.text = " Bạn cần giải đáp đúng ít nhất 3/5 nội dung thắc mắc của người dân để được nhận điểm kinh nghiệm.";
 
-
             }
             else
             {

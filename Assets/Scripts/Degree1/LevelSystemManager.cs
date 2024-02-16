@@ -44,7 +44,19 @@ public class LevelSystemManager : MonoBehaviour
         SaveLoadData.Instance.SaveData();
         SaveLoadData.Instance.LoadData();
         // load the previous scene
-        SceneManager.LoadScene("Degree1Game2");
+        if (idGame == 1)
+        {
+            SceneManager.LoadScene("Degree1Game2");
+        }
+        if (idGame == 2)
+        {
+            SceneManager.LoadScene("TypingHome");
+        }
+        if (idGame == 3)
+        {
+            SceneManager.LoadScene("Degree3Game1");
+        }
+
     }
 
     // private void OnEnable()

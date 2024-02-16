@@ -340,10 +340,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tho\xE1t"
+  m_text: "V\u1EC1 trang ch\u1EE7"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
+  m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -451,8 +451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000095367, y: 205}
-  m_SizeDelta: {x: 1105.4028, y: 455.22}
+  m_AnchoredPosition: {x: 12.002, y: 175}
+  m_SizeDelta: {x: 1363.0112, y: 455.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &629495343
 MonoBehaviour:
@@ -474,10 +474,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TYPING GAME
+  m_text: "Tr\xF2 ch\u01A1i g\xF5 ch\u1EEF"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fb41c48df6e6644ba053c703fc9e68f, type: 2}
-  m_sharedMaterial: {fileID: -3359616415118325047, guid: 9fb41c48df6e6644ba053c703fc9e68f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c8bd993669acf04a81040a59fe323cd, type: 2}
+  m_sharedMaterial: {fileID: -1659711286223948133, guid: 8c8bd993669acf04a81040a59fe323cd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -485,12 +485,12 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4287001884
   m_fontColor: {r: 0.10985403, g: 0.4574486, b: 0.5245282, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0.10980393, g: 0.45882356, b: 0.5254902, a: 1}
+    bottomLeft: {r: 0.10980393, g: 0.45882356, b: 0.5254902, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -1364,8 +1364,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "B\u1EAFt \u0111\u1EA7u"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
+  m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
