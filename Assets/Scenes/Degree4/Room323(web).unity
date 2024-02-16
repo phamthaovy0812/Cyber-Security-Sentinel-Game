@@ -1316,8 +1316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82103321
 MonoBehaviour:
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1391,8 +1391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82464042
 MonoBehaviour:
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2291,8 +2291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168712788
 MonoBehaviour:
@@ -2314,7 +2314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3403,10 +3403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 63242569}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy, t\xF4i th\u1EA5y tin nh\u1EAFn \u1EA5y m\xE0
-    c\u1EE9 nghi ng\u1EDD ho\xE0i. Th\u1EADt may, v\xEC n\xF3 kh\xF4ng ph\u1EA3i
-    tin nh\u1EAFn l\u1EEBa \u0111\u1EA3o. V\u1EADy c\xF2n tin nh\u1EAFn n\xE0y th\xEC
-    sao \u1EA1 ?"
+  - " T\xF4i s\u1EBD ghi nh\u1EDB nh\u1EEFng g\xEC anh v\u1EEBa gi\u1EA3i \u0111\xE1p.
+    C\xF2n trang n\xE0y th\xEC sao? "
   speed: 0.02
 --- !u!114 &317733925
 MonoBehaviour:
@@ -4191,8 +4189,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &394428268
 MonoBehaviour:
@@ -4214,7 +4212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4860,14 +4858,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1277956469}
   content:
-  - "T\xF4i ch\u1EC9 nh\u1EADn \u0111\u01B0\u1EE3c c\xE1c tin nh\u1EAFn \u0111\xE1ng
-    ng\u1EDD nh\u01B0 th\u1EBF th\xF4i. C\u1EA3m \u01A1n anh \u0111\xE3 gi\xFAp \u0111\u1EE1
-    t\xF4i gi\u1EA3i th\xEDch c\xE1c tin nh\u1EAFn \u1EA5y. T\xF4i s\u1EBD \u0111\u1EC1
-    ph\xF2ng h\u01A1n tr\u01B0\u1EDBc nh\u1EEFng tin nh\u1EAFn nh\u1EADn \u0111\u01B0\u1EE3c
-    sau n\xE0y. X\xE3 h\u1ED9i th\u1EADt \u0111\xE1ng s\u1EE3, l\xF2ng ng\u01B0\u1EDDi
-    c\u0169ng th\u1EADt \u0111\xE1ng s\u1EE3. Nh\u1EEFng chi\u1EBFn s\u0129 c\u1EA3nh
-    s\xE1t nh\u01B0 anh th\u1EADt \u0111\xE1ng \u0111\u01B0\u1EE3c tr\xE2n tr\u1ECDng
-    v\xE0 tuy\xEAn d\u01B0\u01A1ng. C\u1EA3m \u01A1n anh r\u1EA5t nhi\u1EC1u."
+  - " C\u1EA3m \u01A1n c\u1EA3nh s\xE1t \u0111\xE3 gi\xFAp t\xF4i ph\xE2n t\xEDch
+    ch\xFAng. \u0110\xE3 l\xE0m phi\u1EC1n c\u1EA3nh s\xE1t r\u1ED3i. Ch\xFAc anh
+    c\xF3 m\u1ED9t ng\xE0y l\xE0m vi\u1EC7c hi\u1EC7u qu\u1EA3. "
   speed: 0.02
 --- !u!1 &521153457
 GameObject:
@@ -5037,8 +5030,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &524150901
 MonoBehaviour:
@@ -5060,7 +5053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9243,8 +9236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 776286873}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "Th\u1EBF c\xF2n trang web cu\u1ED1i c\xF9ng n\xE0y th\xEC sao, t\xF4i c\u1EA3m
+    gi\xE1c n\xF3 kh\xE1 uy t\xEDn. T\xF4i c\xF3 n\xEAn tin v\xE0o n\xF3 hay kh\xF4ng? "
   speed: 0.02
 --- !u!114 &772163974
 MonoBehaviour:
@@ -9452,8 +9445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776886659
 MonoBehaviour:
@@ -9475,7 +9468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13035,11 +13028,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 811014468}
   content:
-  - "\u1ED2, kh\xF4ng c\xF3 g\xEC \u0111\xE2u. Gi\xFAp \u0111\u1EE1 m\u1ECDi ng\u01B0\u1EDDi
-    l\xE0 ngh\u0129a v\u1EE5 v\xE0 l\xFD t\u01B0\u1EDFng c\u1EE7a ch\xFAng t\xF4i.
-    N\u1EBFu b\u1EA1n kh\xF4ng c\u1EA7n s\u1EF1 gi\xFAp \u0111\u1EE1 n\u1EEFa th\xEC
-    t\xF4i ph\u1EA3i ti\u1EBFp t\u1EE5c nhi\u1EC7m v\u1EE5 c\u1EE7a b\u1EA3n th\xE2n
-    \u0111\xE2y. T\u1EA1m bi\u1EC7t."
+  - "V\xE2ng, kh\xF4ng c\xF3 g\xEC, h\xE3y c\u1EA9n th\u1EADn tr\u01B0\u1EDBc nh\u1EEFng
+    email m\xE0 m\xECnh nh\u1EADn \u0111\u01B0\u1EE3c nh\xE9. \u0110\u1ED3ng th\u1EDDi
+    c\u0169ng h\xE3y c\u1EA9n th\u1EADn khi cung c\u1EA5p th\xF4ng tin c\xE1 nh\xE2n
+    c\u1EE7a m\xECnh cho b\xEAn th\u1EE9 3. N\u1EBFu kh\xF4ng c\xF2n v\u1EA5n \u0111\u1EC1
+    g\xEC th\xEC t\xF4i \u0111i \u0111\xE2y. T\u1EA1m bi\u1EC7t! "
   speed: 0.02
 --- !u!1 &1052090926
 GameObject:
@@ -13947,8 +13940,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144420161
 MonoBehaviour:
@@ -13970,7 +13963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14531,8 +14524,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1173545427
 MonoBehaviour:
@@ -14554,7 +14547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15527,8 +15520,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274779093
 MonoBehaviour:
@@ -15550,7 +15543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18208,8 +18201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 634387885}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "Th\xEC ra l\xE0 v\u1EADy. T\xF4i \u0111\xE3 r\xFAt \u0111\u01B0\u1EE3c r\u1EA5t
+    nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
+    th\xEDch c\u1EE7a c\u1EA3nh s\xE1t. "
   speed: 0.02
 --- !u!114 &1470854025
 MonoBehaviour:
@@ -18910,8 +18904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561089064
 MonoBehaviour:
@@ -18933,7 +18927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19139,8 +19133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1874942333}
   content:
-  - "V\xE2ng, t\xF4i s\u1EBD ch\xFA \xFD. Tin nh\u1EAFn ti\u1EBFp theo c\u0169ng
-    l\xE0m t\xF4i ch\xFA \xFD. C\u1EA3nh s\xE1t gi\xFAp t\xF4i xem qua nh\xE9."
+  - "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m tra
+    trang web ti\u1EBFp theo nh\xE9! "
   speed: 0.02
 --- !u!114 &1600497515
 MonoBehaviour:
@@ -19470,11 +19464,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1468086006}
   content:
-  - "Th\u1EADt l\xE0 t\u1EC7, \u0111\u1EBFn c\u1EA3 ng\xE2n h\xE0ng c\u0169ng b\u1ECB
-    b\u1ECDn ch\xFAng nh\xFAng tay, may m\xE0 t\xF4i \u0111\xE3 c\u1EA3nh gi\xE1c
-    v\xE0 nh\u1EDD anh gi\xFAp. C\xF2n m\u1ED9t tin nh\u1EAFn cu\u1ED1i c\xF9ng,
-    tuy t\xF4i kh\xF4ng th\u1EA5y g\xEC \u0111\xE1ng nghi nh\u01B0ng anh xem qua
-    gi\xFAp t\xF4i nh\xE9?"
+  - "Th\xEC ra l\xE0 v\u1EADy. T\xF4i \u0111\xE3 r\xFAt \u0111\u01B0\u1EE3c r\u1EA5t
+    nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
+    th\xEDch c\u1EE7a c\u1EA3nh s\xE1t. "
   speed: 0.02
 --- !u!114 &1626672904
 MonoBehaviour:
@@ -19917,8 +19909,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667207128
 MonoBehaviour:
@@ -19940,7 +19932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21135,8 +21127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747424215
 MonoBehaviour:
@@ -21158,7 +21150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22605,8 +22597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733, y: -285}
-  m_SizeDelta: {x: 492.3439, y: 536.1013}
+  m_AnchoredPosition: {x: -816, y: -302.98093}
+  m_SizeDelta: {x: 267.0474, y: 487.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909782747
 MonoBehaviour:
@@ -22628,7 +22620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9810c4ef86c790b40910403dcc84cf8a, type: 3}
+  m_Sprite: {fileID: 979548350, guid: 9a14461f6c71e0543a22a762d49e19a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24197,8 +24189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1223002409}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "\u1ED2 th\xEC ra l\xE0 v\u1EADy. T\xF4i hi\u1EC3u r\u1ED3i th\u01B0a c\u1EA3nh
+    s\xE1t. \u0110\xE2y l\xE0 trang web ti\u1EBFp theo. "
   speed: 0.02
 --- !u!114 &2051900818
 MonoBehaviour:
@@ -24602,8 +24594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 2040913194}
   content:
-  - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
-    nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
+  - "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m tra
+    trang web ti\u1EBFp theo nh\xE9! "
   speed: 0.02
 --- !u!114 &2087222894
 MonoBehaviour:

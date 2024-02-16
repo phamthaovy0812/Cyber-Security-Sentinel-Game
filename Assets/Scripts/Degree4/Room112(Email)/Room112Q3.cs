@@ -25,7 +25,7 @@ public class Room112Q3 : MonoBehaviour
    }
    public void CheckQ2()
    {
-      if (q3.text == "C" || q3.text == "c")
+      if (q3.text == "B" || q3.text == "b")
       {
          ques3.SetActive(false);
          right.SetActive(true);
