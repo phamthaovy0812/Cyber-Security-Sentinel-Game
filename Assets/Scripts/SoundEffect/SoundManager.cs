@@ -22,13 +22,13 @@ public class SoundManager : MonoBehaviour
         AudioListener.pause = muted;
 
     }
-    public void LoadBeginSound()
-    {
-        muted = false;
-        UpdateButtonIcon();
-        AudioListener.pause = muted;
+    // public void LoadBeginSound()
+    // {
+    //     muted = false;
+    //     UpdateButtonIcon();
+    //     AudioListener.pause = muted;
 
-    }
+    // }
     void Awake()
     {
         if (instance == null)                                               //if instance is null

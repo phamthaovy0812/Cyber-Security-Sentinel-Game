@@ -16255,7 +16255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &956751441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23614,7 +23614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tocdo: 0
-  moveSpeed: 5
+  moveSpeed: 3
 --- !u!58 &1388172891
 CircleCollider2D:
   m_ObjectHideFlags: 0
