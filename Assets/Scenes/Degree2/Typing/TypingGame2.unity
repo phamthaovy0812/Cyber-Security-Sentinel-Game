@@ -6588,6 +6588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58379637dc39b564e956ba1add44f9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wordList: []
 --- !u!4 &1594746454
 Transform:
   m_ObjectHideFlags: 0
@@ -7344,7 +7345,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 288208369}
         m_TargetAssemblyTypeName: WordNextLevel, Assembly-CSharp
         m_MethodName: GoToMenuLevel
         m_Mode: 1

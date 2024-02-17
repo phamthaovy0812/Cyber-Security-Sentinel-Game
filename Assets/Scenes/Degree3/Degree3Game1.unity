@@ -677,8 +677,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6684, y: -85.3873}
-  m_SizeDelta: {x: 853.6204, y: 420.2026}
+  m_AnchoredPosition: {x: 9.1774, y: -40.965485}
+  m_SizeDelta: {x: 972.0788, y: 509.0463}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345081754
 MonoBehaviour:
@@ -700,26 +700,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ng\u01B0\u1EDDi ch\u01A1i s\u1EBD s\u1EED d\u1EE5ng b\xE0n ph\xEDm \u0111\u1EC3
-    di chuy\u1EC3n nh\xE2n v\u1EADt \u0111\u1EBFn thu th\u1EADp c\xE1c t\u1EADp t\xE0i
-    li\u1EC7u \u0111\u01B0\u1EE3c xu\u1EA5t hi\u1EC7n ng\u1EABu nhi\xEAn. T\u1ED5ng
-    s\u1ED1 l\u1EA7n t\xE0i li\u1EC7u xu\u1EA5t hi\u1EC7n l\xE0 10. M\u1ED7i t\xE0i
-    li\u1EC7u thu th\u1EADp \u0111\u01B0\u1EE3c t\u01B0\u01A1ng \u1EE9ng v\u1EDBi
-    15 \u0111i\u1EC3m. Trong s\u1ED1 t\u1EC7p t\xE0i li\u1EC7u xu\u1EA5t hi\u1EC7n
-    s\u1EBD c\xF3 3 t\xE0i li\u1EC7u c\xF3  k\xE8m c\xE2u h\u1ECFi tr\u1EAFc nghi\u1EC7m
-    v\xE0 s\u1EBD \u0111\u01B0\u1EE3c random xu\u1EA5t hi\u1EC7n ng\u1EABu nhi\xEAn
-    v\xE0 x\u1EED l\xFD \u0111\u1EA3m b\u1EA3o r\u1EB1ng lu\xF4n lu\xF4n c\xF3 3
-    c\xE2u h\u1ECFi \u0111\u01B0\u1EE3c xu\u1EA5t hi\u1EC7n., n\u1EBFu ng\u01B0\u1EDDi
-    ch\u01A1i tr\u1EA3 l\u1EDDi \u0111\xFAng th\xEC \u0111\u01B0\u1EE3c 25 \u0111i\u1EC3m,
-    tr\u1EA3 l\u1EDDi sai kh\xF4ng c\xF3 \u0111i\u1EC3m. \r\nTrong qu\xE1 tr\xECnh
-    ch\u01A1i s\u1EBD c\xF3 nh\u1EEFng con virus xu\u1EA5t hi\u1EC7n b\u1EA5t ng\u1EDD
-    v\xE0 truy \u0111u\u1ED5i theo ng\u01B0\u1EDDi ch\u01A1i. Ng\u01B0\u1EDDi ch\u01A1i
-    s\u1EBD ph\u1EA3i di chuy\u1EC3n nh\xE2n v\u1EADt \u0111\u1EC3 thu th\u1EADp
-    t\xE0i li\u1EC7u v\xE0 ph\u1EA3i tr\xE1nh \u0111\u1EE5ng tr\xFAng virut \u0111\xF3.
-    N\u1EBFu nh\xE2n v\u1EADt ch\u1EA1m v\xE0o virut th\xEC gameOver.\r\n"
+  m_text: "\u1EDE tr\xF2 ch\u01A1i n\xE0y, b\u1EA1n s\u1EBD \u0111i\u1EC1u h\u01B0\u1EDBng
+    xe ch\u1EA1y \u0111\u1EC3 truy \u0111u\u1ED5i xe c\u01B0\u1EDBp (L\xCAN - UP;
+    Xu\u1ED1ng - Down; Tr\xE1i - Left; Ph\u1EA3i - Right). Tr\xEAn \u0111\u01B0\u1EDDng
+    truy \u0111u\u1ED5i, s\u1EBD c\xF3 v\u1EADt c\u1EA3n l\xE0 t\u1EA3ng \u0111\xE1.
+    Khi ch\u1EA1m v\xE0o t\u1EA3ng \u0111\xE1 b\u1EA1n c\xF3 th\u1EC3 tr\u1EA3 l\u1EDDi
+    c\xE2u h\u1ECFi hi\u1EC7n ra trong 15 gi\xE2y. Trong 15s n\u1EBFu b\u1EA1n tr\u1EA3
+    l\u1EDDi \u0111\xFAng th\xEC t\u1EA3ng \u0111\xE1 s\u1EBD bi\u1EBFn m\u1EA5t
+    v\xE0 b\u1EA1n \u0111\u01B0\u1EE3c t\u0103ng t\u1ED1c \u0111\u1ED9, c\u1ED9ng
+    10s v\xE0o th\u1EDDi gian ch\u01A1i. Trong v\xF2ng 3 ph\xFAt b\u1EA1n ph\u1EA3i
+    \u0111u\u1ED5i k\u1ECBp xe c\u01B0\u1EDBp th\xEC s\u1EBD chi\u1EBFn th\u1EAFng. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c8bd993669acf04a81040a59fe323cd, type: 2}
+  m_sharedMaterial: {fileID: -1659711286223948133, guid: 8c8bd993669acf04a81040a59fe323cd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -743,10 +736,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
+  m_fontSize: 37.9
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1338,8 +1331,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "H\u01B0\u1EDBng d\u1EABn"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 110aafe454692ef46b06bcea3224ffc9, type: 2}
+  m_sharedMaterial: {fileID: 1967414629209480441, guid: 110aafe454692ef46b06bcea3224ffc9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1369,7 +1362,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1674,8 +1667,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "V\u1EC1 trang ch\u1EE7"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 110aafe454692ef46b06bcea3224ffc9, type: 2}
+  m_sharedMaterial: {fileID: 1967414629209480441, guid: 110aafe454692ef46b06bcea3224ffc9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1959,10 +1952,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ch\u01A1i ngay"
+  m_text: "B\u1EAFt \u0111\u1EA7u"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 110aafe454692ef46b06bcea3224ffc9, type: 2}
+  m_sharedMaterial: {fileID: 1967414629209480441, guid: 110aafe454692ef46b06bcea3224ffc9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2252,7 +2245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 10, y: 278}
+  m_AnchoredPosition: {x: 10, y: 258}
   m_SizeDelta: {x: 598.5, y: 72.5714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1445655477
@@ -2277,8 +2270,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "TRUY \u0110U\u1ED4I"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 110aafe454692ef46b06bcea3224ffc9, type: 2}
+  m_sharedMaterial: {fileID: 1967414629209480441, guid: 110aafe454692ef46b06bcea3224ffc9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2308,7 +2301,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3131,7 +3124,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.31989315, g: 0.5638341, b: 0.94716984, a: 0.74509805}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

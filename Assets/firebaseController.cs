@@ -148,7 +148,11 @@ public class firebaseController : MonoBehaviour
             showNotificationMessage("Lỗi", "Ô nhập bị trống! Làm ơn hãy nhập vào ô trống");
             return;
         }
-
+        if (signupCPassword.text != signupCPassword.text)
+        {
+            showNotificationMessage("Lỗi", "Mật khẩu không khớp");
+            return;
+        }
         // Do SignUp
 
         CreteUser(signupEmail.text, signupPassword.text, signupUserName.text);
@@ -384,7 +388,7 @@ public class firebaseController : MonoBehaviour
     {
         APIUser.Instance.getConnectedUserByUId(email, password);
         // Debug.Log("email: " + email + " password: " + password);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomePage");
 
     }
