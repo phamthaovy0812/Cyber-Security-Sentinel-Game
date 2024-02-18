@@ -332,9 +332,9 @@ public class firebaseController : MonoBehaviour
     IEnumerator SignUpSuccess()
     {
         signupSuccess.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2f);
         signupSuccess.SetActive(false);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
 
         OpenLoginPanel();
 
