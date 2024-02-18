@@ -13,13 +13,19 @@ public class User
     public bool isOpenDegree4 { get; set; }
     public bool isOpenStartGame { get; set; }
 
-
     public User()
     {
-        id_user = "0";
-        email = username = password = "";
-        id_level = 0;
-        experience = 0;
+        this.id_user = "0";
+        this.email = "";
+        this.username = "username";
+        this.password = "password";
+        this.id_level = 0;
+        this.experience = 0;
+        this.isOpenDegree1 = false;
+        this.isOpenDegree2 = false;
+        this.isOpenDegree3 = false;
+        this.isOpenDegree4 = false;
+        this.isOpenStartGame = false;
     }
     public User(string id, string email, string username, string password, int id_level, int experience, bool isOpenDegree1 = false, bool isOpenDegree2 = false, bool isOpenDegree3 = false, bool isOpenDegree4 = false, bool isOpenStartGame = false)
     {
