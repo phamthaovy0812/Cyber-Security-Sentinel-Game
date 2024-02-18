@@ -23831,7 +23831,6 @@ GameObject:
   - component: {fileID: 1426995654}
   - component: {fileID: 1426995656}
   - component: {fileID: 1426995657}
-  - component: {fileID: 1426995658}
   m_Layer: 0
   m_Name: hospital
   m_TagString: Untagged
@@ -24019,19 +24018,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1426995658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1426995653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 389ca238c64ea584f82ebff72cea8aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameScene: Room412(sms)
 --- !u!1 &1427733887
 GameObject:
   m_ObjectHideFlags: 0
