@@ -81,6 +81,11 @@ public class DialogueTrigger : MonoBehaviour
                     dialogueScript.dialogues = dialogString.docNoCompleteDegree4;
 
                 }
+                if (HomeManager.Instance.id_level == 5)
+                {
+                    dialogueScript.dialogues = new List<List<string>>();
+                    dialogueScript.dialogues = dialogString.docEndGame;
+                }
                 playerDetected = true;
 
             }

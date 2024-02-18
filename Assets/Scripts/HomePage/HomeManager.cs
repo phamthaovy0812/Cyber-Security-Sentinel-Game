@@ -1,9 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Web;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +8,7 @@ public class HomeManager : MonoBehaviour
 {
     private static HomeManager instance;                             //instance variable
     public static HomeManager Instance { get => instance; }
+    bool isOpenEndGame = true;
 
     [Header("Object Flags")]
     public GameObject flagPolice;
@@ -37,6 +34,7 @@ public class HomeManager : MonoBehaviour
     public GameObject PassedDegree2Panel;
     public GameObject PassedDegree3Panel;
     public GameObject PassedDegree4Panel;
+    public GameObject EndGamePanel;
     [Header("Username text")]
 
     public TextMeshProUGUI usernameOfCertificate1;
@@ -300,6 +298,10 @@ public class HomeManager : MonoBehaviour
         PassedDegree4Panel.SetActive(false);
         LevelUpObject.SetActive(false);
     }
+    public void Btn_End_Game()
+    {
+        LevelUpObject.SetActive(false);
+    }
     private void UpdateUsernameOfCertificate()
     {
         string username = APIUser.Instance.GetUser().username;
@@ -357,7 +359,7 @@ public class HomeManager : MonoBehaviour
             NPCDegree3Obect.SetActive(true);
             NPCDegree4Obect.SetActive(false);
         }
-        if (id_level == 4)
+        if (id_level > 3)
         {
             degree1Object.SetActive(true);
             degree2Object.SetActive(true);
@@ -454,9 +456,10 @@ public class HomeManager : MonoBehaviour
         {
             PassedDegree1Panel.SetActive(true);
         }
-        if (id_level == 5)
+        if (id_level == 5 && isOpenEndGame)
         {
             LevelUpObject.SetActive(true);
+            isOpenEndGame = false;
         }
     }
 }

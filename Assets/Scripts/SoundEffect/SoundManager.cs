@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -25,13 +22,13 @@ public class SoundManager : MonoBehaviour
         AudioListener.pause = muted;
 
     }
-    public void LoadBeginSound()
-    {
-        muted = false;
-        UpdateButtonIcon();
-        AudioListener.pause = muted;
+    // public void LoadBeginSound()
+    // {
+    //     muted = false;
+    //     UpdateButtonIcon();
+    //     AudioListener.pause = muted;
 
-    }
+    // }
     void Awake()
     {
         if (instance == null)                                               //if instance is null

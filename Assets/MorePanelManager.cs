@@ -42,21 +42,21 @@ public class MorePanelManager : MonoBehaviour
         string url = "";
         if (degree == 1)
         {
-            url = "https://drive.google.com/drive/folders/15PM7ZQql6nyT7dxygSSjJCv3mWv0uEeZ?usp=sharing";
+            url = "https://docs.google.com/document/d/16K3R_jK_pvnKq_4CoFgpz-BiyAhoN-XLuQEVCc7Cg_U/edit?usp=sharing";
         }
         else if (degree == 2)
         {
-            url = "https://drive.google.com/drive/folders/15PM7ZQql6nyT7dxygSSjJCv3mWv0uEeZ?usp=sharing";
+            url = "https://docs.google.com/document/d/1B11euPrOXBllSimCZAivF7EjhLBaI56xsFbUNPj_Sy4/edit?usp=sharing";
 
         }
         else if (degree == 3)
         {
-            url = "https://drive.google.com/drive/folders/15PM7ZQql6nyT7dxygSSjJCv3mWv0uEeZ?usp=sharing";
+            url = "https://docs.google.com/document/d/1rhC6StQe-2sBZe3TGUZjSEFiHpwQzfCwVwFL4D_s2Ls/edit?usp=sharing";
 
         }
         else
         {
-            url = "https://drive.google.com/drive/folders/15PM7ZQql6nyT7dxygSSjJCv3mWv0uEeZ?usp=sharing";
+            url = "https://docs.google.com/document/d/1rhC6StQe-2sBZe3TGUZjSEFiHpwQzfCwVwFL4D_s2Ls/edit?usp=sharing";
 
         }
         Application.OpenURL(url);
