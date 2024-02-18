@@ -11,7 +11,7 @@ public class WordGenerator : MonoBehaviour
     public string[] wordList;
     public void Start()
     {
-        wordList = WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].wishedList;
+        wordList = WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].listWords;
     }
     public string GetRandomWord()
     {

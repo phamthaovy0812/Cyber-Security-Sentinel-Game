@@ -7,7 +7,7 @@ public class DialogString : MonoBehaviour
 	// NPC police
 	public List<List<string>> docBeginStartingGame = new List<List<string>>{
 		new List<string>{"Xin chào! Chào mừng bạn đến với Cybersecurity Sentinel. Hãy tận hưởng những trải nghiệm tuyệt vời tại đây nhé!",
-		"Đầu tiên, hãy đến Sở cảnh sát để nhận nhiệm vụ đầu tiên!"}
+		"Hãy đến Sở cảnh sát để nhận nhiệm vụ đầu tiên!"}
 	};
 	public List<List<string>> docBeginStartingSeePoliceDegree1 = new List<List<string>>{
 		new List<string> {
@@ -36,8 +36,8 @@ public class DialogString : MonoBehaviour
 	};
 	public List<List<string>> docBeginStartingSeePoliceDegree2 = new List<List<string>>{
 		new List<string> {
-		 "Chúc mừng bạn đã hoàn thành cấp 1. Hãy đến cấp 2!",
-		},
+		 "Chúc mừng bạn đã hoàn thành cấp 1. Bây giờ bạn hãy đến địa điểm cấp 2 để tiếp tục trò chơi nhé.",
+		 "Chúc bạn may mắn "        },
 		 new List<string> {
 		 "Vâng thưa quản lý.",
 		 },
@@ -45,7 +45,8 @@ public class DialogString : MonoBehaviour
 	};
 	public List<List<string>> docBeginStartingSeePoliceDegree3 = new List<List<string>>{
 		new List<string> {
-		 "Chúc mừng bạn đã hoàn thành cấp 2. Hãy đến cấp 3!",
+		 "Chúc mừng bạn đã hoàn thành cấp 2. Bây giờ bạn hãy đến địa điểm cấp 3 để tiếp tục trò chơi nhé.",
+		 "Chúc bạn may mắn  ",
 		},
 		 new List<string> {
 		 "Vâng thưa quản lý.",
@@ -53,7 +54,8 @@ public class DialogString : MonoBehaviour
 	};
 	public List<List<string>> docBeginStartingSeePoliceDegree4 = new List<List<string>>{
 		new List<string> {
-		 "Chúc mừng bạn đã hoàn thành cấp 3. Hãy đến cấp 4!",
+		 "Chúc mừng bạn đã hoàn thành cấp 3. Bây giờ bạn hãy đến địa điểm cấp 4 để tiếp tục trò chơi nhé.",
+		 "Chúc bạn may mắn ",
 		},
 		 new List<string> {
 		 "Vâng thưa quản lý.",
@@ -92,17 +94,17 @@ public class DialogString : MonoBehaviour
 		new List<string> {"Tiếp tục trò chơi cấp 1"},
 	};
 	public List<List<string>> docAfterCompleteDegree1 = new List<List<string>>{
-		new List<string> {"Bạn đã hoàn thành cấp 1. bạn có muốn tiếp tục tham gia lại lần nữa không? (Điểm kinh nghiệm sẽ được cộng theo mức độ chơi tốt nhất của bạn)."},
+		new List<string> {"Bạn đã hoàn thành cấp 1. Bạn có muốn tiếp tục tham gia lại lần nữa không? (Điểm kinh nghiệm sẽ được cộng theo mức độ chơi tốt nhất của bạn)."},
 	};
 	// NPC degree 2
 	public List<List<string>> docBeginStartingSeeNPCDegree2 = new List<List<string>>{
-		new List<string> {"Chào mừng bạn đến trò chơi cấp 2!"},
+		new List<string> {"Chào mừng bạn đến trò chơi cấp 2.", "Ở trò chơi này bạn sẽ gõ chữ theo các từ được rơi xuống. Sau khi hoàn thành gõ chữ, một bảng nội dung gồm 2 cột sẽ hiện lên, bạn sẽ nối 2 bảng nội dung với nhau. Bạn phải hoàn thành phần chơi trong thời gian nhanh nhất có thể để đạt được điểm tối đa trong phần chơi này"," Chúc bạn may mắn"},
 	};
 	public List<List<string>> docAfterSeeNPCDegree2 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 2."},
 	};
 	public List<List<string>> docAfterCompleteDegree2 = new List<List<string>>{
-		new List<string> {"Bạn đã hoàn thành cấp 2. Bạn có muốn tiếp tục trò chơi cấp 2 nữa không?"},
+		new List<string> {"Bạn đã hoàn thành cấp 2. Bạn có muốn tiếp tục tham gia lại lần nữa không? (Điểm kinh nghiệm sẽ được cộng theo mức độ chơi tốt nhất của bạn)."},
 	};
 
 	// degree 3
@@ -116,17 +118,20 @@ public class DialogString : MonoBehaviour
 		new List<string> {"Tiếp tục trò chơi cấp 3."},
 	};
 	public List<List<string>> docAfterCompleteDegree3 = new List<List<string>>{
-		new List<string> {"Bạn đã hoàn thành cấp 3. Bạn có muốn Tiếp tục lại trò chơi cấp 3 nữa không?"},
+		new List<string> {"Bạn đã hoàn thành cấp 3.  Bạn có muốn tiếp tục tham gia lại lần nữa không? (Điểm kinh nghiệm sẽ được cộng theo mức độ chơi tốt nhất của bạn)."},
 	};
 	// degree 3
 	public List<List<string>> docBeginStartingSeeNPCDegree4 = new List<List<string>>{
-		new List<string> {"Chào mừng bạn đến trò chơi cấp 4."},
+		new List<string> {"Chào mừng bạn đến trò chơi cấp 4.Ở nhiệm vụ này bạn cần di chuyển đến các ngôi nhà số 112, 412, 456, 323 trong thành phố để hỗ trợ giải đáp thắc mắc cho hộ dân về các vấn đề họ gặp phải."," Chúc bạn may măn"},
 	};
 	public List<List<string>> docAfterSeeNPCDegree4 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 4."},
 	};
 	public List<List<string>> docAfterCompleteDegree4 = new List<List<string>>{
 		new List<string> {"Bạn đã hoàn thành cấp 4. Bạn có muốn Tiếp tục trò chơi cấp 4 nữa không?"},
+	};
+	public List<List<string>> docEndGame = new List<List<string>>{
+		new List<string> {"Bạn đã hoàn thành xuất sắc trò chơi. Bạn có thể quay lại các phòng chơi cũ nếu bạn muốn chơi lại."},
 	};
 	void Start()
 	{

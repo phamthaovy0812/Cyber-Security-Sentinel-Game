@@ -12,6 +12,7 @@ public class Dialogue : MonoBehaviour
     // public GameObject indicator;
     //Text component
     public TMP_Text dialogueText;
+    public TMP_Text continueText;
     //Dialogues list
     public List<List<string>> dialogues = new List<List<string>>();
     //Writing speed
@@ -66,6 +67,7 @@ public class Dialogue : MonoBehaviour
         charIndex = 0;
         index = 0;
         indexDialog = 0;
+        dialogueText.text = "";
         //Stop all Ienumerators
         //Hide the window
         // set flag position police 
@@ -79,6 +81,7 @@ public class Dialogue : MonoBehaviour
     //Writing logic
     IEnumerator Writing()
     {
+        continueText.text = "Nhấn phím Space để tiếp tục";
         yield return new WaitForSeconds(writingSpeed);
 
 
@@ -97,13 +100,9 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            //Wait x seconds 
-            yield return new WaitForSeconds(1f);
+
             //End this sentence and wait for the next one
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                waitForNext = true;
-            }
+            waitForNext = true;
         }
     }
 
@@ -126,7 +125,7 @@ public class Dialogue : MonoBehaviour
 
             }
 
-            if (waitForNext || Input.GetKeyDown(KeyCode.Space)) //  && Input.GetKeyDown(KeyCode.Space)
+            if (waitForNext && Input.GetKeyDown(KeyCode.Space)) //  && Input.GetKeyDown(KeyCode.Space)
             {
                 waitForNext = false;
 
@@ -161,7 +160,9 @@ public class Dialogue : MonoBehaviour
             //     FindAnyObjectByType<HomeManager>().isOpenFlagDegree1 = true;
             //     FindAnyObjectByType<HomeManager>().isOpenFlagPolice = true;
             // }
+            continueText.text = "";
             FindAnyObjectByType<HomeManager>().isOpenBtn = true;
+
             // EndDialogue();
         }
 

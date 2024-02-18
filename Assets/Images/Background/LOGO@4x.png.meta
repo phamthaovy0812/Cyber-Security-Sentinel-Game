@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2746f71ef63097d48b0e59951f7e8672
+guid: f11124d7859a055419ed9eab68eb585d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,112 +134,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: badge@4x_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 186
-        height: 258
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4bebaa659a7b474f884a0ebdd953f34
-      internalID: -758276188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: badge@4x_1
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 0
-        width: 311.2
-        height: 258
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cea73a0545706a146943b1668e865d75
-      internalID: -133267858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: badge@4x_2
-      rect:
-        serializedVersion: 2
-        x: 622
-        y: 0
-        width: 311.2
-        height: 258
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46368e487cd1e3f4983c7b5328792c7a
-      internalID: -772006876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: badge@4x_3
-      rect:
-        serializedVersion: 2
-        x: 933
-        y: 0
-        width: 311.2
-        height: 258
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b028e938f2753094295a07cc725c1bf2
-      internalID: -1824325459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: badge@4x_4
-      rect:
-        serializedVersion: 2
-        x: 1282
-        y: 24
-        width: 274
-        height: 234
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c38826078e4c398489b3f1d733423450
-      internalID: -2020554833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -250,12 +145,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      badge@4x_0: -758276188
-      badge@4x_1: -133267858
-      badge@4x_2: -772006876
-      badge@4x_3: -1824325459
-      badge@4x_4: -2020554833
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
