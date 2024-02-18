@@ -1,15 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System.Net.Mail;
-using Firebase;
 using Firebase.Auth;
 using System;
-using System.Threading.Tasks;
 using Firebase.Extensions;
-using UnityEngine.Tilemaps;
 using Firebase.Database;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -336,9 +330,9 @@ public class firebaseController : MonoBehaviour
     IEnumerator SignUpSuccess()
     {
         signupSuccess.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
         signupSuccess.SetActive(false);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
 
         OpenLoginPanel();
 
@@ -388,7 +382,7 @@ public class firebaseController : MonoBehaviour
     {
         APIUser.Instance.getConnectedUserByUId(email, password);
         // Debug.Log("email: " + email + " password: " + password);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomePage");
 
     }
