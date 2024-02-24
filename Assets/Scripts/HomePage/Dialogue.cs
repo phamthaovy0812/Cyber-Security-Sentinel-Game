@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Dialogue : MonoBehaviour
@@ -81,9 +82,8 @@ public class Dialogue : MonoBehaviour
     //Writing logic
     IEnumerator Writing()
     {
-        continueText.text = "Nhấn phím Space để tiếp tục";
+        continueText.text = "Click chuột để tiếp tục";
         yield return new WaitForSeconds(writingSpeed);
-
 
         string currentDialogue = dialogues[indexDialog][index];
         //Write the character
@@ -125,7 +125,7 @@ public class Dialogue : MonoBehaviour
 
             }
 
-            if (waitForNext && Input.GetKeyDown(KeyCode.Space)) //  && Input.GetKeyDown(KeyCode.Space)
+            if (waitForNext && Input.GetMouseButtonDown(0)) //  && Input.GetKeyDown(KeyCode.Space)
             {
                 waitForNext = false;
 

@@ -38,6 +38,8 @@ public class firebaseController : MonoBehaviour
     Firebase.Auth.FirebaseUser user;
 
     bool isSignIn = false;
+    bool isLogin = true;
+    bool isSignUp = false;
 
 
     public static string StripHTML(bool decode = true)
@@ -88,6 +90,8 @@ public class firebaseController : MonoBehaviour
     {
         loginPanel.SetActive(true);
         signupPanel.SetActive(false);
+        isLogin = true;
+        isSignUp = false;
         notificationPanel.SetActive(false);
         forgetPasswordPanel.SetActive(false);
     }
@@ -96,6 +100,8 @@ public class firebaseController : MonoBehaviour
     {
         loginPanel.SetActive(false);
         signupPanel.SetActive(true);
+        isLogin = false;
+        isSignUp = true;
         // login.SetActive(false);
         forgetPasswordPanel.SetActive(false);
         notificationPanel.SetActive(false);
@@ -123,11 +129,11 @@ public class firebaseController : MonoBehaviour
 
     public void LoginUser()
     {
-        if (string.IsNullOrEmpty(loginEmail.text) && string.IsNullOrEmpty(loginPassword.text))
-        {
-            showNotificationMessage("Lỗi", "Ô nhập bị trống! Làm ơn hãy nhập vào ô trống");
-            return;
-        }
+        // if (string.IsNullOrEmpty(loginEmail.text) && string.IsNullOrEmpty(loginPassword.text))
+        // {
+        //     showNotificationMessage("Lỗi", "Ô nhập bị trống! Làm ơn hãy nhập vào ô trống");
+        //     return;
+        // }
 
         // Do Login
         SignInUser(loginEmail.text, loginPassword.text);
@@ -212,7 +218,7 @@ public class firebaseController : MonoBehaviour
                     }
                 }
 
-
+                isSignUp = true;
                 return;
             }
 
@@ -348,30 +354,30 @@ public class firebaseController : MonoBehaviour
 
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
        {
-           if (task.IsCanceled)
-           {
-               //    Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
-               return;
-           }
-           if (task.IsFaulted)
-           {
-               //    Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+           //    if (task.IsCanceled)
+           //    {
+           //        //    Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
+           //        return;
+           //    }
+           //    if (task.IsFaulted)
+           //    {
+           //        //    Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
 
-               foreach (Exception exception in task.Exception.Flatten().InnerExceptions)
-               {
-                   Firebase.FirebaseException firebaseEx = exception as Firebase.FirebaseException;
-                   if (firebaseEx != null)
-                   {
-                       var errorCode = (AuthError)firebaseEx.ErrorCode;
-                       showNotificationMessage("Error", GetErrorMessage(errorCode));
-                   }
-               }
+           //        foreach (Exception exception in task.Exception.Flatten().InnerExceptions)
+           //        {
+           //            Firebase.FirebaseException firebaseEx = exception as Firebase.FirebaseException;
+           //            if (firebaseEx != null)
+           //            {
+           //                var errorCode = (AuthError)firebaseEx.ErrorCode;
+           //                showNotificationMessage("Error", GetErrorMessage(errorCode));
+           //            }
+           //        }
 
+           //        isLogin = true;
+           //        return;
+           //    }
 
-               return;
-           }
-
-           Firebase.Auth.FirebaseUser newUser = task.Result.User;
+           //    Firebase.Auth.FirebaseUser newUser = task.Result.User;
 
            StartCoroutine(StartHomePage(email, password));
            // Open mainscean
@@ -380,7 +386,8 @@ public class firebaseController : MonoBehaviour
     }
     IEnumerator StartHomePage(string email, string password)
     {
-        APIUser.Instance.getConnectedUserByUId(email, password);
+
+        APIUser.Instance.getConnectedUserByUId("dugn@gmail.com", "123456");
         // Debug.Log("email: " + email + " password: " + password);
         yield return new WaitForSeconds(3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomePage");
@@ -401,14 +408,31 @@ public class firebaseController : MonoBehaviour
             bool signedIn = user != auth.CurrentUser && auth.CurrentUser != null;
             if (!signedIn && user != null)
             {
+                isSignUp = true;
+
                 Debug.Log("Signed out " + user.UserId);
             }
             user = auth.CurrentUser;
             if (signedIn)
             {
+
+                isLogin = true;
                 Debug.Log("Signed in " + user.UserId);
                 isSignIn = true;
             }
+        }
+    }
+    void Update()
+    {
+        if (isSignUp && Input.GetKey(KeyCode.KeypadEnter))
+        {
+
+            SignUpUser();
+
+        }
+        if (isLogin && Input.GetKey(KeyCode.KeypadEnter))
+        {
+            LoginUser();
         }
     }
 

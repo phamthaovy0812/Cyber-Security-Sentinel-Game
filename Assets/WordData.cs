@@ -5,26 +5,27 @@ using UnityEngine;
 
 public class WordData : MonoBehaviour
 {
-    private static WordData instance;                             //instance variable
-	public static WordData Instance { get => instance; }
-    private void Awake()
-	{
-		if (instance == null)                                               //if instance is null
-		{
-			instance = this;                                                //set this as instance																// DontDestroyOnLoad(gameObject);                                                          // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
-		}
-		else
-		{
-			Destroy(gameObject);                                            //else destroy it
-		}
-	}
-    public List<WordList> WordListData()
+     private static WordData instance;                             //instance variable
+     public static WordData Instance { get => instance; }
+     private void Awake()
+     {
+          if (instance == null)                                               //if instance is null
+          {
+               instance = this;
+               DontDestroyOnLoad(gameObject);                                          //set this as instance																// DontDestroyOnLoad(gameObject);                                                          // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
+          }
+          else
+          {
+               Destroy(gameObject);                                            //else destroy it
+          }
+     }
+     public List<WordList> WordListData()
      {
           List<WordList> listWord = new List<WordList>();
 
           // level 1
           string[] wordList1 = {"security","firewall","vulnerability","breach", "privacy", "cyber", "threat","risk","intrusion","password",
-        "biometrics", "access", "control", "secure","network","response", 
+        "biometrics", "access", "control", "secure","network","response",
         "phishing","social","engineering", "hacker", "data", "identity","theft",  "key","policy","communication",  "audit",
 //      "surveillance", "compliance", "incident", "software", "information", "technology",
 //     "patching", "monitoring", "cyber security", "awareness",
