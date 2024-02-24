@@ -337,6 +337,7 @@ public class firebaseController : MonoBehaviour
     {
         signupSuccess.SetActive(true);
         yield return new WaitForSeconds(1f);
+
         signupSuccess.SetActive(false);
         yield return new WaitForSeconds(1f);
 
