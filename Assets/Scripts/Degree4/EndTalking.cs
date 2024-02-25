@@ -50,6 +50,10 @@ public class EndTalking : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    public void Btn_Exit()
+    {
+        SceneManager.LoadScene("HomePage");
+    }
     public void OpenEndRoom()
     {
         endRoom.SetActive(true);

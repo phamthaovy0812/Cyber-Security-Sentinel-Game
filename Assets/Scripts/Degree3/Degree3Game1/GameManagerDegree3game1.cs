@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManagerDegree3game1 : MonoBehaviour
@@ -11,6 +12,9 @@ public class GameManagerDegree3game1 : MonoBehaviour
     [SerializeField] private Transform pellets;
 
     [SerializeField] private GameObject gameOver;
+    public GameObject pausePanel;
+    public GameObject playPanel;
+
 
     private int ghostMultiplier = 1;
 
@@ -63,89 +67,24 @@ public class GameManagerDegree3game1 : MonoBehaviour
         Debug.Log("Home btn");
     }
 
-    // private void SetLives(int lives)
-    // {
-    //     this.lives = lives;
-    //     livesText.text = "x" + lives.ToString();
-    // }
+    public void Btn_Pause()
+    {
+        pausePanel.SetActive(false);
+        playPanel.SetActive(true);
+        Time.timeScale = 0;
+        Debug.Log("Pause btn");
 
-    // private void SetScore(int score)
-    // {
-    //     this.score = score;
-    //     scoreText.text = score.ToString().PadLeft(2, '0');
-    // }
-    // public void SetStar(int star)
-    // {
-    //     this.star = star;
-    //     txtStar.text = star.ToString();
-    // }
+    }
+    public void Btn_Play()
+    {
+        pausePanel.SetActive(true);
+        playPanel.SetActive(false);
+        Time.timeScale = 1;
 
-
-    // public void PacmanEaten()
-    // {
-    //     pacman.DeathSequence();
-
-    //     SetLives(lives - 1);
-
-    //     if (lives > 0)
-    //     {
-    //         Invoke(nameof(ResetState), 3f);
-    //     }
-    //     else
-    //     {
-    //         GameOver();
-    //     }
-    // }
-
-    // public void GhostEaten(GhostPacman ghost)
-    // {
-    //     int points = ghost.points * ghostMultiplier;
-    //     SetScore(score + points);
-
-    //     ghostMultiplier++;
-    // }
-
-    // public void PelletEaten(Pellet pellet)
-    // {
-    //     pellet.gameObject.SetActive(false);
-
-    //     SetScore(score + pellet.points);
-
-    //     if (!HasRemainingPellets())
-    //     {
-    //         pacman.gameObject.SetActive(false);
-    //         Invoke(nameof(NewRound), 3f);
-    //     }
-    // }
-
-    // public void PowerPelletEaten(PowerPellet pellet)
-    // {
-    //     // for (int i = 0; i < ghosts.Length; i++)
-    //     // {
-    //     //     ghosts[i].frightened.Enable(pellet.duration);
-    //     // }
-    //     PelletEaten(pellet);
-
-    //     CancelInvoke(nameof(ResetGhostMultiplier));
-    //     Invoke(nameof(ResetGhostMultiplier), pellet.duration);
-    // }
-
-    // private bool HasRemainingPellets()
-    // {
-    //     foreach (Transform pellet in pellets)
-    //     {
-    //         if (pellet.gameObject.activeSelf)
-    //         {
-    //             return true;
-    //         }
-    //     }
-
-    //     return false;
-    // }
-
-    // private void ResetGhostMultiplier()
-    // {
-    //     ghostMultiplier = 1;
-    // }
+    }
+    public void Btn_Exit()
+    {
+        SceneManager.LoadScene("Degree3Game1MenuLevel");
+    }
 
 }
