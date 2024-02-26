@@ -167,8 +167,6 @@ public class HomeManager : MonoBehaviour
     }
     public void Btn_Join()
     {
-        Debug.Log("indexNPC: " + NPC);
-
         switch (NPC)
         {
 

@@ -82,7 +82,7 @@ public class Dialogue : MonoBehaviour
     //Writing logic
     IEnumerator Writing()
     {
-        continueText.text = "Click chuột để tiếp tục";
+        continueText.text = "Nhấn Space để tiếp tục";
         yield return new WaitForSeconds(writingSpeed);
 
         string currentDialogue = dialogues[indexDialog][index];
@@ -103,6 +103,7 @@ public class Dialogue : MonoBehaviour
 
             //End this sentence and wait for the next one
             waitForNext = true;
+
         }
     }
 
@@ -125,43 +126,60 @@ public class Dialogue : MonoBehaviour
 
             }
 
-            if (waitForNext && Input.GetMouseButtonDown(0)) //  && Input.GetKeyDown(KeyCode.Space)
+            if (waitForNext) //  && Input.GetKeyDown(KeyCode.Space)
             {
-                waitForNext = false;
-
-                index++;
-
-                //Check if we are in the scope fo dialogues List
-                if (index < dialogues[indexDialog].Count)
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    //If so fetch the next dialogue
-                    GetDialogue(index);
+                    waitForNext = false;
+
+                    index++;
+
+                    //Check if we are in the scope fo dialogues List
+                    if (index < dialogues[indexDialog].Count)
+                    {
+                        //If so fetch the next dialogue
+                        GetDialogue(index);
+                    }
+                    else
+                    {
+                        //If not end the dialogue process
+
+                        //Hide the window
+                        // ToggleWindow(false);
+                        index = -1;
+                        waitForNext = true; indexDialog += 1;
+
+                    }
                 }
-                else
-                {
-                    //If not end the dialogue process
 
+
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    StopAllCoroutines();
+                    //Stared is disabled
+
+                    dialogueText.text = dialogues[indexDialog][index];
+                    //Stop all Ienumerators
                     //Hide the window
-                    // ToggleWindow(false);
-                    index = -1;
-                    waitForNext = true; indexDialog += 1;
+                    // set flag position police 
+                    waitForNext = true;
 
                 }
-
             }
 
 
         }
         else
         {
-
-            // if (!FindAnyObjectByType<HomeManager>().isOpenFlagPolice)
-            // {
-            //     FindAnyObjectByType<HomeManager>().isOpenFlagDegree1 = true;
-            //     FindAnyObjectByType<HomeManager>().isOpenFlagPolice = true;
-            // }
             continueText.text = "";
-            FindAnyObjectByType<HomeManager>().isOpenBtn = true;
+            // FindAnyObjectByType<HomeManager>().isOpenBtn = true;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                FindAnyObjectByType<HomeManager>().Btn_Join();
+            }
 
             // EndDialogue();
         }
