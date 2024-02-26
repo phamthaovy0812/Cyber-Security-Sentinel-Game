@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 300
+  startingTime: 180
   dangerTime: 10
   countDownText: {fileID: 184421469}
 --- !u!1 &234587131
@@ -50521,7 +50521,7 @@ PrefabInstance:
       objectReference: {fileID: 1540109363}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Radius
-      value: 1.1333495
+      value: 1.2333388
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Offset.x
@@ -50529,7 +50529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Offset.y
-      value: -0.0860457
+      value: -0.07493689
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_IsTrigger

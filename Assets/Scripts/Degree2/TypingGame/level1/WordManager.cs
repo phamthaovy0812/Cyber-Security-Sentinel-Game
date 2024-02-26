@@ -91,6 +91,7 @@ public class WordManager : MonoBehaviour
     }
     public void GameOver(bool isWin)
     {
+        CanvasWord.SetActive(false);
         _gameOver.SetActive(true);
         int star = 0;
         if (isWin)

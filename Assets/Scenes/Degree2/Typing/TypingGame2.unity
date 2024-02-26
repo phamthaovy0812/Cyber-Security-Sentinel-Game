@@ -1071,7 +1071,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 417672902}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4292,7 +4292,7 @@ MonoBehaviour:
   words: []
   wordSpwaner: {fileID: 938016275}
   _gameOver: {fileID: 1609213116}
-  openSecurity: {fileID: 0}
+  openSecurity: {fileID: 248393783}
   word: {fileID: 3885605082994390796, guid: 56b8f235669998146af45e6b1e5b5931, type: 3}
   count: 0
   countDraw: 0
@@ -4343,7 +4343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordManager: {fileID: 938016272}
-  wordDelay: 5
+  wordDelay: 4
 --- !u!114 &938016277
 MonoBehaviour:
   m_ObjectHideFlags: 0

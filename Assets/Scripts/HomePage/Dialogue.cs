@@ -174,7 +174,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            continueText.text = "";
+            continueText.text = "Nhấn Space để tiếp tục";
             // FindAnyObjectByType<HomeManager>().isOpenBtn = true;
             if (Input.GetKeyDown(KeyCode.Space))
             {
