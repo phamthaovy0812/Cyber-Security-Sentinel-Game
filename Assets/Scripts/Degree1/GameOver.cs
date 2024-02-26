@@ -31,13 +31,7 @@ public class GameOver : MonoBehaviour
         if (star > 0)
         {
             titleGameOver.text = "Chiến thắng";
-            Debug.Log("levelData: " + JsonUtility.ToJson(levelData));
 
-            Debug.Log("Star: " + star);
-            Debug.Log("index item: " + indexItem);
-            Debug.Log("id game: " + idGame);
-
-            Debug.Log("star level: " + levelData.levelItemsArray[indexItem].starAchieved);
             if (star > levelData.levelItemsArray[indexItem].starAchieved)
             {
                 scoreText.text = "+" + ((star - APIUser.Instance.GetLevelData(idGame).levelItemsArray[indexItem].starAchieved) * 112) + "exp";
@@ -50,7 +44,6 @@ public class GameOver : MonoBehaviour
         else
         {
             titleGameOver.text = "Thất bại";
-            LevelSystemManager.Instance.LevelComplete(0);
             scoreText.text = "";
 
         }
@@ -79,7 +72,8 @@ public class GameOver : MonoBehaviour
     {
         if (instance == null)                                               //if instance is null
         {
-            instance = this;                                                //set this as instance                              //make it DontDestroyOnLoad
+            instance = this;
+            //set this as instance                              //make it DontDestroyOnLoad
         }
         else
         {

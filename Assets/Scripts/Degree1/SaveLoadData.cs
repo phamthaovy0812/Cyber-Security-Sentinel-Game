@@ -75,7 +75,7 @@ public class SaveLoadData : MonoBehaviour
             //save the string as json 
             DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
             // string json = JsonUtility.ToJson(degree);
-            await reference.Child("ScoreDegree").Child(APIUser.Instance.GetUser().id_user).Child(APIUser.Instance.GetUser().id_level.ToString()).SetRawJsonValueAsync(levelDataString);
+            await reference.Child("ScoreDegree").Child(APIUser.Instance.GetUser().id_user).Child(LevelSystemManager.Instance.idGame.ToString()).SetRawJsonValueAsync(levelDataString);
 
         }
         catch (System.Exception e)
@@ -92,11 +92,9 @@ public class SaveLoadData : MonoBehaviour
         try
         {
 
-
             //create LevelData from json
             if (levelData != null)
             {
-                Debug.Log("LevelData : " + levelData.lastUnlockedLevel);
                 //set the LevelData of LevelSystemManager
                 LevelSystemManager.Instance.LevelData.levelItemsArray = levelData.levelItemsArray;
                 LevelSystemManager.Instance.LevelData.lastUnlockedLevel = levelData.lastUnlockedLevel;
