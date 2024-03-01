@@ -39,14 +39,14 @@ public class WordData : MonoBehaviour
           listWord.Add(new WordList(1, wordList1, wishedList1));
 
           // level 2
-          string[] wordList2 = {"countermeasure", "crimeware", "cron", "cryptanalysis",
-       "daemon", "datagram", "decapsulation", "decryption",
-       "defacement", "disassembly", "disruption", "domain",
+          string[] wordList2 = {"countermeasure", "crimeware","cryptanalysis",
+     //   "daemon", "datagram", "decapsulation", "decryption",
+     //   "defacement", "disassembly", "disruption", "domain",
         "dumpsec", "eavesdropping", "encapsulation", "encryption",
          "ethernet", "event", "exposure", "filter", "finger",
          "fingerprinting", "firewall", "flooding", "forest",
           "fragmentation", "frames", "fuzzing", "gateway",
-           "gnutella", "hardening", "header", "honeymonkey", "hops", 
+            "hardening", "header", "honeymonkey", "hops", 
     //   "host", "https", "hub", "hyperlink", "identity", "incident", 
    };
           string[] wishedList2 = {
@@ -58,29 +58,29 @@ public class WordData : MonoBehaviour
           string[] wordList3 = { "applet", "algorithm", "arpanet", "auditing", "authentication",
         "authenticity", "authorization", "availability", "backdoor",
         "bandwidth", "banner", "bind", "biometrics",
-        "bit", "botnet", "bridge", "broadcast", "browser",
+     //    "bit", "botnet", "bridge", "broadcast", "browser",
         "rootkit", "router", "safety", "scavenging",
-         "plaintext", "polymorphism", "polyinstantiation",
+         "plaintext", "polymorphism",
           "protocol", "ransomware", "reconnaissance", "registry",
    };
           string[] wishedList3 = {
         "authorization","availability","reconnaissance","polymorphism","protocol"
    };
-          listWord.Add(new WordList(3, wordList3, wishedList2));
+          listWord.Add(new WordList(3, wordList3, wishedList3));
           // level 4
           string[] wordList4 = {"possession", "preamble", "protocol", "ransomware",
          "reconnaissance", "registry", "response",
-         "risk", "root", "rootkit", "router", "safety",
+     //     "risk", "root", "rootkit", "router", "safety",
           "scavenging", "segment", "server", "session",
           "share", "shell", "signature", "smartcard",
            "smishing", "smurf", "sniffer", "sniffing",
-            "socket", "socks", "software", "spam", "spoof",
-             "stealthing", "steganalysis", "steganography",
+          //   "socket", "socks", "software", "spam", "spoof",
+          //    "stealthing", "steganalysis", "steganography",
              "stimulus", "switch", "syslog", "synchronization",
-             "tamper", "tcp", "threat", "token", "topology",
+          //    "tamper", "tcp", "threat", "token", "topology",
               "traceroute", "trunking", "trust", "tunnel",
-               "unicast", "unix", "virus", "vishing", "whois",
-         "windump", "wiretapping", "wireless", "worm", "zombies"
+               "unicast", "unix", "virus",
+     //    "wiretapping", "wireless", "worm", "zombies"
 
    };
           string[] wishedList4 = {

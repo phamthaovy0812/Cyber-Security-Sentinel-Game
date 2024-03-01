@@ -15,13 +15,14 @@ public class LevelUIManager : MonoBehaviour
 
     private void Start()
     {
-        LevelSystemManager.Instance.LevelData = APIUser.Instance.GetLevelData(idGame);
         Debug.Log("load level successfully");
         InitializeUI();
     }
 
     private void Awake()
     {
+        LevelSystemManager.Instance.LevelData = APIUser.Instance.GetLevelData(idGame);
+
         if (instance == null)                                               //if instance is null
         {
             instance = this;                                                //set this as instance

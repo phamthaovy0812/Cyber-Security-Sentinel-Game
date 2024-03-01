@@ -98,12 +98,17 @@ public class WordManager : MonoBehaviour
         {
             float currentTime = FindAnyObjectByType<TPCountTime>().currentTime;
             FindAnyObjectByType<TPCountTime>().isGameOver = true;
+            int score = WordScore.instance.GetScore();
+            currentTime -= score;
             openSecurity.SetActive(false);
             if (currentTime < 180)
             {
                 star = 3;
             }
-            else if (currentTime < 240) star = 2;
+            else if (currentTime < 240)
+            {
+                star = 2;
+            }
             else
             {
                 star = 1;
@@ -116,6 +121,8 @@ public class WordManager : MonoBehaviour
         else
         {
             FindAnyObjectByType<GameOver>().gameOver(0);
+
+            Debug.Log("star level 4: " + star);
 
         }
 

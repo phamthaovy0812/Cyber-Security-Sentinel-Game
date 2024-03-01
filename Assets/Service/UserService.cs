@@ -22,6 +22,10 @@ public class APIUser : MonoBehaviour
 
 	private void Awake()
 	{
+		levelDataDegree1 = null;
+		levelDataDegree2 = null;
+		levelDataDegree3 = null;
+		levelDataDegree4 = null;
 		if (instance == null)                                               //if instance is null
 		{
 			instance = this;                                                //set this as instance
@@ -55,6 +59,10 @@ public class APIUser : MonoBehaviour
 	public void SetLevelDataDegree1(LevelData levelData)
 	{
 		this.levelDataDegree1 = levelData;
+	}
+	public void SetLevelDataDegree2(LevelData levelData)
+	{
+		this.levelDataDegree2 = levelData;
 	}
 	public void SetLevelDataDegree3(LevelData levelData)
 	{

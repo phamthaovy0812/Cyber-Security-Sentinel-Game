@@ -9,12 +9,11 @@ public class ActiveObject : MonoBehaviour
     {
         npc.SetActive(false);
         player.SetActive(true);
-
+        // FindAnyObjectByType<DialogText>().waitForNext = false;
     }
     public void NPCActive()
     {
         npc1.SetActive(true);
         player.SetActive(false);
-
     }
 }
