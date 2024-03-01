@@ -828,7 +828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 300
+  startingTime: 180
   dangerTime: 10
   countDownText: {fileID: 184421469}
 --- !u!1 &189463655
@@ -3426,7 +3426,7 @@ TilemapRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799682402}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -43205,9 +43205,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.051346496, y: -0.08400797}
+  m_Offset: {x: -0.051346496, y: -0.026179116}
   serializedVersion: 2
-  m_Radius: 1.1108222
+  m_Radius: 1.1686511
 --- !u!1 &1882580570
 GameObject:
   m_ObjectHideFlags: 0
@@ -50494,7 +50494,7 @@ PrefabInstance:
       objectReference: {fileID: 632116781}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Radius
-      value: 1.1333494
+      value: 1.1888995
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Offset.x
@@ -50502,7 +50502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Offset.y
-      value: -0.08604599
+      value: -0.09715624
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_IsTrigger

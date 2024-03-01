@@ -1102,7 +1102,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: " T\xF4i s\u1EBD ghi nh\u1EDB nh\u1EEFng g\xEC anh v\u1EEBa gi\u1EA3i \u0111\xE1p.
+    C\xF2n trang n\xE0y th\xEC sao? "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -2659,7 +2660,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "H\xE3y cho t\xF4i xem qua ch\xFAng v\xE0 t\xF4i s\u1EBD gi\u1EA3i th\xEDch
+    gi\xFAp anh. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -3395,6 +3397,7 @@ MonoBehaviour:
   - "H\xE3y cho t\xF4i xem qua ch\xFAng v\xE0 t\xF4i s\u1EBD gi\u1EA3i th\xEDch gi\xFAp
     anh. "
   speed: 0.02
+  isEndTalk: 0
 --- !u!1 &291732338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3452,6 +3455,7 @@ MonoBehaviour:
   - "H\xE3y gi\u1EEF g\xECn s\u1EE9c kh\u1ECFe v\xE0 ho\xE0n th\xE0nh t\u1ED1t nhi\u1EC7m
     v\u1EE5 nh\xE9. T\u1EA1m bi\u1EC7t anh."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &291732341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3618,6 +3622,7 @@ MonoBehaviour:
   - " T\xF4i s\u1EBD ghi nh\u1EDB nh\u1EEFng g\xEC anh v\u1EEBa gi\u1EA3i \u0111\xE1p.
     C\xF2n trang n\xE0y th\xEC sao? "
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &317733925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3959,6 +3964,7 @@ MonoBehaviour:
     ki\u1EBFm ti\u1EC1n b\u1EB1ng giao d\u1ECBch crypto l\xE0 m\u1ED9t l\u0129nh
     v\u1EF1c kh\xF4ng d\u1EC5, b\u1EA1n c\xF3 th\u1EC3 s\u1EBD m\u1EA5t tr\u1EAFng!"
   speed: 0.02
+  isEndTalk: 1
 --- !u!114 &341792259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4058,7 +4064,7 @@ MonoBehaviour:
     t\xEDn kh\xF4ng? "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4978,6 +4984,7 @@ MonoBehaviour:
   - "\u0110\xE2y th\u01B0a c\u1EA3nh s\xE1t. \u0110\xE2y l\xE0 trang web \u0111\u1EA7u
     ti\xEAn. "
   speed: 0.02
+  isEndTalk: 0
 --- !u!1 &495386729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5207,6 +5214,7 @@ MonoBehaviour:
     ch\xFAng. \u0110\xE3 l\xE0m phi\u1EC1n c\u1EA3nh s\xE1t r\u1ED3i. Ch\xFAc anh
     c\xF3 m\u1ED9t ng\xE0y l\xE0m vi\u1EC7c hi\u1EC7u qu\u1EA3. "
   speed: 0.02
+  isEndTalk: 0
 --- !u!1 &521153457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5264,7 +5272,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "H\xE3y gi\u1EEF g\xECn s\u1EE9c kh\u1ECFe v\xE0 ho\xE0n th\xE0nh t\u1ED1t
+    nhi\u1EC7m v\u1EE5 nh\xE9. T\u1EA1m bi\u1EC7t anh."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -5473,7 +5482,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0110\xE2y l\xE0 trang web tin c\u1EADy, trang web x\u1EED l\xFD tin
+    gi\u1EA3, tr\u1EF1c thu\u1ED9c C\u1EE5c ph\xE1t thanh, truy\u1EC1n h\xECnh v\xE0
+    th\xF4ng tin \u0111i\u1EC7n t\u1EED. \nC\xF3 th\u1EC3 ki\u1EC3m tra b\u1EB1ng
+    c\xE1ch xem x\xE9t c\xE1c \u0111i\u1EC1u ki\u1EC7n sau:\n-  N\u1ED9i dung trang
+    web r\xF5 r\xE0ng, kh\xF4ng mang t\xEDnh ch\xE8o k\xE9o hay y\xEAu c\u1EA7u cung
+    c\u1EA5p th\xF4ng tin nh\u1EA1y c\u1EA3m;\n- \u0110\u01B0\u1EDDng li\xEAn k\u1EBFt
+    trang web r\xF5 r\xE0ng, uy t\xEDn. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -5709,7 +5724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\xC0, \u0111\xFAng nh\u01B0 t\xF4i ngh\u0129."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7266,7 +7281,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Th\xEC ra l\xE0 v\u1EADy. T\xF4i \u0111\xE3 r\xFAt \u0111\u01B0\u1EE3c
+    r\u1EA5t nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
+    th\xEDch c\u1EE7a c\u1EA3nh s\xE1t. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7455,7 +7472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -28}
+  m_AnchoredPosition: {x: 0, y: -24}
   m_SizeDelta: {x: 1135.5105, y: 331.2457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638576036
@@ -7478,7 +7495,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Trang web tr\xEAn l\xE0 trang web kh\xF4ng uy t\xEDn.<br><br>\u0110\u1EA7u
+    ti\xEAn, c\xF3 th\u1EC3 ki\u1EC3m tra xem \u1EE9ng d\u1EE5ng MOMO c\xF3 \u0111ang
+    ho\u1EA1t \u0111\u1ED9ng ch\u01B0\u01A1ng tr\xECnh mini game \u0111\xF3 hay kh\xF4ng.
+    \n\nTi\u1EBFp theo, r\xF5 nh\u1EADn th\u1EA5y nh\u1EA5t ch\xEDnh l\xE0 \u0111\u01B0\u1EDDng
+    d\u1EABn li\xEAn k\u1EBFt c\u1EE7a trang kh\xF4ng uy t\xEDn, kh\xF4ng r\xF5 r\xE0ng.
+    N\u1ED9i dung c\u1EE7a trang kh\xF4ng ch\u1EC9n chu, v\xE0 mang xu h\u01B0\u1EDBng
+    l\u1EEBa \u0111\u1EA3o, l\xF9a g\xE0.\n\nH\xE3y c\u1EA3nh gi\xE1c tr\u01B0\u1EDBc
+    nh\u1EEFng trang web c\xF3 n\u1ED9i dung t\u01B0\u01A1ng t\u1EF1."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7903,7 +7927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 99, y: -65.85321}
+  m_AnchoredPosition: {x: 121.8, y: -69.2}
   m_SizeDelta: {x: 160, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672594064
@@ -8920,7 +8944,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i
+    tin nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -9053,6 +9078,7 @@ MonoBehaviour:
   content:
   - "\xC0, \u0111\xFAng nh\u01B0 t\xF4i ngh\u0129."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &716380821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9720,7 +9746,7 @@ MonoBehaviour:
   m_text: "A. C\xF3\r\nB.Kh\xF4ng\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9851,6 +9877,7 @@ MonoBehaviour:
   - "Th\u1EBF c\xF2n trang web cu\u1ED1i c\xF9ng n\xE0y th\xEC sao, t\xF4i c\u1EA3m
     gi\xE1c n\xF3 kh\xE1 uy t\xEDn. T\xF4i c\xF3 n\xEAn tin v\xE0o n\xF3 hay kh\xF4ng? "
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &772163974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9946,7 +9973,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Th\u1EBF c\xF2n trang web cu\u1ED1i c\xF9ng n\xE0y th\xEC sao, t\xF4i
+    c\u1EA3m gi\xE1c n\xF3 kh\xE1 uy t\xEDn. T\xF4i c\xF3 n\xEAn tin v\xE0o n\xF3
+    hay kh\xF4ng? "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10160,6 +10189,7 @@ MonoBehaviour:
     tin nh\u1EA1y c\u1EA3m; \u0110\u01B0\u1EDDng li\xEAn k\u1EBFt trang web r\xF5
     r\xE0ng, uy t\xEDn. "
   speed: 0.02
+  isEndTalk: 1
 --- !u!114 &781291264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10429,7 +10459,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'New Text '
+  m_text: "Ch\xE0o c\u1EA3nh s\xE1t, r\u1EA5t vui v\xEC anh \u0111\xE3 \u0111\u1EBFn
+    \u0111\xE2y.<br>T\xF4i c\xF3 t\xECm hi\u1EC3u \u0111\u1EBFn 1 v\xE0i trang web
+    v\xE0 t\xF4i mu\u1ED1n s\u1EED d\u1EE5ng ch\xFAng \u0111\u1EC3 ph\u1EE5c v\u1EE5
+    cho c\xF4ng vi\u1EC7c c\u1EE7a t\xF4i. T\xF4i kh\xF4ng bi\u1EBFt c\xE1ch \u0111\u1EC3
+    x\xE1c minh t\xEDnh \u0111\xFAng ch\xE2n th\u1EF1c c\u1EE7a ch\xFAng. Mong anh
+    h\xE3y gi\xFAp t\xF4i. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10563,7 +10598,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Trang web tr\xEAn kh\xF4ng ph\u1EA3i l\xE0 m\u1ED9t trang web uy t\xEDn.
+    Tho\u1EA1t nh\xECn, n\xF3 gi\u1ED1ng nh\u01B0 trang ch\u0103m s\xF3c kh\xE1ch
+    h\xE0ng c\u1EE7a chu\u1ED7i h\u1EC7 th\u1ED1ng c\u1EEDa h\xE0ng B\xE1ch h\xF3a
+    xanh. Tuy nhi\xEAn, n\xF3 v\u1EABn c\xF3 r\u1EA5t nhi\u1EC1u \u0111i\u1EC3m \u0111\xE1ng
+    ng\u1EDD. <br>\u0110\u1EA7u ti\xEAn l\xE0 \u0111\u01B0\u1EDDng d\u1EABn trang
+    web kh\xF4ng h\u1EE3p l\xFD. Ti\u1EBFp theo ch\xEDnh l\xE0 n\u1ED9i dung \u0111\u01B0\u1EE3c
+    di\u1EC5n t\u1EA3 b\xEAn trong trang web kh\xF4ng ph\xF9 h\u1EE3p v\u1EDBi n\u1ED9i
+    dung b\xE1n h\xE0ng c\u1EE7a B\xE1ch h\xF3a xanh.<br><b>L\u01B0u \xFD,</b> c\xE1c
+    trang web uy t\xEDn s\u1EBD kh\xF4ng y\xEAu c\u1EA7u m\xECnh cung c\u1EA5p th\xF4ng
+    tin c\xE1 nh\xE2n m\u1ED9t c\xE1ch l\u1ED9 li\u1EC5u nh\u01B0 v\u1EADy. V\xE0
+    b\u1EA1n c\xF9ng kh\xF4ng n\xEAn d\u1EC5 d\xE0ng cung c\u1EA5p th\xF4ng tin c\xE1
+    nh\xE2n c\u1EE7a m\xECnh \u0111\u1EC3 tr\xE1nh r\u1EE7i ro v\xE0 l\xE0m phi\u1EC1n
+    kh\xF4ng c\u1EA7n thi\u1EBFt. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10697,7 +10744,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "V\xE2ng, kh\xF4ng c\xF3 g\xEC, h\xE3y c\u1EA9n th\u1EADn tr\u01B0\u1EDBc
+    nh\u1EEFng email m\xE0 m\xECnh nh\u1EADn \u0111\u01B0\u1EE3c nh\xE9. \u0110\u1ED3ng
+    th\u1EDDi c\u0169ng h\xE3y c\u1EA9n th\u1EADn khi cung c\u1EA5p th\xF4ng tin
+    c\xE1 nh\xE2n c\u1EE7a m\xECnh cho b\xEAn th\u1EE9 3. N\u1EBFu kh\xF4ng c\xF2n
+    v\u1EA5n \u0111\u1EC1 g\xEC th\xEC t\xF4i \u0111i \u0111\xE2y. T\u1EA1m bi\u1EC7t! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10964,6 +11015,7 @@ MonoBehaviour:
   - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
     nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &823132572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11322,6 +11374,7 @@ MonoBehaviour:
     l\u1EEBa \u0111\u1EA3o, l\xF9a g\xE0. H\xE3y c\u1EA3nh gi\xE1c tr\u01B0\u1EDBc
     nh\u1EEFng trang web c\xF3 n\u1ED9i dung t\u01B0\u01A1ng t\u1EF1."
   speed: 0.02
+  isEndTalk: 1
 --- !u!114 &864048024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12593,7 +12646,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0110\xE2y th\u01B0a c\u1EA3nh s\xE1t. \u0110\xE2y l\xE0 trang web \u0111\u1EA7u
+    ti\xEAn. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -13646,6 +13700,7 @@ MonoBehaviour:
     c\u1EE7a m\xECnh cho b\xEAn th\u1EE9 3. N\u1EBFu kh\xF4ng c\xF2n v\u1EA5n \u0111\u1EC1
     g\xEC th\xEC t\xF4i \u0111i \u0111\xE2y. T\u1EA1m bi\u1EC7t! "
   speed: 0.02
+  isEndTalk: 0
 --- !u!1 &1052090926
 GameObject:
   m_ObjectHideFlags: 0
@@ -15821,7 +15876,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0110\xE2y l\xE0 m\u1ED9t trang web uy t\xEDn, l\xE0 m\u1ED9t s\xE0n
+    giao d\u1ECBch crypto n\u1ED5i ti\u1EBFng tr\xEAn th\u1EBF gi\u1EDBi.\n\nTuy
+    nhi\xEAn, c\u0169ng kh\xF4ng n\xEAn tin t\u01B0\u1EDFng 100% v\xE0 \u0111\u1EA7u
+    t\u01B0 ngay v\xE0o \u0111\xF3. N\u1EBFu b\u1EA1n c\xF3 ki\u1EBFn th\u1EE9c v\u1EC1
+    m\u1EA3ng n\xE0y, h\xE3y c\xE2n nh\u1EAFc l\u1EF1a ch\u1ECDn v\xEC n\xF3 l\xE0
+    m\u1ED9t s\xE0n giao d\u1ECBch \u0111\xE3 \u0111\u01B0\u1EE3c ki\u1EC3m ch\u1EE9ng
+    v\xE0 tin d\xF9ng. \n\nN\u1EBFu b\u1EA1n kh\xF4ng ch\u1EAFc ch\u1EAFn v\u1EDBi
+    kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c c\u1EE7a b\u1EA3n th\xE2n v\u1EC1
+    m\u1EA3ng n\xE0y, \u0111\u1EEBng b\u1EAFt \u0111\u1EA7u v\u1ED9i. B\u1EDFi v\xEC,
+    ki\u1EBFm ti\u1EC1n b\u1EB1ng giao d\u1ECBch crypto l\xE0 m\u1ED9t l\u0129nh
+    v\u1EF1c kh\xF4ng d\u1EC5, b\u1EA1n c\xF3 th\u1EC3 s\u1EBD m\u1EA5t tr\u1EAFng!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -16057,7 +16122,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u1ED2 th\xEC ra l\xE0 v\u1EADy. T\xF4i hi\u1EC3u r\u1ED3i th\u01B0a c\u1EA3nh
+    s\xE1t. \u0110\xE2y l\xE0 trang web ti\u1EBFp theo. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -16470,7 +16536,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: " C\u1EA3m \u01A1n c\u1EA3nh s\xE1t \u0111\xE3 gi\xFAp t\xF4i ph\xE2n t\xEDch
+    ch\xFAng. \u0110\xE3 l\xE0m phi\u1EC1n c\u1EA3nh s\xE1t r\u1ED3i. Ch\xFAc anh
+    c\xF3 m\u1ED9t ng\xE0y l\xE0m vi\u1EC7c hi\u1EC7u qu\u1EA3. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -17263,6 +17331,7 @@ MonoBehaviour:
     ph\xF2ng v\xE0 kh\xF4ng d\u1EC5 d\xE0ng tin t\u01B0\u1EDFng v\u1EDBi c\xE1c trang
     web mang n\u1ED9i dung v\u1EC1 ti\u1EC1n."
   speed: 0.02
+  isEndTalk: 1
 --- !u!114 &1351763228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18923,7 +18992,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Th\xEC ra l\xE0 v\u1EADy. T\xF4i \u0111\xE3 r\xFAt \u0111\u01B0\u1EE3c
+    r\u1EA5t nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
+    th\xEDch c\u1EE7a c\u1EA3nh s\xE1t. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -19058,6 +19129,7 @@ MonoBehaviour:
     nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
     th\xEDch c\u1EE7a c\u1EA3nh s\xE1t. "
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &1470854025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20264,6 +20336,7 @@ MonoBehaviour:
   - "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m tra
     trang web ti\u1EBFp theo nh\xE9! "
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &1600497515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20596,6 +20669,7 @@ MonoBehaviour:
     nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
     th\xEDch c\u1EE7a c\u1EA3nh s\xE1t. "
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &1626672904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21228,7 +21302,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683149504}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
   m_Name: 
@@ -21241,6 +21315,7 @@ MonoBehaviour:
     c\u1EE7a t\xF4i. T\xF4i kh\xF4ng bi\u1EBFt c\xE1ch \u0111\u1EC3 x\xE1c minh t\xEDnh
     \u0111\xFAng ch\xE2n th\u1EF1c c\u1EE7a ch\xFAng. Mong anh h\xE3y gi\xFAp t\xF4i. "
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &1683149507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21627,7 +21702,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Nh\u1EEFng trang web mang n\u1ED9i dung v\u1EC1 c\u1EDD b\u1EA1c, c\xE1
+    \u0111\u1ED9 hay n\u1ED9i dung li\xEAn quan v\u1EC1 vi\u1EC7c ki\u1EBFm \u0111\u01B0\u1EE3c
+    ti\u1EC1n nhanh, \u0111a s\u1ED1 \u0111\u1EC1u s\u1EBD l\xE0 c\xE1c trang web
+    l\u1EADu v\xE0 b\u1ECB c\u1EA5m b\u1EDFi ch\xEDnh quy\u1EC1n Vi\u1EC7t Nam.\n\u0110\u1ED3ng
+    th\u1EDDi, c\xE1c trang web \u1EA5y mang t\xEDnh c\xE2u k\xE9o, l\u1EEBa \u0111\u1EA3o,
+    l\xF9a g\xE0 r\u1EA5t m\u1EA1nh. Ch\xFAng \u0111\xE1nh v\xE0o l\xF2ng tham c\u1EE7a
+    ng\u01B0\u1EDDi d\xF9ng m\u1EA1ng. Khi s\u1EED d\u1EE5ng nh\u1EEFng trang web
+    n\xE0y r\u1EE7i ro s\u1EBD r\u1EA5t cao, v\u1EADy n\xEAn h\xE3y \u0111\u1EC1
+    ph\xF2ng v\xE0 kh\xF4ng d\u1EC5 d\xE0ng tin t\u01B0\u1EDFng v\u1EDBi c\xE1c trang
+    web mang n\u1ED9i dung v\u1EC1 ti\u1EC1n."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -22916,6 +23000,7 @@ MonoBehaviour:
     nh\xE2n c\u1EE7a m\xECnh \u0111\u1EC3 tr\xE1nh r\u1EE7i ro v\xE0 l\xE0m phi\u1EC1n
     kh\xF4ng c\u1EA7n thi\u1EBFt. "
   speed: 0.02
+  isEndTalk: 1
 --- !u!1 &1847941657
 GameObject:
   m_ObjectHideFlags: 0
@@ -23250,7 +23335,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m
+    tra trang web ti\u1EBFp theo nh\xE9! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -25261,7 +25347,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m
+    tra trang web ti\u1EBFp theo nh\xE9! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -25395,6 +25482,7 @@ MonoBehaviour:
   - "\u1ED2 th\xEC ra l\xE0 v\u1EADy. T\xF4i hi\u1EC3u r\u1ED3i th\u01B0a c\u1EA3nh
     s\xE1t. \u0110\xE2y l\xE0 trang web ti\u1EBFp theo. "
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &2051900818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25800,6 +25888,7 @@ MonoBehaviour:
   - "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m tra
     trang web ti\u1EBFp theo nh\xE9! "
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &2087222894
 MonoBehaviour:
   m_ObjectHideFlags: 0

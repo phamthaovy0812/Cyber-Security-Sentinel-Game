@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "C\xF2n email n\xE0y th\xEC sao?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -2509,7 +2509,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "H\xE3y cho t\xF4i xem qua ch\xFAng v\xE0 t\xF4i s\u1EBD gi\u1EA3i th\xEDch
+    gi\xFAp ch\u1ECB.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -3074,7 +3075,6 @@ GameObject:
   - component: {fileID: 291023201}
   - component: {fileID: 291023200}
   - component: {fileID: 291023199}
-  - component: {fileID: 291023202}
   m_Layer: 5
   m_Name: player
   m_TagString: Untagged
@@ -3166,23 +3166,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &291023202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291023197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 212706517}
-  content:
-  - "H\xE3y cho t\xF4i xem qua ch\xFAng v\xE0 t\xF4i s\u1EBD gi\u1EA3i th\xEDch gi\xFAp
-    ch\u1ECB. "
-  speed: 0.02
 --- !u!1 &291732338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,7 +3177,6 @@ GameObject:
   - component: {fileID: 291732339}
   - component: {fileID: 291732342}
   - component: {fileID: 291732341}
-  - component: {fileID: 291732340}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -3223,23 +3205,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -193.66304}
   m_SizeDelta: {x: 1503.2651, y: 256.1815}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &291732340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291732338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 521153459}
-  content:
-  - "H\xE3y gi\u1EEF g\xECn s\u1EE9c kh\u1ECFe v\xE0 ho\xE0n th\xE0nh t\u1ED1t nhi\u1EC7m
-    v\u1EE5 nh\xE9. T\u1EA1m bi\u1EC7t anh."
-  speed: 0.02
 --- !u!114 &291732341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3362,7 +3327,6 @@ GameObject:
   - component: {fileID: 317733923}
   - component: {fileID: 317733926}
   - component: {fileID: 317733925}
-  - component: {fileID: 317733924}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -3391,22 +3355,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &317733924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317733922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 63242569}
-  content:
-  - " C\xF2n email n\xE0y th\xEC sao?"
-  speed: 0.02
 --- !u!114 &317733925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3768,7 +3716,6 @@ GameObject:
   - component: {fileID: 341792257}
   - component: {fileID: 341792260}
   - component: {fileID: 341792259}
-  - component: {fileID: 341792258}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -3797,34 +3744,6 @@ RectTransform:
   m_AnchoredPosition: {x: -50, y: -250}
   m_SizeDelta: {x: 1503.2651, y: 792.3473}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &341792258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341792256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 1213725843}
-  content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t email l\u1EEBa \u0111\u1EA3o, kh\xF4ng tin c\u1EADy.
-    M\u1EB7c d\xF9 b\xE2y gi\u1EDD ki\u1EC3u l\u1EEBa \u0111\u1EA3o n\xE0y \xEDt
-    g\u1EB7p, nh\u01B0ng v\u1EABn c\xF3 th\u1EC3 x\u1EA3y ra. Kh\xF4ng c\xF3 c\xE1c
-    ch\u01B0\u01A1ng tr\xECnh khuy\u1EBFn m\xE3i, t\u1EB7ng qu\xE0 ki\u1EC3u n\xE0y.
-    H\xECnh th\u1EE9c email c\u1EA9u th\u1EA3, b\u1ED1 c\u1EE5c kh\xF4ng h\u1EE3p
-    l\xFD, d\u1EABn \u0111\u1EBFn email kh\xF4ng trang tr\u1ECDng. Ngo\xE0i ra, h\xE3y
-    b\u1ECF qua t\u1EA5t c\u1EA3 c\xE1c email l\u1EA1 y\xEAu c\u1EA7u cung c\u1EA5p
-    th\xF4ng tin c\xE1 nh\xE2n nh\u1EA1y c\u1EA3m nh\u01B0: s\u1ED1 \u0111i\u1EC7n
-    tho\u1EA1i, \u0111\u1ECBa ch\u1EC9, ch\u1EE9ng minh nh\xE2n d\xE2n. H\xE3y c\u1EA9n
-    th\u1EADn v\xE0 c\xE2n nh\u1EAFc tr\u01B0\u1EDBc b\u1EA5t k\xEC tr\u01B0\u1EDDng
-    h\u1EE3p n\xE0o y\xEAu c\u1EA7u b\u1EA3n th\xE2n cung c\u1EA5p th\xF4ng tin c\xE1
-    nh\xE2n nh\u1EA1y c\u1EA3m \u0111\u1EC3 tr\xE1nh c\xE1c r\u1EE7i ro kh\xF4ng
-    \u0111\xE1ng c\xF3."
-  speed: 0.02
 --- !u!114 &341792259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3928,7 +3847,7 @@ MonoBehaviour:
     tin c\u1EADy.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4767,7 +4686,6 @@ GameObject:
   - component: {fileID: 424296357}
   - component: {fileID: 424296359}
   - component: {fileID: 424296358}
-  - component: {fileID: 424296360}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -4834,23 +4752,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424296356}
   m_CullTransparentMesh: 1
---- !u!114 &424296360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424296356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 985941132}
-  content:
-  - "\u0110\xE2y th\u01B0a c\u1EA3nh s\xE1t. \u0110\xE2y l\xE0 email \u0111\u1EA7u
-    ti\xEAn."
-  speed: 0.02
 --- !u!1 &482249751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,7 +4863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 487.76, y: -216}
+  m_AnchoredPosition: {x: 498, y: -263}
   m_SizeDelta: {x: 160, y: 85.6381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495386731
@@ -5070,7 +4971,6 @@ GameObject:
   - component: {fileID: 513161376}
   - component: {fileID: 513161378}
   - component: {fileID: 513161377}
-  - component: {fileID: 513161379}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -5137,24 +5037,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513161375}
   m_CullTransparentMesh: 1
---- !u!114 &513161379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513161375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 1277956469}
-  content:
-  - "C\u1EA3m \u01A1n c\u1EA3nh s\xE1t \u0111\xE3 gi\xFAp t\xF4i ph\xE2n t\xEDch
-    ch\xFAng. \u0110\xE3 l\xE0m phi\u1EC1n c\u1EA3nh s\xE1t r\u1ED3i. Ch\xFAc anh
-    c\xF3 m\u1ED9t ng\xE0y l\xE0m vi\u1EC7c hi\u1EC7u qu\u1EA3. "
-  speed: 0.02
 --- !u!1 &520826690
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,7 +5054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &520826691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5353,7 +5235,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "C\u1EA3m \u01A1n c\u1EA3nh s\xE1t \u0111\xE3 gi\xFAp t\xF4i ph\xE2n t\xEDch
+    ch\xFAng. \u0110\xE3 l\xE0m phi\u1EC1n c\u1EA3nh s\xE1t r\u1ED3i. Ch\xFAc anh
+    c\xF3 m\u1ED9t ng\xE0y l\xE0m vi\u1EC7c hi\u1EC7u qu\u1EA3.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -5539,8 +5423,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -28}
-  m_SizeDelta: {x: 1135.5105, y: 331.2457}
+  m_AnchoredPosition: {x: -12.1895, y: -18.857788}
+  m_SizeDelta: {x: 1249.28, y: 373.9094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531478182
 MonoBehaviour:
@@ -5562,7 +5446,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>Gi\u1EA3i th\xEDch:</b> \u0110\xE2y l\xE0 m\u1ED9t email uy t\xEDn.
+    <br>\tTh\u1EE9 nh\u1EA5t, email n\xE0y \u0111\u01B0\u1EE3c g\u1EEDi t\u1EEB m\u1ED9t
+    t\xE0i kho\u1EA3n uy t\xEDn tr\xEAn LinkedIn, m\u1ED9t m\u1EA1ng x\xE3 h\u1ED9i
+    chuy\xEAn v\u1EC1 m\u1EA1ng l\u01B0\u1EDBi k\u1EBFt n\u1ED1i chuy\xEAn nghi\u1EC7p.
+    \u0110i\u1EC1u n\xE0y th\u1EC3 hi\u1EC7n qua ngu\u1ED3n g\u1ED1c c\u1EE7a email
+    v\xE0 c\xE1ch n\xF3 \u0111\u01B0\u1EE3c g\u1EEDi th\xF4ng qua LinkedIn. <br>\tTh\u1EE9
+    hai, ti\xEAu \u0111\u1EC1 c\u1EE7a email r\xF5 r\xE0ng, chuy\xEAn nghi\u1EC7p,
+    \u0111\xFAng ch\xEDnh t\u1EA3, v\xE0 tu\xE2n theo ng\u1EEF ph\xE1p. Ti\xEAu \u0111\u1EC1
+    n\xE0y kh\xF4ng g\xE2y hi\u1EC3u l\u1EA7m v\xE0 th\u1EC3 hi\u1EC7n m\u1EE5c \u0111\xEDch
+    ch\xEDnh c\u1EE7a email, \u0111\xF3 l\xE0 th\xF4ng b\xE1o v\u1EC1 tuy\u1EC3n
+    d\u1EE5ng t\u1EEB Amazon. <br>\tTh\u1EE9 ba, n\u1ED9i dung email r\xF5 r\xE0ng,
+    \u0111\u1EA7y \u0111\u1EE7, kh\xF4ng c\xF3 d\u1EA5u hi\u1EC7u ch\xE8o k\xE9o
+    ho\u1EB7c l\u1EEBa \u0111\u1EA3o. Email t\u1EADp trung v\xE0o th\xF4ng b\xE1o
+    tuy\u1EC3n d\u1EE5ng t\u1EEB Amazon v\xE0 kh\xF4ng y\xEAu c\u1EA7u th\xF4ng tin
+    c\xE1 nh\xE2n nh\u1EA1y c\u1EA3m ho\u1EB7c giao d\u1ECBch t\xE0i ch\xEDnh.<br>\tTh\u1EE9
+    t\u01B0, c\xE1c \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt trong email r\xF5 r\xE0ng
+    v\xE0 chuy\u1EC3n h\u01B0\u1EDBng ng\u01B0\u1EDDi nh\u1EADn \u0111\u1EBFn trang
+    web tuy\u1EC3n d\u1EE5ng c\u1EE7a Amazon, \u0111\u1EA3m b\u1EA3o t\xEDnh x\xE1c
+    th\u1EF1c v\xE0 an to\xE0n.<br>\t Th\u1EE9 n\u0103m, khi nh\u1EA5n v\xE0o \"View
+    Message,\" s\u1EBD chuy\u1EC3n h\u01B0\u1EDBng ng\u01B0\u1EDDi nh\u1EADn \u0111\u1EBFn
+    trang tin nh\u1EAFn c\xE1 nh\xE2n trong \u1EE9ng d\u1EE5ng LinkedIn c\u1EE7a
+    ch\u1EE7 s\u1EDF h\u1EEFu email, th\u1EC3 hi\u1EC7n t\xEDnh ri\xEAng t\u01B0
+    v\xE0 x\xE1c th\u1EF1c c\u1EE7a th\xF4ng \u0111i\u1EC7p.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -5589,15 +5495,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 25.95
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5798,7 +5704,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Th\xEC ra l\xE0 v\u1EADy. T\xF4i \u0111\xE3 r\xFAt \u0111\u01B0\u1EE3c
+    r\u1EA5t nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
+    th\xEDch c\u1EE7a c\u1EA3nh s\xE1t."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7495,7 +7403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: npc2q5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7684,8 +7592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -28}
-  m_SizeDelta: {x: 1135.5105, y: 331.2457}
+  m_AnchoredPosition: {x: 0.000019073, y: -26}
+  m_SizeDelta: {x: 1277.811, y: 414.7701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638576036
 MonoBehaviour:
@@ -7707,7 +7615,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>Gi\u1EA3i th\xEDch:</b><br> C\xF3. \u0110\xE2y l\xE0 m\u1ED9t email
+    uy t\xEDn.<br> Ban \u0111\u1EA7u khi m\u1EDBi nh\xECn qua n\u1ED9i dung email,
+    c\xF3 th\u1EC3 t\u01B0\u1EDFng \u0111\xE2y l\xE0 m\u1ED9t email kh\xF4ng uy t\xEDn
+    do n\u1ED9i dung kh\xE1 c\xE0 ch\u1EDBn. Tuy nhi\xEAn, th\xF4ng tin x\xE1c \u0111\u1ECBnh
+    r\u1EB1ng \u0111\xE2y l\xE0 m\u1ED9t email uy t\xEDn t\u1EEB Discord, th\xF4ng
+    b\xE1o v\u1EC1 vi\u1EC7c c\u1EADp nh\u1EADt th\xE0nh c\xF4ng m\u1EADt kh\u1EA9u.
+    <br>- Email n\xE0y \u0111\u01B0\u1EE3c g\u1EEDi t\u1EEB t\xE0i kho\u1EA3n t\u1EF1
+    \u0111\u1ED9ng c\u1EE7a Discord, l\xE0 m\u1ED9t d\u1ECBch v\u1EE5 ph\u1ED5 bi\u1EBFn
+    trong l\u0129nh v\u1EF1c tr\xF2 chuy\u1EC7n v\xE0 giao ti\u1EBFp tr\u1EF1c tuy\u1EBFn.
+    <br>- Ti\xEAu \u0111\u1EC1 c\u1EE7a email r\u1EA5t r\xF5 r\xE0ng v\xE0 ch\xEDnh
+    x\xE1c th\u1EC3 hi\u1EC7n n\u1ED9i dung v\u1EC1 vi\u1EC7c c\u1EADp nh\u1EADt
+    m\u1EADt kh\u1EA9u. <br>- Ti\xEAu \u0111\u1EC1 n\xE0y kh\xF4ng c\xF3 l\u1ED7i
+    v\u1EC1 ng\u1EEF ph\xE1p v\xE0 ch\xEDnh t\u1EA3, th\u1EC3 hi\u1EC7n s\u1EF1 ch\u1EC9n
+    chu; S\u1EF1 s\xE1ng t\u1EA1o trong c\xE1ch s\u1EED d\u1EE5ng ng\xF4n t\u1EEB
+    trong email c\xF3 th\u1EC3 t\u1EA1o s\u1EF1 th\xFA v\u1ECB v\xE0 m\u1EDBi l\u1EA1
+    cho ng\u01B0\u1EDDi \u0111\u1ECDc, nh\u01B0ng v\u1EABn gi\u1EEF \u0111\u01B0\u1EE3c
+    t\xEDnh r\xF5 r\xE0ng v\xE0 th\xF4ng tin.<br> \u0110i\u1EC1u n\xE0y c\xF3 th\u1EC3
+    l\xE0 m\u1ED9t c\xE1ch Discord \xE1p d\u1EE5ng \u0111\u1EC3 t\u1EA1o tr\u1EA3i
+    nghi\u1EC7m ng\u01B0\u1EDDi d\xF9ng th\xFA v\u1ECB h\u01A1n khi \u0111\u1ECDc
+    email. \u0110\u1EB7c bi\u1EC7t, n\u1ED9i dung email r\xF5 r\xE0ng v\xE0 kh\xF4ng
+    c\xF3 d\u1EA5u hi\u1EC7u ch\xE8o k\xE9o ho\u1EB7c l\u1EEBa \u0111\u1EA3o v\xE0
+    \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\xEDnh k\xE8m trong email d\u1EABn
+    \u0111\u1EBFn trang web uy t\xEDn c\u1EE7a Discord, \u0111\u1EA3m b\u1EA3o t\xEDnh
+    x\xE1c th\u1EF1c v\xE0 an to\xE0n cho ng\u01B0\u1EDDi nh\u1EADn.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7734,10 +7665,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 25.9
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -8881,7 +8812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u1ED2, \u0111\xE2y l\xE0 email cu\u1ED1i c\xF9ng r\u1ED3i.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -8969,7 +8900,6 @@ GameObject:
   - component: {fileID: 716380819}
   - component: {fileID: 716380822}
   - component: {fileID: 716380821}
-  - component: {fileID: 716380820}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -8998,22 +8928,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &716380820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716380818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 545344797}
-  content:
-  - "\xC0, \u0111\xFAng nh\u01B0 t\xF4i ngh\u0129."
-  speed: 0.02
 --- !u!114 &716380821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9609,7 +9523,7 @@ MonoBehaviour:
     v\xE0o m\u1ED9t \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt kh\xF4ng r\xF5 r\xE0ng\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9694,7 +9608,6 @@ GameObject:
   - component: {fileID: 772163972}
   - component: {fileID: 772163975}
   - component: {fileID: 772163974}
-  - component: {fileID: 772163973}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -9723,22 +9636,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &772163973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772163971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 776286873}
-  content:
-  - "\u1ED2, \u0111\xE2y l\xE0 email cu\u1ED1i c\xF9ng r\u1ED3i. "
-  speed: 0.02
 --- !u!114 &772163974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9834,7 +9731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: " \u1ED2, \u0111\xE2y l\xE0 email cu\u1ED1i c\xF9ng r\u1ED3i."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -9997,7 +9894,6 @@ GameObject:
   - component: {fileID: 781291262}
   - component: {fileID: 781291265}
   - component: {fileID: 781291264}
-  - component: {fileID: 781291263}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -10023,46 +9919,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -250}
-  m_SizeDelta: {x: 1503.2651, y: 792.3473}
+  m_AnchoredPosition: {x: -4.2889, y: -174.83075}
+  m_SizeDelta: {x: 1594.6873, y: 942.6858}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &781291263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781291261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 531478182}
-  content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t email uy t\xEDn. Th\u1EE9 nh\u1EA5t, email n\xE0y
-    \u0111\u01B0\u1EE3c g\u1EEDi t\u1EEB m\u1ED9t t\xE0i kho\u1EA3n uy t\xEDn tr\xEAn
-    LinkedIn, m\u1ED9t m\u1EA1ng x\xE3 h\u1ED9i chuy\xEAn v\u1EC1 m\u1EA1ng l\u01B0\u1EDBi
-    k\u1EBFt n\u1ED1i chuy\xEAn nghi\u1EC7p. \u0110i\u1EC1u n\xE0y th\u1EC3 hi\u1EC7n
-    qua ngu\u1ED3n g\u1ED1c c\u1EE7a email v\xE0 c\xE1ch n\xF3 \u0111\u01B0\u1EE3c
-    g\u1EEDi th\xF4ng qua LinkedIn. Th\u1EE9 hai, ti\xEAu \u0111\u1EC1 c\u1EE7a email
-    r\xF5 r\xE0ng, chuy\xEAn nghi\u1EC7p, \u0111\xFAng ch\xEDnh t\u1EA3, v\xE0 tu\xE2n
-    theo ng\u1EEF ph\xE1p. Ti\xEAu \u0111\u1EC1 n\xE0y kh\xF4ng g\xE2y hi\u1EC3u
-    l\u1EA7m v\xE0 th\u1EC3 hi\u1EC7n m\u1EE5c \u0111\xEDch ch\xEDnh c\u1EE7a email,
-    \u0111\xF3 l\xE0 th\xF4ng b\xE1o v\u1EC1 tuy\u1EC3n d\u1EE5ng t\u1EEB Amazon.
-    Th\u1EE9 ba, n\u1ED9i dung email r\xF5 r\xE0ng, \u0111\u1EA7y \u0111\u1EE7, kh\xF4ng
-    c\xF3 d\u1EA5u hi\u1EC7u ch\xE8o k\xE9o ho\u1EB7c l\u1EEBa \u0111\u1EA3o. Email
-    t\u1EADp trung v\xE0o th\xF4ng b\xE1o tuy\u1EC3n d\u1EE5ng t\u1EEB Amazon v\xE0
-    kh\xF4ng y\xEAu c\u1EA7u th\xF4ng tin c\xE1 nh\xE2n nh\u1EA1y c\u1EA3m ho\u1EB7c
-    giao d\u1ECBch t\xE0i ch\xEDnh. Th\u1EE9 t\u01B0, c\xE1c \u0111\u01B0\u1EDDng
-    li\xEAn k\u1EBFt trong email r\xF5 r\xE0ng v\xE0 chuy\u1EC3n h\u01B0\u1EDBng
-    ng\u01B0\u1EDDi nh\u1EADn \u0111\u1EBFn trang web tuy\u1EC3n d\u1EE5ng c\u1EE7a
-    Amazon, \u0111\u1EA3m b\u1EA3o t\xEDnh x\xE1c th\u1EF1c v\xE0 an to\xE0n. Th\u1EE9
-    n\u0103m, khi nh\u1EA5n v\xE0o \"View Message,\" s\u1EBD chuy\u1EC3n h\u01B0\u1EDBng
-    ng\u01B0\u1EDDi nh\u1EADn \u0111\u1EBFn trang tin nh\u1EAFn c\xE1 nh\xE2n trong
-    \u1EE9ng d\u1EE5ng LinkedIn c\u1EE7a ch\u1EE7 s\u1EDF h\u1EEFu email, th\u1EC3
-    hi\u1EC7n t\xEDnh ri\xEAng t\u01B0 v\xE0 x\xE1c th\u1EF1c c\u1EE7a th\xF4ng \u0111i\u1EC7p."
-  speed: 0.02
 --- !u!114 &781291264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10332,7 +10191,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'New Text '
+  m_text: "<page>Ch\xE0o c\u1EA3nh s\xE1t, <br> t\xF4i v\u1EEBa </b> nh\u1EADn \u0111\u01B0\u1EE3c<page>
+    th\xF4ng b\xE1o r\u1EB1ng anh s\u1EBD \u0111\u1EBFn \u0111\xE2y. T\xF4i r\u1EA5t
+    vui v\xEC anh \u0111\xE3 \u0111\u1EBFn. T\xF4i g\u1EB7p m\u1ED9t v\xE0i email
+    m\xE0 kh\xF4ng bi\u1EBFt ch\xFAng c\xF3 ph\u1EA3i l\xE0 email l\u1EEBa \u0111\u1EA3o
+    hay kh\xF4ng. T\xF4i kh\xF4ng bi\u1EBFt c\xE1ch \u0111\u1EC3 x\xE1c minh t\xEDnh
+    \u0111\xFAng ch\xE2n th\u1EF1c c\u1EE7a m\u1ED9t email. Mong anh h\xE3y gi\xFAp
+    t\xF4i."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10443,8 +10308,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -28}
-  m_SizeDelta: {x: 1135.5105, y: 331.2457}
+  m_AnchoredPosition: {x: -18, y: -27}
+  m_SizeDelta: {x: 1262.9519, y: 309.6878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810949423
 MonoBehaviour:
@@ -10466,7 +10331,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>Gi\u1EA3i th\xEDch:</b><br>\u0110\xE2y l\xE0 m\u1ED9t email l\u1EEBa
+    \u0111\u1EA3o, kh\xF4ng tin c\u1EADy. M\u1EB7c d\xF9 b\xE2y gi\u1EDD ki\u1EC3u
+    l\u1EEBa \u0111\u1EA3o n\xE0y \xEDt g\u1EB7p, nh\u01B0ng v\u1EABn c\xF3 th\u1EC3
+    x\u1EA3y ra. Kh\xF4ng c\xF3 c\xE1c ch\u01B0\u01A1ng tr\xECnh khuy\u1EBFn m\xE3i,
+    t\u1EB7ng qu\xE0 ki\u1EC3u n\xE0y. H\xECnh th\u1EE9c email c\u1EA9u th\u1EA3,
+    b\u1ED1 c\u1EE5c kh\xF4ng h\u1EE3p l\xFD, d\u1EABn \u0111\u1EBFn email kh\xF4ng
+    trang tr\u1ECDng, v\u1EDBi c\xE1c email ch\xEDnh th\u1EE9c, tin c\u1EADy t\u1EEB
+    c\xE1c c\xF4ng ty, t\u1ED5 ch\u1EE9c, email s\u1EBD \u0111\u01B0\u1EE3c vi\u1EBFt
+    m\u1ED9t c\xE1ch trang tr\u1ECDng. <br>Ngo\xE0i ra c\xF3 th\u1EC3 nh\u1EADn th\u1EA5y
+    qua c\xE1c d\u1EA5u hi\u1EC7u nh\u01B0: email ng\u01B0\u1EDDi g\u1EEDi kh\xF4ng
+    ph\u1EA3i l\xE0 t\xEAn c\u1EE7a doanh nghi\u1EC7p m\xE0 l\xE0 m\u1ED9t email
+    c\xE1 nh\xE2n kh\xF4ng r\xF5 r\xE0ng, v\xE0 trong n\u1ED9i dung email y\xEAu
+    c\u1EA7u ph\u1EA3i nh\u1EA5n v\xE0o m\u1ED9t \u0111\u01B0\u1EDDng link li\xEAn
+    k\u1EBFt kh\xF4ng r\xF5 r\xE0ng.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10600,7 +10478,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: " V\xE2ng, kh\xF4ng c\xF3 g\xEC, h\xE3y c\u1EA9n th\u1EADn tr\u01B0\u1EDBc
+    nh\u1EEFng email m\xE0 m\xECnh nh\u1EADn \u0111\u01B0\u1EE3c nh\xE9. \u0110\u1ED3ng
+    th\u1EDDi c\u0169ng h\xE3y c\u1EA9n th\u1EADn khi cung c\u1EA5p th\xF4ng tin
+    c\xE1 nh\xE2n c\u1EE7a m\xECnh cho b\xEAn th\u1EE9 3. N\u1EBFu kh\xF4ng c\xF2n
+    v\u1EA5n \u0111\u1EC1 g\xEC th\xEC t\xF4i \u0111i \u0111\xE2y. T\u1EA1m bi\u1EC7t!\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10821,7 +10703,6 @@ GameObject:
   - component: {fileID: 823132570}
   - component: {fileID: 823132573}
   - component: {fileID: 823132572}
-  - component: {fileID: 823132571}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -10850,23 +10731,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &823132571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823132569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 709808372}
-  content:
-  - "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m tra
-    email ti\u1EBFp theo nh\xE9! "
-  speed: 0.02
 --- !u!114 &823132572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11074,7 +10938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 99, y: -65.85321}
+  m_AnchoredPosition: {x: 139.3, y: -91.4}
   m_SizeDelta: {x: 160, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842914043
@@ -11439,7 +11303,6 @@ GameObject:
   - component: {fileID: 864048022}
   - component: {fileID: 864048025}
   - component: {fileID: 864048024}
-  - component: {fileID: 864048023}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -11465,48 +11328,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -250}
-  m_SizeDelta: {x: 1503.2651, y: 792.3473}
+  m_AnchoredPosition: {x: -2.0508, y: -171.1159}
+  m_SizeDelta: {x: 1599.1636, y: 950.1155}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &864048023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864048021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 638576036}
-  content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t email uy t\xEDn. Ban \u0111\u1EA7u khi m\u1EDBi nh\xECn
-    qua n\u1ED9i dung email, c\xF3 th\u1EC3 t\u01B0\u1EDFng \u0111\xE2y l\xE0 m\u1ED9t
-    email kh\xF4ng uy t\xEDn do n\u1ED9i dung kh\xE1 c\xE0 ch\u1EDBn. Tuy nhi\xEAn,
-    th\xF4ng tin x\xE1c \u0111\u1ECBnh r\u1EB1ng \u0111\xE2y l\xE0 m\u1ED9t email
-    uy t\xEDn t\u1EEB Discord, th\xF4ng b\xE1o v\u1EC1 vi\u1EC7c c\u1EADp nh\u1EADt
-    th\xE0nh c\xF4ng m\u1EADt kh\u1EA9u. Email n\xE0y \u0111\u01B0\u1EE3c g\u1EEDi
-    t\u1EEB t\xE0i kho\u1EA3n t\u1EF1 \u0111\u1ED9ng c\u1EE7a Discord, l\xE0 m\u1ED9t
-    d\u1ECBch v\u1EE5 ph\u1ED5 bi\u1EBFn trong l\u0129nh v\u1EF1c tr\xF2 chuy\u1EC7n
-    v\xE0 giao ti\u1EBFp tr\u1EF1c tuy\u1EBFn. Ti\xEAu \u0111\u1EC1 c\u1EE7a email
-    r\u1EA5t r\xF5 r\xE0ng v\xE0 ch\xEDnh x\xE1c th\u1EC3 hi\u1EC7n n\u1ED9i dung
-    v\u1EC1 vi\u1EC7c c\u1EADp nh\u1EADt m\u1EADt kh\u1EA9u. Ti\xEAu \u0111\u1EC1
-    n\xE0y kh\xF4ng c\xF3 l\u1ED7i v\u1EC1 ng\u1EEF ph\xE1p v\xE0 ch\xEDnh t\u1EA3,
-    th\u1EC3 hi\u1EC7n s\u1EF1 ch\u1EC9n chu; S\u1EF1 s\xE1ng t\u1EA1o trong c\xE1ch
-    s\u1EED d\u1EE5ng ng\xF4n t\u1EEB trong email c\xF3 th\u1EC3 t\u1EA1o s\u1EF1
-    th\xFA v\u1ECB v\xE0 m\u1EDBi l\u1EA1 cho ng\u01B0\u1EDDi \u0111\u1ECDc, nh\u01B0ng
-    v\u1EABn gi\u1EEF \u0111\u01B0\u1EE3c t\xEDnh r\xF5 r\xE0ng v\xE0 th\xF4ng tin.
-    \u0110i\u1EC1u n\xE0y c\xF3 th\u1EC3 l\xE0 m\u1ED9t c\xE1ch Discord \xE1p d\u1EE5ng
-    \u0111\u1EC3 t\u1EA1o tr\u1EA3i nghi\u1EC7m ng\u01B0\u1EDDi d\xF9ng th\xFA v\u1ECB
-    h\u01A1n khi \u0111\u1ECDc email. \u0110\u1EB7c bi\u1EC7t, n\u1ED9i dung email
-    r\xF5 r\xE0ng v\xE0 kh\xF4ng c\xF3 d\u1EA5u hi\u1EC7u ch\xE8o k\xE9o ho\u1EB7c
-    l\u1EEBa \u0111\u1EA3o v\xE0 \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\xEDnh
-    k\xE8m trong email d\u1EABn \u0111\u1EBFn trang web uy t\xEDn c\u1EE7a Discord,
-    \u0111\u1EA3m b\u1EA3o t\xEDnh x\xE1c th\u1EF1c v\xE0 an to\xE0n cho ng\u01B0\u1EDDi
-    nh\u1EADn."
-  speed: 0.02
 --- !u!114 &864048024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12706,7 +12530,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0110\xE2y th\u01B0a c\u1EA3nh s\xE1t. \u0110\xE2y l\xE0 email \u0111\u1EA7u
+    ti\xEAn.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -13747,7 +13572,6 @@ GameObject:
   - component: {fileID: 1048511592}
   - component: {fileID: 1048511594}
   - component: {fileID: 1048511593}
-  - component: {fileID: 1048511595}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -13814,26 +13638,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048511591}
   m_CullTransparentMesh: 1
---- !u!114 &1048511595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048511591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 811014468}
-  content:
-  - "V\xE2ng, kh\xF4ng c\xF3 g\xEC, h\xE3y c\u1EA9n th\u1EADn tr\u01B0\u1EDBc nh\u1EEFng
-    email m\xE0 m\xECnh nh\u1EADn \u0111\u01B0\u1EE3c nh\xE9. \u0110\u1ED3ng th\u1EDDi
-    c\u0169ng h\xE3y c\u1EA9n th\u1EADn khi cung c\u1EA5p th\xF4ng tin c\xE1 nh\xE2n
-    c\u1EE7a m\xECnh cho b\xEAn th\u1EE9 3. N\u1EBFu kh\xF4ng c\xF2n v\u1EA5n \u0111\u1EC1
-    g\xEC th\xEC t\xF4i \u0111i \u0111\xE2y. T\u1EA1m bi\u1EC7t! "
-  speed: 0.02
 --- !u!1 &1052090926
 GameObject:
   m_ObjectHideFlags: 0
@@ -14547,7 +14351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 487.76, y: -216}
+  m_AnchoredPosition: {x: 505, y: -224.66}
   m_SizeDelta: {x: 160, y: 85.6381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119985189
@@ -15811,7 +15615,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>Gi\u1EA3i th\xEDch:</b> \u0110\xE2y l\xE0 m\u1ED9t email l\u1EEBa \u0111\u1EA3o,
+    kh\xF4ng tin c\u1EADy. M\u1EB7c d\xF9 b\xE2y gi\u1EDD ki\u1EC3u l\u1EEBa \u0111\u1EA3o
+    n\xE0y \xEDt g\u1EB7p, nh\u01B0ng v\u1EABn c\xF3 th\u1EC3 x\u1EA3y ra. <br>-
+    Kh\xF4ng c\xF3 c\xE1c ch\u01B0\u01A1ng tr\xECnh khuy\u1EBFn m\xE3i, t\u1EB7ng
+    qu\xE0 ki\u1EC3u n\xE0y.  <br>- H\xECnh th\u1EE9c email c\u1EA9u th\u1EA3, b\u1ED1
+    c\u1EE5c kh\xF4ng h\u1EE3p l\xFD, d\u1EABn \u0111\u1EBFn email kh\xF4ng trang
+    tr\u1ECDng.  <br>Ngo\xE0i ra, h\xE3y b\u1ECF qua t\u1EA5t c\u1EA3 c\xE1c email
+    l\u1EA1 y\xEAu c\u1EA7u cung c\u1EA5p th\xF4ng tin c\xE1 nh\xE2n nh\u1EA1y c\u1EA3m
+    nh\u01B0: s\u1ED1 \u0111i\u1EC7n tho\u1EA1i, \u0111\u1ECBa ch\u1EC9, ch\u1EE9ng
+    minh nh\xE2n d\xE2n. H\xE3y c\u1EA9n th\u1EADn v\xE0 c\xE2n nh\u1EAFc tr\u01B0\u1EDBc
+    b\u1EA5t k\xEC tr\u01B0\u1EDDng h\u1EE3p n\xE0o y\xEAu c\u1EA7u b\u1EA3n th\xE2n
+    cung c\u1EA5p th\xF4ng tin c\xE1 nh\xE2n nh\u1EA1y c\u1EA3m \u0111\u1EC3 tr\xE1nh
+    c\xE1c r\u1EE7i ro kh\xF4ng \u0111\xE1ng c\xF3.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -16047,7 +15863,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u1ED2 th\xEC ra l\xE0 v\u1EADy. T\xF4i hi\u1EC3u r\u1ED3i th\u01B0a c\u1EA3nh
+    s\xE1t. \u0110\xE2y l\xE0 email ti\u1EBFp theo.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -16462,7 +16279,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "C\u1EA3m \u01A1n c\u1EA3nh s\xE1t \u0111\xE3 gi\xFAp t\xF4i ph\xE2n t\xEDch
+    ch\xFAng. \u0110\xE3 l\xE0m phi\u1EC1n c\u1EA3nh s\xE1t r\u1ED3i. Ch\xFAc anh
+    c\xF3 m\u1ED9t ng\xE0y l\xE0m vi\u1EC7c hi\u1EC7u qu\u1EA3.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -16647,7 +16466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 487.76, y: -216}
+  m_AnchoredPosition: {x: 496, y: -257}
   m_SizeDelta: {x: 160, y: 85.6381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304271838
@@ -17226,7 +17045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 513, y: -42.819}
+  m_AnchoredPosition: {x: 515, y: -70}
   m_SizeDelta: {x: 160, y: 85.6381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1341925308
@@ -17334,7 +17153,6 @@ GameObject:
   - component: {fileID: 1351763226}
   - component: {fileID: 1351763229}
   - component: {fileID: 1351763228}
-  - component: {fileID: 1351763227}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -17360,40 +17178,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -250}
-  m_SizeDelta: {x: 1503.2651, y: 792.3473}
+  m_AnchoredPosition: {x: -8.3521, y: -198.19412}
+  m_SizeDelta: {x: 1578.4346, y: 895.9591}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1351763227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351763225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 1701288164}
-  content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t email kh\xF4ng uy t\xEDn, l\xE0 m\u1ED9t email l\u1EEBa
-    \u0111\u1EA3o. Th\u1EE9 nh\u1EA5t, n\u1ED9i dung email y\xEAu c\u1EA7u thanh
-    to\xE1n \u0111\u1EC3 duy tr\xEC t\xE0i kho\u1EA3n, m\u1ED9t ph\u01B0\u01A1ng
-    th\u1EE9c th\u01B0\u1EDDng \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng trong c\xE1c
-    email l\u1EEBa \u0111\u1EA3o. Th\u1EE9 hai, khi nh\xECn t\u1ED5ng quan, email
-    n\xE0y kh\xF4ng c\xF3 s\u1EF1 ch\u1EC9n chu, b\u1EDFi v\xEC background c\u1EE7a
-    logo v\xE0 background c\u1EE7a email kh\xF4ng \u0111\u1ED3ng nh\u1EA5t. \u0110i\u1EC1u
-    n\xE0y c\xF3 th\u1EC3 l\xE0 m\u1ED9t d\u1EA5u hi\u1EC7u s\u01A1 \u0111\u1EB3ng
-    c\u1EE7a m\u1ED9t email l\u1EEBa \u0111\u1EA3o. Th\u1EE9 ba, s\u1EF1 sai l\u1EC7ch
-    trong \u0111\u1ECBnh d\u1EA1ng t\xEAn \"metflix\" thay v\xEC \"netflix\" trong
-    c\xE1c \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt l\xE0 m\u1ED9t d\u1EA5u hi\u1EC7u
-    r\xF5 r\xE0ng v\u1EC1 t\xEDnh kh\xF4ng uy t\xEDn c\u1EE7a email n\xE0y. D\u1EF1a
-    v\xE0o nh\u1EEFng \u0111i\u1EC3m tr\xEAn, c\u1EA7n c\u1EA9n tr\u1ECDng v\xE0
-    kh\xF4ng n\xEAn ti\u1EBFp t\u1EE5c th\u1EF1c hi\u1EC7n b\u1EA5t k\u1EF3 y\xEAu
-    c\u1EA7u thanh to\xE1n n\xE0o t\u1EEB email n\xE0y, v\xEC n\xF3 c\xF3 th\u1EC3
-    l\xE0 m\u1ED9t c\u1ED1 g\u1EAFng l\u1EEBa \u0111\u1EA3o."
-  speed: 0.02
 --- !u!114 &1351763228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18396,7 +18183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 487.76, y: -216}
+  m_AnchoredPosition: {x: 525, y: -276.2}
   m_SizeDelta: {x: 160, y: 85.6381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427057535
@@ -19247,7 +19034,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u1ED2, \u0111\xE2y l\xE0 email cu\u1ED1i c\xF9ng r\u1ED3i."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -19335,7 +19122,6 @@ GameObject:
   - component: {fileID: 1470854023}
   - component: {fileID: 1470854026}
   - component: {fileID: 1470854025}
-  - component: {fileID: 1470854024}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -19364,24 +19150,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1470854024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470854022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 634387885}
-  content:
-  - "Th\xEC ra l\xE0 v\u1EADy. T\xF4i \u0111\xE3 r\xFAt \u0111\u01B0\u1EE3c r\u1EA5t
-    nhi\u1EC1u kinh nghi\u1EC7m v\xE0 ki\u1EBFn th\u1EE9c qua l\u1EDDi gi\u1EA3i
-    th\xEDch c\u1EE7a c\u1EA3nh s\xE1t. "
-  speed: 0.02
 --- !u!114 &1470854025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20342,7 +20110,6 @@ GameObject:
   - component: {fileID: 1600497513}
   - component: {fileID: 1600497516}
   - component: {fileID: 1600497515}
-  - component: {fileID: 1600497514}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -20371,23 +20138,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1600497514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600497512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 1874942333}
-  content:
-  - "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m tra
-    email ti\u1EBFp theo nh\xE9! "
-  speed: 0.02
 --- !u!114 &1600497515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20673,7 +20423,6 @@ GameObject:
   - component: {fileID: 1626672902}
   - component: {fileID: 1626672905}
   - component: {fileID: 1626672904}
-  - component: {fileID: 1626672903}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -20702,26 +20451,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1626672903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626672901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 1468086006}
-  content:
-  - "Th\u1EADt l\xE0 t\u1EC7, \u0111\u1EBFn c\u1EA3 ng\xE2n h\xE0ng c\u0169ng b\u1ECB
-    b\u1ECDn ch\xFAng nh\xFAng tay, may m\xE0 t\xF4i \u0111\xE3 c\u1EA3nh gi\xE1c
-    v\xE0 nh\u1EDD anh gi\xFAp. C\xF2n m\u1ED9t tin nh\u1EAFn cu\u1ED1i c\xF9ng,
-    tuy t\xF4i kh\xF4ng th\u1EA5y g\xEC \u0111\xE1ng nghi nh\u01B0ng anh xem qua
-    gi\xFAp t\xF4i nh\xE9?"
-  speed: 0.02
 --- !u!114 &1626672904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21393,7 +21122,6 @@ GameObject:
   - component: {fileID: 1683149505}
   - component: {fileID: 1683149508}
   - component: {fileID: 1683149507}
-  - component: {fileID: 1683149506}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -21422,27 +21150,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -159}
   m_SizeDelta: {x: 1503.2651, y: 456.269}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1683149506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683149504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 806651872}
-  content:
-  - "Ch\xE0o c\u1EA3nh s\xE1t, t\xF4i v\u1EEBa nh\u1EADn \u0111\u01B0\u1EE3c th\xF4ng
-    b\xE1o r\u1EB1ng anh s\u1EBD \u0111\u1EBFn \u0111\xE2y. T\xF4i r\u1EA5t vui v\xEC
-    anh \u0111\xE3 \u0111\u1EBFn. T\xF4i g\u1EB7p m\u1ED9t v\xE0i email m\xE0 kh\xF4ng
-    bi\u1EBFt ch\xFAng c\xF3 ph\u1EA3i l\xE0 email l\u1EEBa \u0111\u1EA3o hay kh\xF4ng.
-    T\xF4i kh\xF4ng bi\u1EBFt c\xE1ch \u0111\u1EC3 x\xE1c minh t\xEDnh \u0111\xFAng
-    ch\xE2n th\u1EF1c c\u1EE7a m\u1ED9t email. Mong anh h\xE3y gi\xFAp t\xF4i."
-  speed: 0.02
 --- !u!114 &1683149507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21806,8 +21513,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -28}
-  m_SizeDelta: {x: 1135.5105, y: 331.2457}
+  m_AnchoredPosition: {x: -5.0788, y: -17.841988}
+  m_SizeDelta: {x: 1202.5537, y: 351.5618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701288164
 MonoBehaviour:
@@ -21829,7 +21536,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>Gi\u1EA3i th\xEDch:</b><br> \u0110\xE2y l\xE0 m\u1ED9t email kh\xF4ng
+    uy t\xEDn, l\xE0 m\u1ED9t email l\u1EEBa \u0111\u1EA3o. <br>-\tTh\u1EE9 nh\u1EA5t,
+    n\u1ED9i dung email y\xEAu c\u1EA7u thanh to\xE1n \u0111\u1EC3 duy tr\xEC t\xE0i
+    kho\u1EA3n, m\u1ED9t ph\u01B0\u01A1ng th\u1EE9c th\u01B0\u1EDDng \u0111\u01B0\u1EE3c
+    s\u1EED d\u1EE5ng trong c\xE1c email l\u1EEBa \u0111\u1EA3o.  <br>-\tTh\u1EE9
+    hai, khi nh\xECn t\u1ED5ng quan, email n\xE0y kh\xF4ng c\xF3 s\u1EF1 ch\u1EC9n
+    chu, b\u1EDFi v\xEC background c\u1EE7a logo v\xE0 background c\u1EE7a email
+    kh\xF4ng \u0111\u1ED3ng nh\u1EA5t. \u0110i\u1EC1u n\xE0y c\xF3 th\u1EC3 l\xE0
+    m\u1ED9t d\u1EA5u hi\u1EC7u s\u01A1 \u0111\u1EB3ng c\u1EE7a m\u1ED9t email l\u1EEBa
+    \u0111\u1EA3o.  <br>-\tTh\u1EE9 ba, s\u1EF1 sai l\u1EC7ch trong \u0111\u1ECBnh
+    d\u1EA1ng t\xEAn \"metflix\" thay v\xEC \"netflix\" trong c\xE1c \u0111\u01B0\u1EDDng
+    li\xEAn k\u1EBFt l\xE0 m\u1ED9t d\u1EA5u hi\u1EC7u r\xF5 r\xE0ng v\u1EC1 t\xEDnh
+    kh\xF4ng uy t\xEDn c\u1EE7a email n\xE0y. <br>D\u1EF1a v\xE0o nh\u1EEFng \u0111i\u1EC3m
+    tr\xEAn, c\u1EA7n c\u1EA9n tr\u1ECDng v\xE0 kh\xF4ng n\xEAn ti\u1EBFp t\u1EE5c
+    th\u1EF1c hi\u1EC7n b\u1EA5t k\u1EF3 y\xEAu c\u1EA7u thanh to\xE1n n\xE0o t\u1EEB
+    email n\xE0y, v\xEC n\xF3 c\xF3 th\u1EC3 l\xE0 m\u1ED9t c\u1ED1 g\u1EAFng l\u1EEBa
+    \u0111\u1EA3o.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -21856,10 +21579,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 27.25
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -23127,7 +22850,6 @@ GameObject:
   - component: {fileID: 1840079498}
   - component: {fileID: 1840079500}
   - component: {fileID: 1840079499}
-  - component: {fileID: 1840079501}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -23153,8 +22875,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -250}
-  m_SizeDelta: {x: 1503.2651, y: 792.3473}
+  m_AnchoredPosition: {x: 38, y: -250.58246}
+  m_SizeDelta: {x: 1623.1858, y: 795.9796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840079499
 MonoBehaviour:
@@ -23194,34 +22916,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840079497}
   m_CullTransparentMesh: 1
---- !u!114 &1840079501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840079497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 810949423}
-  content:
-  - "\u0110\xE2y l\xE0 m\u1ED9t email l\u1EEBa \u0111\u1EA3o, kh\xF4ng tin c\u1EADy.
-    M\u1EB7c d\xF9 b\xE2y gi\u1EDD ki\u1EC3u l\u1EEBa \u0111\u1EA3o n\xE0y \xEDt
-    g\u1EB7p, nh\u01B0ng v\u1EABn c\xF3 th\u1EC3 x\u1EA3y ra. Kh\xF4ng c\xF3 c\xE1c
-    ch\u01B0\u01A1ng tr\xECnh khuy\u1EBFn m\xE3i, t\u1EB7ng qu\xE0 ki\u1EC3u n\xE0y.
-    H\xECnh th\u1EE9c email c\u1EA9u th\u1EA3, b\u1ED1 c\u1EE5c kh\xF4ng h\u1EE3p
-    l\xFD, d\u1EABn \u0111\u1EBFn email kh\xF4ng trang tr\u1ECDng, v\u1EDBi c\xE1c
-    email ch\xEDnh th\u1EE9c, tin c\u1EADy t\u1EEB c\xE1c c\xF4ng ty, t\u1ED5 ch\u1EE9c,
-    email s\u1EBD \u0111\u01B0\u1EE3c vi\u1EBFt m\u1ED9t c\xE1ch trang tr\u1ECDng.
-    Ngo\xE0i ra c\xF3 th\u1EC3 nh\u1EADn th\u1EA5y qua c\xE1c d\u1EA5u hi\u1EC7u
-    nh\u01B0: email ng\u01B0\u1EDDi g\u1EEDi kh\xF4ng ph\u1EA3i l\xE0 t\xEAn c\u1EE7a
-    doanh nghi\u1EC7p m\xE0 l\xE0 m\u1ED9t email c\xE1 nh\xE2n kh\xF4ng r\xF5 r\xE0ng,
-    v\xE0 trong n\u1ED9i dung email y\xEAu c\u1EA7u ph\u1EA3i nh\u1EA5n v\xE0o m\u1ED9t
-    \u0111\u01B0\u1EDDng link li\xEAn k\u1EBFt kh\xF4ng r\xF5 r\xE0ng. "
-  speed: 0.02
 --- !u!1 &1847941657
 GameObject:
   m_ObjectHideFlags: 0
@@ -23556,7 +23250,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "T\xF4i \u0111\xE3 r\xF5. C\u1EA3nh s\xE1t h\xE3y gi\xFAp t\xF4i ki\u1EC3m
+    tra email ti\u1EBFp theo nh\xE9!\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -25578,7 +25273,6 @@ GameObject:
   - component: {fileID: 2051900816}
   - component: {fileID: 2051900819}
   - component: {fileID: 2051900818}
-  - component: {fileID: 2051900817}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -25607,23 +25301,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2051900817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051900815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 1223002409}
-  content:
-  - "\u1ED2 th\xEC ra l\xE0 v\u1EADy. T\xF4i hi\u1EC3u r\u1ED3i th\u01B0a c\u1EA3nh
-    s\xE1t. \u0110\xE2y l\xE0 email ti\u1EBFp theo. "
-  speed: 0.02
 --- !u!114 &2051900818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25981,7 +25658,6 @@ GameObject:
   - component: {fileID: 2087222892}
   - component: {fileID: 2087222895}
   - component: {fileID: 2087222894}
-  - component: {fileID: 2087222893}
   m_Layer: 5
   m_Name: boxchat
   m_TagString: Untagged
@@ -26010,22 +25686,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -157.3}
   m_SizeDelta: {x: 1503.2651, y: 280.7099}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2087222893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087222891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e88730bf289c97449d3326c316eda93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 2040913194}
-  content:
-  - "C\xF2n email n\xE0y th\xEC sao? "
-  speed: 0.02
 --- !u!114 &2087222894
 MonoBehaviour:
   m_ObjectHideFlags: 0

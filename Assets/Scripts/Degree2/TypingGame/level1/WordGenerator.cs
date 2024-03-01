@@ -20,7 +20,7 @@ public class WordGenerator : MonoBehaviour
         if (instance == null)                                               //if instance is null
         {
             instance = this;                                                //set this as instance
-            DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
+            // DontDestroyOnLoad(gameObject);                                  //make it DontDestroyOnLoad
         }
         else
         {

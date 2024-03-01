@@ -43693,9 +43693,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.051346496, y: -0.000730287}
+  m_Offset: {x: -0.1477282, y: 0.018545998}
   serializedVersion: 2
-  m_Radius: 1.1940999
+  m_Radius: 1.155547
 --- !u!1 &1894560177
 GameObject:
   m_ObjectHideFlags: 0
@@ -50385,7 +50385,7 @@ PrefabInstance:
       objectReference: {fileID: 821391696}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Radius
-      value: 1.0970821
+      value: 1.1940198
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Offset.x
@@ -50393,7 +50393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_Offset.y
-      value: -0.057390604
+      value: -0.030952873
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854513, guid: 1f3068ac3c23bb7419b7640826d8e348, type: 3}
       propertyPath: m_IsTrigger

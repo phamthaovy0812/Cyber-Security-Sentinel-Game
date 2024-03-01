@@ -28,6 +28,7 @@ public class PMStoneQuestion : MonoBehaviour
     private bool checkCorrectAnswer = false;
     private bool checkCorrect = false;
     private int countCorrect = 0;
+    private bool checkPressOneAnswer = false;
     int layer1;
     int layer2;
     [SerializeField] private TextMeshProUGUI speedPoliceText;
@@ -85,6 +86,7 @@ public class PMStoneQuestion : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             FindAnyObjectByType<MoveEnemy>().enabled = false;
+            checkPressOneAnswer = false;
             CallQuestion();
             FindAnyObjectByType<CountDown>().StartCountdown();
 
@@ -130,7 +132,7 @@ public class PMStoneQuestion : MonoBehaviour
     {
         bool iscorrectAnswer = false;
 
-        if (m_QuestionData[m_QuestionIndex].correctAnswer.Equals(pSlectedAnswer))
+        if (m_QuestionData[m_QuestionIndex].correctAnswer.Equals(pSlectedAnswer) && !checkPressOneAnswer)
         {
 
             iscorrectAnswer = true;
@@ -142,8 +144,11 @@ public class PMStoneQuestion : MonoBehaviour
             Debug.Log("Cau tra loiw sai ");
 
         }
-
-        StartCoroutine(QuestionCoroutine(pSlectedAnswer, iscorrectAnswer));
+        if (!checkPressOneAnswer)
+        {
+            StartCoroutine(QuestionCoroutine(pSlectedAnswer, iscorrectAnswer));
+            checkPressOneAnswer = true;
+        }
         // StartCoroutine(ExampleCoroutine());
     }
     public void Btn_Exit()
