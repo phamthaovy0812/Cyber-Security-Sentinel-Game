@@ -52,10 +52,7 @@ public class PMStoneQuestion : MonoBehaviour
         if (checkCorrectAnswer)
         {
             countCorrect++;
-            if (countCorrect == 1 || countCorrect == 3 || countCorrect == 5 || countCorrect >= 8)
-            {
-                FindAnyObjectByType<MovementPacman>().speed += 1;
-            }
+            FindAnyObjectByType<MovementPacman>().speed += 1;
             FindAnyObjectByType<MoveEnemy>().enabled = true;
             Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
             // Instantiate(AddTimeObject, hitPosPlayer, Quaternion.identity);
@@ -66,7 +63,7 @@ public class PMStoneQuestion : MonoBehaviour
             // Time.timeScale = 1;
             QuestionObj.SetActive(false);
 
-            Debug.Log("Movement pacman: " + FindAnyObjectByType<MovementPacman>().speed);
+
             speedPoliceText.text = FindAnyObjectByType<MovementPacman>().speed.ToString();
             speedThiefText.text = FindAnyObjectByType<MoveEnemy>().speed.ToString();
             checkCorrectAnswer = false;

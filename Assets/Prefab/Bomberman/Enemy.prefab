@@ -150,7 +150,7 @@ MonoBehaviour:
   PathToTarget: []
   SolidLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 896
 --- !u!114 &567999516360898191
 MonoBehaviour:
   m_ObjectHideFlags: 0
