@@ -28,8 +28,10 @@ public class PMStoneQuestion : MonoBehaviour
     private bool checkCorrectAnswer = false;
     private bool checkCorrect = false;
     private int countCorrect = 0;
+    private bool checkPressOneAnswer = false;
     int layer1;
     int layer2;
+    int sumLengthQuestion = 0;
     [SerializeField] private TextMeshProUGUI speedPoliceText;
     [SerializeField] private TextMeshProUGUI speedThiefText;
     void Start()
@@ -51,10 +53,7 @@ public class PMStoneQuestion : MonoBehaviour
         if (checkCorrectAnswer)
         {
             countCorrect++;
-            if (countCorrect == 1 || countCorrect == 3 || countCorrect == 5 || countCorrect >= 8)
-            {
-                FindAnyObjectByType<MovementPacman>().speed += 1;
-            }
+            FindAnyObjectByType<MovementPacman>().speed += 1;
             FindAnyObjectByType<MoveEnemy>().enabled = true;
             Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
             // Instantiate(AddTimeObject, hitPosPlayer, Quaternion.identity);
@@ -65,7 +64,7 @@ public class PMStoneQuestion : MonoBehaviour
             // Time.timeScale = 1;
             QuestionObj.SetActive(false);
 
-            Debug.Log("Movement pacman: " + FindAnyObjectByType<MovementPacman>().speed);
+
             speedPoliceText.text = FindAnyObjectByType<MovementPacman>().speed.ToString();
             speedThiefText.text = FindAnyObjectByType<MoveEnemy>().speed.ToString();
             checkCorrectAnswer = false;
@@ -85,8 +84,23 @@ public class PMStoneQuestion : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             FindAnyObjectByType<MoveEnemy>().enabled = false;
+            checkPressOneAnswer = false;
             CallQuestion();
-            FindAnyObjectByType<CountDown>().StartCountdown();
+            if (sumLengthQuestion < 100)
+            {
+                FindAnyObjectByType<CountDown>().StartCountdown(10);
+
+            }
+            else if (sumLengthQuestion < 200)
+            {
+                FindAnyObjectByType<CountDown>().StartCountdown(15);
+
+            }
+            else
+            {
+                FindAnyObjectByType<CountDown>().StartCountdown(20);
+
+            }
 
         }
 
@@ -130,7 +144,7 @@ public class PMStoneQuestion : MonoBehaviour
     {
         bool iscorrectAnswer = false;
 
-        if (m_QuestionData[m_QuestionIndex].correctAnswer.Equals(pSlectedAnswer))
+        if (m_QuestionData[m_QuestionIndex].correctAnswer.Equals(pSlectedAnswer) && !checkPressOneAnswer)
         {
 
             iscorrectAnswer = true;
@@ -142,8 +156,11 @@ public class PMStoneQuestion : MonoBehaviour
             Debug.Log("Cau tra loiw sai ");
 
         }
-
-        StartCoroutine(QuestionCoroutine(pSlectedAnswer, iscorrectAnswer));
+        if (!checkPressOneAnswer)
+        {
+            StartCoroutine(QuestionCoroutine(pSlectedAnswer, iscorrectAnswer));
+            checkPressOneAnswer = true;
+        }
         // StartCoroutine(ExampleCoroutine());
     }
     public void Btn_Exit()
@@ -236,6 +253,10 @@ public class PMStoneQuestion : MonoBehaviour
         {
             return;
         }
+
+        sumLengthQuestion = m_QuestionData[index].question.Length + m_QuestionData[index].answerA.Length + m_QuestionData[index].answerB.Length + m_QuestionData[index].answerC.Length + m_QuestionData[index].answerD.Length;
+
+
 
         m_ImageAnswerA.GetComponent<UnityEngine.UI.Image>().color = Color.white;
         m_ImageAnswerB.GetComponent<UnityEngine.UI.Image>().color = Color.white;

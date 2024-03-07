@@ -3454,6 +3454,7 @@ MonoBehaviour:
   - "V\xE2ng, h\xE3y \u0111\u01B0a t\xF4i xem c\xE1c tin nh\u1EAFn b\u1EA1n g\u1EB7p
     v\xE0 t\xF4i s\u1EBD gi\u1EA3i th\xEDch gi\xFAp b\u1EA1n."
   speed: 0.02
+  isEndTalk: 0
 --- !u!1 &291732338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,6 +3512,7 @@ MonoBehaviour:
   - "H\xE3y gi\u1EEF g\xECn s\u1EE9c kh\u1ECFe v\xE0 ho\xE0n th\xE0nh t\u1ED1t nhi\u1EC7m
     v\u1EE5 nh\xE9. T\u1EA1m bi\u1EC7t anh."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &291732341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3737,6 +3739,7 @@ MonoBehaviour:
     tin nh\u1EAFn l\u1EEBa \u0111\u1EA3o. V\u1EADy c\xF2n tin nh\u1EAFn n\xE0y th\xEC
     sao \u1EA1 ?"
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &317733925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4151,6 +4154,7 @@ MonoBehaviour:
     ch\u1EC9 khuy\u1EBFn kh\xEDch ng\u01B0\u1EDDi d\xE2n t\xECm hi\u1EC3u v\u1EC1
     ph\xF2ng ch\u1ED1ng ma t\xFAy. "
   speed: 0.02
+  isEndTalk: 1
 --- !u!114 &341792259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4252,7 +4256,7 @@ MonoBehaviour:
     0."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5154,6 +5158,7 @@ MonoBehaviour:
   content:
   - "\u0110\xE2y th\u01B0a c\u1EA3nh s\xE1t."
   speed: 0.02
+  isEndTalk: 0
 --- !u!1 &495386729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5388,6 +5393,7 @@ MonoBehaviour:
     s\xE1t nh\u01B0 anh th\u1EADt \u0111\xE1ng \u0111\u01B0\u1EE3c tr\xE2n tr\u1ECDng
     v\xE0 tuy\xEAn d\u01B0\u01A1ng. C\u1EA3m \u01A1n anh r\u1EA5t nhi\u1EC1u."
   speed: 0.02
+  isEndTalk: 0
 --- !u!1 &516613434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5795,7 +5801,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0110\xE2y l\xE0 m\u1ED9t tin nh\u1EAFn l\u1EEBa \u0111\u1EA3o. M\u1EB7c
+    d\xF9 \u0111\u01B0\u1EE3c g\u1EEDi t\u1EEB t\u1ED5ng \u0111\xE0i, tuy nhi\xEAn
+    \u0111\xE2y l\xE0 m\u1ED9t th\u1EE7 thu\u1EADt tinh vi c\u1EE7a Hacker.\nD\u1EA5u
+    hi\u1EC7u nh\u1EADn bi\u1EBFt ch\xEDnh l\xE0 \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt
+    \u0111\xEDnh k\xE8m, \u0111u\xF4i \"top\" kh\xF4ng ph\u1EA3i m\u1ED9t \u0111u\xF4i
+    li\xEAn k\u1EBFt uy t\xEDn v\xE0 \"-ms.top\" \u0111\u1EC3 \u0111\xE1nh l\u1EEBa
+    nh\u1EEFng ai kh\xF4ng \u0111\u1ECDc k\u1EF9 tin nh\u1EAFn. H\u01A1n h\u1EBFt,
+    c\xE1c \u1EE9ng d\u1EE5ng ng\xE2n h\xE0ng s\u1EBD kh\xF4ng \u0111\xEDnh k\xE8m
+    \u0111\u01B0\u1EDDng d\u1EABn v\xE0o tin nh\u1EAFn khi th\xF4ng b\xE1o cho b\u1EA1n.
+    \nH\xE3y c\u1EA3nh gi\xE1c tr\u01B0\u1EDBc c\xE1c chi\xEAu tr\xF2 l\u1EEBa \u0111\u1EA3o
+    \u0111\xE1nh v\xE0o t\xE2m l\xFD thi\u1EBFu c\u1EA3nh gi\xE1c c\u1EE7a ng\u01B0\u1EDDi
+    d\xF9ng c\u1EE7a hacker. N\u1EBFu g\u1EB7p tr\u01B0\u1EDDng h\u1EE3p n\xE0y,
+    b\u1EA1n n\xEAn \u0111\u1EBFn chi nh\xE1nh ng\xE2n h\xE0ng g\u1EA7n nh\u1EA5t
+    ho\u1EB7c g\u1ECDi cho ng\xE2n h\xE0ng \u0111\u1EC3 x\xE1c nh\u1EADn v\u1EA5n
+    \u0111\u1EC1 truy c\u1EADp c\u1EE7a t\xE0i kho\u1EA3n."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -7802,7 +7822,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0110\xE2y l\xE0 m\u1ED9t tin nh\u1EAFn \u0111\xE1ng tin c\u1EADy c\u1EE7a
+    B\xE1ch ho\xE1 Xanh. M\u1EB7c d\xF9 quy t\u1EAFc d\xF9ng d\u1EA5u c\xE2u ch\u01B0a
+    h\u1EE3p l\xFD, tuy nhi\xEAn, \u0111\xE2y v\u1EABn l\xE0 m\u1ED9t tin nh\u1EAFn
+    uy t\xEDn. \nD\u1EA5u hi\u1EC7u nh\u1EADn bi\u1EBFt l\xE0:\n- Th\u1EE9 nh\u1EA5t,
+    \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\xFAng ch\xEDnh t\u1EA3 \u201Cbachhoaxanh\"
+    v\xE0 c\xF3 \u0111u\xF4i \u201C.com\" l\xE0 m\u1ED9t \u0111\u01B0\u1EDDng li\xEAn
+    k\u1EBFt uy t\xEDn. \n- Th\u1EE9 hai, \u0111\u1EC3 ch\u1EAFc ch\u1EAFn, khi nh\u1EA5n
+    v\xE0o \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt s\u1EBD hi\u1EC3n th\u1ECB \u0111\xFAng
+    trang web c\u1EE7a c\u1EEDa h\xE0ng B\xE1ch ho\xE1 Xanh."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -8323,6 +8351,139 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &680304454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680304455}
+  - component: {fileID: 680304458}
+  - component: {fileID: 680304457}
+  - component: {fileID: 680304456}
+  m_Layer: 5
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &680304455
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680304454}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1891492048}
+  m_Father: {fileID: 1433289523}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 133.9, y: -76.6}
+  m_SizeDelta: {x: 160, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &680304456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680304454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 680304457}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1053992148}
+        m_TargetAssemblyTypeName: EndTalking, Assembly-CSharp
+        m_MethodName: Btn_Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &680304457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680304454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.9294118, b: 0.91372555, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -5177388603050735206, guid: 1f69c5316280f224b8c4eaca1dd2bbef, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &680304458
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680304454}
+  m_CullTransparentMesh: 1
 --- !u!1 &685777716
 GameObject:
   m_ObjectHideFlags: 0
@@ -9108,6 +9269,7 @@ MonoBehaviour:
   content:
   - "\xC0, \u0111\xFAng nh\u01B0 t\xF4i ngh\u0129."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &716380821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9702,7 +9864,7 @@ MonoBehaviour:
     L\u1ED7i c\xFA ph\xE1p\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9833,6 +9995,7 @@ MonoBehaviour:
   - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
     nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &772163974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10150,6 +10313,7 @@ MonoBehaviour:
     g\u1ECDi cho ng\xE2n h\xE0ng \u0111\u1EC3 x\xE1c nh\u1EADn v\u1EA5n \u0111\u1EC1
     truy c\u1EADp c\u1EE7a t\xE0i kho\u1EA3n."
   speed: 0.02
+  isEndTalk: 1
 --- !u!114 &781291264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10553,7 +10717,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Tin nh\u1EAFn \u0111\u1EA5y kh\xF4ng ph\u1EA3i l\xE0 m\u1ED9t tin nh\u1EAFn
+    \u0111\xE1ng tin \u0111\u1EADy, \u0111\xE2y l\xE0 m\u1ED9t chi\xEAu tr\xF2 l\u1EEBa
+    \u0111\u1EA3o c\u1EE7a Hacker. \nD\u1EA5u hi\u1EC7u nh\u1EADn bi\u1EBFt l\u1EEBa
+    \u0111\u1EA3o l\xE0: \n\n- Th\u1EE9 nh\u1EA5t, c\xE1c tin nh\u1EAFn c\u1EE7a
+    ng\xE2n h\xE0ng s\u1EBD kh\xF4ng k\xE8m th\xEAm \u0111\u01B0\u1EDDng li\xEAn
+    k\u1EBFt. \n- Th\u1EE9 hai, \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt \u0111\u01B0\u1EE3c
+    \u0111\xEDnh k\xE8m trong tin nh\u1EAFn c\u0169ng kh\xF4ng ph\u1EA3i \u0111\u01B0\u1EDDng
+    li\xEAn k\u1EBFt ch\xEDnh th\u1ED1ng c\u1EE7a ng\xE2n h\xE0ng. \n- Th\u1EE9 ba,
+    c\xFA ph\xE1p c\u1EE7a tin nh\u1EAFn kh\xF4ng ch\u1EC9n chu, d\u1EA5u c\xE2u
+    b\u1EEBa b\xE3i, c\xE1ch d\xF9ng d\u1EA5u c\xE2u kh\xF4ng \u0111\xFAng. \nN\u1EBFu
+    b\u1EA1n nh\u1EA5n v\xE0o \u0111\u01B0\u1EDDng link v\xE0 th\u1EF1c hi\u1EC7n
+    theo c\xE1c y\xEAu c\u1EA7u c\u1EE7a trang web th\xEC b\u1EA1n ch\u1EAFc ch\u1EAFn
+    s\u1EBD b\u1ECB \u0111\xE1nh c\u1EAFp th\xF4ng tin ng\xE2n h\xE0ng v\xE0 s\u1EBD
+    b\u1ECB m\u1EA5t to\xE0n b\u1ED9 s\u1ED1 ti\u1EC1n trong t\xE0i kho\u1EA3n. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10580,10 +10757,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 26.65
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -10954,6 +11131,7 @@ MonoBehaviour:
   - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
     nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &823132572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11313,6 +11491,7 @@ MonoBehaviour:
     v\xE0o \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt s\u1EBD hi\u1EC3n th\u1ECB \u0111\xFAng
     trang web c\u1EE7a c\u1EEDa h\xE0ng B\xE1ch ho\xE1 Xanh."
   speed: 0.02
+  isEndTalk: 1
 --- !u!114 &864048024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13564,6 +13743,7 @@ MonoBehaviour:
     t\xF4i ph\u1EA3i ti\u1EBFp t\u1EE5c nhi\u1EC7m v\u1EE5 c\u1EE7a b\u1EA3n th\xE2n
     \u0111\xE2y. T\u1EA1m bi\u1EC7t."
   speed: 0.02
+  isEndTalk: 0
 --- !u!1 &1052090926
 GameObject:
   m_ObjectHideFlags: 0
@@ -15478,7 +15658,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0110\xE2y l\xE0 m\u1ED9t tin nh\u1EAFn uy t\xEDn do B\u1ED9 C\xF4ng
+    An g\u1EEDi.\nTh\u1EE9 nh\u1EA5t, tin nh\u1EAFn \u0111\u01B0\u1EE3c ghi r\u1EA5t
+    chu\u1EA9n m\u1EF1c, \u0111\xFAng ch\xEDnh t\u1EA3, \u0111\xFAng ng\u1EEF ph\xE1p.
+    \nTh\u1EE9 hai, \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt uy t\xEDn, \u0111\u1EC3
+    ch\u1EAFc ch\u1EAFn, khi nh\u1EA5n v\xE0o s\u1EBD d\u1EABn \u0111\u1EBFn website
+    c\u1EE7a B\u1ED9 C\xF4ng An. \nCu\u1ED1i c\xF9ng uqyeets \u0111\u1ECBnh ch\xEDnh
+    l\xE0 n\u1ED9i dung c\u1EE7a tin nh\u1EAFn, kh\xF4ng ch\xE8o k\xE9o, kh\xF4ng
+    y\xEAu c\u1EA7u, ch\u1EC9 khuy\u1EBFn kh\xEDch ng\u01B0\u1EDDi d\xE2n t\xECm
+    hi\u1EC3u v\u1EC1 ph\xF2ng ch\u1ED1ng ma t\xFAy. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -16906,6 +17094,7 @@ MonoBehaviour:
     kh\xF4ng r\xF5 r\xE0ng, kh\xF4ng uy t\xEDn, c\u0169ng nh\u01B0 kh\xF4ng cung
     c\u1EA5p th\xF4ng tin t\xE0i kho\u1EA3ng trong c\xE1c li\xEAn k\u1EBFt n\xE0y."
   speed: 0.02
+  isEndTalk: 1
 --- !u!114 &1351763228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18100,6 +18289,7 @@ RectTransform:
   - {fileID: 1708808117}
   - {fileID: 800488758}
   - {fileID: 85038248}
+  - {fileID: 680304455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18849,6 +19039,7 @@ MonoBehaviour:
   - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
     nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &1470854025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19780,6 +19971,7 @@ MonoBehaviour:
   - "V\xE2ng, t\xF4i s\u1EBD ch\xFA \xFD. Tin nh\u1EAFn ti\u1EBFp theo c\u0169ng
     l\xE0m t\xF4i ch\xFA \xFD. C\u1EA3nh s\xE1t gi\xFAp t\xF4i xem qua nh\xE9."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &1600497515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20114,6 +20306,7 @@ MonoBehaviour:
     tuy t\xF4i kh\xF4ng th\u1EA5y g\xEC \u0111\xE1ng nghi nh\u01B0ng anh xem qua
     gi\xFAp t\xF4i nh\xE9?"
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &1626672904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20760,6 +20953,7 @@ MonoBehaviour:
     \u0111\u1EC1 ph\xF2ng tr\u01B0\u1EDBc c\xE1c tin nh\u1EAFn l\u1EA1. Anh h\xE3y
     gi\xFAp t\xF4i xem qua nh\xE9!"
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &1683149507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21279,7 +21473,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0110\xE2y l\xE0 m\u1ED9t tin nh\u1EAFn l\u1EEBa \u0111\u1EA3o r\xF5
+    r\xE0ng, n\xF3 \u0111\xE1nh v\xE0o l\xF2ng tham c\u1EE7a ng\u01B0\u1EDDi nh\u1EADn.
+    Khi nh\u1EADn \u0111\u01B0\u1EE3c nh\u1EEFng tin nh\u1EAFn nh\u01B0 th\u1EBF,
+    \u0111i\u1EC1u b\u1EA1n n\xEAn l\xE0m l\xE0 ch\u1EB7n s\u1ED1 v\xE0 m\u1EB7c
+    k\u1EC7 tin nh\u1EAFn \u1EA5y \u0111i.\nN\u1EBFu \u0111\u01B0\u1EE3c, h\xE3y
+    c\u1EA3nh gi\xE1c khi nh\u1EADn \u0111\u01B0\u1EE3c c\xE1c cu\u1ED9c g\u1ECDi
+    t\u1EEB s\u1ED1 l\u1EA1 v\xE0 c\u1EA3nh gi\xE1c khi cho s\u1ED1 \u0111i\u1EC7n
+    tho\u1EA1i v\u1EDBi b\xEAn th\u1EE9 ba. V\xEC kh\u1EA3 n\u0103ng cao b\u1EA1n
+    s\u1EBD b\u1ECB b\xE1n th\xF4ng tin c\xE1 nh\xE2n v\xE0 t\u1EEB \u0111\xF3 g\u1EB7p
+    ph\u1EA3i c\xE1c cu\u1ED9c g\u1ECDi v\xE0 tin nh\u1EAFn l\xE0m phi\u1EC1n. \nQuan
+    tr\u1ECDng nh\u1EA5t, b\u1EA1n kh\xF4ng \u0111\u01B0\u1EE3c \u1EA5n v\xE0o c\xE1c
+    \u0111\u01B0\u1EDDng li\xEAn k\u1EBFt kh\xF4ng r\xF5 r\xE0ng, kh\xF4ng uy t\xEDn,
+    c\u0169ng nh\u01B0 kh\xF4ng cung c\u1EA5p th\xF4ng tin t\xE0i kho\u1EA3ng trong
+    c\xE1c li\xEAn k\u1EBFt n\xE0y."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -22655,6 +22862,7 @@ MonoBehaviour:
     b\u1ECB \u0111\xE1nh c\u1EAFp th\xF4ng tin ng\xE2n h\xE0ng v\xE0 s\u1EBD b\u1ECB
     m\u1EA5t to\xE0n b\u1ED9 s\u1ED1 ti\u1EC1n trong t\xE0i kho\u1EA3n. "
   speed: 0.02
+  isEndTalk: 1
 --- !u!1 &1847941657
 GameObject:
   m_ObjectHideFlags: 0
@@ -23274,6 +23482,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890716825}
+  m_CullTransparentMesh: 1
+--- !u!1 &1891492047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1891492048}
+  - component: {fileID: 1891492050}
+  - component: {fileID: 1891492049}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1891492048
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891492047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 680304455}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1891492049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891492047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Tho\xE1t Game"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1891492050
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891492047}
   m_CullTransparentMesh: 1
 --- !u!1 &1892314910
 GameObject:
@@ -25193,6 +25535,7 @@ MonoBehaviour:
   - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
     nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &2051900818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25597,6 +25940,7 @@ MonoBehaviour:
   - "\u1ED2, th\xEC ra l\xE0 v\u1EADy. T\xF4i v\u1EABn c\xF2n m\u1ED9t v\xE0i tin
     nh\u1EAFn n\u1EEFa. Anh c\u1EA3nh s\xE1t xem gi\xFAp t\xF4i nh\xE9."
   speed: 0.02
+  isEndTalk: 0
 --- !u!114 &2087222894
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,4 +22,8 @@ public class WordScore : MonoBehaviour
         score++;
         cur_score.text = score.ToString();
     }
+    public int GetScore()
+    {
+        return score;
+    }
 }

@@ -17,6 +17,9 @@ public class WordManager : MonoBehaviour
     public int countDraw = 0;
     public GameObject nextLevel;
     public GameObject CanvasWord;
+    public GameObject pausePanel;
+    public GameObject playPanel;
+    public GameObject closeMatchPanel;
 
     private void Start()
     {
@@ -88,28 +91,38 @@ public class WordManager : MonoBehaviour
     }
     public void GameOver(bool isWin)
     {
-        float currentTime = FindAnyObjectByType<TPCountTime>().currentTime;
-        Debug.Log("currentTime: " + currentTime);
-        FindAnyObjectByType<TPCountTime>().isGameOver = true;
-        openSecurity.SetActive(false);
+        CanvasWord.SetActive(false);
         _gameOver.SetActive(true);
         int star = 0;
         if (isWin)
         {
-            if (currentTime < 120)
+            float currentTime = FindAnyObjectByType<TPCountTime>().currentTime;
+            FindAnyObjectByType<TPCountTime>().isGameOver = true;
+            int score = WordScore.instance.GetScore();
+            currentTime -= score;
+            openSecurity.SetActive(false);
+            if (currentTime < 180)
             {
                 star = 3;
             }
-            else if (currentTime < 180) star = 2;
+            else if (currentTime < 240)
+            {
+                star = 2;
+            }
             else
             {
                 star = 1;
             }
             FindAnyObjectByType<GameOver>().gameOver(star);
+            FindAnyObjectByType<TPCountTime>().isGameOver = false;
+            openSecurity.SetActive(false);
+            // WordGenerator.Instance.SetWordList();
         }
         else
         {
             FindAnyObjectByType<GameOver>().gameOver(0);
+
+            Debug.Log("star level 4: " + star);
 
         }
 
@@ -124,11 +137,30 @@ public class WordManager : MonoBehaviour
         // LevelSystemManager.Instance.CurrentLevel = LevelSystemManager.Instance.getCurrentLevel();
         int level = LevelSystemManager.Instance.CurrentLevel + 1;
         Debug.Log("level: " + level);
-        FindAnyObjectByType<WordGenerator>().wordList = WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].wishedList;
+        WordGenerator.Instance.SetWordList();
+
         //set the CurrentLevel, we subtract 1 as level data array start from 0
         SceneManager.LoadScene("TypingGame" + level);
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // SceneManager.LoadScene(WordConstants.DATA.HOME_TYPING);
     }
 
+    public void Btn_Pause()
+    {
+        Time.timeScale = 0;
+        pausePanel.SetActive(false);
+        playPanel.SetActive(true);
+        closeMatchPanel.SetActive(true);
+    }
+    public void Btn_Play()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(true);
+        playPanel.SetActive(false);
+        closeMatchPanel.SetActive(false);
+    }
+    public void Btn_Exit()
+    {
+        SceneManager.LoadScene("TypingGameMenuLevel");
+    }
 }

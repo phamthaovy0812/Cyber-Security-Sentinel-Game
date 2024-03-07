@@ -38,6 +38,8 @@ public class firebaseController : MonoBehaviour
     Firebase.Auth.FirebaseUser user;
 
     bool isSignIn = false;
+    bool isLogin = true;
+    bool isSignUp = false;
 
 
     public static string StripHTML(bool decode = true)
@@ -88,6 +90,8 @@ public class firebaseController : MonoBehaviour
     {
         loginPanel.SetActive(true);
         signupPanel.SetActive(false);
+        isLogin = true;
+        isSignUp = false;
         notificationPanel.SetActive(false);
         forgetPasswordPanel.SetActive(false);
     }
@@ -96,6 +100,8 @@ public class firebaseController : MonoBehaviour
     {
         loginPanel.SetActive(false);
         signupPanel.SetActive(true);
+        isLogin = false;
+        isSignUp = true;
         // login.SetActive(false);
         forgetPasswordPanel.SetActive(false);
         notificationPanel.SetActive(false);
@@ -212,7 +218,7 @@ public class firebaseController : MonoBehaviour
                     }
                 }
 
-
+                isSignUp = true;
                 return;
             }
 
@@ -331,6 +337,7 @@ public class firebaseController : MonoBehaviour
     {
         signupSuccess.SetActive(true);
         yield return new WaitForSeconds(1f);
+
         signupSuccess.SetActive(false);
         yield return new WaitForSeconds(1f);
 
@@ -367,7 +374,7 @@ public class firebaseController : MonoBehaviour
                    }
                }
 
-
+               isLogin = true;
                return;
            }
 
@@ -380,6 +387,7 @@ public class firebaseController : MonoBehaviour
     }
     IEnumerator StartHomePage(string email, string password)
     {
+
         APIUser.Instance.getConnectedUserByUId(email, password);
         // Debug.Log("email: " + email + " password: " + password);
         yield return new WaitForSeconds(3f);
@@ -401,14 +409,31 @@ public class firebaseController : MonoBehaviour
             bool signedIn = user != auth.CurrentUser && auth.CurrentUser != null;
             if (!signedIn && user != null)
             {
+                isSignUp = true;
+
                 Debug.Log("Signed out " + user.UserId);
             }
             user = auth.CurrentUser;
             if (signedIn)
             {
+
+                isLogin = true;
                 Debug.Log("Signed in " + user.UserId);
                 isSignIn = true;
             }
+        }
+    }
+    void Update()
+    {
+        if (isSignUp && Input.GetKey(KeyCode.KeypadEnter))
+        {
+
+            SignUpUser();
+
+        }
+        if (isLogin && Input.GetKey(KeyCode.KeypadEnter))
+        {
+            LoginUser();
         }
     }
 
@@ -508,8 +533,6 @@ public class firebaseController : MonoBehaviour
                     }
                 }
             }
-
-
 
             showNotificationMessage("Alert", "Sucessfully Send Email For Reset Password");
         }

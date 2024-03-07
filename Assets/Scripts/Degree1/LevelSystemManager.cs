@@ -82,12 +82,81 @@ public class LevelSystemManager : MonoBehaviour
             }
             else if (idGame == 2)
             {
-                APIUser.Instance.UpdateExperiences(score * 400);
+                int scoreDegree2 = APIUser.Instance.GetLevelData(idGame).levelItemsArray[currentLevel].starAchieved;
+                int point = 0;
+                if (starAchieved == 3)
+                {
+                    if (scoreDegree2 == 2)
+                    {
+                        point = 100;
+                    }
+                    else if (scoreDegree2 == 1)
+                    {
+                        point = 200;
+                    }
+                    else
+                    {
+                        point = 500;
+                    }
+
+                }
+                else if (starAchieved == 2)
+                {
+                    if (scoreDegree2 == 1)
+                    {
+                        point = 100;
+                    }
+                    else
+                    {
+                        point = 400;
+                    }
+                }
+                else if (starAchieved == 1)
+                {
+                    point = 300;
+                }
+
+                APIUser.Instance.UpdateExperiences(point);
 
             }
             else if (idGame == 3)
             {
-                APIUser.Instance.UpdateExperiences(score * 400);
+                // if ()
+                int scoreDegree3 = APIUser.Instance.GetLevelData(idGame).levelItemsArray[currentLevel].starAchieved;
+                int point3 = 0;
+                if (starAchieved == 3)
+                {
+                    if (scoreDegree3 == 2)
+                    {
+                        point3 = 100;
+                    }
+                    else if (scoreDegree3 == 1)
+                    {
+                        point3 = 200;
+                    }
+                    else
+                    {
+                        point3 = 500;
+                    }
+
+                }
+                else if (starAchieved == 2)
+                {
+                    if (scoreDegree3 == 1)
+                    {
+                        point3 = 100;
+                    }
+                    else
+                    {
+                        point3 = 400;
+                    }
+                }
+                else if (starAchieved == 1)
+                {
+                    point3 = 300;
+                }
+
+                APIUser.Instance.UpdateExperiences(point3);
 
             }
             levelData.levelItemsArray[currentLevel].starAchieved = starAchieved;

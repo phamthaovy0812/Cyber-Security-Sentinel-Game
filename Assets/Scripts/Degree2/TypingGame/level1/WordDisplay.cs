@@ -13,6 +13,7 @@ public class WordDisplay : MonoBehaviour
 
     public void Start()
     {
+        gameObject.SetActive(true);
 
     }
 
@@ -31,7 +32,7 @@ public class WordDisplay : MonoBehaviour
     {
         WordScore.instance.UpdateScore();
         CheckAndActivateWord();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
 

@@ -14,51 +14,148 @@ public class GameOver : MonoBehaviour
     LevelData levelData;
     int indexItem;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-
-    }
-
 
     public void gameOver(int star)
     {
         Time.timeScale = 0;
         indexItem = LevelSystemManager.Instance.CurrentLevel;
-        levelData = LevelSystemManager.Instance.LevelData;
+        levelData = APIUser.Instance.GetLevelData(idGame);
         Debug.Log("Game Over");
+        Debug.Log("index Item: " + indexItem);
         if (star > 0)
         {
             titleGameOver.text = "Chiến thắng";
-            Debug.Log("levelData: " + JsonUtility.ToJson(levelData));
-
-            Debug.Log("Star: " + star);
-            Debug.Log("index item: " + indexItem);
-            Debug.Log("id game: " + idGame);
-
-            Debug.Log("star level: " + levelData.levelItemsArray[indexItem].starAchieved);
-            if (star > levelData.levelItemsArray[indexItem].starAchieved)
+            if (idGame == 1)
             {
-                scoreText.text = "+" + ((star - APIUser.Instance.GetLevelData(idGame).levelItemsArray[indexItem].starAchieved) * 112) + "exp";
+                if (star > levelData.levelItemsArray[indexItem].starAchieved)
+                {
+                    scoreText.text = "+" + ((star - APIUser.Instance.GetLevelData(idGame).levelItemsArray[indexItem].starAchieved) * 112) + "exp";
+                }
+                else
+                {
+                    scoreText.text = "";
+                }
+
             }
-            else
+            else if (idGame == 2)
             {
-                scoreText.text = "";
+                int scoreDegree2 = levelData.levelItemsArray[indexItem].starAchieved;
+                Debug.Log("score degree 2: " + scoreDegree2);
+
+                int point = 0;
+                if (star > scoreDegree2)
+                {
+
+                    if (star == 3)
+                    {
+
+                        if (scoreDegree2 == 2)
+                        {
+                            point = 100;
+                        }
+                        else if (scoreDegree2 == 1)
+                        {
+                            point = 200;
+                        }
+                        else
+                        {
+                            point = 500;
+                        }
+
+                    }
+                    else if (star == 2)
+                    {
+
+
+                        if (scoreDegree2 == 1)
+                        {
+                            point = 100;
+                        }
+                        else
+                        {
+                            point = 400;
+                        }
+                    }
+                    else if (star == 1)
+                    {
+
+
+                        point = 300;
+                    }
+                    scoreText.text = "+" + point + " exp";
+                }
+
+                else
+                {
+
+                    scoreText.text = "";
+                }
+
+
             }
+            else if (idGame == 3)
+            {
+                // if ()
+                int scoreDegree3 = levelData.levelItemsArray[indexItem].starAchieved;
+                int point3 = 0;
+                if (star > scoreDegree3)
+                {
+                    if (star == 3)
+                    {
+                        if (scoreDegree3 == 2)
+                        {
+                            point3 = 100;
+                        }
+                        else if (scoreDegree3 == 1)
+                        {
+                            point3 = 200;
+                        }
+                        else
+                        {
+                            point3 = 500;
+                        }
+
+                    }
+                    else if (star == 2)
+                    {
+                        if (scoreDegree3 == 1)
+                        {
+                            point3 = 100;
+                        }
+                        else
+                        {
+                            point3 = 400;
+                        }
+                    }
+                    else if (star == 1)
+                    {
+                        point3 = 300;
+                    }
+                    scoreText.text = "+" + point3 + "exp";
+                }
+                else
+                {
+                    scoreText.text = "";
+                }
+            }
+
+
         }
         else
         {
             titleGameOver.text = "Thất bại";
-            LevelSystemManager.Instance.LevelComplete(0);
             scoreText.text = "";
 
         }
         SetStar(star);
         LevelSystemManager.Instance.LevelComplete(star);
-
+    }
+    IEnumerable UpFirebase(int star)
+    {
+        yield return new WaitForSeconds(1);
 
     }
+
     private void SetStar(int starAchieved)
     {
         for (int i = 0; i < starsArray.Length; i++)             //loop through entire star array
@@ -77,9 +174,11 @@ public class GameOver : MonoBehaviour
 
     private void Awake()
     {
+        levelData = APIUser.Instance.GetLevelData(idGame);
         if (instance == null)                                               //if instance is null
         {
-            instance = this;                                                //set this as instance                              //make it DontDestroyOnLoad
+            instance = this;
+            //set this as instance                              //make it DontDestroyOnLoad
         }
         else
         {

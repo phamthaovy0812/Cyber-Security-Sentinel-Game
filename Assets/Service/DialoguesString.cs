@@ -86,9 +86,7 @@ public class DialogString : MonoBehaviour
 
 	// NPC degree 1
 	public List<List<string>> docBeginStartingSeeNPCDegree1 = new List<List<string>>{
-		new List<string> {"Chào mừng bạn đến trò chơi cấp 1."},
-		new List<string> {" Ở cấp chơi này bạn sẽ di chuyển nhân vật và đặt bom để tiêu diệt tàu vũ trụ, quái vật nguy hiểm. Cấp bậc sẽ bao gồm 6 level khác nhau. Ở mỗi level bạn cần phải hoàn thành trong thời gian quy định để nhận điểm kinh nghiệm thăng cấp."},
-		new List<string> {"Chúc bạn may mắn."},
+		new List<string> {"Chào mừng bạn đến trò chơi cấp 1.", " Ở cấp chơi này bạn sẽ di chuyển nhân vật và đặt bom để tiêu diệt tàu vũ trụ, quái vật nguy hiểm. Cấp bậc sẽ bao gồm 6 level khác nhau. Ở mỗi level bạn cần phải hoàn thành trong thời gian quy định để nhận điểm kinh nghiệm thăng cấp. ", "Vượt qua mỗi level bạn sẽ được cộng điểm kinh nghiệm. Bạn phải tích đủ ít nhất 1600 exp để vượt qua cấp bậc 1. Chúc bạn may mắn."},
 	};
 	public List<List<string>> docAfterSeeNPCDegree1 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 1"},
@@ -98,7 +96,7 @@ public class DialogString : MonoBehaviour
 	};
 	// NPC degree 2
 	public List<List<string>> docBeginStartingSeeNPCDegree2 = new List<List<string>>{
-		new List<string> {"Chào mừng bạn đến trò chơi cấp 2.", "Ở trò chơi này bạn sẽ gõ chữ theo các từ được rơi xuống. Sau khi hoàn thành gõ chữ, một bảng nội dung gồm 2 cột sẽ hiện lên, bạn sẽ nối 2 bảng nội dung với nhau. Bạn phải hoàn thành phần chơi trong thời gian nhanh nhất có thể để đạt được điểm tối đa trong phần chơi này"," Chúc bạn may mắn"},
+		new List<string> {"Chào mừng bạn đến trò chơi cấp 2.", "Ở trò chơi này bạn sẽ gõ chữ theo các từ được rơi xuống. Sau khi hoàn thành gõ chữ, một bảng nội dung gồm 2 cột sẽ hiện lên, bạn sẽ nối 2 bảng nội dung với nhau. Bạn phải hoàn thành phần chơi trong thời gian nhanh nhất có thể để đạt được điểm tối đa trong phần chơi này","Bạn phải tích đủ ít nhất 3600 exp để vượt qua cấp bậc 2. Chúc bạn may mắn"},
 	};
 	public List<List<string>> docAfterSeeNPCDegree2 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 2."},
@@ -109,9 +107,7 @@ public class DialogString : MonoBehaviour
 
 	// degree 3
 	public List<List<string>> docBeginStartingSeeNPCDegree3 = new List<List<string>>{
-		new List<string> {"Chào mừng bạn đến trò chơi cấp 3."},
-		new List<string> {"Trong bối cảnh trộm cướp hoành hành. Là một cảnh sát dự bị bạn được giao nhiệm vụ truy đổi băng cướp trong thị trấn. Bạn sẽ phải điều khiển xe cảnh sát để truy đuổi băng cướp. Trong quá trình truy đuổi bạn cần trả lời các câu hỏi trên đường đi để loại bỏ đá trên đường cản trở bạn di chuyển.Cấp bậc sẽ bao gồm 4 level khác nhau. Ở mỗi level bạn cần phải hoàn thành trong thời gian quy định để nhận điểm kinh nghiệm thăng cấp."},
-		new List<string> {"Chúc bạn may mắn!"},
+		new List<string> {"Chào mừng bạn đến trò chơi cấp 3.", "Trong bối cảnh trộm cướp hoành hành. Là một cảnh sát dự bị bạn được giao nhiệm vụ truy đổi băng cướp trong thị trấn. Bạn sẽ phải điều khiển xe cảnh sát để truy đuổi băng cướp. Trong quá trình truy đuổi bạn cần trả lời các câu hỏi trên đường đi để loại bỏ đá trên đường cản trở bạn di chuyển.Cấp bậc sẽ bao gồm 4 level khác nhau. Ở mỗi level bạn cần phải hoàn thành trong thời gian quy định để nhận điểm kinh nghiệm thăng cấp.", "Bạn phải tích đủ ít nhất 5600 exp để vượt qua cấp bậc 3.Chúc bạn may mắn!"},
 
 	};
 	public List<List<string>> docAfterSeeNPCDegree3 = new List<List<string>>{

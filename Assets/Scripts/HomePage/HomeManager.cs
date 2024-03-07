@@ -35,6 +35,10 @@ public class HomeManager : MonoBehaviour
     public GameObject PassedDegree3Panel;
     public GameObject PassedDegree4Panel;
     public GameObject EndGamePanel;
+    [Header("Medal")]
+    public GameObject bronzeMedal;
+    public GameObject silverMedal;
+    public GameObject goldMedal;
     [Header("Username text")]
 
     public TextMeshProUGUI usernameOfCertificate1;
@@ -47,6 +51,9 @@ public class HomeManager : MonoBehaviour
     public GameObject badgeOfDegree2Object;
     public GameObject badgeOfDegree3Object;
     public GameObject badgeOfDegree4Object;
+    public GameObject medalOfProfiles1;
+    public GameObject medalOfProfiles2;
+    public GameObject medalOfProfiles3;
     public TextMeshProUGUI usernameProfileDegree1;
     public TextMeshProUGUI usernameProfileDegree2;
     public TextMeshProUGUI usernameProfileDegree3;
@@ -81,12 +88,16 @@ public class HomeManager : MonoBehaviour
         badgeOfDegree3Object.SetActive(false);
         badgeOfDegree4Object.SetActive(false);
 
-
+        bronzeMedal.SetActive(false);
+        silverMedal.SetActive(false);
+        goldMedal.SetActive(false);
+        medalOfProfiles1.SetActive(false);
+        medalOfProfiles2.SetActive(false);
+        medalOfProfiles3.SetActive(false);
 
         // btnJoin.SetActive(false);
         // NPC = -1;
         // btnExitGame.SetActive(false);
-        id_level = APIUser.Instance.GetUser().id_level;
         UpdateProfile();
     }
     private void Awake()
@@ -112,26 +123,80 @@ public class HomeManager : MonoBehaviour
         usernameText.text = usernameToolbarText.text = APIUser.Instance.GetUser().username;
         levelText.text = levelToolbarText.text = APIUser.Instance.GetUser().id_level.ToString();
         experienceText.text = experienceToolbarText.text = APIUser.Instance.GetUser().experience.ToString();
-
+        Debug.Log("id_level: " + id_level);
         if (id_level == 2)
         {
+            Debug.Log("id_level 1: " + id_level);
+
             badgeOfDegree1Object.SetActive(true);
         }
         if (id_level == 3)
         {
+            Debug.Log("id_level 2: " + id_level);
+
+            badgeOfDegree1Object.SetActive(true);
             badgeOfDegree2Object.SetActive(true);
         }
         if (id_level == 4)
         {
+            Debug.Log("id_level 3: " + id_level);
+
+            badgeOfDegree1Object.SetActive(true);
+            badgeOfDegree2Object.SetActive(true);
             badgeOfDegree3Object.SetActive(true);
         }
         if (id_level == 5)
         {
+            Debug.Log("id_level 4: " + id_level);
+
+            badgeOfDegree1Object.SetActive(true);
+            badgeOfDegree2Object.SetActive(true);
+            badgeOfDegree3Object.SetActive(true);
             badgeOfDegree4Object.SetActive(true);
+
+            if (APIUser.Instance.GetUser().experience >= 9200 && APIUser.Instance.GetUser().experience < 9600)
+            {
+                OpenBronzeMedal();
+            }
+            else if (APIUser.Instance.GetUser().experience >= 9600 && APIUser.Instance.GetUser().experience < 9800)
+            {
+                OpenSilverMedal();
+            }
+            else if (APIUser.Instance.GetUser().experience >= 9800)
+            {
+                OpenGoldMedal();
+            }
         }
 
     }
 
+    void OpenBronzeMedal()
+    {
+        bronzeMedal.SetActive(true);
+        silverMedal.SetActive(false);
+        goldMedal.SetActive(false);
+        medalOfProfiles1.SetActive(true);
+        medalOfProfiles2.SetActive(false);
+        medalOfProfiles3.SetActive(false);
+    }
+    void OpenSilverMedal()
+    {
+        bronzeMedal.SetActive(false);
+        silverMedal.SetActive(true);
+        goldMedal.SetActive(false);
+        medalOfProfiles1.SetActive(false);
+        medalOfProfiles2.SetActive(true);
+        medalOfProfiles3.SetActive(false);
+    }
+    void OpenGoldMedal()
+    {
+        bronzeMedal.SetActive(false);
+        silverMedal.SetActive(false);
+        goldMedal.SetActive(true);
+        medalOfProfiles1.SetActive(false);
+        medalOfProfiles2.SetActive(false);
+        medalOfProfiles3.SetActive(true);
+    }
     public void Btn_MorePanel()
     {
         MorePanel.SetActive(true);
@@ -167,8 +232,6 @@ public class HomeManager : MonoBehaviour
     }
     public void Btn_Join()
     {
-        Debug.Log("indexNPC: " + NPC);
-
         switch (NPC)
         {
 
@@ -199,13 +262,13 @@ public class HomeManager : MonoBehaviour
                             }
                         case 1:
                             {
-                                APIUser.Instance.UpdateIsOpenDegree1(true);
+                                // APIUser.Instance.UpdateIsOpenDegree1(true);
                                 ActiveHomePage.Instance.isOpenFlagDegree1 = true;
                                 break;
                             }
                         case 2:
                             {
-                                APIUser.Instance.UpdateIsOpenDegree2(true);
+                                // APIUser.Instance.UpdateIsOpenDegree2(true);
                                 ActiveHomePage.Instance.isOpenFlagDegree2 = true;
                                 break;
                             }
@@ -217,7 +280,7 @@ public class HomeManager : MonoBehaviour
                             }
                         case 4:
                             {
-                                APIUser.Instance.UpdateIsOpenDegree4(true);
+                                // APIUser.Instance.UpdateIsOpenDegree4(true);
                                 ActiveHomePage.Instance.isOpenFlagDegree4 = true;
                                 FindAnyObjectByType<Dialogue>().EndDialogue();
 
@@ -319,6 +382,7 @@ public class HomeManager : MonoBehaviour
     void Update()
     {
         // Update profile information
+        id_level = APIUser.Instance.GetUser().id_level;
 
         UpdateProfile();
         UpdateUsernameOfCertificate();

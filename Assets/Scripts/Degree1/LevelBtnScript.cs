@@ -79,8 +79,12 @@ public class LevelBtnScript : MonoBehaviour
     void OnClick()                                              //method called by button
     {
         LevelSystemManager.Instance.CurrentLevel = levelIndex - 1;
-        int level = LevelSystemManager.Instance.CurrentLevel + 1;  //set the CurrentLevel, we subtract 1 as level data array start from 0
-        SceneManager.LoadScene(nameScene + level);           //load the level
+        int level = LevelSystemManager.Instance.CurrentLevel + 1;
+        Time.timeScale = 1;
+        //set the CurrentLevel, we subtract 1 as level data array start from 0
+        SceneManager.LoadScene(nameScene + level);
+        // SceneManager.SetActiveScene(SceneManager.GetSceneByName(nameScene + level.ToString));
     }
-
 }
+//load the level
+

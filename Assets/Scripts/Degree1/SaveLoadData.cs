@@ -15,12 +15,12 @@ public class SaveLoadData : MonoBehaviour
 
     private void Awake()
     {
-
+        LoadData();
         if (instance == null)
         {
             instance = this;
 
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -59,14 +59,28 @@ public class SaveLoadData : MonoBehaviour
         //convert the data to string
 
         string levelDataString = JsonUtility.ToJson(LevelSystemManager.Instance.LevelData);
+        Debug.Log("string levelDataString = " + levelDataString);
+
         if (LevelSystemManager.Instance.idGame == 1)
         {
             APIUser.Instance.SetLevelDataDegree1(LevelSystemManager.Instance.LevelData);
 
         }
-        else
+        else if (LevelSystemManager.Instance.idGame == 2)
+        {
+
+            APIUser.Instance.SetLevelDataDegree2(LevelSystemManager.Instance.LevelData);
+            Debug.Log("Nullllll");
+
+        }
+        else if (LevelSystemManager.Instance.idGame == 3)
         {
             APIUser.Instance.SetLevelDataDegree3(LevelSystemManager.Instance.LevelData);
+
+        }
+        else
+        {
+            APIUser.Instance.SetLevelDataDegree4(LevelSystemManager.Instance.LevelData);
 
         }
 
@@ -75,7 +89,7 @@ public class SaveLoadData : MonoBehaviour
             //save the string as json 
             DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
             // string json = JsonUtility.ToJson(degree);
-            await reference.Child("ScoreDegree").Child(APIUser.Instance.GetUser().id_user).Child(APIUser.Instance.GetUser().id_level.ToString()).SetRawJsonValueAsync(levelDataString);
+            await reference.Child("ScoreDegree").Child(APIUser.Instance.GetUser().id_user).Child(LevelSystemManager.Instance.idGame.ToString()).SetRawJsonValueAsync(levelDataString);
 
         }
         catch (System.Exception e)
@@ -92,15 +106,7 @@ public class SaveLoadData : MonoBehaviour
         try
         {
 
-
-            //create LevelData from json
-            if (levelData != null)
-            {
-                Debug.Log("LevelData : " + levelData.lastUnlockedLevel);
-                //set the LevelData of LevelSystemManager
-                LevelSystemManager.Instance.LevelData.levelItemsArray = levelData.levelItemsArray;
-                LevelSystemManager.Instance.LevelData.lastUnlockedLevel = levelData.lastUnlockedLevel;
-            }
+            levelData = APIUser.Instance.GetLevelData(LevelSystemManager.Instance.idGame);
             // Debug.Log("path: " + Application.persistentDataPath);
             Debug.Log("Data Loaded");
         }
