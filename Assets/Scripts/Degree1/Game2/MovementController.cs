@@ -37,6 +37,8 @@ public class MovementController : MonoBehaviour
     public int countCorrectAnswer = 0;
     bool isOpenQuestion = false;
     bool isWin = false;
+    AudioBomberman audioBomberman;
+
 
     private void Awake()
     {
@@ -46,6 +48,9 @@ public class MovementController : MonoBehaviour
         spriteRendererDeath.enabled = true;
         txtSpeed.text = speed.ToString();
         countCorrectAnswer = 0;
+
+        audioBomberman = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioBomberman>();
+
     }
     public void AddSpeed()
     {
@@ -122,9 +127,21 @@ public class MovementController : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Chest"))
         {
+            FindAnyObjectByType<STEnemySpawner>().enabled = false;
             StopAllCoroutines();
             itemQuestion.SetActive(true);
             FindAnyObjectByType<InsertAnswerDestructibles>().checkAppear = true;
+            FindAnyObjectByType<MovementController>().enabled = false;
+            if (FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy > 0)
+            {
+                int count = FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy;
+                for (int i = 0; i < count; i++)
+                {
+                    FindAnyObjectByType<EnemyBomber>().enabled = false;
+
+                }
+            }
+
         }
     }
 
@@ -145,7 +162,18 @@ public class MovementController : MonoBehaviour
     }
     IEnumerator DelayPlayerDeathCoroutine(bool isWin)
     {
+        if (isWin)
+        {
+            audioBomberman.PlaySFX(audioBomberman.winAudio);
+
+        }
+        else
+        {
+            audioBomberman.PlaySFX(audioBomberman.failAudio);
+
+        }
         yield return new WaitForSeconds(1f);
+
 
         Time.timeScale = 0;
         gameOver.SetActive(true);

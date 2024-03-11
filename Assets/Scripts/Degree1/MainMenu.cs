@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OnClickExit()
     {
-
+        AudioBomberman.instance.DestroySoundGameBomberman();
         SceneManager.LoadScene("HomePage");
     }
     public void OnClickBackOption()

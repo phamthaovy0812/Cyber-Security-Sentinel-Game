@@ -28,6 +28,13 @@ public class Dialogue : MonoBehaviour
     //Wait for next boolean
     private bool waitForNext;
 
+    AudioHomeManager audioHomeManager;
+
+    private void Awake()
+    {
+        audioHomeManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioHomeManager>();
+    }
+
     private void ToggleWindow(bool show)
     {
         window.SetActive(show);
@@ -37,7 +44,7 @@ public class Dialogue : MonoBehaviour
     {
         if (started)
             return;
-
+        audioHomeManager.PlaySFX(audioHomeManager.typingBoard);
         //Boolean to indicate that we have started
         started = true;
         //Show the window
@@ -74,7 +81,7 @@ public class Dialogue : MonoBehaviour
         // set flag position police 
         StopAllCoroutines();
         ToggleWindow(false);
-
+        audioHomeManager.StopSFX();
         Debug.Log("EndDialogue");
 
 
@@ -82,6 +89,7 @@ public class Dialogue : MonoBehaviour
     //Writing logic
     IEnumerator Writing()
     {
+        audioHomeManager.PlaySFX(audioHomeManager.typingBoard);
         continueText.text = "Nhấn Space để tiếp tục";
         yield return new WaitForSeconds(writingSpeed);
 
@@ -174,6 +182,8 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            audioHomeManager.StopSFX();
+
             continueText.text = "Nhấn Space để tiếp tục";
             // FindAnyObjectByType<HomeManager>().isOpenBtn = true;
             if (Input.GetKeyDown(KeyCode.Space))

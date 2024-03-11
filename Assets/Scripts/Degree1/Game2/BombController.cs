@@ -29,6 +29,13 @@ public class BombController : MonoBehaviour
 
     public TextMeshProUGUI txtLengthFire;
 
+    AudioBomberman audioBomberman;
+
+    public void Awake()
+    {
+        audioBomberman = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioBomberman>();
+
+    }
 
     public void Start()
     {
@@ -70,13 +77,17 @@ public class BombController : MonoBehaviour
         Explosion explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
         explosion.SetActiveRenderer(explosion.start);
         explosion.DestroyAfter(explosionDuration);
+        audioBomberman.PlayExplode(audioBomberman.explodedAudio);
 
         Explode(position, Vector2.up, explosionRadius);
         Explode(position, Vector2.down, explosionRadius);
         Explode(position, Vector2.left, explosionRadius);
         Explode(position, Vector2.right, explosionRadius);
         txtCountBomb.text = bombsRemaining.ToString();
+
         Destroy(bomb);
+        // audioBomberman.StopSFX(audioBomberman.explodedAudio);
+
         bombsRemaining++;
 
 

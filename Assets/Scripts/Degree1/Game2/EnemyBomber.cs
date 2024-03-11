@@ -17,6 +17,7 @@ public class EnemyBomber : MonoBehaviour
 
     public float MoveSpeed;
     Vector3 positionChest;
+    AudioBomberman audioBomberman;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,11 @@ public class EnemyBomber : MonoBehaviour
         PathFinder = GetComponent<PathFinderBomberman>();
         ReCalculatePath();
         isMoving = true;
+
+    }
+    void Awake()
+    {
+        audioBomberman = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioBomberman>();
     }
 
     public void ReCalculatePath()
@@ -63,7 +69,7 @@ public class EnemyBomber : MonoBehaviour
     {
         if (collider.gameObject.layer == LayerMask.NameToLayer("Explosion"))
         {
-            Debug.Log("Enemy death");
+            audioBomberman.PlaySFX(audioBomberman.correctAudio);
             GameObject add = Instantiate(AddScoreEffect, positionChest, Quaternion.identity);
             GameObject game = Instantiate(DeathEffect, positionChest, Quaternion.identity);
             FindObjectOfType<BBCountDownGamePlay>().AddTimer(1);
