@@ -21,7 +21,7 @@ public class WordManager : MonoBehaviour
     public GameObject playPanel;
     public GameObject closeMatchPanel;
 
-    [SerializeField] private AudioClip win, lose, rightType, wrongType;
+    // [SerializeField] private AudioClip win, lose, rightType, wrongType;
 
     private void Start()
     {
@@ -68,7 +68,7 @@ public class WordManager : MonoBehaviour
             // remove it from the word
             if (activateWord.GetNextLetter() == letter)
             {
-                 SoundPlay.Instance.PlaySound(rightType);
+                //  SoundPlay.Instance.PlaySound(rightType);
                 activateWord.TypeLetter();
             }
         }
@@ -81,11 +81,11 @@ public class WordManager : MonoBehaviour
                     activateWord = word;
                     hasActiveWord = true;
                     word.TypeLetter();
-                    SoundPlay.Instance.PlaySound(rightType);
+                    // SoundPlay.Instance.PlaySound(rightType);
                     break;
                 }
                 else{
-                    SoundPlay.Instance.PlaySound(wrongType);
+                    // SoundPlay.Instance.PlaySound(wrongType);
                 }
             }
         }
@@ -121,7 +121,7 @@ public class WordManager : MonoBehaviour
                 star = 1;
             }
 
-            SoundPlay.Instance.PlaySound(win);
+            // SoundPlay.Instance.PlaySound(win);
             FindAnyObjectByType<GameOver>().gameOver(star);
             FindAnyObjectByType<TPCountTime>().isGameOver = false;
             openSecurity.SetActive(false);
@@ -129,7 +129,7 @@ public class WordManager : MonoBehaviour
         }
         else
         {
-            SoundPlay.Instance.PlaySound(lose);
+            // SoundPlay.Instance.PlaySound(lose);
             FindAnyObjectByType<GameOver>().gameOver(0);
 
             Debug.Log("star level 4: " + star);

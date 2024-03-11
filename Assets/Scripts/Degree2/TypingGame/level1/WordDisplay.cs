@@ -9,7 +9,7 @@ public class WordDisplay : MonoBehaviour
     public TMP_Text text;
     private string check;
     // public GameObject openSecurity;
-        [SerializeField] private AudioClip wish, clearWord;
+        // [SerializeField] private AudioClip wish, clearWord;
 
     public float fallSpeed = 1f;
 
@@ -27,7 +27,6 @@ public class WordDisplay : MonoBehaviour
 
     public void RemoveLetter()
     {
-     
         text.text = text.text.Remove(0, 1);
         text.color = Color.red;
     }
@@ -35,7 +34,7 @@ public class WordDisplay : MonoBehaviour
     {
  
         WordScore.instance.UpdateScore();
-        SoundPlay.Instance.PlaySound(clearWord);
+        // SoundPlay.Instance.PlaySound(clearWord);
         CheckAndActivateWord();
         gameObject.SetActive(false);
     }
@@ -59,7 +58,7 @@ public class WordDisplay : MonoBehaviour
         //firewall, network, policy, risk, phishing
         if (WordData.Instance.isFindWordInArray(check, WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].wishedList))
         {
-            SoundPlay.Instance.PlaySound(wish);
+            // SoundPlay.Instance.PlaySound(wish);
             FindAnyObjectByType<WordManager>().count += 1;
             FindAnyObjectByType<wishedListPrefab>().wishedList.Add(check);
 

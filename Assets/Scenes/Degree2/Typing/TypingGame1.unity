@@ -3631,6 +3631,10 @@ MonoBehaviour:
   pausePanel: {fileID: 1294823105}
   playPanel: {fileID: 728893114}
   closeMatchPanel: {fileID: 1031959530}
+  win: {fileID: 8300000, guid: 8e7471c3825cf6340adf6ca03b7a78fb, type: 3}
+  lose: {fileID: 8300000, guid: f796761033ffab34e995a3a7e96ae69e, type: 3}
+  rightType: {fileID: 8300000, guid: 3781e3a62c5961a4b9d7a915dc15c496, type: 3}
+  wrongType: {fileID: 8300000, guid: 66c56334a9b0e1d4aa60f2b44fa5ad61, type: 3}
 --- !u!4 &938016273
 Transform:
   m_ObjectHideFlags: 0
