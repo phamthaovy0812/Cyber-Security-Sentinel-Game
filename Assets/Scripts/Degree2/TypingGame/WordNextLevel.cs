@@ -36,6 +36,8 @@ public class WordNextLevel : MonoBehaviour
   public void GoToHome()
   {
     // Time.timeScale = 1;
+    AudioTyping.instance.DestroySoundGame();
+
     UnityEngine.SceneManagement.SceneManager.LoadScene(WordConstants.DATA.HOME);
 
   }

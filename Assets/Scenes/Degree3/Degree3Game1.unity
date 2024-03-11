@@ -677,8 +677,8 @@ MonoBehaviour:
   explodedSource: {fileID: 1240502604}
   background: {fileID: 8300000, guid: d3b37b4cb61a9dd459014194e06bde0f, type: 3}
   explodedAudio: {fileID: 8300000, guid: 2faa9f1b24297d240b0bce45fbc71400, type: 3}
-  winAudio: {fileID: 8300000, guid: a8148f39acc72e747a8b519b5a3ef3a7, type: 3}
-  failAudio: {fileID: 8300000, guid: 5a3c33b20d0283b41a2960f47ca77cba, type: 3}
+  winAudio: {fileID: 8300000, guid: c11f0e3cb3219694584b747b1c987428, type: 3}
+  failAudio: {fileID: 8300000, guid: ac417b6eda38dad4e897c1f51658f632, type: 3}
   correctAudio: {fileID: 8300000, guid: 60d47906fef2e3842a1ce94f013445e4, type: 3}
   wrongAudio: {fileID: 8300000, guid: c6e49b02d752ea14891c0119de1d5ad7, type: 3}
 --- !u!4 &221724696
@@ -2372,7 +2372,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.35
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
