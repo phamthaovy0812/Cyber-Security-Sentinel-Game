@@ -66,6 +66,15 @@ public class Pacman : MonoBehaviour
         Time.timeScale = 0;
         gameOver.SetActive(true);
         float currentTime = FindAnyObjectByType<PMCountdownPlayGame>().currentTime;
+        if (isWin)
+        {
+            AudioBomberman.instance.PlaySFX(AudioBomberman.instance.winAudio);
+        }
+        else
+        {
+            AudioBomberman.instance.PlaySFX(AudioBomberman.instance.failAudio);
+
+        }
         int star = 0;
         if (isWin)
         {

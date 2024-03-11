@@ -10,6 +10,7 @@ TagManager:
   - Score
   - Obstacle1
   - Enemy
+  - Audio
   layers:
   - Default
   - TransparentFX

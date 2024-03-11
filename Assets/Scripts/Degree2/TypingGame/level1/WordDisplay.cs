@@ -34,6 +34,8 @@ public class WordDisplay : MonoBehaviour
     {
  
         WordScore.instance.UpdateScore();
+                AudioTyping.instance.PlaySoundRemoveWord(AudioTyping.instance.destroyWordAudio);
+
         // SoundPlay.Instance.PlaySound(clearWord);
         CheckAndActivateWord();
         gameObject.SetActive(false);
@@ -59,6 +61,8 @@ public class WordDisplay : MonoBehaviour
         if (WordData.Instance.isFindWordInArray(check, WordData.Instance.WordListData()[LevelSystemManager.Instance.CurrentLevel].wishedList))
         {
             // SoundPlay.Instance.PlaySound(wish);
+                AudioTyping.instance.PlaySoundWishlist(AudioTyping.instance.wishlistAudio);
+
             FindAnyObjectByType<WordManager>().count += 1;
             FindAnyObjectByType<wishedListPrefab>().wishedList.Add(check);
 

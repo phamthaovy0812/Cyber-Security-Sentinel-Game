@@ -69,6 +69,8 @@ public class WordManager : MonoBehaviour
             if (activateWord.GetNextLetter() == letter)
             {
                 //  SoundPlay.Instance.PlaySound(rightType);
+            AudioTyping.instance.PlaySFX(AudioTyping.instance.correctTypingAudio);
+
                 activateWord.TypeLetter();
             }
         }
@@ -82,16 +84,22 @@ public class WordManager : MonoBehaviour
                     hasActiveWord = true;
                     word.TypeLetter();
                     // SoundPlay.Instance.PlaySound(rightType);
+            AudioTyping.instance.PlaySFX(AudioTyping.instance.correctTypingAudio);
+
                     break;
                 }
                 else{
                     // SoundPlay.Instance.PlaySound(wrongType);
+            AudioTyping.instance.PlaySFX(AudioTyping.instance.wrongTypingAudio);
+
                 }
             }
         }
 
         if (hasActiveWord && activateWord.WordTyped())
         {
+            AudioTyping.instance.PlaySFX(AudioTyping.instance.correctTypingAudio);
+
             hasActiveWord = false;
             words.Remove(activateWord);
         }
@@ -100,9 +108,18 @@ public class WordManager : MonoBehaviour
     {
         CanvasWord.SetActive(false);
         _gameOver.SetActive(true);
+        if(isWin){
+AudioTyping.instance.PlaySFX(AudioTyping.instance.winAudio);
+        }
+        else{
+AudioTyping.instance.PlaySFX(AudioTyping.instance.failAudio);
+
+        }
         int star = 0;
         if (isWin)
         {
+                
+
             float currentTime = FindAnyObjectByType<TPCountTime>().currentTime;
             FindAnyObjectByType<TPCountTime>().isGameOver = true;
             int score = WordScore.instance.GetScore();
@@ -129,6 +146,7 @@ public class WordManager : MonoBehaviour
         }
         else
         {
+                
             // SoundPlay.Instance.PlaySound(lose);
             FindAnyObjectByType<GameOver>().gameOver(0);
 

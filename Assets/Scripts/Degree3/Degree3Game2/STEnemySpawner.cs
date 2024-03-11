@@ -13,6 +13,8 @@ public class STEnemySpawner : MonoBehaviour
 
 
     private float _timeUntilSpawn;
+    public Transform enemyCanvas;
+    public int countChildrenEnemy = 0;
 
     void Awake()
     {
@@ -25,9 +27,9 @@ public class STEnemySpawner : MonoBehaviour
 
         if (_timeUntilSpawn <= 0)
         {
-            Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
+            Instantiate(_enemyPrefab, transform.position, Quaternion.identity, enemyCanvas);
             SetTimeUntilSpawn();
-            Debug.Log("minSpawnTime: " + _minimumSpawnTime);
+            countChildrenEnemy = enemyCanvas.transform.childCount;
         }
     }
 

@@ -146,13 +146,14 @@ public class PMStoneQuestion : MonoBehaviour
 
         if (m_QuestionData[m_QuestionIndex].correctAnswer.Equals(pSlectedAnswer) && !checkPressOneAnswer)
         {
-
+            AudioBomberman.instance.PlaySFX(AudioBomberman.instance.correctAudio);
             iscorrectAnswer = true;
             checkCorrect = true;
 
         }
         else
         {
+            AudioBomberman.instance.PlaySFX(AudioBomberman.instance.failAudio);
             Debug.Log("Cau tra loiw sai ");
 
         }
