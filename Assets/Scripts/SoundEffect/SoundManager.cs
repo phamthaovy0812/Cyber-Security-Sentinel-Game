@@ -6,7 +6,8 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get => instance; }
     [SerializeField] GameObject soundOnIcon;
     [SerializeField] GameObject soundOffIcon;
-    private bool muted = false;
+   
+    public bool muted = false;
     void Start()
     {
         if (!PlayerPrefs.HasKey("muted"))
@@ -71,6 +72,9 @@ public class SoundManager : MonoBehaviour
             soundOffIcon.SetActive(true);
         }
     }
+
+    
+
     private void Load()
     {
         muted = PlayerPrefs.GetInt("muted") == 1;
