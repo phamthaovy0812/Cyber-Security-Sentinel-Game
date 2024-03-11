@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 6340780055404454460}
+  wish: {fileID: 8300000, guid: 2cfb69c073e13ef48b67251bdd89d090, type: 3}
+  clearWord: {fileID: 8300000, guid: 5ad235a4639c13545a701ecb051c98f1, type: 3}
   fallSpeed: 0.5
 --- !u!61 &699145890685731609
 BoxCollider2D:
