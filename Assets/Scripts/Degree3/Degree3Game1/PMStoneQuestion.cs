@@ -53,7 +53,11 @@ public class PMStoneQuestion : MonoBehaviour
         if (checkCorrectAnswer)
         {
             countCorrect++;
-            FindAnyObjectByType<MovementPacman>().speed += 1;
+            if (countCorrect == 1 || countCorrect == 3 || countCorrect == 5 || countCorrect == 7 || countCorrect > 8)
+            {
+                FindAnyObjectByType<MovementPacman>().speed += 1;
+
+            }
             FindAnyObjectByType<MoveEnemy>().enabled = true;
             Vector3 hitPosPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
             // Instantiate(AddTimeObject, hitPosPlayer, Quaternion.identity);

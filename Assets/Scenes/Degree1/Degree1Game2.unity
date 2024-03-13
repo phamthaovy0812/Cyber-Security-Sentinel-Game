@@ -578,11 +578,12 @@ MonoBehaviour:
     \u0111\u01B0\u1EE3c alien, b\u1EA1n s\u1EBD \u0111\u01B0\u1EE3c c\u1ED9ng th\xEAm
     1 gi\xE2y v\xE0o th\u1EDDi gian ch\u01A1i v\xE0 r\u01A1i r\u01B0\u01A1ng v\u1EADt
     ph\u1EA9m h\u1ED7 tr\u1EE3 (s\u1EBD bi\u1EBFn m\u1EA5t sau 5 gi\xE2y). Khi nh\u1EB7t
-    r\u01B0\u01A1ng, b\u1EA1n s\u1EBD \u0111\u01B0\u1EE3c quy\u1EC1n tr\u1EA3 l\u1EDDi
-    nh\u1EEFng c\xE2u h\u1ECFi, m\u1ED7i c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng b\u1EA1n
-    s\u1EBD nh\u1EADn \u0111\u01B0\u1EE3c 1 v\u1EADt ph\u1EA9m h\u1ED7 tr\u1EE3.
-    N\u1EBFu nh\xE2n v\u1EADt ch\u1EA1m v\xE0o alien ho\u1EB7c h\u1EBFt th\u1EDDi
-    gian quy \u0111\u1ECBnh th\xEC tr\xF2 ch\u01A1i s\u1EBD k\u1EBFt th\xFAc.\r\n"
+    r\u01B0\u01A1ng, b\u1EA1n s\u1EBD ph\u1EA3i  tr\u1EA3 l\u1EDDi c\xE2u h\u1ECFi
+    \u0111\u01B0\u1EE3c xu\u1EA5t hi\u1EC7n b\xEAn c\u1EA1nh, m\u1ED7i c\xE2u tr\u1EA3
+    l\u1EDDi \u0111\xFAng b\u1EA1n s\u1EBD nh\u1EADn \u0111\u01B0\u1EE3c 1 v\u1EADt
+    ph\u1EA9m h\u1ED7 tr\u1EE3. N\u1EBFu nh\xE2n v\u1EADt ch\u1EA1m v\xE0o alien
+    ho\u1EB7c h\u1EBFt th\u1EDDi gian quy \u0111\u1ECBnh th\xEC tr\xF2 ch\u01A1i
+    s\u1EBD k\u1EBFt th\xFAc.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}
   m_sharedMaterial: {fileID: -3239743447711797758, guid: 3079f6e6d29cba94ebcfb8811b401a9b, type: 2}

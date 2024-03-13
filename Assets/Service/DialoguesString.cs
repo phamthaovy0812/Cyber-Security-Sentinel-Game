@@ -118,7 +118,7 @@ public class DialogString : MonoBehaviour
 	};
 	// degree 3
 	public List<List<string>> docBeginStartingSeeNPCDegree4 = new List<List<string>>{
-		new List<string> {"Chào mừng bạn đến trò chơi cấp 4.Ở nhiệm vụ này bạn cần di chuyển đến các ngôi nhà số 112, 412, 456, 323 trong thành phố để hỗ trợ giải đáp thắc mắc cho hộ dân về các vấn đề họ gặp phải."," Chúc bạn may măn"},
+		new List<string> {"Chào mừng bạn đến trò chơi cấp 4.Ở nhiệm vụ này bạn cần di chuyển đến các ngôi nhà cấp 4.1, 4.2, 4.3, 4.4 trong thành phố để hỗ trợ giải đáp thắc mắc cho hộ dân về các vấn đề họ gặp phải."," Chúc bạn may măn"},
 	};
 	public List<List<string>> docAfterSeeNPCDegree4 = new List<List<string>>{
 		new List<string> {"Tiếp tục trò chơi cấp 4."},
