@@ -37,11 +37,13 @@ public class MovementController : MonoBehaviour
     public int countCorrectAnswer = 0;
     bool isOpenQuestion = false;
     bool isWin = false;
+    bool isCollide = false;
     AudioBomberman audioBomberman;
 
 
     private void Awake()
     {
+        isCollide = false;
         rb = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
         SetDirection(Vector2.down, spriteRendererDown);
@@ -61,6 +63,19 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
+        if (isCollide)
+        {
+            if (FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy > 0)
+            {
+                int count = FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy;
+                for (int i = 0; i < count; i++)
+                {
+                    FindAnyObjectByType<EnemyBomber>().enabled = false;
+
+                }
+            }
+        }
+
         if (Input.GetKey(inputUp) || Input.GetKey(KeyCode.W))
         {
             SetDirection(Vector2.up, spriteRendererUp);
@@ -127,21 +142,18 @@ public class MovementController : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Chest"))
         {
+            isCollide = true;
             FindAnyObjectByType<STEnemySpawner>().enabled = false;
             StopAllCoroutines();
             itemQuestion.SetActive(true);
             FindAnyObjectByType<InsertAnswerDestructibles>().checkAppear = true;
             FindAnyObjectByType<MovementController>().enabled = false;
-            if (FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy > 0)
-            {
-                int count = FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy;
-                for (int i = 0; i < count; i++)
-                {
-                    FindAnyObjectByType<EnemyBomber>().enabled = false;
 
-                }
-            }
 
+        }
+        else
+        {
+            isCollide = false;
         }
     }
 
