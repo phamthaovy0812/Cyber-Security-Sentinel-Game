@@ -2,19 +2,12 @@ using UnityEngine;
 
 public class GhostPacmanFrightened : GhostPacmanBehavior
 {
-    // public SpriteRenderer body;
-    // public SpriteRenderer eyes;
-    // public SpriteRenderer blue;
-    // public SpriteRenderer white;
-    // private MovementPacman movement;
 
-    private bool eaten;
 
     public override void Enable(float duration)
     {
         base.Enable(duration);
 
-        Invoke(nameof(Flash), duration / 2f);
     }
 
     public override void Disable()
@@ -22,17 +15,6 @@ public class GhostPacmanFrightened : GhostPacmanBehavior
         base.Disable();
     }
 
-    private void Eaten()
-    {
-        eaten = true;
-
-        // ghostPacman.home.Enable(duration);
-
-        // body.enabled = false;
-        // eyes.enabled = true;
-        // blue.enabled = false;
-        // white.enabled = false;
-    }
 
     private void Flash()
     {
@@ -48,18 +30,14 @@ public class GhostPacmanFrightened : GhostPacmanBehavior
     {
         // blue.GetComponent<AnimatedSprite>().Restart();
         ghostPacman.movement.speedMultiplier = 0.5f;
-        eaten = false;
+
     }
 
     private void OnDisable()
     {
         ghostPacman.movement.speedMultiplier = 1f;
-        eaten = false;
+
     }
-    // private void Awake()
-    // {
-    //     movement = GetComponent<MovementPacman>();
-    // }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -98,15 +76,5 @@ public class GhostPacmanFrightened : GhostPacmanBehavior
         }
     }
 
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.layer == LayerMask.NameToLayer("Pacman"))
-    //     {
-    //         if (enabled)
-    //         {
-    //             Eaten();
-    //         }
-    //     }
-    // }
 
 }

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +7,6 @@ public class DialogueTrigger : MonoBehaviour
     public DialogString dialogString;
     public int indexNPC = 0; // 1: NPC0, 2: NPC1, 3: NPC2, 4: NPC3  
     public bool playerDetected = false;
-    private bool isCompletedDialog = false;
 
     Rigidbody2D _rb;
 
@@ -117,7 +115,6 @@ public class DialogueTrigger : MonoBehaviour
         {
             dialogueScript.StartDialogue();
             HomeManager.Instance.isOpenBtn = false;
-            isCompletedDialog = true;
             playerDetected = false;
 
         }

@@ -19,7 +19,7 @@ public class randomItemPickup : MonoBehaviour
             Vector2 positionItem = transform.position;
             positionItem.y += 0.5f;
             GameObject item = Instantiate(spawnableItems[randomIndex], positionItem, Quaternion.identity);
-
+            FindFirstObjectByType<MovementController>().enemyObject.SetActive(true);
         }
 
     }

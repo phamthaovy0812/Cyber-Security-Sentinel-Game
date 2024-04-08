@@ -121,7 +121,16 @@ public class HomeManager : MonoBehaviour
     public void UpdateProfile()
     {
         usernameText.text = usernameToolbarText.text = APIUser.Instance.GetUser().username;
-        levelText.text = levelToolbarText.text = APIUser.Instance.GetUser().id_level.ToString();
+
+        if (id_level > 3)
+        {
+            levelText.text = levelToolbarText.text = "4";
+        }
+        else
+        {
+            levelText.text = levelToolbarText.text = APIUser.Instance.GetUser().id_level.ToString();
+
+        }
         experienceText.text = experienceToolbarText.text = APIUser.Instance.GetUser().experience.ToString();
         Debug.Log("id_level: " + id_level);
         if (id_level == 2)

@@ -30,20 +30,18 @@ public class MovementController : MonoBehaviour
     private AnimatedSpriteRenderer activeSpriteRenderer;
     public GameObject gameOver;
     public GameObject itemQuestion;
-    private bool checkPassGame = false;
 
     [Header("Text")]
     public TextMeshProUGUI txtSpeed;
     public int countCorrectAnswer = 0;
-    bool isOpenQuestion = false;
     bool isWin = false;
-    bool isCollide = false;
+
+    public GameObject enemyObject;
     AudioBomberman audioBomberman;
 
 
     private void Awake()
     {
-        isCollide = false;
         rb = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
         SetDirection(Vector2.down, spriteRendererDown);
@@ -63,18 +61,7 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
-        if (isCollide)
-        {
-            if (FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy > 0)
-            {
-                int count = FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy;
-                for (int i = 0; i < count; i++)
-                {
-                    FindAnyObjectByType<EnemyBomber>().enabled = false;
 
-                }
-            }
-        }
 
         if (Input.GetKey(inputUp) || Input.GetKey(KeyCode.W))
         {
@@ -142,7 +129,7 @@ public class MovementController : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Chest"))
         {
-            isCollide = true;
+            enemyObject.SetActive(false);
             FindAnyObjectByType<STEnemySpawner>().enabled = false;
             StopAllCoroutines();
             itemQuestion.SetActive(true);
@@ -151,10 +138,7 @@ public class MovementController : MonoBehaviour
 
 
         }
-        else
-        {
-            isCollide = false;
-        }
+
     }
 
     public void DeathSequence(bool isWin)

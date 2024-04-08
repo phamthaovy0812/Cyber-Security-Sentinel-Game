@@ -210,15 +210,16 @@ public class InsertAnswerDestructibles : MonoBehaviour
         // }
         FindAnyObjectByType<MovementController>().enabled = true;
         FindAnyObjectByType<STEnemySpawner>().enabled = true;
-        if (FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy > 0)
-        {
-            int count = FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy;
-            for (int i = 0; i < count; i++)
-            {
-                FindAnyObjectByType<EnemyBomber>().enabled = true;
+        FindFirstObjectByType<MovementController>().enemyObject.SetActive(true);
+        // if (FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy > 0)
+        // {
+        //     int count = FindAnyObjectByType<STEnemySpawner>().countChildrenEnemy;
+        //     for (int i = 0; i < count; i++)
+        //     {
+        //         FindAnyObjectByType<EnemyBomber>().enabled = true;
 
-            }
-        }
+        //     }
+        // }
 
     }
 

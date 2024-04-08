@@ -10,7 +10,7 @@ public class NodePacman : MonoBehaviour
     {
         availableDirections.Clear();
 
-        // We determine if the direction is available by box casting to see if
+        // We determine if the direction is available by box casting to see if 
         // we hit a wall. The direction is added to list if available.
         CheckAvailableDirection(Vector2.up);
         CheckAvailableDirection(Vector2.down);

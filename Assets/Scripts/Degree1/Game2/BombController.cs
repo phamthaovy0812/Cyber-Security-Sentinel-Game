@@ -33,7 +33,7 @@ public class BombController : MonoBehaviour
 
     public void Awake()
     {
-        audioBomberman = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioBomberman>();
+        // audioBomberman = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioBomberman>();
 
     }
 

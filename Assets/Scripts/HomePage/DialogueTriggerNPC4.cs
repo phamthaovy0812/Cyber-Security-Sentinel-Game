@@ -8,7 +8,6 @@ public class DialogueTriggerNPC4 : MonoBehaviour
     public DialogString dialogString;
 
     public bool playerDetected = false;
-    private bool isCompletedDialog = false;
 
     Rigidbody2D _rb;
 
@@ -31,44 +30,8 @@ public class DialogueTriggerNPC4 : MonoBehaviour
             dialogueScript.dialogues = new List<List<string>>();
             dialogueScript.dialogues = dialogString.docBeginStartingSeeNPCDegree4;
             ActiveHomePage.Instance.isOpenFlagPolice = false;
-            // if (HomeManager.Instance.id_level < 4)
-            // {
-            //     dialogueScript.dialogues = new List<List<string>>();
-            //     dialogueScript.dialogues = dialogString.docNoCompleteDegree4;
-
-            // }
-
-            // else if (!APIUser.Instance.GetUser().isOpenDegree4)//&& HomeManager.Instance.id_level == 4
-            // {
-            //     Debug.Log("4");
-            //     dialogueScript.dialogues = new List<List<string>>();
-            //     dialogueScript.dialogues = dialogString.docBeginStartingSeeNPCDegree4;
-            //     ActiveHomePage.Instance.isOpenFlagPolice = false;
-
-
-            // }
-            // else if (APIUser.Instance.GetUser().isOpenDegree4 && HomeManager.Instance.id_level > 4)
-            // {
-            //     Debug.Log("2");
-            //     dialogueScript.dialogues = new List<List<string>>();
-            //     dialogueScript.dialogues = new List<List<string>>();
-            //     dialogueScript.dialogues = dialogString.docAfterCompleteDegree4;
-            // }
-            // else if (APIUser.Instance.GetUser().isOpenDegree4)
-            // {
-            //     Debug.Log("3");
-            //     dialogueScript.dialogues = new List<List<string>>();
-            //     dialogueScript.dialogues = new List<List<string>>();
-            //     dialogueScript.dialogues = dialogString.docAfterSeeNPCDegree4;
-            // }
 
             playerDetected = true;
-
-            // dialogueScript.dialogues = dialoguesSeePolice;
-            // dialogueScript.ToggleIndicator(playerDetected);
-
-            // dialogueScript.dialogues = dialoguesSeePolice;
-            // dialogueScript.ToggleIndicator(playerDetected);
         }
     }
 

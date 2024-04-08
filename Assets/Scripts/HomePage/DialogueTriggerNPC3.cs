@@ -9,8 +9,6 @@ public class DialogueTriggerNPC3 : MonoBehaviour
     public DialogString dialogString;
 
     public bool playerDetected = false;
-    private bool isCompletedDialog = false;
-    int exp = 2000;
     Rigidbody2D _rb;
 
 
@@ -73,7 +71,6 @@ public class DialogueTriggerNPC3 : MonoBehaviour
         {
             dialogueScript.StartDialogue();
             HomeManager.Instance.isOpenBtn = false;
-            isCompletedDialog = true;
             playerDetected = false;
 
         }

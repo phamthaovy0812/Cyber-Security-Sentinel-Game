@@ -9,7 +9,6 @@ public class DialogueTriggerNPC1 : MonoBehaviour
     public DialogString dialogString;
 
     public bool playerDetected = false;
-    private bool isCompletedDialog = false;
 
     Rigidbody2D _rb;
 
@@ -62,11 +61,6 @@ public class DialogueTriggerNPC1 : MonoBehaviour
 
             playerDetected = true;
 
-            // dialogueScript.dialogues = dialoguesSeePolice;
-            // dialogueScript.ToggleIndicator(playerDetected);
-
-            // dialogueScript.dialogues = dialoguesSeePolice;
-            // dialogueScript.ToggleIndicator(playerDetected);
         }
     }
 

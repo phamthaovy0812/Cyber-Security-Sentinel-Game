@@ -104,7 +104,7 @@ public class APIUser : MonoBehaviour
 					foreach (DataSnapshot dataSnapshot in snapshot.Children)
 					{
 
-						if (dataSnapshot.Child("email").GetValue(true).ToString().Equals(email) && dataSnapshot.Child("password").GetValue(true).ToString().Equals(password))
+						if (dataSnapshot.Child("email").GetValue(true).ToString().Equals(email)) //&& dataSnapshot.Child("password").GetValue(true).ToString().Equals(password)
 						{
 							Debug.Log("getConnectedUserByUId");
 

@@ -7,6 +7,7 @@ using Firebase.Extensions;
 using Firebase.Database;
 using System.Text.RegularExpressions;
 using System.Web;
+using Firebase;
 
 public class firebaseController : MonoBehaviour
 {
@@ -33,7 +34,8 @@ public class firebaseController : MonoBehaviour
     public TMP_Text htmlText;
     public bool isExitUser;
 
-
+    [Header("Firebase")]
+    public DependencyStatus dependencyStatus;
     Firebase.Auth.FirebaseAuth auth;
     Firebase.Auth.FirebaseUser user;
 
@@ -41,14 +43,6 @@ public class firebaseController : MonoBehaviour
     bool isLogin = true;
     bool isSignUp = false;
 
-
-    public static string StripHTML(bool decode = true)
-    {
-        string HTMLText = "The <i>quick brown fox</i> jumps over the <b>lazy dog</b>.";
-        Regex reg = new Regex("<[^>]+>", RegexOptions.IgnoreCase);
-        var stripped = reg.Replace(HTMLText, "");
-        return decode ? HttpUtility.HtmlDecode(stripped) : stripped;
-    }
     void Start()
     {
         Logout();
@@ -59,26 +53,54 @@ public class firebaseController : MonoBehaviour
         forgetPasswordPanel.SetActive(false);
         signupSuccess.SetActive(false);
         isExitUser = false;
-        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
-        {
-            var dependencyStatus = task.Result;
-            if (dependencyStatus == Firebase.DependencyStatus.Available)
-            {
-                // Create and hold a reference to your FirebaseApp,
-                // where app is a Firebase.FirebaseApp property of your application class.
-                InitializeFirebase();
+        StartCoroutine(CheckAndFixDependenciesAsync());
 
-                // Set a flag here to indicate whether Firebase is ready to use by your app.
-            }
-            else
-            {
-                UnityEngine.Debug.LogError(System.String.Format(
-                  "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
-                // Firebase Unity SDK is not safe to use here.
-            }
-        });
     }
 
+    private IEnumerator CheckAndFixDependenciesAsync()
+    {
+        var dependencyTask = FirebaseApp.CheckAndFixDependenciesAsync();
+        yield return new WaitUntil(() => dependencyTask.IsCompleted);
+
+        dependencyStatus = dependencyTask.Result;
+        if (dependencyStatus == DependencyStatus.Available)
+        {
+            InitializeFirebase();
+            yield return new WaitForEndOfFrame();
+            StartCoroutine(CheckForAutoLogin());
+        }
+        else
+        {
+            Debug.LogError("Could not resolve all firebase dependencies: " + dependencyStatus);
+        }
+    }
+    private IEnumerator CheckForAutoLogin()
+    {
+        if (user != null)
+        {
+            var reloadUser = user.ReloadAsync();
+            yield return new WaitUntil(() => reloadUser.IsCompleted);
+            AutoLogin();
+            yield return new WaitForSeconds(2f);
+            loginEmail.text = APIUser.Instance.GetUser().email;
+            loginPassword.text = APIUser.Instance.GetUser().password;
+        }
+        else
+        {
+            OpenLoginPanel();
+        }
+    }
+    private void AutoLogin()
+    {
+        if (user != null)
+        {
+            APIUser.Instance.getConnectedUserByUId(user.Email, "");
+        }
+        else
+        {
+            OpenLoginPanel();
+        }
+    }
     public void Logout()
     {
         if (auth != null && user != null)
@@ -108,13 +130,7 @@ public class firebaseController : MonoBehaviour
 
     }
 
-    // public void OpenLoginPanel()
-    // {
-    //     signin.SetActive(false);
-    //     register.SetActive(false);
-    //     login.SetActive(true);
-    //     forgetPasswordPanel.SetActive(false);
-    // }
+
 
     public void Openforgetpass()
     {
@@ -425,6 +441,21 @@ public class firebaseController : MonoBehaviour
     }
     void Update()
     {
+        // if (checkAutoLogin)
+        // {
+        //     // emailLoginField.OnPointerClick
+        //     loginEmail.text = user.Email;
+        //     loginPassword.text = APIUser.Instance.GetUser().password;
+        //     checkAutoLogin = false;
+        // }
+        if (isSignIn)
+        {
+            if (!isSigned)
+            {
+                isSigned = true;
+                Debug.Log("Success");
+            }
+        }
         if (isSignUp && Input.GetKey(KeyCode.KeypadEnter))
         {
 
@@ -541,18 +572,6 @@ public class firebaseController : MonoBehaviour
         );
     }
 
-
-    void updated()
-    {
-        if (isSignIn)
-        {
-            if (!isSigned)
-            {
-                isSigned = true;
-                Debug.Log("Success");
-            }
-        }
-    }
 
 
 

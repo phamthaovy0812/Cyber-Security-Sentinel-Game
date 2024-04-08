@@ -5521,6 +5521,7 @@ MonoBehaviour:
   itemQuestion: {fileID: 2016300836}
   txtSpeed: {fileID: 33224016}
   countCorrectAnswer: 0
+  enemyObject: {fileID: 966864390}
 --- !u!50 &1121832891
 Rigidbody2D:
   serializedVersion: 4
