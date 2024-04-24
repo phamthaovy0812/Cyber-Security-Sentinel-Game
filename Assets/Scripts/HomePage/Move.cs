@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
@@ -11,7 +13,9 @@ public class Move : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
-    private Vector2 moveInput;
+    private UnityEngine.Vector2 moveInput;
+
+    public InputActionReference moveActionToUse;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,8 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UnityEngine.Vector2 moveDirection = moveActionToUse.action.ReadValue<UnityEngine.Vector2>();
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
         // trai_phai = Input.GetAxis("Horizontal");
         // rb.velocity = new Vector3(trai_phai * tocdo, rb.velocity.y);
         moveInput.x = Input.GetAxis("Horizontal");
@@ -33,6 +39,10 @@ public class Move : MonoBehaviour
         animator.SetFloat("move", Mathf.Abs(Input.GetAxis("Horizontal")));
 
     }
+    public void OnMove(InputAction.CallbackContext ctx)
+    {
+        rb.velocity = ctx.ReadValue<UnityEngine.Vector2>() * moveSpeed;
+    }
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
@@ -43,7 +53,7 @@ public class Move : MonoBehaviour
         if ((isfacingRight && Input.GetAxis("Horizontal") < 0) || (!isfacingRight && Input.GetAxis("Horizontal") > 0))
         {
             isfacingRight = !isfacingRight;
-            Vector3 kichthuoc = transform.localScale;
+            UnityEngine.Vector3 kichthuoc = transform.localScale;
             kichthuoc.x = kichthuoc.x * -1;
             transform.localScale = kichthuoc;
         }

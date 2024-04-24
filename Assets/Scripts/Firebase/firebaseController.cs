@@ -42,6 +42,7 @@ public class firebaseController : MonoBehaviour
     bool isSignIn = false;
     bool isLogin = true;
     bool isSignUp = false;
+    bool isAutoLogin = false;
 
     void Start()
     {
@@ -94,7 +95,9 @@ public class firebaseController : MonoBehaviour
     {
         if (user != null)
         {
+
             APIUser.Instance.getConnectedUserByUId(user.Email, "");
+            isAutoLogin = true;
         }
         else
         {
@@ -145,12 +148,16 @@ public class firebaseController : MonoBehaviour
 
     public void LoginUser()
     {
+        Debug.Log("Login user");
         if (string.IsNullOrEmpty(loginEmail.text) && string.IsNullOrEmpty(loginPassword.text))
         {
             showNotificationMessage("Lỗi", "Ô nhập bị trống! Làm ơn hãy nhập vào ô trống");
             return;
         }
-
+        if (isAutoLogin)
+        {
+            StartCoroutine(StartHomePage(loginEmail.text, loginPassword.text));
+        }
         // Do Login
         SignInUser(loginEmail.text, loginPassword.text);
 
@@ -420,6 +427,7 @@ public class firebaseController : MonoBehaviour
 
     void AuthStateChanged(object sender, System.EventArgs eventArgs)
     {
+        Time.timeScale = 1;
         if (auth.CurrentUser != user)
         {
             bool signedIn = user != auth.CurrentUser && auth.CurrentUser != null;

@@ -32,6 +32,7 @@ public class Dialogue : MonoBehaviour
 
     private void Awake()
     {
+        started = false;
         audioHomeManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioHomeManager>();
     }
 
@@ -42,6 +43,7 @@ public class Dialogue : MonoBehaviour
     //Start Dialogue
     public void StartDialogue()
     {
+        Debug.Log("Start chat box");
         if (started)
             return;
         audioHomeManager.PlaySFX(audioHomeManager.typingBoard);

@@ -16,9 +16,6 @@ public class DialogueTriggerNPC1 : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-
-
-
     }
 
     //Detect trigger with player
@@ -37,7 +34,7 @@ public class DialogueTriggerNPC1 : MonoBehaviour
 
             else if (!APIUser.Instance.GetUser().isOpenDegree1)//&& HomeManager.Instance.id_level == 1
             {
-                Debug.Log("1");
+                Debug.Log("NPC1");
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docBeginStartingSeeNPCDegree1;
                 ActiveHomePage.Instance.isOpenFlagPolice = false;
@@ -46,14 +43,14 @@ public class DialogueTriggerNPC1 : MonoBehaviour
             }
             else if (APIUser.Instance.GetUser().isOpenDegree1 && HomeManager.Instance.id_level > 1)
             {
-                Debug.Log("2");
+                Debug.Log("NPC12");
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docAfterCompleteDegree1;
             }
             else if (APIUser.Instance.GetUser().isOpenDegree1)
             {
-                Debug.Log("3");
+                Debug.Log("NPC13");
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = new List<List<string>>();
                 dialogueScript.dialogues = dialogString.docAfterSeeNPCDegree1;
